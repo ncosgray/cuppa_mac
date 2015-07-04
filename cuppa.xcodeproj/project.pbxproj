@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73251EFC12893F42008CD18E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73251EFA12893F42008CD18E /* Localizable.strings */; };
+		733D2385128B1707006033B0 /* help in Resources */ = {isa = PBXBuildFile; fileRef = 733D2380128B1707006033B0 /* help */; };
+		73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73BD7D8F128A8350003013D4 /* InfoPlist.strings */; };
+		FE109E7010545C320020BFE4 /* Badge4.png in Resources */ = {isa = PBXBuildFile; fileRef = FE109E6F10545C320020BFE4 /* Badge4.png */; };
+		FE256DDF098754DD003C11F1 /* Cuppa_Render.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2C5020362E401A80001 /* Cuppa_Render.h */; };
+		FE256DE0098754DD003C11F1 /* Cuppa_Control.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2CD020371E201A80001 /* Cuppa_Control.h */; };
+		FE256DE1098754DD003C11F1 /* Cuppa_Bevy.h in Headers */ = {isa = PBXBuildFile; fileRef = F51AB8AD0204B17101A80001 /* Cuppa_Bevy.h */; };
+		FE256DE2098754DD003C11F1 /* Cuppa_Shape.h in Headers */ = {isa = PBXBuildFile; fileRef = F51AB8AF0204B27301A80001 /* Cuppa_Shape.h */; };
+		FE256DE5098754DD003C11F1 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F52B259B02974DDA01000002 /* icon.icns */; };
+		FE256DE7098754DD003C11F1 /* tea_end.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AA902B19DC301000008 /* tea_end.png */; };
+		FE256DE8098754DD003C11F1 /* tea_start.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AAA02B19DC301000008 /* tea_start.png */; };
+		FE256DE9098754DD003C11F1 /* pour.aiff in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AB102B1B0A201000008 /* pour.aiff */; };
+		FE256DEA098754DD003C11F1 /* spoon.aiff in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AB202B1B0A201000008 /* spoon.aiff */; };
+		FE256DEB098754DD003C11F1 /* teacup16.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AB502B1B6D201000008 /* teacup16.png */; };
+		FE256DF9098754DD003C11F1 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = FE39F3CA08DA119A0085DC68 /* MainMenu.nib */; };
+		FE256DFA098754DD003C11F1 /* tea_done.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1F0A6308E7DF5B00F26390 /* tea_done.png */; };
+		FE256DFB098754DD003C11F1 /* beep.aiff in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9162092EC6E3003821C5 /* beep.aiff */; };
+		FE256DFD098754DD003C11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		FE256DFE098754DD003C11F1 /* Cuppa_Render.m in Sources */ = {isa = PBXBuildFile; fileRef = F538F2C6020362E401A80001 /* Cuppa_Render.m */; };
+		FE256DFF098754DD003C11F1 /* Cuppa_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = F538F2CB020371B601A80001 /* Cuppa_Control.m */; };
+		FE256E00098754DD003C11F1 /* Cuppa_Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AB8B10204B4E101A80001 /* Cuppa_Shape.m */; };
+		FE256E01098754DD003C11F1 /* Cuppa_Bevy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AB8B40204C19D01A80001 /* Cuppa_Bevy.m */; };
+		FE256E03098754DD003C11F1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECF5BAD08DC6F6A00010F73 /* Carbon.framework */; };
+		FE256E04098754DD003C11F1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */; };
+		FE4295AC0DC37BCC00C2F743 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; };
+		FE6FA57B1051AF2700FE4752 /* Badge3.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6FA5771051AF2700FE4752 /* Badge3.png */; };
+		FE6FA57D1051AF2700FE4752 /* Badge5.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6FA5791051AF2700FE4752 /* Badge5.png */; };
+		FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; };
+		FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; };
+		FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */; };
+		FEC8E72F0DC3780400031109 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE4295AA0DC37BA800C2F743 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */,
+				FE4295AC0DC37BCC00C2F743 /* Growl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = source/main.m; sourceTree = SOURCE_ROOT; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		73251EFB12893F42008CD18E /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		73251EFF12893F4F008CD18E /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
+		733D2381128B1707006033B0 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = English.lproj/help; sourceTree = "<group>"; };
+		733D2388128B1733006033B0 /* German */ = {isa = PBXFileReference; lastKnownFileType = folder; name = German; path = German.lproj/help; sourceTree = "<group>"; };
+		736A923612830C590098240C /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		73BD7D90128A8350003013D4 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73BD7D92128A8364003013D4 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F51AB8AD0204B17101A80001 /* Cuppa_Bevy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Cuppa_Bevy.h; path = source/Cuppa_Bevy.h; sourceTree = "<group>"; };
+		F51AB8AF0204B27301A80001 /* Cuppa_Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Cuppa_Shape.h; path = source/Cuppa_Shape.h; sourceTree = "<group>"; };
+		F51AB8B10204B4E101A80001 /* Cuppa_Shape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Cuppa_Shape.m; path = source/Cuppa_Shape.m; sourceTree = "<group>"; };
+		F51AB8B40204C19D01A80001 /* Cuppa_Bevy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Cuppa_Bevy.m; path = source/Cuppa_Bevy.m; sourceTree = "<group>"; };
+		F52B259B02974DDA01000002 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = art/icon.icns; sourceTree = SOURCE_ROOT; };
+		F538F2C5020362E401A80001 /* Cuppa_Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Cuppa_Render.h; path = source/Cuppa_Render.h; sourceTree = SOURCE_ROOT; };
+		F538F2C6020362E401A80001 /* Cuppa_Render.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Cuppa_Render.m; path = source/Cuppa_Render.m; sourceTree = SOURCE_ROOT; };
+		F538F2CB020371B601A80001 /* Cuppa_Control.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Cuppa_Control.m; path = source/Cuppa_Control.m; sourceTree = "<group>"; };
+		F538F2CD020371E201A80001 /* Cuppa_Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Cuppa_Control.h; path = source/Cuppa_Control.h; sourceTree = "<group>"; };
+		F5F82AA902B19DC301000008 /* tea_end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tea_end.png; path = art/cups/tea_end.png; sourceTree = SOURCE_ROOT; };
+		F5F82AAA02B19DC301000008 /* tea_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tea_start.png; path = art/cups/tea_start.png; sourceTree = SOURCE_ROOT; };
+		F5F82AB102B1B0A201000008 /* pour.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = pour.aiff; path = sound/pour.aiff; sourceTree = SOURCE_ROOT; };
+		F5F82AB202B1B0A201000008 /* spoon.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = spoon.aiff; path = sound/spoon.aiff; sourceTree = SOURCE_ROOT; };
+		F5F82AB502B1B6D201000008 /* teacup16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teacup16.png; path = art/teacup16.png; sourceTree = SOURCE_ROOT; };
+		FE109E6F10545C320020BFE4 /* Badge4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Badge4.png; sourceTree = "<group>"; };
+		FE1E997C1831C25800BC1535 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE1E997D1831C26400BC1535 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE1F0A6308E7DF5B00F26390 /* tea_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tea_done.png; path = art/cups/tea_done.png; sourceTree = "<group>"; };
+		FE256E0C098754DD003C11F1 /* Info-cuppa.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-cuppa.plist"; sourceTree = "<group>"; };
+		FE256E0D098754DD003C11F1 /* Cuppa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuppa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE39F3CB08DA119A0085DC68 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		FE5C9162092EC6E3003821C5 /* beep.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = beep.aiff; path = sound/beep.aiff; sourceTree = "<group>"; };
+		FE6FA5771051AF2700FE4752 /* Badge3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Badge3.png; sourceTree = "<group>"; };
+		FE6FA5791051AF2700FE4752 /* Badge5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Badge5.png; sourceTree = "<group>"; };
+		FE70E659181DEAFA006A35CE /* Czech */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Czech; path = Czech.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE7D45571831C15A007265FE /* French */ = {isa = PBXFileReference; lastKnownFileType = folder; name = French; path = French.lproj/help; sourceTree = "<group>"; };
+		FE7D455A1831C175007265FE /* Italian */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Italian; path = Italian.lproj/help; sourceTree = "<group>"; };
+		FE7D455B1831C185007265FE /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE7D455C1831C18E007265FE /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE7D455D1831C198007265FE /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		FE7D455E1831C19F007265FE /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		FE923A25181DE39E0088AB1D /* Czech */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Czech; path = Czech.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		FE923A26181DE8680088AB1D /* Czech */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Czech; path = Czech.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FEA6A353181DE8F500603E33 /* Czech */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Czech; path = Czech.lproj/help; sourceTree = "<group>"; };
+		FEA6ABB01055B23D00C436D8 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
+		FEC8E72E0DC3780400031109 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		FECF5BAD08DC6F6A00010F73 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE256E02098754DD003C11F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE256E03098754DD003C11F1 /* Carbon.framework in Frameworks */,
+				FE256E04098754DD003C11F1 /* Cocoa.framework in Frameworks */,
+				FEC8E72F0DC3780400031109 /* Growl.framework in Frameworks */,
+				FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F538F2C5020362E401A80001 /* Cuppa_Render.h */,
+				F538F2C6020362E401A80001 /* Cuppa_Render.m */,
+				F538F2CD020371E201A80001 /* Cuppa_Control.h */,
+				F538F2CB020371B601A80001 /* Cuppa_Control.m */,
+				F51AB8AD0204B17101A80001 /* Cuppa_Bevy.h */,
+				F51AB8B40204C19D01A80001 /* Cuppa_Bevy.m */,
+				F51AB8AF0204B27301A80001 /* Cuppa_Shape.h */,
+				F51AB8B10204B4E101A80001 /* Cuppa_Shape.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FECF5BAD08DC6F6A00010F73 /* Carbon.framework */,
+				FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE256E0D098754DD003C11F1 /* Cuppa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* cuppa */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				FE256E0C098754DD003C11F1 /* Info-cuppa.plist */,
+				73BD7D8F128A8350003013D4 /* InfoPlist.strings */,
+			);
+			name = cuppa;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				733D2380128B1707006033B0 /* help */,
+				73251EFA12893F42008CD18E /* Localizable.strings */,
+				FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */,
+				FE39F3CA08DA119A0085DC68 /* MainMenu.nib */,
+				F51FA18B02A0A7F401000002 /* Art */,
+				F5F82AB002B1B0A201000008 /* Sound */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEA6ABB01055B23D00C436D8 /* Sparkle.framework */,
+				FEC8E72E0DC3780400031109 /* Growl.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F51FA18B02A0A7F401000002 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				FE6FA5751051AF2700FE4752 /* Badge */,
+				F5F82AA702B19DC301000008 /* Cups */,
+				F52B259B02974DDA01000002 /* icon.icns */,
+				F5F82AB502B1B6D201000008 /* teacup16.png */,
+			);
+			name = Art;
+			sourceTree = "<group>";
+		};
+		F5F82AA702B19DC301000008 /* Cups */ = {
+			isa = PBXGroup;
+			children = (
+				FE1F0A6308E7DF5B00F26390 /* tea_done.png */,
+				F5F82AA902B19DC301000008 /* tea_end.png */,
+				F5F82AAA02B19DC301000008 /* tea_start.png */,
+			);
+			name = Cups;
+			sourceTree = "<group>";
+		};
+		F5F82AB002B1B0A201000008 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C9162092EC6E3003821C5 /* beep.aiff */,
+				F5F82AB102B1B0A201000008 /* pour.aiff */,
+				F5F82AB202B1B0A201000008 /* spoon.aiff */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		FE6FA5751051AF2700FE4752 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				FE109E6F10545C320020BFE4 /* Badge4.png */,
+				FE6FA5771051AF2700FE4752 /* Badge3.png */,
+				FE6FA5791051AF2700FE4752 /* Badge5.png */,
+			);
+			name = Badge;
+			path = art/badge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FE256DDE098754DD003C11F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE256DDF098754DD003C11F1 /* Cuppa_Render.h in Headers */,
+				FE256DE0098754DD003C11F1 /* Cuppa_Control.h in Headers */,
+				FE256DE1098754DD003C11F1 /* Cuppa_Bevy.h in Headers */,
+				FE256DE2098754DD003C11F1 /* Cuppa_Shape.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FE256DDD098754DD003C11F1 /* cuppa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE256E08098754DD003C11F1 /* Build configuration list for PBXNativeTarget "cuppa" */;
+			buildPhases = (
+				FE256DDE098754DD003C11F1 /* Headers */,
+				FE256DE3098754DD003C11F1 /* Resources */,
+				FE256DFC098754DD003C11F1 /* Sources */,
+				FE256E02098754DD003C11F1 /* Frameworks */,
+				FE4295AA0DC37BA800C2F743 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cuppa;
+			productInstallPath = "$(HOME)/Applications";
+			productName = cuppa;
+			productReference = FE256E0D098754DD003C11F1 /* Cuppa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = FE1AAAD608B95B9C00DAFB86 /* Build configuration list for PBXProject "cuppa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Czech,
+				Italian,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* cuppa */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE256DDD098754DD003C11F1 /* cuppa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE256DE3098754DD003C11F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE256DE5098754DD003C11F1 /* icon.icns in Resources */,
+				FE256DE7098754DD003C11F1 /* tea_end.png in Resources */,
+				FE256DE8098754DD003C11F1 /* tea_start.png in Resources */,
+				FE256DE9098754DD003C11F1 /* pour.aiff in Resources */,
+				FE256DEA098754DD003C11F1 /* spoon.aiff in Resources */,
+				FE256DEB098754DD003C11F1 /* teacup16.png in Resources */,
+				FE256DF9098754DD003C11F1 /* MainMenu.nib in Resources */,
+				FE256DFA098754DD003C11F1 /* tea_done.png in Resources */,
+				FE256DFB098754DD003C11F1 /* beep.aiff in Resources */,
+				FE6FA57B1051AF2700FE4752 /* Badge3.png in Resources */,
+				FE6FA57D1051AF2700FE4752 /* Badge5.png in Resources */,
+				FE109E7010545C320020BFE4 /* Badge4.png in Resources */,
+				FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */,
+				73251EFC12893F42008CD18E /* Localizable.strings in Resources */,
+				73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */,
+				733D2385128B1707006033B0 /* help in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE256DFC098754DD003C11F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE256DFD098754DD003C11F1 /* main.m in Sources */,
+				FE256DFE098754DD003C11F1 /* Cuppa_Render.m in Sources */,
+				FE256DFF098754DD003C11F1 /* Cuppa_Control.m in Sources */,
+				FE256E00098754DD003C11F1 /* Cuppa_Shape.m in Sources */,
+				FE256E01098754DD003C11F1 /* Cuppa_Bevy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		73251EFA12893F42008CD18E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73251EFB12893F42008CD18E /* English */,
+				73251EFF12893F4F008CD18E /* German */,
+				FE923A26181DE8680088AB1D /* Czech */,
+				FE7D455B1831C185007265FE /* French */,
+				FE7D455C1831C18E007265FE /* Italian */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		733D2380128B1707006033B0 /* help */ = {
+			isa = PBXVariantGroup;
+			children = (
+				733D2381128B1707006033B0 /* English */,
+				733D2388128B1733006033B0 /* German */,
+				FEA6A353181DE8F500603E33 /* Czech */,
+				FE7D45571831C15A007265FE /* French */,
+				FE7D455A1831C175007265FE /* Italian */,
+			);
+			name = help;
+			sourceTree = "<group>";
+		};
+		73BD7D8F128A8350003013D4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73BD7D90128A8350003013D4 /* English */,
+				73BD7D92128A8364003013D4 /* German */,
+				FE70E659181DEAFA006A35CE /* Czech */,
+				FE1E997C1831C25800BC1535 /* French */,
+				FE1E997D1831C26400BC1535 /* Italian */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE39F3CA08DA119A0085DC68 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE39F3CB08DA119A0085DC68 /* English */,
+				736A923612830C590098240C /* German */,
+				FE923A25181DE39E0088AB1D /* Czech */,
+				FE7D455D1831C198007265FE /* French */,
+				FE7D455E1831C19F007265FE /* Italian */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE1AAAD708B95B9C00DAFB86 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_VERSION = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				SDKROOT = macosx;
+			};
+			name = Development;
+		};
+		FE1AAAD808B95B9C00DAFB86 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_VERSION = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				SDKROOT = macosx;
+			};
+			name = Deployment;
+		};
+		FE1AAAD908B95B9C00DAFB86 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_VERSION = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				SDKROOT = macosx;
+			};
+			name = Default;
+		};
+		FE256E09098754DD003C11F1 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(SRCROOT)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-cuppa.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Cuppa;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		FE256E0A098754DD003C11F1 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(SRCROOT)",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-cuppa.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Cuppa;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		FE256E0B098754DD003C11F1 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(SRCROOT)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-cuppa.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Cuppa;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE1AAAD608B95B9C00DAFB86 /* Build configuration list for PBXProject "cuppa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE1AAAD708B95B9C00DAFB86 /* Development */,
+				FE1AAAD808B95B9C00DAFB86 /* Deployment */,
+				FE1AAAD908B95B9C00DAFB86 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		FE256E08098754DD003C11F1 /* Build configuration list for PBXNativeTarget "cuppa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE256E09098754DD003C11F1 /* Development */,
+				FE256E0A098754DD003C11F1 /* Deployment */,
+				FE256E0B098754DD003C11F1 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="AppleTitle" content="Cuppa Help">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+    body,td,th {
+        font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    }
+</style>
+</head>
+<body>
+
+<table><tr><td><img src="teacup48.gif" width=48 height=48></td><td>&nbsp;</td><td><h1>Cuppa</h1></td></tr></table>
+
+<p><i>Cuppa is a small application for Mac OS X to time your cup of tea as it
+steeps. Tired of leaving your tea too long, to become bitter and cold, or
+drinking it too soon and not appreciating its full potential? Then this
+utility is for you!</i></p>
+
+<h2>Features</h2>
+
+<ul>
+<li>All functionality is available from the Dock menu.
+<li>Dock icon can display a small countdown timer as the beverage steeps.
+<li>Customize the beverage list and steeping times.
+<li>Quick Timer feature turns Cuppa into a versatile freeform timer.
+<li>Customize the brew complete notification, including support for Growl.
+<li>Also great for timing French press coffee and 2-minute noodles!
+<li>Full Cocoa source code available.
+<li>Runs on OS X 10.4-10.9.
+</ul>
+
+<h2>Timing Your Brew</h2>
+
+<p>Use it from the Dock: just right-click or control-click on Cuppa's icon
+and select the beverage you are brewing. Or select a beverage from the
+<i>Beverages</i> menu. Cuppa will begin timing the brew, and you'll see a teabag
+appear in the cup and gradually darken as the tea steeps. When the tea is done
+Cuppa will attempt to get your attention by various configurable means. You can
+also enable a countdown timer that's displayed in a small badge on the Dock icon.</p>
+
+<h2>Configuring Cuppa</h2>
+
+<p>Tea is a personal thing, but Cuppa can be customized to your heart's content.
+To do so, select <i>Preferences...</i> from the menu.</p>
+
+<p><b>Beverage List:</b> The <i>Beverage List</i> tab allows you to change any
+existing tea by double-clicking on its name or steep time and simply typing in a
+new value. You can also remove beverages entirely, or add new ones, by clicking
+the buttons underneath the beverage listing.</p>
+
+<p>Clicking the <i>Options</i> tab will open a page of additional configuration
+settings:</p>
+
+<ul>
+<li><b>Bounce Dock icon:</b> When brewing is complete, bounce the Dock icon
+repeatedly until you click it. This is annoying enough to get your attention.</li>
+<li><b>Play sound:</b> If you prefer an audio notification, Cuppa will make a
+clinking-spoon sound when the timer hits zero. You'll also hear quiet beeps
+for the last few seconds of steep time.</li>
+<li><b>Show "Brewing Complete" alert box:</b> Show an alert box on the screen
+when your beverage is done. This alert box will also allow you to quit Cuppa
+with a single click (or keystroke) when your tea is done.</li>
+<li><b>Notify via OS X Notification Center:</b> On OS X 10.8 or later, use the
+built-in Notification Center to show "Brewing Complete" messages. If you find
+you're missing notifications because they disappear too quickly, try setting
+the Cuppa alert style to "Alerts" in Notifications System Preferences.</li>
+<li><b>Notify via Growl:</b> Growl is a notification system for OS X with a
+pretty slick, highly configurable interface. You decide how obtrusive the
+notifications should be, and their appearance. This preference option will only
+be available if you have Growl installed on your system. For more information,
+or to download Growl, visit the Growl project on the web at
+<a href="http://www.growl.info">http://www.growl.info</a>.</li>
+<li><b>Show countdown timer on Dock icon:</b> When this option is enabled, Cuppa
+will show a tiny countdown timer as part of its Dock icon. Try not to strain 
+your eyes looking at it!</li>
+<li><b>Include steep times in menus:</b> Check this box if you want Cuppa to
+include times in the beverage menu items, so that before the timer even starts,
+you know how long you'll have to wait.</li>
+<li><b>Check for program updates automatically:</b> If this is enabled, Cuppa
+will periodically contact a web service and inform you when a new version of
+the program is available to download.</li>
+</ul>
+
+<h2>Cuppa Quick Timer</h2>
+
+<p>What if you need to brew a cup of tea in a hurry, and don't have time to
+add a new beverage in Preferences? No worries; Cuppa's Quick Timer feature is a
+simple way to start a timer in a jiffy. Just select <i>Quick Timer...</i> from
+the menu and type either a number of seconds (e.g. "30"), minutes and seconds
+(e.g. "2:45"), or any time up to the maximum 10 hours. Cuppa does the rest, and
+notifies you when time is up.</p>
+
+<h2>Miscellaneous</h2>
+
+<p>To cancel the timer while it is running, select <i>Cancel</i> from the menu.</p>
+
+<h2>Customizing Sounds</h2>
+
+<p>You may find it amusing if your computer announces, "Tea -- Earl Grey -- Hot"
+when your morning tea is ready to drink. Although there is no mechanism within
+Cuppa's Preferences for changing the alert sounds, it's actually quite easy to
+accomplish this. You'll need a couple of AIFF format sound files to copy into
+the Cuppa application bundle. These will replace the default sounds for
+beginning and completing brewing. Name them <tt>pour.aiff</tt> and
+<tt>spoon.aiff</tt>, respectively.</p>
+
+<p>Then, replace the default sound files as follows:</p>
+
+<ol>
+<li>Quit Cuppa if it is running.</li>
+<li>Find the Cuppa application in your Applications folder and right-click
+(control-click) it.</li>
+<li>Click <i>Show Package Contents</i>.</li>
+<li>Navigate to Contents and then to Resources.</li>
+<li>Make backup copies of the <tt>pour.aiff</tt> and <tt>spoon.aiff</tt> sound
+files, just in case something horrible happens.</li>
+<li>Copy your <tt>pour.aiff</tt> and <tt>spoon.aiff</tt> sound files into the
+Resources folder.</li>
+<li>That's it! Now you can run Cuppa and test your modifications.</li>
+</ol>
+
+<h2>Credits and Copyright</h2>
+
+<p>Cuppa is an free, open-source application.</p>
+
+<P>Copyright &copy; 2005-2013 Nathan Cosgray, with contributions from Mathias Meyer and Eric McMurry.
+German translation by Benedikt Hopmann. Czech translation by Tom&aacute;&#353;. Italian translation by Giuseppe Morelli. French translation by Christian Parent.</p>
+
+<p>This application was inspired by The Tea Cooker for Linux and is based on work
+done by Wunderbear Software.</p>
+
+<p>Visit the Cuppa home page at <a href="http://www.nathanatos.com/software/">http://www.nathanatos.com/software/</a>.</p>
+
+<p>Also available: iCuppa for iPhone and iPod touch... you'll find it in the iTunes App Store! ...and aCuppa for Android in the Google Play Store!</p>
+
+</body>
+</html>
