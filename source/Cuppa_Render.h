@@ -86,9 +86,6 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // Returns the current cup shape.
 - (int) cupShape;
 
-// Create CoreGraphics image from PNG resource (shamelessly lifted from Apple's DockBrowser example).
-static CGImageRef MyCreateCGImageFromPNG(CFStringRef fileName);
-
 @end // @interface Cuppa_Render
 
 

@@ -132,6 +132,9 @@
 //
 //  Modifications by Nathan Cosgray on 2013/11/15 (v. 1.7.8):
 //  * added Italian and French localization
+//
+//  Modifications by Nathan Cosgray on 2016/02/20 (v. 1.7.8a):
+//  * use a secure URL for Cuppa update checks
 
 #import <Cocoa/Cocoa.h>
 

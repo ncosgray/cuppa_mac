@@ -42,12 +42,6 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #import "Cuppa_Bevy.h"
 
 
-// Internal C Prototypes
-
-// Dummy function to release image data after CGImageCreate().
-static void releaseData(void *info, const void *data, size_t size);
-
-
 // Code!
 
 @implementation Cuppa_Render
@@ -306,15 +300,6 @@ static CGImageRef MyCreateCGImageFromPNG(CFStringRef fileName)
 	return mCupShape;
 	
 } // end -cupShape
-
-
-// *************************************************************************************************
-
-
-// Dummy function to release image data after CGImageCreate().
-static void releaseData(void *info, const void *data, size_t size)
-{
-} // end releaseData()
 
 
 // *************************************************************************************************

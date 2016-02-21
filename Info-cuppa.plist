@@ -9,11 +9,11 @@
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUFeedURL</key>
-	<string>http://www.nathanatos.com/software/cuppa.xml</string>
+	<string>https://www.nathanatos.com/software/cuppa.xml</string>
 	<key>SUEnableSystemProfiling</key>
 	<string>YES</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.7.8</string>
+	<string>1.7.8a</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>help</string>
 	<key>CFBundleHelpBookName</key>
@@ -33,7 +33,7 @@
 	<key>CFBundleSignature</key>
 	<string>Cupa</string>
 	<key>CFBundleVersion</key>
-	<string>1.7.8</string>
+	<string>1.7.8a</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
@@ -41,6 +41,6 @@
 	<key>NSUserNotificationAlertStyle</key>
 	<string>alert</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright (c) 2005-2013 Nathan Cosgray.</string>
+	<string>Copyright (c) 2005-2016 Nathan Cosgray.</string>
 </dict>
 </plist>
