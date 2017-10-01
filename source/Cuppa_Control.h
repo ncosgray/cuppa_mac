@@ -159,6 +159,9 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     // Handle toggle of Growl notification.
 - (void) toggleNotifyGrowl : (id) sender;
 
+    // Handle Growl network entitlement check.
+- (BOOL) hasNetworkClientEntitlement;
+    
    // Handle click on the add beverage button.
 - (void) addBevyButton : (id) sender;
 

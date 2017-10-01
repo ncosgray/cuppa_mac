@@ -439,8 +439,8 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	// reset the timer variable
 	mSecondsRemain = 0;
     
-    // reset the dock icon
-    [mRender restore];
+    // Remove badge
+    [[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
 
 } // end -cancelTimer:
 
@@ -565,11 +565,14 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	startSound = [NSSound soundNamed:@"pour"];
 	[startSound play];
     
-    // tell the OS we are doing something important
+    // tell the OS we are doing something important... disable App Nap
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
+                         beginActivityWithOptions:(NSActivityUserInitiated
+                                                   | NSActivityLatencyCritical
+                                                   | NSActivityIdleSystemSleepDisabled
+                                                   | NSActivitySuddenTerminationDisabled)
                          reason:@"Cuppa timer"];
     }
     
@@ -795,7 +798,7 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
 	#endif
 	*/
 	
-	return [mBevys count];
+	return (int) [mBevys count];
 
 } // end -numberOfRowsInTableView:
 
@@ -1137,7 +1140,7 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
 	{
 		// clear out old menu items first, since we're rebuilding the menu
 		// we don't count the separators, prefs and other items
-		i = [mDockMenu numberOfItems] - 5;
+		i = (int) [mDockMenu numberOfItems] - 5;
 		while (i-- > 0)
 		{
 			// we've been using NSInvocations to get around the sender-is-NSApplication bug and
@@ -1260,7 +1263,7 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
     {
     
         // clear out the old menu
-        i = [mAppMenu numberOfItems] - 3;
+        i = (int) [mAppMenu numberOfItems] - 3;
         while (i-- > 0)
         {
             [mAppMenu removeItemAtIndex: 0];
@@ -1355,10 +1358,10 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
 // *************************************************************************************************
 
 
-// Handle a click on the link to iTunes App Store
+// Handle a click on the link to mobile app info
 - (IBAction) loadWebsite : (id) sender {
 	NSURL *url=[NSURL
-				URLWithString:@"itms://itunes.apple.com/us/app/icuppa/id342122918"];
+                URLWithString:@"https://www.nathanatos.com"];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }
 
@@ -1424,9 +1427,8 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
 
 	// Restore our application's dock tile back to its standard state, otherwise the wind will
 	// change and it will be stuck as it is.
-	NSAssert(mRender, @"Render object is nil.\n");
-	[mRender restore];
-	
+	[[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
+    
 	// Ensure the user's settings are saved for the next run.
 	[[NSUserDefaults standardUserDefaults] synchronize];
 
@@ -1559,6 +1561,16 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
 } // end -applicationNameForGrowl
 
 
+// *************************************************************************************************
+    
+// Handle Growl network entitlement check.
+- (BOOL) hasNetworkClientEntitlement;
+{
+        return YES;
+        
+} // end -hasNetworkClientEntitlement
+    
+    
 // *************************************************************************************************
 
 - (BOOL)application:(NSApplication *)sender 
