@@ -10,7 +10,6 @@
 		73251EFC12893F42008CD18E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73251EFA12893F42008CD18E /* Localizable.strings */; };
 		733D2385128B1707006033B0 /* help in Resources */ = {isa = PBXBuildFile; fileRef = 733D2380128B1707006033B0 /* help */; };
 		73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73BD7D8F128A8350003013D4 /* InfoPlist.strings */; };
-		FE109E7010545C320020BFE4 /* Badge4.png in Resources */ = {isa = PBXBuildFile; fileRef = FE109E6F10545C320020BFE4 /* Badge4.png */; };
 		FE256DDF098754DD003C11F1 /* Cuppa_Render.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2C5020362E401A80001 /* Cuppa_Render.h */; };
 		FE256DE0098754DD003C11F1 /* Cuppa_Control.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2CD020371E201A80001 /* Cuppa_Control.h */; };
 		FE256DE1098754DD003C11F1 /* Cuppa_Bevy.h in Headers */ = {isa = PBXBuildFile; fileRef = F51AB8AD0204B17101A80001 /* Cuppa_Bevy.h */; };
@@ -31,11 +30,9 @@
 		FE256E01098754DD003C11F1 /* Cuppa_Bevy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AB8B40204C19D01A80001 /* Cuppa_Bevy.m */; };
 		FE256E03098754DD003C11F1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECF5BAD08DC6F6A00010F73 /* Carbon.framework */; };
 		FE256E04098754DD003C11F1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */; };
-		FE4295AC0DC37BCC00C2F743 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; };
-		FE6FA57B1051AF2700FE4752 /* Badge3.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6FA5771051AF2700FE4752 /* Badge3.png */; };
-		FE6FA57D1051AF2700FE4752 /* Badge5.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6FA5791051AF2700FE4752 /* Badge5.png */; };
+		FE4295AC0DC37BCC00C2F743 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; };
-		FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; };
+		FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */; };
 		FEC8E72F0DC3780400031109 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; };
 /* End PBXBuildFile section */
@@ -79,16 +76,14 @@
 		F5F82AB102B1B0A201000008 /* pour.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = pour.aiff; path = sound/pour.aiff; sourceTree = SOURCE_ROOT; };
 		F5F82AB202B1B0A201000008 /* spoon.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = spoon.aiff; path = sound/spoon.aiff; sourceTree = SOURCE_ROOT; };
 		F5F82AB502B1B6D201000008 /* teacup16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teacup16.png; path = art/teacup16.png; sourceTree = SOURCE_ROOT; };
-		FE109E6F10545C320020BFE4 /* Badge4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Badge4.png; sourceTree = "<group>"; };
 		FE1E997C1831C25800BC1535 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE1E997D1831C26400BC1535 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE1F0A6308E7DF5B00F26390 /* tea_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tea_done.png; path = art/cups/tea_done.png; sourceTree = "<group>"; };
 		FE256E0C098754DD003C11F1 /* Info-cuppa.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-cuppa.plist"; sourceTree = "<group>"; };
 		FE256E0D098754DD003C11F1 /* Cuppa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuppa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE39F3CB08DA119A0085DC68 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		FE4DDAA91F81968B007C1FEB /* Cuppa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cuppa.entitlements; sourceTree = "<group>"; };
 		FE5C9162092EC6E3003821C5 /* beep.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = beep.aiff; path = sound/beep.aiff; sourceTree = "<group>"; };
-		FE6FA5771051AF2700FE4752 /* Badge3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Badge3.png; sourceTree = "<group>"; };
-		FE6FA5791051AF2700FE4752 /* Badge5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Badge5.png; sourceTree = "<group>"; };
 		FE70E659181DEAFA006A35CE /* Czech */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Czech; path = Czech.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE7D45571831C15A007265FE /* French */ = {isa = PBXFileReference; lastKnownFileType = folder; name = French; path = French.lproj/help; sourceTree = "<group>"; };
 		FE7D455A1831C175007265FE /* Italian */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Italian; path = Italian.lproj/help; sourceTree = "<group>"; };
@@ -165,6 +160,7 @@
 		29B97314FDCFA39411CA2CEA /* cuppa */ = {
 			isa = PBXGroup;
 			children = (
+				FE4DDAA91F81968B007C1FEB /* Cuppa.entitlements */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -211,7 +207,6 @@
 		F51FA18B02A0A7F401000002 /* Art */ = {
 			isa = PBXGroup;
 			children = (
-				FE6FA5751051AF2700FE4752 /* Badge */,
 				F5F82AA702B19DC301000008 /* Cups */,
 				F52B259B02974DDA01000002 /* icon.icns */,
 				F5F82AB502B1B6D201000008 /* teacup16.png */,
@@ -237,17 +232,6 @@
 				F5F82AB202B1B0A201000008 /* spoon.aiff */,
 			);
 			name = Sound;
-			sourceTree = "<group>";
-		};
-		FE6FA5751051AF2700FE4752 /* Badge */ = {
-			isa = PBXGroup;
-			children = (
-				FE109E6F10545C320020BFE4 /* Badge4.png */,
-				FE6FA5771051AF2700FE4752 /* Badge3.png */,
-				FE6FA5791051AF2700FE4752 /* Badge5.png */,
-			);
-			name = Badge;
-			path = art/badge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +277,18 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0900;
+				TargetAttributes = {
+					FE256DDD098754DD003C11F1 = {
+						DevelopmentTeam = BTLTN4T7QF;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = FE1AAAD608B95B9C00DAFB86 /* Build configuration list for PBXProject "cuppa" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -330,9 +325,6 @@
 				FE256DF9098754DD003C11F1 /* MainMenu.nib in Resources */,
 				FE256DFA098754DD003C11F1 /* tea_done.png in Resources */,
 				FE256DFB098754DD003C11F1 /* beep.aiff in Resources */,
-				FE6FA57B1051AF2700FE4752 /* Badge3.png in Resources */,
-				FE6FA57D1051AF2700FE4752 /* Badge5.png in Resources */,
-				FE109E7010545C320020BFE4 /* Badge4.png in Resources */,
 				FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */,
 				73251EFC12893F42008CD18E /* Localizable.strings in Resources */,
 				73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */,
@@ -412,13 +404,36 @@
 		FE1AAAD708B95B9C00DAFB86 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Development;
@@ -426,9 +441,32 @@
 		FE1AAAD808B95B9C00DAFB86 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				ONLY_ACTIVE_ARCH = NO;
@@ -439,9 +477,32 @@
 		FE1AAAD908B95B9C00DAFB86 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				ONLY_ACTIVE_ARCH = NO;
@@ -452,8 +513,12 @@
 		FE256E09098754DD003C11F1 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Cuppa.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = BTLTN4T7QF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 					"$(SRCROOT)",
@@ -469,7 +534,9 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wunderbear.Cuppa;
 				PRODUCT_NAME = Cuppa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -484,8 +551,12 @@
 		FE256E0A098754DD003C11F1 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Cuppa.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = BTLTN4T7QF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 					"$(SRCROOT)",
@@ -499,7 +570,9 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wunderbear.Cuppa;
 				PRODUCT_NAME = Cuppa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -514,7 +587,11 @@
 		FE256E0B098754DD003C11F1 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Cuppa.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BTLTN4T7QF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 					"$(SRCROOT)",
@@ -526,7 +603,9 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wunderbear.Cuppa;
 				PRODUCT_NAME = Cuppa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
