@@ -100,29 +100,13 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 // Render the interface in its current state. No state changes will be visible until this call.
-// Removed the tea darkening compositing on the dock icon for Snow Leopard compatibility.
-// Some of this routine comes from Apple's DockBrowser example and other sources online.
 - (void) render
 {
 	int hours;
-    int digits;
 	char countString[8];
-    CGImageRef badgeImage = NULL;
-    int previousDigits = 0;
-    CGContextRef cgContext;
-	
-	// Load icon images.
-    CGImageRef iconImage = MyCreateCGImageFromPNG(CFSTR("tea_start.png"));
-    CGImageRef endImage = MyCreateCGImageFromPNG(CFSTR("tea_end.png"));
 	
 	if (mBrewRemain > 0)
 	{		
-		// Limit the maximum number of digits displayed on dock tile.
-		if(mBrewRemain > CUPPA_BEVY_BREW_TIME_MAX)
-		{
-			mBrewRemain = CUPPA_BEVY_BREW_TIME_MAX;
-		}
-				
 		// Convert seconds into a time string of format 'hh:mm:ss' or 'mm:ss'.
 		hours = mBrewRemain / 3600;
 		if(hours > 0)
@@ -139,106 +123,12 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 					mBrewRemain % 60);
 		}
 		
-		// NB.
-		// On 10.5 and later, we can use 'setBadgeLabel' method to set a badge label very easily:
-		//   [[[NSApplication sharedApplication] dockTile] setBadgeLabel:
-		//    [NSString stringWithFormat:@"%s", countString]];
-		// For now I would like to support 10.4 and later, so let's do it the hard way and
-		// draw the badge manually.
-
-		// Decide what size badge to use according to number of digits left in time.
-        digits = strlen(countString);		
-        if (badgeImage == NULL || digits != previousDigits) {
-            
-            if (digits != previousDigits && badgeImage != NULL) {
-                CGImageRelease(badgeImage);
-            }
-            
-            switch (digits) {
-				case 1:
-				case 2:
-                case 3:
-				case 4:
-                    badgeImage = MyCreateCGImageFromPNG(CFSTR("Badge3.png"));
-                    break;
-				case 5:
-                    badgeImage = MyCreateCGImageFromPNG(CFSTR("Badge4.png"));
-                    break;
-                default:
-                    badgeImage = MyCreateCGImageFromPNG(CFSTR("Badge5.png"));
-                    break;
-            }
-			
-            previousDigits = digits;
-        }
-
-        // Modifications to the dock icon while brewing:
-		// 1) Add a tea bag to the cup
-		// 2) Gradually darken the color of the tea
-		// 3) Show a countdown timer badge
-		cgContext = BeginCGContextForApplicationDockTile();
-		if (cgContext) {
-		
-			const CGRect iconRect = CGRectMake(0, 0, 128, 128);
-			static const CGPoint lowerRightForBadge = { 128.0, 97.0 };
-			CGRect badgeRect;
-			CGPoint textLocation, badgeLocation;
-			NSSize numSize;
-			
-			// Use tea brewing icon.
-			CGContextClearRect(cgContext, iconRect);
-			CGContextDrawImage(cgContext, iconRect, iconImage);
-			
-			// Change tea color according to brew state.
-			if (mBrewState < 1.0 && mBrewState > 0.0)
-			{
-				CGContextBeginTransparencyLayer(cgContext, NULL);
-				CGContextSetBlendMode(cgContext, kCGBlendModeDarken);
-				CGContextSetAlpha(cgContext, mBrewState);
-				CGContextDrawImage(cgContext, iconRect, endImage);
-				CGContextEndTransparencyLayer(cgContext);
-			}
-			
-			// Add countdown timer to dock icon.
-			if (mBrewRemain >= 0 && badgeImage) {
-			
-				// Draw the badge.
-				badgeLocation = lowerRightForBadge;
-				badgeLocation.x -= CGImageGetWidth(badgeImage);
-				badgeRect = CGRectMake(badgeLocation.x, badgeLocation.y, CGImageGetWidth(badgeImage), CGImageGetHeight(badgeImage));
-				CGContextDrawImage(cgContext, badgeRect, badgeImage);
-				
-				// Measure the width of the count string so we can center it inside the badge.
-				NSString *countdown = [NSString stringWithFormat:@"%s", countString];
-				NSDictionary *attributes = [[NSDictionary alloc]
-								initWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica-Bold" size:29.0],
-								NSFontAttributeName, [NSColor whiteColor],
-								NSForegroundColorAttributeName, NULL];
-				numSize = [countdown sizeWithAttributes:attributes];
-				textLocation.y = badgeLocation.y + CGImageGetHeight(badgeImage) / 2 - 10;
-				textLocation.x = badgeLocation.x + CGImageGetWidth(badgeImage) / 2 - numSize.width / 2;
-				[attributes release];
-				
-				// Draw the countdown time in the badge.
-				// Use Core Graphics because that's the way we drew the badge. I never claimed to be a great programmer...
-				CGContextSetTextDrawingMode(cgContext, kCGTextFill);
-				CGContextSetRGBFillColor(cgContext, 1, 1, 1, 1);
-				CGContextSelectFont(cgContext, "Helvetica-Bold", 29.0, kCGEncodingMacRoman);
-				CGContextShowTextAtPoint(cgContext, textLocation.x, textLocation.y, countString, strlen(countString));
-				
-			}
-			
-			// Make the updates to the icon visible.
-			CGContextFlush(cgContext);
-			EndCGContextForApplicationDockTile(cgContext);
-		}
-	}
-	else RestoreApplicationDockTileImage();
-    
-	// Clean up.
-	if (badgeImage != NULL) CGImageRelease(badgeImage);
-    CGImageRelease(iconImage);
-    CGImageRelease(endImage);
+		// Add a badge to the dock icon.
+        [[[NSApplication sharedApplication] dockTile] setBadgeLabel:
+             [NSString stringWithFormat:@"%s", countString]];
+    }
+    else
+        [[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
 	
     return;
 		
@@ -248,44 +138,11 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // *************************************************************************************************
 
 
-// Create CoreGraphics image from PNG resource (shamelessly lifted from Apple's DockBrowser example).
-static CGImageRef MyCreateCGImageFromPNG(CFStringRef fileName)
-{
-    CGImageRef image;
-    CFBundleRef bundle;
-    CGDataProviderRef myProvider;
-    CFURLRef url;
-    
-    assert(fileName != NULL);
-    
-    bundle = CFBundleGetMainBundle();
-    assert(bundle != NULL);
-    
-    url = CFBundleCopyResourceURL(bundle, fileName, NULL, NULL);
-    assert(url != NULL);
-    
-    myProvider = CGDataProviderCreateWithURL(url);
-    assert(myProvider != NULL);
-    
-    image = CGImageCreateWithPNGDataProvider(myProvider, NULL, false, kCGRenderingIntentDefault);
-    
-    CGDataProviderRelease(myProvider);
-    CFRelease(url);
-    
-    return image;
-} // end MyCreateCGImageFromPNG
-
-
-// *************************************************************************************************
-
-
 // Restore the standard Cuppa dock tile (must call this on application exit).
 - (void) restore
 {
-	// We can use this Carbon method to restore our application dock tile to its default.
-	// The docs are actually a little unclear on whether this is required (eg, see the notes
-	// on SetApplicationDockTileImage()) but experimentations says we have to...
-	RestoreApplicationDockTileImage();
+	// Remove badge
+	[[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
 
 } // end -restore
 
