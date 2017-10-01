@@ -6,14 +6,8 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>Cuppa</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
-	<key>SUFeedURL</key>
-	<string>https://www.nathanatos.com/software/cuppa.xml</string>
-	<key>SUEnableSystemProfiling</key>
-	<string>YES</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.7.9</string>
+	<string>1.8</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>help</string>
 	<key>CFBundleHelpBookName</key>
@@ -21,7 +15,7 @@
 	<key>CFBundleIconFile</key>
 	<string>icon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.wunderbear.Cuppa</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -33,14 +27,20 @@
 	<key>CFBundleSignature</key>
 	<string>Cupa</string>
 	<key>CFBundleVersion</key>
-	<string>1.7.9</string>
+	<string>1.8</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright (c) 2005-2017 Nathan Cosgray.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSUserNotificationAlertStyle</key>
 	<string>alert</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright (c) 2005-2016 Nathan Cosgray.</string>
+	<key>SUEnableSystemProfiling</key>
+	<string>YES</string>
+	<key>SUFeedURL</key>
+	<string>https://www.nathanatos.com/software/cuppa.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
 </dict>
 </plist>
