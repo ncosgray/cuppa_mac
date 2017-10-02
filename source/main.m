@@ -138,6 +138,18 @@
 //  * built with Xcode 7
 //  * minor cleanup of unused code
 //  * consistent localization file encoding (UTF-8)
+//
+//  Modifications by Nathan Cosgray on 2017/10/01 (v. 1.8):
+//  ! NOTE: this release requires OS 10.6 (Snow Leopard) or newer
+//  ! NOTE: preparing to submit Cuppa to the Mac App Store
+//  * Cuppa is now code-signed with my Apple Developer ID
+//  * high-res icons for Retina displays
+//  * enabled App Sandboxing for improved security
+//  * now using native dock badge for countdown timer
+//    - sadly, this means the dock icon no longer animates
+//  * updated links to Cuppa mobile apps
+//  * built with Xcode 9
+//  * upgraded Growl framework to 2.0
 
 #import <Cocoa/Cocoa.h>
 
