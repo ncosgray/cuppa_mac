@@ -412,14 +412,17 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     mCurrentBevy = bevy;
 
-    // tell the OS we are doing something important
+    // tell the OS we are doing something important... disable App Nap
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
+                         beginActivityWithOptions:(NSActivityUserInitiated
+                                                   | NSActivityLatencyCritical
+                                                   | NSActivityIdleSystemSleepDisabled
+                                                   | NSActivitySuddenTerminationDisabled)
                          reason:@"Cuppa timer"];
     }
-    
+
 	// update the onscreen image
 	[self updateTick:self];
 
@@ -1427,7 +1430,9 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
 
 	// Restore our application's dock tile back to its standard state, otherwise the wind will
 	// change and it will be stuck as it is.
-	[[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
+    NSAssert(mRender, @"Render object is nil.\n");
+    [mRender restore];
+    [[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
     
 	// Ensure the user's settings are saved for the next run.
 	[[NSUserDefaults standardUserDefaults] synchronize];
