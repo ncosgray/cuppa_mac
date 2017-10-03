@@ -416,10 +416,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityUserInitiated
-                                                   | NSActivityLatencyCritical
-                                                   | NSActivityIdleSystemSleepDisabled
-                                                   | NSActivitySuddenTerminationDisabled)
+                         beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
                          reason:@"Cuppa timer"];
     }
 
@@ -572,10 +569,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityUserInitiated
-                                                   | NSActivityLatencyCritical
-                                                   | NSActivityIdleSystemSleepDisabled
-                                                   | NSActivitySuddenTerminationDisabled)
+                         beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
                          reason:@"Cuppa timer"];
     }
     
