@@ -12,7 +12,7 @@ eventually be flexible enough to allow people to add their own artwork dynamical
 
 ----------------------------------------------------------------------------------------------------
 
-Copyright (c) 2005-2009 Nathan Cosgray. All rights reserved.
+Copyright (c) 2005-2017 Nathan Cosgray. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted
 provided that the following conditions are met:
