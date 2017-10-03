@@ -442,8 +442,8 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	// reset the timer variable
 	mSecondsRemain = 0;
     
-    // Remove badge
-    [[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
+    // reset the dock icon
+    [mRender restore];
 
 } // end -cancelTimer:
 
@@ -1432,7 +1432,6 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
 	// change and it will be stuck as it is.
     NSAssert(mRender, @"Render object is nil.\n");
     [mRender restore];
-    [[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
     
 	// Ensure the user's settings are saved for the next run.
 	[[NSUserDefaults standardUserDefaults] synchronize];
