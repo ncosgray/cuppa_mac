@@ -530,6 +530,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-cuppa.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -565,6 +566,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-cuppa.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -597,6 +599,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-cuppa.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
