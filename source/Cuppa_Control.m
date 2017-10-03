@@ -289,7 +289,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         }
         
 		// is the bevarage ready?
-		if (mSecondsRemain == 0)
+		if (mSecondsRemain <= 0)
 		{
             #if !defined(NDEBUG)
 			printf("Brew complete!\n");
