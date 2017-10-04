@@ -14,13 +14,10 @@
 		FE256DE0098754DD003C11F1 /* Cuppa_Control.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2CD020371E201A80001 /* Cuppa_Control.h */; };
 		FE256DE1098754DD003C11F1 /* Cuppa_Bevy.h in Headers */ = {isa = PBXBuildFile; fileRef = F51AB8AD0204B17101A80001 /* Cuppa_Bevy.h */; };
 		FE256DE2098754DD003C11F1 /* Cuppa_Shape.h in Headers */ = {isa = PBXBuildFile; fileRef = F51AB8AF0204B27301A80001 /* Cuppa_Shape.h */; };
-		FE256DE7098754DD003C11F1 /* tea_end.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AA902B19DC301000008 /* tea_end.png */; };
-		FE256DE8098754DD003C11F1 /* tea_start.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AAA02B19DC301000008 /* tea_start.png */; };
 		FE256DE9098754DD003C11F1 /* pour.aiff in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AB102B1B0A201000008 /* pour.aiff */; };
 		FE256DEA098754DD003C11F1 /* spoon.aiff in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AB202B1B0A201000008 /* spoon.aiff */; };
 		FE256DEB098754DD003C11F1 /* teacup16.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F82AB502B1B6D201000008 /* teacup16.png */; };
 		FE256DF9098754DD003C11F1 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = FE39F3CA08DA119A0085DC68 /* MainMenu.nib */; };
-		FE256DFA098754DD003C11F1 /* tea_done.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1F0A6308E7DF5B00F26390 /* tea_done.png */; };
 		FE256DFB098754DD003C11F1 /* beep.aiff in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9162092EC6E3003821C5 /* beep.aiff */; };
 		FE256DFD098754DD003C11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		FE256DFE098754DD003C11F1 /* Cuppa_Render.m in Sources */ = {isa = PBXBuildFile; fileRef = F538F2C6020362E401A80001 /* Cuppa_Render.m */; };
@@ -70,14 +67,11 @@
 		F538F2C6020362E401A80001 /* Cuppa_Render.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Cuppa_Render.m; path = source/Cuppa_Render.m; sourceTree = SOURCE_ROOT; };
 		F538F2CB020371B601A80001 /* Cuppa_Control.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Cuppa_Control.m; path = source/Cuppa_Control.m; sourceTree = "<group>"; };
 		F538F2CD020371E201A80001 /* Cuppa_Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Cuppa_Control.h; path = source/Cuppa_Control.h; sourceTree = "<group>"; };
-		F5F82AA902B19DC301000008 /* tea_end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tea_end.png; path = art/cups/tea_end.png; sourceTree = SOURCE_ROOT; };
-		F5F82AAA02B19DC301000008 /* tea_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tea_start.png; path = art/cups/tea_start.png; sourceTree = SOURCE_ROOT; };
 		F5F82AB102B1B0A201000008 /* pour.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = pour.aiff; path = sound/pour.aiff; sourceTree = SOURCE_ROOT; };
 		F5F82AB202B1B0A201000008 /* spoon.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = spoon.aiff; path = sound/spoon.aiff; sourceTree = SOURCE_ROOT; };
 		F5F82AB502B1B6D201000008 /* teacup16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teacup16.png; path = art/teacup16.png; sourceTree = SOURCE_ROOT; };
 		FE1E997C1831C25800BC1535 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE1E997D1831C26400BC1535 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FE1F0A6308E7DF5B00F26390 /* tea_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tea_done.png; path = art/cups/tea_done.png; sourceTree = "<group>"; };
 		FE256E0C098754DD003C11F1 /* Info-cuppa.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-cuppa.plist"; sourceTree = "<group>"; };
 		FE256E0D098754DD003C11F1 /* Cuppa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuppa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE39F3CB08DA119A0085DC68 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
@@ -208,20 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				FE3F19C11F81CB6A0066AD74 /* icon.iconset */,
-				F5F82AA702B19DC301000008 /* Cups */,
 				F5F82AB502B1B6D201000008 /* teacup16.png */,
 			);
 			name = Art;
-			sourceTree = "<group>";
-		};
-		F5F82AA702B19DC301000008 /* Cups */ = {
-			isa = PBXGroup;
-			children = (
-				FE1F0A6308E7DF5B00F26390 /* tea_done.png */,
-				F5F82AA902B19DC301000008 /* tea_end.png */,
-				F5F82AAA02B19DC301000008 /* tea_start.png */,
-			);
-			name = Cups;
 			sourceTree = "<group>";
 		};
 		F5F82AB002B1B0A201000008 /* Sound */ = {
@@ -317,13 +300,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE256DE7098754DD003C11F1 /* tea_end.png in Resources */,
-				FE256DE8098754DD003C11F1 /* tea_start.png in Resources */,
 				FE256DE9098754DD003C11F1 /* pour.aiff in Resources */,
 				FE256DEA098754DD003C11F1 /* spoon.aiff in Resources */,
 				FE256DEB098754DD003C11F1 /* teacup16.png in Resources */,
 				FE256DF9098754DD003C11F1 /* MainMenu.nib in Resources */,
-				FE256DFA098754DD003C11F1 /* tea_done.png in Resources */,
 				FE256DFB098754DD003C11F1 /* beep.aiff in Resources */,
 				FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */,
 				73251EFC12893F42008CD18E /* Localizable.strings in Resources */,
