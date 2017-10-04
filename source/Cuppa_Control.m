@@ -1540,7 +1540,7 @@ printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
     [GrowlApplicationBridge notifyWithTitle:NSLocalizedString(@"Brewing complete...", nil)
                                 description:[NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]]
                            notificationName:BREWING_COMPLETE
-                                   iconData:[[NSImage imageNamed:@"tea_done"] TIFFRepresentation]
+                                   iconData:nil
                                    priority:0.0
                                    isSticky:NO
                                clickContext:nil];
