@@ -28,6 +28,7 @@
 		FE256E04098754DD003C11F1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */; };
 		FE3F19C21F81CB6A0066AD74 /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = FE3F19C11F81CB6A0066AD74 /* icon.iconset */; };
 		FE4295AC0DC37BCC00C2F743 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FE9A9C8D1F847F5100F9AA57 /* teacup16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */; };
 		FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; };
 		FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */; };
@@ -87,6 +88,7 @@
 		FE7D455E1831C19F007265FE /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		FE923A25181DE39E0088AB1D /* Czech */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Czech; path = Czech.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		FE923A26181DE8680088AB1D /* Czech */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Czech; path = Czech.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "teacup16@2x.png"; path = "art/teacup16@2x.png"; sourceTree = "<group>"; };
 		FEA6A353181DE8F500603E33 /* Czech */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Czech; path = Czech.lproj/help; sourceTree = "<group>"; };
 		FEA6ABB01055B23D00C436D8 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
@@ -201,6 +203,7 @@
 		F51FA18B02A0A7F401000002 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */,
 				FE3F19C11F81CB6A0066AD74 /* icon.iconset */,
 				F5F82AB502B1B6D201000008 /* teacup16.png */,
 			);
@@ -304,6 +307,7 @@
 				FE256DEA098754DD003C11F1 /* spoon.aiff in Resources */,
 				FE256DEB098754DD003C11F1 /* teacup16.png in Resources */,
 				FE256DF9098754DD003C11F1 /* MainMenu.nib in Resources */,
+				FE9A9C8D1F847F5100F9AA57 /* teacup16@2x.png in Resources */,
 				FE256DFB098754DD003C11F1 /* beep.aiff in Resources */,
 				FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */,
 				73251EFC12893F42008CD18E /* Localizable.strings in Resources */,
