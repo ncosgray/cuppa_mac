@@ -96,6 +96,24 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	[appDefaults setObject:[Cuppa_Bevy toDictionary:mBevys] forKey:@"bevys"];
     [defaults registerDefaults:appDefaults];
 	
+    // migrate settings from old bundle identifier, if needed
+    if (![defaults boolForKey:@"migratedPrefs"]) {
+        // check for defaults from old com.wunderbear.Cuppa application identifier
+        // IMPORTANT: This will not work after Cuppa is sandboxed!
+        NSUserDefaults *oldDefaults = [NSUserDefaults new];
+        NSDictionary *oldDefaultsDict = [oldDefaults persistentDomainForName:@"com.wunderbear.Cuppa"];
+        if (oldDefaultsDict) {
+            // load the old defaults and set flag to skip subsequent imports
+            [defaults setPersistentDomain:oldDefaultsDict forName:[[NSBundle mainBundle] bundleIdentifier]];
+            [defaults setBool:YES forKey:@"migratedPrefs"];
+            [defaults synchronize];
+            
+            #if !defined(NDEBUG)
+            printf("Imported defaults from com.wunderbear.Cuppa\n");
+            #endif
+        }
+    }
+    
 	// apply current settings
 	mBounceIcon = [defaults boolForKey:@"bounceIcon"];
 	mMakeSound = [defaults boolForKey:@"makeSound"];
