@@ -535,7 +535,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wunderbear.Cuppa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;
 				PRODUCT_NAME = Cuppa;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
@@ -571,7 +571,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wunderbear.Cuppa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;
 				PRODUCT_NAME = Cuppa;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
@@ -604,7 +604,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wunderbear.Cuppa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;
 				PRODUCT_NAME = Cuppa;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
