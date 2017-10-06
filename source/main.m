@@ -146,6 +146,8 @@
 //  * now using native dock badge for countdown timer
 //    - sadly, this means the dock icon no longer animates
 //  * updated links to Cuppa mobile apps
+//  * changed bundle identifier
+//    - your preferences will be copied from the old bundle ID
 //  * built with Xcode 9
 //  * upgraded Growl framework to 2.0
 //  * upgraded Sparkle framework to 1.18.1
