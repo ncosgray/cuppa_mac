@@ -10,6 +10,7 @@
 		73251EFC12893F42008CD18E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73251EFA12893F42008CD18E /* Localizable.strings */; };
 		733D2385128B1707006033B0 /* help in Resources */ = {isa = PBXBuildFile; fileRef = 733D2380128B1707006033B0 /* help */; };
 		73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73BD7D8F128A8350003013D4 /* InfoPlist.strings */; };
+		FE047FEC1F8ACE0D007333E7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FE047FEB1F8ACE0C007333E7 /* README.md */; };
 		FE256DDF098754DD003C11F1 /* Cuppa_Render.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2C5020362E401A80001 /* Cuppa_Render.h */; };
 		FE256DE0098754DD003C11F1 /* Cuppa_Control.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2CD020371E201A80001 /* Cuppa_Control.h */; };
 		FE256DE1098754DD003C11F1 /* Cuppa_Bevy.h in Headers */ = {isa = PBXBuildFile; fileRef = F51AB8AD0204B17101A80001 /* Cuppa_Bevy.h */; };
@@ -71,6 +72,7 @@
 		F5F82AB102B1B0A201000008 /* pour.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = pour.aiff; path = sound/pour.aiff; sourceTree = SOURCE_ROOT; };
 		F5F82AB202B1B0A201000008 /* spoon.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = spoon.aiff; path = sound/spoon.aiff; sourceTree = SOURCE_ROOT; };
 		F5F82AB502B1B6D201000008 /* teacup16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teacup16.png; path = art/teacup16.png; sourceTree = SOURCE_ROOT; };
+		FE047FEB1F8ACE0C007333E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FE1E997C1831C25800BC1535 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE1E997D1831C26400BC1535 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE256E0C098754DD003C11F1 /* Info-cuppa.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-cuppa.plist"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		29B97314FDCFA39411CA2CEA /* cuppa */ = {
 			isa = PBXGroup;
 			children = (
+				FE047FEB1F8ACE0C007333E7 /* README.md */,
 				FE4DDAA91F81968B007C1FEB /* Cuppa.entitlements */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -309,6 +312,7 @@
 				FE256DF9098754DD003C11F1 /* MainMenu.nib in Resources */,
 				FE9A9C8D1F847F5100F9AA57 /* teacup16@2x.png in Resources */,
 				FE256DFB098754DD003C11F1 /* beep.aiff in Resources */,
+				FE047FEC1F8ACE0D007333E7 /* README.md in Resources */,
 				FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */,
 				73251EFC12893F42008CD18E /* Localizable.strings in Resources */,
 				73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */,
