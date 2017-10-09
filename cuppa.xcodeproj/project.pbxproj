@@ -10,7 +10,6 @@
 		73251EFC12893F42008CD18E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73251EFA12893F42008CD18E /* Localizable.strings */; };
 		733D2385128B1707006033B0 /* help in Resources */ = {isa = PBXBuildFile; fileRef = 733D2380128B1707006033B0 /* help */; };
 		73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73BD7D8F128A8350003013D4 /* InfoPlist.strings */; };
-		FE047FEC1F8ACE0D007333E7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FE047FEB1F8ACE0C007333E7 /* README.md */; };
 		FE256DDF098754DD003C11F1 /* Cuppa_Render.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2C5020362E401A80001 /* Cuppa_Render.h */; };
 		FE256DE0098754DD003C11F1 /* Cuppa_Control.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2CD020371E201A80001 /* Cuppa_Control.h */; };
 		FE256DE1098754DD003C11F1 /* Cuppa_Bevy.h in Headers */ = {isa = PBXBuildFile; fileRef = F51AB8AD0204B17101A80001 /* Cuppa_Bevy.h */; };
@@ -32,7 +31,6 @@
 		FE9A9C8D1F847F5100F9AA57 /* teacup16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */; };
 		FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; };
 		FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */; };
 		FEC8E72F0DC3780400031109 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; };
 /* End PBXBuildFile section */
 
@@ -312,8 +310,6 @@
 				FE256DF9098754DD003C11F1 /* MainMenu.nib in Resources */,
 				FE9A9C8D1F847F5100F9AA57 /* teacup16@2x.png in Resources */,
 				FE256DFB098754DD003C11F1 /* beep.aiff in Resources */,
-				FE047FEC1F8ACE0D007333E7 /* README.md in Resources */,
-				FEA6ABCE1055B4E900C436D8 /* dsa_pub.pem in Resources */,
 				73251EFC12893F42008CD18E /* Localizable.strings in Resources */,
 				73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */,
 				FE3F19C21F81CB6A0066AD74 /* icon.iconset in Resources */,
