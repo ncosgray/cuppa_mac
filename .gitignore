@@ -9,6 +9,7 @@ profile
 
 DerivedData/
 build/
+build-appstore/
 
 *.pbxuser
 *.mode1v3
