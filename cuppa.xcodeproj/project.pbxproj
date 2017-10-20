@@ -522,6 +522,7 @@
 		FE1AAAD708B95B9C00DAFB86 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPSTORE_BUILD = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -557,6 +558,7 @@
 		FE1AAAD808B95B9C00DAFB86 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPSTORE_BUILD = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -591,6 +593,7 @@
 		FE1AAAD908B95B9C00DAFB86 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPSTORE_BUILD = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -729,6 +732,7 @@
 		FE2940C31F970FB3003119BF /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPSTORE_BUILD = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Cuppa-appstore.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -770,6 +774,7 @@
 		FE2940C41F970FB3003119BF /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPSTORE_BUILD = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Cuppa-appstore.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
@@ -809,6 +814,7 @@
 		FE2940C51F970FB3003119BF /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPSTORE_BUILD = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Cuppa-appstore.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
