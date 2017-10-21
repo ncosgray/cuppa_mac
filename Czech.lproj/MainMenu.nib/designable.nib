@@ -223,7 +223,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <clipView key="contentView" id="UC3-DP-0Ie">
                                                 <rect key="frame" x="1" y="0.0" width="287" height="169"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="378" id="202">
                                                         <rect key="frame" x="0.0" y="0.0" width="287" height="152"/>
@@ -436,30 +436,7 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSteep:" target="195" id="326"/>
-                                                            <outlet property="nextKeyView" destination="465" id="470"/>
                                                         </connections>
-                                                    </button>
-                                                </subviews>
-                                            </view>
-                                            <font key="titleFont" metaFont="system"/>
-                                        </box>
-                                        <box borderType="none" title="Aktualizace" id="464">
-                                            <rect key="frame" x="6" y="13" width="321" height="45"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" id="HeY-Vd-QLe">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="27"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <button id="465">
-                                                        <rect key="frame" x="17" y="1" width="284" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="check" title="Kontrolovat aktualizace automaticky" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="466">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <connections>
-                                                                <binding destination="379" name="value" keyPath="automaticallyChecksForUpdates" id="469"/>
-                                                            </connections>
-                                                        </buttonCell>
                                                     </button>
                                                 </subviews>
                                             </view>
