@@ -55,6 +55,7 @@
 		FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; };
 		FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FEC8E72F0DC3780400031109 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; };
+		FEEC297A1F9C187900B2E114 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -392,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEC297A1F9C187900B2E114 /* dsa_pub.pem in Resources */,
 				FE256DE9098754DD003C11F1 /* pour.aiff in Resources */,
 				FE256DEA098754DD003C11F1 /* spoon.aiff in Resources */,
 				FE256DEB098754DD003C11F1 /* teacup16.png in Resources */,
@@ -541,7 +543,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "APPSTORE_BUILD=0";
+				GCC_PREPROCESSOR_DEFINITIONS = "APPSTORE_BUILD=1";
 				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -576,7 +578,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "APPSTORE_BUILD=0";
+				GCC_PREPROCESSOR_DEFINITIONS = "APPSTORE_BUILD=1";
 				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -611,7 +613,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "APPSTORE_BUILD=0";
+				GCC_PREPROCESSOR_DEFINITIONS = "APPSTORE_BUILD=1";
 				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
