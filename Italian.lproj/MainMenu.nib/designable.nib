@@ -25,12 +25,6 @@
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Controlla aggiornamenti..." id="380">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="checkForUpdates:" target="379" id="382"/>
-                                </connections>
-                            </menuItem>
                             <menuItem title="Trova Cuppa nell'Apple Store..." id="471">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
