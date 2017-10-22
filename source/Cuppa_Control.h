@@ -198,6 +198,11 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors;
 // Handle a click on the link to iTunes App Store
 - (IBAction)loadWebsite:(id)sender;
 
+#if !APPSTORE_BUILD
+// Handle a click on the Check for Updates menu item
+- (IBAction)checkForUpdates:(id)sender;
+#endif
+
 // Handle an application quit.
 - (void)applicationWillTerminate:(NSNotification *)aNotification;
 

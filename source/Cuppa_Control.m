@@ -34,6 +34,9 @@
 
 #import "Cuppa_Bevy.h"
 #import "Cuppa_Control.h"
+#if !APPSTORE_BUILD
+#import "Sparkle/SUUpdater.h"
+#endif
 
 // Code!
 
@@ -162,6 +165,20 @@
     NSMenu *mMainMenu; // main menu object
     NSMenuItem *item; // current menu item
     
+    mMainMenu = [NSApp mainMenu];
+    
+#if !APPSTORE_BUILD
+    // Set up Sparkle updater and add menu item
+    [[SUUpdater sharedUpdater] checkForUpdatesInBackground];
+    NSMenu *mCuppaMenu = [[mMainMenu itemAtIndex:0] submenu];
+    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Check for Updates...", nil)
+                                      action:@selector(checkForUpdates:)
+                               keyEquivalent:@""];
+    [item setTarget:self];
+    [item setEnabled:YES];
+    [mCuppaMenu insertItem:item atIndex:1];
+#endif
+    
     // setup preferences table to display bevy images properly
     imageCell = [[NSImageCell alloc] init];
     [imageCell setImageFrameStyle:NSImageFrameNone];
@@ -229,7 +246,6 @@
     [mQTimerValue setStringValue:@"2:00"];
     
     // add the Beverages menu to the main menu
-    mMainMenu = [NSApp mainMenu];
     item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Beverages", nil) action:nil keyEquivalent:@""];
     [mMainMenu insertItem:item atIndex:1];
     mAppMenu = [[NSMenu alloc] initWithTitle:NSLocalizedString(@"Beverages", nil)];
@@ -239,7 +255,7 @@
     [mAppMenu insertItem:[NSMenuItem separatorItem] atIndex:0];
     
     // add the quick timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil) // TODO: allow localisation
+    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
                                       action:@selector(showQuickTimer:)
                                keyEquivalent:@"t"];
     [item setTarget:self];
@@ -247,7 +263,7 @@
     [mAppMenu insertItem:item atIndex:1];
     
     // add the cancel timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) // TODO: allow localisation
+    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
                                       action:@selector(cancelTimer:)
                                keyEquivalent:@"."];
     [item setTarget:self];
@@ -1348,6 +1364,14 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                   URLWithString:@"https://www.nathanatos.com"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
+
+#if !APPSTORE_BUILD
+// Handle a click on the Check for Updates menu item
+- (IBAction)checkForUpdates:(id)sender;
+{
+    [[SUUpdater sharedUpdater] checkForUpdates:sender];
+}
+#endif
 
 // *************************************************************************************************
 
