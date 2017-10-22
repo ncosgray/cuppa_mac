@@ -2,12 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SUEnableAutomaticChecks</key>
-	<string>YES</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<key>CFBundleSignature</key>
+	<string>Cupa</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleName</key>
+	<string>Cuppa</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleVersion</key>
+	<string>1.8</string>
+	<key>CFBundleShortVersionString</key>
+	<string>25</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright (c) 2005-2017 Nathan Cosgray.</string>
 	<key>CFBundleExecutable</key>
 	<string>Cuppa</string>
 	<key>CFBundleGetInfoString</key>
@@ -18,28 +28,18 @@
 	<string>Cuppa Help</string>
 	<key>CFBundleIconFile</key>
 	<string>icon.icns</string>
-	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>Cuppa</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleShortVersionString</key>
-	<string>25</string>
-	<key>CFBundleSignature</key>
-	<string>Cupa</string>
-	<key>CFBundleVersion</key>
-	<string>1.8</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright (c) 2005-2017 Nathan Cosgray.</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
-	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
 	<key>NSUserNotificationAlertStyle</key>
 	<string>alert</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>SUEnableAutomaticChecks</key>
+	<string>YES</string>
 	<key>SUEnableSystemProfiling</key>
 	<string>YES</string>
 	<key>SUFeedURL</key>
