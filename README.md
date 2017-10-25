@@ -6,6 +6,8 @@
 * Intel only (2)
 * Supports OS X Notification Center and Growl notifications
 * Localized in Czech, French, German, Italian
+* Target "cuppa" builds non-App Store distribution version with Sparkle updater and DMG
+* Target "cuppa-appstore" builds App Store distribution version
 * See changelog in source/main.m
 
 1. [Cuppa 1.7.9](https://www.nathanatos.com/software/downloads/Cuppa-1.7.9.zip) supported OS 10.4+
