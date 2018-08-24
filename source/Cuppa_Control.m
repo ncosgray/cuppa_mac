@@ -1015,22 +1015,15 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
                  proposedRow:(int)row
        proposedDropOperation:(NSTableViewDropOperation)operation
 {
-    NSArray *typeArray; // array of types
     int dragRow; // selected row of table for drag (we don't allow multi-row drags)
     
 #if !defined(NDEBUG)
-    // printf("Accept drag 'n' drop?\n");
+    printf("Accept drag 'n' drop?\n");
 #endif
-    
-    // retrieve data from drag and drop pasteboard
-    typeArray = [[info draggingPasteboard] types];
     
     // ensure that we are the owner (this limits table drops to row re-arrangements)
     // also double-check drag format and destination drop
-    // TODO: self check fails for some reason
-    if (/* [info draggingSource] == self && */ [typeArray count] == 1 && row != -1 &&
-        [[typeArray objectAtIndex:0] isEqualToString:@"RowIndexPboardType"] == YES &&
-        operation == NSTableViewDropAbove)
+    if ([info draggingSource] == tableView && operation == NSTableViewDropAbove)
     {
         // retrieve the dragged row index from the pasteboard data
         dragRow = *((int *)[[[info draggingPasteboard]
