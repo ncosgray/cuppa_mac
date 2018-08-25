@@ -14,10 +14,19 @@
 "Cancel" = "Abbrechen";
 
 /* No comment provided by engineer. */
+"Chamomile" = "Kamille";
+
+/* No comment provided by engineer. */
 "Check for Updates..." = "Auf Aktualisierungen prüfen...";
 
 /* No comment provided by engineer. */
 "Earl Grey" = "Earl Grey";
+
+/* No comment provided by engineer. */
+"English Breakfast" = "Englisches Frühstück";
+
+/* No comment provided by engineer. */
+"Jasmine Green Tea" = "Jasmin Grüner Tee";
 
 /* No comment provided by engineer. */
 "Libby's Mint Tea" = "Libby's Pfefferminz Tee";
@@ -30,6 +39,9 @@
 
 /* No comment provided by engineer. */
 "OK" = "OK";
+
+/* No comment provided by engineer. */
+"Oolong Tea" = "Oolong-Tee";
 
 /* No comment provided by engineer. */
 "Preferences..." = "Einstellungen...";

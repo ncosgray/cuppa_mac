@@ -50,38 +50,66 @@
 + (NSMutableArray *)defaultBevys
 {
     NSMutableArray *bevys;
-    Cuppa_Bevy *bevy[4];
+    Cuppa_Bevy *bevy[8];
     
     // create an empty array
     bevys = [NSMutableArray array];
     
-    // Blackcurrent Tea
+    // Blackcurrant Tea
     bevy[0] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[0] setName:NSLocalizedString(@"Blackcurrant Tea", nil)];
     [bevy[0] setBrewTime:210];
     [bevy[0] setCupShape:CUPPA_SHAPE_TEA];
     [bevys addObject:bevy[0]];
     
-    // Earl Grey Tea
+    // Chamomile
     bevy[1] = [[[Cuppa_Bevy alloc] init] autorelease];
-    [bevy[1] setName:NSLocalizedString(@"Earl Grey", nil)];
-    [bevy[1] setBrewTime:240];
+    [bevy[1] setName:NSLocalizedString(@"Chamomile", nil)];
+    [bevy[1] setBrewTime:300];
     [bevy[1] setCupShape:CUPPA_SHAPE_TEA];
     [bevys addObject:bevy[1]];
     
-    // Mint Tea
+    // Earl Grey
     bevy[2] = [[[Cuppa_Bevy alloc] init] autorelease];
-    [bevy[2] setName:NSLocalizedString(@"Libby's Mint Tea", nil)];
+    [bevy[2] setName:NSLocalizedString(@"Earl Grey", nil)];
     [bevy[2] setBrewTime:240];
     [bevy[2] setCupShape:CUPPA_SHAPE_TEA];
     [bevys addObject:bevy[2]];
     
-    // Rooibos
+    // English Breakfast
     bevy[3] = [[[Cuppa_Bevy alloc] init] autorelease];
-    [bevy[3] setName:NSLocalizedString(@"Rooibos", nil)];
-    [bevy[3] setBrewTime:180];
+    [bevy[3] setName:NSLocalizedString(@"English Breakfast", nil)];
+    [bevy[3] setBrewTime:240];
     [bevy[3] setCupShape:CUPPA_SHAPE_TEA];
     [bevys addObject:bevy[3]];
+    
+    // Green Tea
+    bevy[4] = [[[Cuppa_Bevy alloc] init] autorelease];
+    [bevy[4] setName:NSLocalizedString(@"Green Tea", nil)];
+    [bevy[4] setBrewTime:150];
+    [bevy[4] setCupShape:CUPPA_SHAPE_TEA];
+    [bevys addObject:bevy[4]];
+    
+    // Mint Tea
+    bevy[5] = [[[Cuppa_Bevy alloc] init] autorelease];
+    [bevy[5] setName:NSLocalizedString(@"Libby's Mint Tea", nil)];
+    [bevy[5] setBrewTime:240];
+    [bevy[5] setCupShape:CUPPA_SHAPE_TEA];
+    [bevys addObject:bevy[5]];
+    
+    // Oolong Tea
+    bevy[6] = [[[Cuppa_Bevy alloc] init] autorelease];
+    [bevy[6] setName:NSLocalizedString(@"Oolong Tea", nil)];
+    [bevy[6] setBrewTime:240];
+    [bevy[6] setCupShape:CUPPA_SHAPE_TEA];
+    [bevys addObject:bevy[6]];
+    
+    // Rooibos
+    bevy[7] = [[[Cuppa_Bevy alloc] init] autorelease];
+    [bevy[7] setName:NSLocalizedString(@"Rooibos", nil)];
+    [bevy[7] setBrewTime:180];
+    [bevy[7] setCupShape:CUPPA_SHAPE_TEA];
+    [bevys addObject:bevy[7]];
     
     // return the array of standard bevys
     return bevys;
