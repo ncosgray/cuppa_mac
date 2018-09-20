@@ -178,6 +178,11 @@
 //  * built with Xcode 9
 //  * upgraded Growl framework to 2.0
 //  * upgraded Sparkle framework to 1.18.1
+//
+//  Modifications by Nathan Cosgray on 2018/08/24 (v. 1.8.1):
+//  * UI improvements:
+//    - reorder beverage list in Preferences with drag 'n' drop
+//  * added more default teas (e.g. green)
 
 #import <Cocoa/Cocoa.h>
 
