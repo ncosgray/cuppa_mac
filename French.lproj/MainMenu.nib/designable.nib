@@ -156,14 +156,7 @@
                     <menu key="submenu" title="Aide" id="106">
                         <items>
                             <menuItem title="Aide Cuppa" keyEquivalent="?" id="111">
-                                <attributedString key="attributedTitle">
-                                    <fragment content="Aide Cuppa">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="LucidaGrande"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedTitle"/>
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="PoR-OA-N4l"/>
                                 </connections>

@@ -156,14 +156,7 @@
                     <menu key="submenu" title="Help" id="106">
                         <items>
                             <menuItem title="Cuppa Help" keyEquivalent="?" id="111">
-                                <attributedString key="attributedTitle">
-                                    <fragment content="Cuppa Help">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="LucidaGrande"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedTitle"/>
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="122"/>
                                 </connections>
@@ -450,7 +443,7 @@
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <value key="minSize" type="size" width="133.13" height="5"/>
             <view key="contentView" id="279">
-                <rect key="frame" x="1" y="9" width="319" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" id="289">
