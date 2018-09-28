@@ -185,6 +185,7 @@
 //    - reorder beverage list in Preferences with drag 'n' drop
 //  * added more default teas (e.g. green)
 //  * built with Xcode 10
+//  * upgraded Sparkle framework to 1.20.0
 
 #import <Cocoa/Cocoa.h>
 
