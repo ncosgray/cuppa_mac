@@ -183,6 +183,7 @@
 //  * UI improvements:
 //    - support macOS Mojave Dark Aqua mode
 //    - reorder beverage list in Preferences with drag 'n' drop
+//    - prefer system font in help pages and menu
 //  * added more default teas (e.g. green)
 //  * built with Xcode 10
 //  * upgraded Sparkle framework to 1.20.0
