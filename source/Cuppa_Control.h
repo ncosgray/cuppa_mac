@@ -100,8 +100,10 @@
     bool mOSXNofifyAvail; // flag: shows if OS X Notification Center is available
     Cuppa_Bevy *mCurrentBevy; // the currently brewing beverage
     Cuppa_Bevy *genericbevy; // quick timer beverage
-    id timerActivity; // timer activity
 }
+
+// timer activity
+@property (strong) id timerActivity;
 
 // ------ Manipulators ------
 

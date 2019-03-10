@@ -284,15 +284,6 @@
     // update the brew state
     if (mSecondsRemain > 0)
     {
-        
-        // tell the OS we are doing something important
-        if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
-        {
-            timerActivity = [[NSProcessInfo processInfo]
-                             beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
-                             reason:@"Cuppa timer"];
-        }
-        
         // decrement the brew counter
         // we could be paranoid about timer drift here, but for things that only last a few
         // minutes anyway, it seems pointless to worry
@@ -380,9 +371,9 @@
             }
             
             // tell the OS we're done timing
-            if (timerActivity != nil)
+            if (self.timerActivity != nil)
             {
-                [[NSProcessInfo processInfo] endActivity:timerActivity];
+                [[NSProcessInfo processInfo] endActivity:self.timerActivity];
             }
             
             // ensure the final image is displayed
@@ -446,7 +437,7 @@
     // tell the OS we are doing something important... disable App Nap
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
-        timerActivity = [[NSProcessInfo processInfo]
+        self.timerActivity = [[NSProcessInfo processInfo]
                          beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
                          reason:@"Cuppa timer"];
     }
@@ -593,7 +584,7 @@
     // tell the OS we are doing something important... disable App Nap
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
-        timerActivity = [[NSProcessInfo processInfo]
+        self.timerActivity = [[NSProcessInfo processInfo]
                          beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
                          reason:@"Cuppa timer"];
     }
