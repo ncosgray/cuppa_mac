@@ -191,8 +191,8 @@
 //  Modifications by Nathan Cosgray on 2019/03/09 (v. 1.8.2):
 //  * bugfix:
 //    - improve timer reliability on High Sierra and later
-//  * Retina graphics for help pages
-//  * cleaned up app icon
+//  * Retina graphics for help pages and DMG
+//  * cleaned up and centered app icon
 
 #import <Cocoa/Cocoa.h>
 
