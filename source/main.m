@@ -192,6 +192,7 @@
 //  * bugfix:
 //    - improve timer reliability on High Sierra and later
 //  * Retina graphics for help pages
+//  * cleaned up app icon
 
 #import <Cocoa/Cocoa.h>
 
