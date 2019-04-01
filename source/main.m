@@ -188,11 +188,12 @@
 //  * built with Xcode 10
 //  * upgraded Sparkle framework to 1.20.0
 //
-//  Modifications by Nathan Cosgray on 2019/03/09 (v. 1.8.2):
+//  Modifications by Nathan Cosgray on 2019/03/31 (v. 1.8.2):
 //  * bugfix:
 //    - improve timer reliability on High Sierra and later
 //  * Retina graphics for help pages and DMG
 //  * cleaned up and centered app icon
+//  * upgraded Sparkle framework to 1.21.3
 
 #import <Cocoa/Cocoa.h>
 
