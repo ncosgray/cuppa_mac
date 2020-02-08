@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -165,6 +165,7 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="139" y="260"/>
         </menu>
         <customObject id="195" userLabel="Cuppa_Control" customClass="Cuppa_Control">
             <connections>
@@ -188,13 +189,13 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="171" y="412" width="380" height="338"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="360" height="206"/>
             <view key="contentView" id="197">
                 <rect key="frame" x="0.0" y="0.0" width="380" height="338"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <tabView initialItem="446" id="445">
+                    <tabView fixedFrame="YES" initialItem="446" translatesAutoresizingMaskIntoConstraints="NO" id="445">
                         <rect key="frame" x="13" y="10" width="354" height="322"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <font key="font" metaFont="system"/>
@@ -204,23 +205,23 @@
                                     <rect key="frame" x="10" y="33" width="334" height="276"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <scrollView horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="204">
+                                        <scrollView fixedFrame="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="204">
                                             <rect key="frame" x="17" y="103" width="300" height="170"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <clipView key="contentView" id="UC3-DP-0Ie">
-                                                <rect key="frame" x="1" y="0.0" width="287" height="169"/>
+                                            <clipView key="contentView" ambiguous="YES" id="UC3-DP-0Ie">
+                                                <rect key="frame" x="1" y="0.0" width="298" height="169"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="378" id="202">
-                                                        <rect key="frame" x="0.0" y="0.0" width="287" height="152"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="378" id="202">
+                                                        <rect key="frame" x="0.0" y="0.0" width="298" height="152"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
                                                             <tableColumn identifier="image" editable="NO" width="40" minWidth="40" maxWidth="1000" id="205">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -233,7 +234,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="name" width="197" minWidth="40" maxWidth="1000" id="203">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
-                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -245,9 +246,9 @@
                                                                 <sortDescriptor key="sortDescriptorPrototype" selector="caseInsensitiveCompare:" sortKey="name"/>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
-                                                            <tableColumn identifier="time" width="40.533203125" minWidth="30.533203125" maxWidth="1000" id="206">
+                                                            <tableColumn identifier="time" width="52.033203125" minWidth="30.533203125" maxWidth="1000" id="206">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Zeit">
-                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
@@ -271,45 +272,45 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="376">
-                                                <rect key="frame" x="288" y="17" width="11" height="152"/>
+                                                <rect key="frame" x="285" y="17" width="14" height="152"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="378">
-                                                <rect key="frame" x="0.0" y="0.0" width="287" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="298" height="17"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                             <connections>
                                                 <outlet property="nextKeyView" destination="454" id="463"/>
                                             </connections>
                                         </scrollView>
-                                        <button verticalHuggingPriority="750" id="452">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="452">
                                             <rect key="frame" x="151" y="71" width="171" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <buttonCell key="cell" type="push" title="Gewähltes Getränk löschen" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="453">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                                 <connections>
                                                     <action selector="deleteBevyButton:" target="195" id="458"/>
                                                 </connections>
                                             </buttonCell>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="454">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="454">
                                             <rect key="frame" x="12" y="71" width="133" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <buttonCell key="cell" type="push" title="Getränk hinzufügen" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="455">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="addBevyButton:" target="195" id="459"/>
                                                 <outlet property="nextKeyView" destination="452" id="462"/>
                                             </connections>
                                         </button>
-                                        <textField verticalHuggingPriority="750" id="456">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="456">
                                             <rect key="frame" x="15" y="9" width="306" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="justified" id="457">
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                                 <string key="title">Klicke auf den Button "Getränk hinzufügen" um ein neues Getränk hinzuzufügen. Bearbeite dann danach den Namen und die Brühzeit. Neue Getränke werden immer oben in der Liste angezeigt.</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -319,71 +320,71 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Optionen" identifier="2" id="447">
-                                <view key="view" id="448">
+                                <view key="view" ambiguous="YES" id="448">
                                     <rect key="frame" x="10" y="33" width="334" height="276"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <box borderType="none" title="Wenn Brühzeit abgeschlossen ..." id="217">
+                                        <box fixedFrame="YES" borderType="none" title="Wenn Brühzeit abgeschlossen ..." translatesAutoresizingMaskIntoConstraints="NO" id="217">
                                             <rect key="frame" x="6" y="142" width="321" height="134"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <view key="contentView" id="DIp-d8-gvs">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="117"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button id="219">
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="219">
                                                         <rect key="frame" x="16" y="90" width="153" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Docksymbol animieren" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="362">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleBounce:" target="195" id="234"/>
                                                             <outlet property="nextKeyView" destination="220" id="349"/>
                                                         </connections>
                                                     </button>
-                                                    <button id="220">
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220">
                                                         <rect key="frame" x="16" y="72" width="107" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Klang abspielen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="363">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSound:" target="195" id="235"/>
                                                             <outlet property="nextKeyView" destination="251" id="350"/>
                                                         </connections>
                                                     </button>
-                                                    <button id="251">
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="251">
                                                         <rect key="frame" x="16" y="54" width="304" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="&quot;Brühzeit abgeschlossen&quot; Fenster anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="364">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleAlert:" target="195" id="252"/>
                                                             <outlet property="nextKeyView" destination="263" id="351"/>
                                                         </connections>
                                                     </button>
-                                                    <button id="263">
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="263">
                                                         <rect key="frame" x="16" y="36" width="270" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Benachrichtigung mit Mitteilungszentrale" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="365">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyOSX:" target="195" id="e1S-jq-1iB"/>
                                                             <outlet property="nextKeyView" destination="5KQ-zd-ScE" id="CpR-8S-SPY"/>
                                                         </connections>
                                                     </button>
-                                                    <button id="5KQ-zd-ScE">
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5KQ-zd-ScE">
                                                         <rect key="frame" x="16" y="18" width="224" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Benachrichtigung mit Growl" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="mmO-bn-BTH">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyGrowl:" target="195" id="dCI-66-LZf"/>
@@ -394,31 +395,31 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <box borderType="none" title="Benutzeroberfläche einstellen" id="255">
-                                            <rect key="frame" x="6" y="62" width="321" height="76"/>
+                                        <box fixedFrame="YES" borderType="none" title="Benutzeroberfläche einstellen" translatesAutoresizingMaskIntoConstraints="NO" id="255">
+                                            <rect key="frame" x="6" y="10" width="321" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <view key="contentView" id="1Cu-7X-EKE">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="58"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="59"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button id="257">
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="257">
                                                         <rect key="frame" x="16" y="32" width="241" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Countdownzeit im Docksymbol anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="368">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleTimer:" target="195" id="260"/>
                                                             <outlet property="nextKeyView" destination="325" id="353"/>
                                                         </connections>
                                                     </button>
-                                                    <button id="325">
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="325">
                                                         <rect key="frame" x="16" y="14" width="224" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Aufbrühzeiten in Menü anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="369">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSteep:" target="195" id="326"/>
@@ -428,6 +429,14 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cB-k0-lEs" userLabel="MTestNotify Button">
+                                            <rect key="frame" x="12" y="130" width="140" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Testbenachrichtigung" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8cB-AK-Wsy">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -435,29 +444,30 @@
                     </tabView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="139" y="147"/>
         </window>
         <window title="Schneller Timer" allowsToolTipsWhenApplicationIsInactive="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="QTimerPanel" animationBehavior="default" id="278" userLabel="QTimerPanel" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="230" y="464" width="319" height="100"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="133.13" height="5"/>
             <view key="contentView" id="279">
                 <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" id="289">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="289">
                         <rect key="frame" x="220" y="10" width="84" height="28"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Starten" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="370">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" metaFont="message" size="11"/>
                         </buttonCell>
                         <connections>
                             <action selector="startQuickTimer:" target="195" id="308"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="303">
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="303">
                         <rect key="frame" x="20" y="61" width="93" height="22"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" title="QTimerValue" drawsBackground="YES" id="371">
@@ -469,11 +479,11 @@
                             <action selector="performClick:" target="289" id="310"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="312">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="312">
                         <rect key="frame" x="17" y="31" width="285" height="22"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Gib eine Zeit im Format Minuten:Sekunden ein oder direkt in Sekunden." id="372">
-                            <font key="font" metaFont="miniSystem"/>
+                            <font key="font" metaFont="label" size="9"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>

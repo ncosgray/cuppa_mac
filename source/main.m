@@ -194,6 +194,9 @@
 //  * Retina graphics for help pages and DMG
 //  * cleaned up and centered app icon
 //  * upgraded Sparkle framework to 1.21.3
+//
+//  Modifications by Nathan Cosgray on 2020/02/08 (v. 1.8.3):
+//  * upgraded Sparkle framework to 1.22
 
 #import <Cocoa/Cocoa.h>
 
