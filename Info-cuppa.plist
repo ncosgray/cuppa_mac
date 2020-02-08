@@ -15,15 +15,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleVersion</key>
-	<string>29</string>
+	<string>30</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8.2</string>
+	<string>1.8.3</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright (c) 2005-2019 Nathan Cosgray.</string>
 	<key>CFBundleExecutable</key>
 	<string>Cuppa</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.8.2</string>
+	<string>1.8.3</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>help</string>
 	<key>CFBundleHelpBookName</key>
