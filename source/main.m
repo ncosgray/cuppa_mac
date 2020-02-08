@@ -196,6 +196,8 @@
 //  * upgraded Sparkle framework to 1.21.3
 //
 //  Modifications by Nathan Cosgray on 2020/02/08 (v. 1.8.3):
+//  * bugfix:
+//    - improve icon badge reliability on Catalina and later
 //  * added Test Notification button
 //  * upgraded Sparkle framework to 1.22
 
