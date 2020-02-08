@@ -596,6 +596,47 @@
 
 // *************************************************************************************************
 
+// A request to do a notification test has been made.
+- (IBAction)testNotify:(id)sender
+{
+    NSSound *startSound; // start sound
+    int secs = 5; // test timer duration
+    
+    mCurrentBevy = genericbevy;
+    
+    // setup the brewing state
+#if !defined(NDEBUG)
+    printf("Start notification test (%d secs)\n", secs);
+#endif
+    
+    mSecondsTotal = secs;
+    mSecondsRemain = mSecondsTotal + 1;
+    
+    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
+    
+    // play the start sound
+    startSound = [NSSound soundNamed:@"pour"];
+    [startSound play];
+    
+    // tell the OS we are doing something important... disable App Nap
+    if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
+    {
+        self.timerActivity = [[NSProcessInfo processInfo]
+                         beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
+                         reason:@"Cuppa timer"];
+    }
+    
+    // some notifications aren't displayed if we're in the foreground, so let's deactivate
+    [[NSApplication sharedApplication] hide: self];
+    [[NSApplication sharedApplication] miniaturizeAll: self];
+
+    // update the onscreen image
+    [self updateTick:self];
+    
+} // end -testNotify:
+
+// *************************************************************************************************
+
 // Handle toggle of bounce icon flag.
 - (void)toggleBounce:(id)sender
 {

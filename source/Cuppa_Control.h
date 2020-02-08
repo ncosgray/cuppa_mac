@@ -75,6 +75,7 @@
     IBOutlet NSButton *mSteepSwitch; // switch on steep control
     IBOutlet NSButton *mOSXNotifySwitch; // switch for Notification Center control
     IBOutlet NSButton *mGrowlNotifySwitch; // switch for Growl control
+    IBOutlet NSButton *mTestNotifyButton; // test notifications button
     IBOutlet NSButton *mDeleteBevyButton; // delete beverage button
     IBOutlet NSButton *mAddBevyButton; // edit beverage button
     IBOutlet NSTableView *mBevyTable; // table of beverages
@@ -127,6 +128,9 @@
 
 // A request to start the quick timer has been made.
 - (void)startQuickTimer:(id)sender;
+
+// A request to do a notification test has been made.
+- (IBAction)testNotify:(id)sender;
 
 // Handle toggle of bounce icon flag.
 - (void)toggleBounce:(id)sender;
