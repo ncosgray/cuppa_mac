@@ -137,6 +137,9 @@
     [genericbevy setName:@"Cuppa"];
     [genericbevy setBrewTime:120];
     
+    // we are not testing by default
+    mTestNotify = false;
+    
     // create the brew timer object
     // this is set to fire every second
     // TODO: only run timer when active
@@ -378,6 +381,14 @@
             
             // ensure the final image is displayed
             [mRender setBrewState:0.0f];
+            
+            // as a courtesy, reopen Preferences if user was testing
+            if (mTestNotify)
+            {
+                mTestNotify = false;
+                
+                [self showPrefs:nil];
+            }
         }
         
         // render dock tile, just in case
@@ -606,6 +617,9 @@
     int secs = 5; // test timer duration
     
     mCurrentBevy = genericbevy;
+    
+    // make sure everyone knows we're testing (so we can reopen Preferences window later)
+    mTestNotify = true;
     
     // setup the brewing state
 #if !defined(NDEBUG)

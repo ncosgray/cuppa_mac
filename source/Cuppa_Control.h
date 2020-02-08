@@ -97,6 +97,7 @@
     int mShowSteep; // flag: show steep times in menus?
     int mNotifyOSX; // flag: notify Notification Center?
     int mNotifyGrowl; // flag: notify Growl?
+    bool mTestNotify; // flag: indicates we are doing a test notification
     bool mGrowlInstalled; // flag: shows if growl is installed on the system
     bool mOSXNofifyAvail; // flag: shows if OS X Notification Center is available
     Cuppa_Bevy *mCurrentBevy; // the currently brewing beverage
