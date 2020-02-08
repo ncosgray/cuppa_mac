@@ -453,6 +453,9 @@
                          reason:@"Cuppa timer"];
     }
     
+    // Make sure Cuppa is not hidden while a timer is running.
+    [[NSApplication sharedApplication] unhideWithoutActivation];
+
     // update the onscreen image
     [self updateTick:self];
     
