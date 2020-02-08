@@ -647,6 +647,9 @@
     [[NSApplication sharedApplication] hide: self];
     [[NSApplication sharedApplication] miniaturizeAll: self];
 
+    // But unhide asap. ;)
+    [[NSApplication sharedApplication] unhideWithoutActivation];
+
     // update the onscreen image
     [self updateTick:self];
     
