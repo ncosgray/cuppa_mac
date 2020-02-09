@@ -473,6 +473,12 @@
     // reset the timer variable
     mSecondsRemain = 0;
     
+    // tell the OS we're done timing
+    if (self.timerActivity != nil)
+    {
+        [[NSProcessInfo processInfo] endActivity:self.timerActivity];
+    }
+    
     // reset the dock icon
     [mRender restore];
     
