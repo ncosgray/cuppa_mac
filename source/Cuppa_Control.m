@@ -449,7 +449,7 @@
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         self.timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
+                         beginActivityWithOptions:(NSActivityIdleSystemSleepDisabled | NSActivityUserInitiated | NSActivityLatencyCritical)
                          reason:@"Cuppa timer"];
     }
     
@@ -599,7 +599,7 @@
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         self.timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
+                         beginActivityWithOptions:(NSActivityIdleSystemSleepDisabled | NSActivityUserInitiated | NSActivityLatencyCritical)
                          reason:@"Cuppa timer"];
     }
     
@@ -642,7 +642,7 @@
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         self.timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityUserInitiated | NSActivityLatencyCritical)
+                         beginActivityWithOptions:(NSActivityIdleSystemSleepDisabled | NSActivityUserInitiated | NSActivityLatencyCritical)
                          reason:@"Cuppa timer"];
     }
     
