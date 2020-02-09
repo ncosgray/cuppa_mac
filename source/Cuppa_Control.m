@@ -287,11 +287,7 @@
     // update the brew state
     if (mSecondsRemain > 0)
     {
-        // decrement the brew counter
-        // we could be paranoid about timer drift here, but for things that only last a few
-        // minutes anyway, it seems pointless to worry
-        //--mSecondsRemain;
-        
+        // calculate time remaining til brewing complete
         mSecondsRemain = floor([mAlarmTime timeIntervalSinceNow]);
         
         // update brew time remaining for countdown timer
@@ -350,13 +346,6 @@
             // show a little alert window
             if (mShowAlert)
             {
-                //if(NSRunAlertPanel (@"Brewing complete...",
-                //                 [NSString stringWithFormat:@"%@ is now ready!", [mCurrentBevy name]],
-                //                 NULL,
-                //                 @"Quit Cuppa",
-                //                 NULL,
-                //                 NULL) != 1 ) [[NSApplication sharedApplication] terminate:self];
-                
                 // It's more complicated if we want to allow keyboard shortcuts
                 NSAlert *brewAlert = [[[NSAlert alloc] init] autorelease];
                 [brewAlert setMessageText:NSLocalizedString(@"Brewing complete...", nil)];
@@ -404,17 +393,6 @@
 {
     Cuppa_Bevy *bevy; // matching beverage object
     NSSound *startSound; // start sound
-    
-    // Why do we have to do things this way? Here's what the Apple sample code has to say:
-    
-    // "This sample shows how to have many dock menu items hooked up to one action method.
-    // Because of bug #2751274, on Mac OS X 10.1.x the sender for this action method when called
-    // from a dock menu item is always the NSApplication object, not the actual menu item.  This
-    // ordinarily makes it impossible to take action based on which menu item was selected, because
-    // we don't know which menu item called our action method. We have a workaround in this sample
-    // for the bug (using NSInvocations)..."
-    
-    // Oh well.. we want to support 10.1 forward, so we'll stick with the work-around.
     
     // which beverage have they choosen?
     bevy = (Cuppa_Bevy *)[sender representedObject];
@@ -855,11 +833,6 @@
 // Return the number of known beverages.
 - (int)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-    /*
-     #if !defined(NDEBUG)
-     printf("-numberOfRowsInTableView: (returning %d)\n", [mBevys count]);
-     #endif
-     */
     
     return (int)[mBevys count];
     
@@ -874,12 +847,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 {
     Cuppa_Bevy *bevy;
     int hours; // hours digit of brew time
-    
-    /*
-     #if !defined(NDEBUG)
-     printf("-tableView:objectValueForTableColumn:row:\n");
-     #endif
-     */
     
     // parameter checks
     assert(rowIndex >= 0 && rowIndex < [mBevys count]);
@@ -1264,7 +1231,6 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
         [invocation setTarget:self];
         [invocation setArgument:&item atIndex:2];
         [item setTarget:[invocation retain]];
-        //[item setImage:[NSImage imageNamed:@"teacup16"]];
         [item setEnabled:YES];
         
         // append the item to the menu
@@ -1277,7 +1243,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     i++;
     
     // add the quick timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil) // TODO: allow localisation
+    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
                                       action:@selector(showQuickTimer:)
                                keyEquivalent:@""];
     [item setTarget:self];
@@ -1286,7 +1252,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     i++;
     
     // add the cancel timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) // TODO: allow localisation
+    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
                                       action:@selector(cancelTimer:)
                                keyEquivalent:@""];
     [item setTarget:self];
@@ -1299,7 +1265,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     i++;
     
     // add the preferences item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Preferences...", nil) // TODO: allow localisation
+    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Preferences...", nil)
                                       action:@selector(showPrefs:)
                                keyEquivalent:@""];
     [item setTarget:self];
@@ -1374,7 +1340,6 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
             [invocation setTarget:self];
             [invocation setArgument:&item atIndex:2];
             [item setTarget:[invocation retain]];
-            //[item setImage:[NSImage imageNamed:@"teacup16"]];
             
             // set the key equivalent for this item
             if (i < 40)
