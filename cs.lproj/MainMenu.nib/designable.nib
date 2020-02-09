@@ -209,11 +209,11 @@
                                             <rect key="frame" x="17" y="103" width="300" height="170"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <clipView key="contentView" ambiguous="YES" id="UC3-DP-0Ie">
-                                                <rect key="frame" x="1" y="0.0" width="298" height="169"/>
+                                                <rect key="frame" x="1" y="0.0" width="287" height="169"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="378" id="202">
-                                                        <rect key="frame" x="0.0" y="0.0" width="298" height="152"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="287" height="152"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -246,7 +246,7 @@
                                                                 <sortDescriptor key="sortDescriptorPrototype" selector="caseInsensitiveCompare:" sortKey="name"/>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
-                                                            <tableColumn identifier="time" width="52.033203125" minWidth="30.533203125" maxWidth="1000" id="206">
+                                                            <tableColumn identifier="time" width="41.033203125" minWidth="30.533203125" maxWidth="1000" id="206">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Čas">
                                                                     <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -272,11 +272,11 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="376">
-                                                <rect key="frame" x="285" y="17" width="14" height="152"/>
+                                                <rect key="frame" x="288" y="17" width="11" height="152"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="378">
-                                                <rect key="frame" x="0.0" y="0.0" width="298" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="287" height="17"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                             <connections>
@@ -388,13 +388,24 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyGrowl:" target="195" id="dCI-66-LZf"/>
-                                                            <outlet property="nextKeyView" destination="257" id="GpF-tc-goz"/>
+                                                            <outlet property="nextKeyView" destination="TSB-9A-gTr" id="zMD-S9-nD2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSB-9A-gTr" userLabel="MTestNotify Button">
+                                            <rect key="frame" x="12" y="130" width="128" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Zkušební oznámení" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MBh-2D-zuL">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <outlet property="nextKeyView" destination="257" id="Iie-bR-6m9"/>
+                                            </connections>
+                                        </button>
                                         <box fixedFrame="YES" borderType="none" title="Možnosti uživatelského rozhraní" translatesAutoresizingMaskIntoConstraints="NO" id="255">
                                             <rect key="frame" x="6" y="10" width="321" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -429,14 +440,6 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSB-9A-gTr" userLabel="MTestNotify Button">
-                                            <rect key="frame" x="12" y="130" width="128" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Zkušební oznámení" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MBh-2D-zuL">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="message" size="11"/>
-                                            </buttonCell>
-                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
