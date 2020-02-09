@@ -1605,39 +1605,6 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
 
 // *************************************************************************************************
 
-- (int)brewTime
-{
-    return 0;
-}
-
-- (void)setBrewTime:(int)brewvalue
-{
-    NSSound *startSound; // start sound
-    
-    mCurrentBevy = genericbevy;
-    
-    // final check for time limits
-    if (brewvalue < CUPPA_BEVY_BREW_TIME_MIN)
-        brewvalue = CUPPA_BEVY_BREW_TIME_MIN;
-    if (brewvalue > CUPPA_BEVY_BREW_TIME_MAX)
-        brewvalue = CUPPA_BEVY_BREW_TIME_MAX;
-    
-    // setup the brewing state
-#if !defined(NDEBUG)
-    printf("[AppleScript] Start quick timer (%d secs)\n", brewvalue);
-#endif
-    
-    mSecondsTotal = brewvalue;
-    mSecondsRemain = mSecondsTotal + 1;
-    
-    // play the start sound
-    startSound = [NSSound soundNamed:@"pour"];
-    [startSound play];
-    
-    // update the onscreen image
-    [self updateTick:self];
-}
-
 @end // @implementation Cuppa_Control
 
 // end Cuppa_Control.m

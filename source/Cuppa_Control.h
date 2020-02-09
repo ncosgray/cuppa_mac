@@ -222,9 +222,6 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors;
 // Send notification to OS X Notification Center
 - (void)notifyOSX;
 
-- (void)setBrewTime:(int)brewvalue;
-- (int)brewTime;
-
 @end // @interface Cuppa_Control
 
 // *************************************************************************************************
