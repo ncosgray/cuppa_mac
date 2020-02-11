@@ -394,6 +394,9 @@
     Cuppa_Bevy *bevy; // matching beverage object
     NSSound *startSound; // start sound
     
+    // Make sure Cuppa is not hidden while a timer is running.
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+
     // which beverage have they choosen?
     bevy = (Cuppa_Bevy *)[sender representedObject];
     
@@ -431,9 +434,6 @@
                          reason:@"Cuppa timer"];
     }
     
-    // Make sure Cuppa is not hidden while a timer is running.
-    [[NSApplication sharedApplication] unhideWithoutActivation];
-
     // update the onscreen image
     [self updateTick:self];
     
@@ -504,6 +504,9 @@
     NSSound *startSound; // start sound
     int hours = -1, mins = -1, secs = -1; // time values
     
+    // Make sure Cuppa is not hidden while a timer is running.
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+
     // set up the quick timer value scanner
     NSScanner *scanner = [NSScanner scannerWithString:[mQTimerValue stringValue]];
     
@@ -587,9 +590,6 @@
                          reason:@"Cuppa timer"];
     }
     
-    // Make sure Cuppa is not hidden while a timer is running.
-    [[NSApplication sharedApplication] unhideWithoutActivation];
-
     // update the onscreen image
     [self updateTick:self];
     
@@ -633,9 +633,6 @@
     // some notifications aren't displayed if we're in the foreground, so let's deactivate
     [[NSApplication sharedApplication] hide: self];
     [[NSApplication sharedApplication] miniaturizeAll: self];
-
-    // But unhide asap. ;)
-    [[NSApplication sharedApplication] unhideWithoutActivation];
 
     // update the onscreen image
     [self updateTick:self];
