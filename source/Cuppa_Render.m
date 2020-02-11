@@ -98,9 +98,6 @@
     
     if (mBrewRemain > 0)
     {
-        // Make sure Cuppa is not hidden while a timer is running.
-        [[NSApplication sharedApplication] unhideWithoutActivation];
-        
         // Convert seconds into a time string of format 'hh:mm:ss' or 'mm:ss'.
         hours = mBrewRemain / 3600;
         if (hours > 0)
