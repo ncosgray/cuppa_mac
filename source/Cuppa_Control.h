@@ -80,7 +80,6 @@
     IBOutlet NSButton *mDeleteBevyButton; // delete beverage button
     IBOutlet NSButton *mAddBevyButton; // edit beverage button
     IBOutlet NSTableView *mBevyTable; // table of beverages
-    IBOutlet id startBrew; // [AppleScript] start brew
     
     // general data
     NSMutableArray *mBevys; // array of beverages
