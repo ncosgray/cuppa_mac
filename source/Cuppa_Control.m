@@ -582,8 +582,11 @@
     [mQTimerPanel close];
     
     // play the start sound
-    startSound = [NSSound soundNamed:@"pour"];
-    [startSound play];
+    if (mMakeSound)
+    {
+        startSound = [NSSound soundNamed:@"pour"];
+        [startSound play];
+    }
     
     // tell the OS we are doing something important... disable App Nap
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
