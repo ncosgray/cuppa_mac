@@ -135,7 +135,7 @@
 - (IBAction)testNotify:(id)sender;
 
 // Set up and start a timer.
-- (void)setTimer:(int)secs;
+- (void)setTimer:(Cuppa_Bevy *)bevy;
 
 // Handle toggle of bounce icon flag.
 - (void)toggleBounce:(id)sender;

@@ -405,21 +405,15 @@
         mSecondsRemain = 0;
     }
     
-    // setup the brewing state
-    mCurrentBevy = bevy;
-    mSecondsTotal = [bevy brewTime];
-    mSecondsRemain = mSecondsTotal + 1;
-    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
-        
 #if !defined(NDEBUG)
     printf("Start brewing %s (%d secs)\n", [[bevy name] cString], [bevy brewTime]);
 #endif
 
-    // Make sure Cuppa is not hidden while a timer is running.
+    // Make sure Cuppa is not hidden while a timer is starting up.
     [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     
     // start!
-    [self setTimer:[bevy brewTime]];
+    [self setTimer:bevy];
 
 } // end -startBrewing:
 
@@ -543,11 +537,8 @@
     if (secs > CUPPA_BEVY_BREW_TIME_MAX)
         secs = CUPPA_BEVY_BREW_TIME_MAX;
     
-    // setup the brewing state
-    mCurrentBevy = genericbevy;
-    mSecondsTotal = secs;
-    mSecondsRemain = mSecondsTotal + 1;
-    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
+    // set quick timer duration
+    [genericbevy setBrewTime:secs];
 
 #if !defined(NDEBUG)
     printf("Start quick timer (%d secs)\n", secs);
@@ -556,11 +547,11 @@
     // we're done with the quick timer panel so close it
     [mQTimerPanel close];
     
-    // Make sure Cuppa is not hidden while a timer is running.
+    // Make sure Cuppa is not hidden while a timer is starting up.
     [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     
     // start!
-    [self setTimer:secs];
+    [self setTimer:genericbevy];
 
 } // end -startQuickTimer:
 
@@ -569,13 +560,9 @@
 // A request to do a notification test has been made.
 - (IBAction)testNotify:(id)sender
 {
-    int secs = 10; // test timer duration
-
-    // setup the brewing state
-    mCurrentBevy = genericbevy;
-    mSecondsTotal = secs;
-    mSecondsRemain = mSecondsTotal + 1;
-    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
+    // test timer duration is always 10 seconds
+    int secs = 10;
+    [genericbevy setBrewTime:secs];
     
 #if !defined(NDEBUG)
     printf("Start notification test (%d secs)\n", secs);
@@ -589,19 +576,20 @@
     [[NSApplication sharedApplication] miniaturizeAll: self];
 
     // start!
-    [self setTimer:secs];
+    [self setTimer:genericbevy];
     
 } // end -testNotify:
 
 // *************************************************************************************************
 
 // Set up and start a timer.
-- (void)setTimer:(int)secs
+- (void)setTimer:(Cuppa_Bevy *)bevy
 {
     NSSound *startSound; // start sound
 
     // setup the brewing state
-    mSecondsTotal = secs;
+    mCurrentBevy = bevy;
+    mSecondsTotal = [bevy brewTime];
     mSecondsRemain = mSecondsTotal + 1;
     mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
     
