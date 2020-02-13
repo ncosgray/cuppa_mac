@@ -134,6 +134,9 @@
 // A request to do a notification test has been made.
 - (IBAction)testNotify:(id)sender;
 
+// Set up and start a timer.
+- (void)setTimer:(int)secs;
+
 // Handle toggle of bounce icon flag.
 - (void)toggleBounce:(id)sender;
 

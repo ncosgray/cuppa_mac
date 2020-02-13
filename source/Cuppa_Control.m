@@ -395,14 +395,9 @@
 - (void)startBrewing:(id)sender
 {
     Cuppa_Bevy *bevy; // matching beverage object
-    NSSound *startSound; // start sound
-    
-    // Make sure Cuppa is not hidden while a timer is running.
-    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 
     // which beverage have they choosen?
     bevy = (Cuppa_Bevy *)[sender representedObject];
-    
     if (!bevy)
     {
         // Bother, we didn't find it! This shouldn't happen.
@@ -411,35 +406,21 @@
     }
     
     // setup the brewing state
+    mCurrentBevy = bevy;
+    mSecondsTotal = [bevy brewTime];
+    mSecondsRemain = mSecondsTotal + 1;
+    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
+        
 #if !defined(NDEBUG)
     printf("Start brewing %s (%d secs)\n", [[bevy name] cString], [bevy brewTime]);
 #endif
+
+    // Make sure Cuppa is not hidden while a timer is running.
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     
-    mSecondsTotal = [bevy brewTime];
-    mSecondsRemain = mSecondsTotal + 1;
-    
-    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
-    
-    // play the start sound
-    if (mMakeSound)
-    {
-        startSound = [NSSound soundNamed:@"pour"];
-        [startSound play];
-    }
-    
-    mCurrentBevy = bevy;
-    
-    // tell the OS we are doing something important... disable App Nap
-    if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
-    {
-        self.timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityIdleSystemSleepDisabled | NSActivityUserInitiated | NSActivityLatencyCritical)
-                         reason:@"Cuppa timer"];
-    }
-    
-    // update the onscreen image
-    [self updateTick:self];
-    
+    // start!
+    [self setTimer:[bevy brewTime]];
+
 } // end -startBrewing:
 
 // *************************************************************************************************
@@ -504,11 +485,7 @@
 // A request to start the quick timer has been made.
 - (void)startQuickTimer:(id)sender
 {
-    NSSound *startSound; // start sound
     int hours = -1, mins = -1, secs = -1; // time values
-    
-    // Make sure Cuppa is not hidden while a timer is running.
-    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 
     // set up the quick timer value scanner
     NSScanner *scanner = [NSScanner scannerWithString:[mQTimerValue stringValue]];
@@ -560,8 +537,6 @@
         secs = hours;
     }
     
-    mCurrentBevy = genericbevy;
-    
     // final check for time limits
     if (secs < CUPPA_BEVY_BREW_TIME_MIN)
         secs = CUPPA_BEVY_BREW_TIME_MIN;
@@ -569,36 +544,24 @@
         secs = CUPPA_BEVY_BREW_TIME_MAX;
     
     // setup the brewing state
+    mCurrentBevy = genericbevy;
+    mSecondsTotal = secs;
+    mSecondsRemain = mSecondsTotal + 1;
+    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
+
 #if !defined(NDEBUG)
     printf("Start quick timer (%d secs)\n", secs);
 #endif
     
-    mSecondsTotal = secs;
-    mSecondsRemain = mSecondsTotal + 1;
-    
-    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
-    
     // we're done with the quick timer panel so close it
     [mQTimerPanel close];
     
-    // play the start sound
-    if (mMakeSound)
-    {
-        startSound = [NSSound soundNamed:@"pour"];
-        [startSound play];
-    }
+    // Make sure Cuppa is not hidden while a timer is running.
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     
-    // tell the OS we are doing something important... disable App Nap
-    if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
-    {
-        self.timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityIdleSystemSleepDisabled | NSActivityUserInitiated | NSActivityLatencyCritical)
-                         reason:@"Cuppa timer"];
-    }
-    
-    // update the onscreen image
-    [self updateTick:self];
-    
+    // start!
+    [self setTimer:secs];
+
 } // end -startQuickTimer:
 
 // *************************************************************************************************
@@ -606,28 +569,49 @@
 // A request to do a notification test has been made.
 - (IBAction)testNotify:(id)sender
 {
-    NSSound *startSound; // start sound
     int secs = 10; // test timer duration
-    
-    mCurrentBevy = genericbevy;
-    
-    // make sure everyone knows we're testing (so we can reopen Preferences window later)
-    mTestNotify = true;
-    
+
     // setup the brewing state
+    mCurrentBevy = genericbevy;
+    mSecondsTotal = secs;
+    mSecondsRemain = mSecondsTotal + 1;
+    mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
+    
 #if !defined(NDEBUG)
     printf("Start notification test (%d secs)\n", secs);
 #endif
     
+    // make sure everyone knows we're testing (so we can reopen Preferences window later)
+    mTestNotify = true;
+
+    // some notifications aren't displayed if we're in the foreground, so let's deactivate
+    [[NSApplication sharedApplication] hide: self];
+    [[NSApplication sharedApplication] miniaturizeAll: self];
+
+    // start!
+    [self setTimer:secs];
+    
+} // end -testNotify:
+
+// *************************************************************************************************
+
+// Set up and start a timer.
+- (void)setTimer:(int)secs
+{
+    NSSound *startSound; // start sound
+
+    // setup the brewing state
     mSecondsTotal = secs;
     mSecondsRemain = mSecondsTotal + 1;
-    
     mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
     
     // play the start sound
-    startSound = [NSSound soundNamed:@"pour"];
-    [startSound play];
-    
+    if (mMakeSound)
+    {
+        startSound = [NSSound soundNamed:@"pour"];
+        [startSound play];
+    }
+
     // tell the OS we are doing something important... disable App Nap
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
@@ -636,14 +620,10 @@
                          reason:@"Cuppa timer"];
     }
     
-    // some notifications aren't displayed if we're in the foreground, so let's deactivate
-    [[NSApplication sharedApplication] hide: self];
-    [[NSApplication sharedApplication] miniaturizeAll: self];
-
     // update the onscreen image
     [self updateTick:self];
-    
-} // end -testNotify:
+
+} // end -setTimer:
 
 // *************************************************************************************************
 
