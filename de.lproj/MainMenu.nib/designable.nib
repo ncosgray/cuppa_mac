@@ -407,6 +407,15 @@
                                                 <outlet property="nextKeyView" destination="257" id="sqi-y7-iVL"/>
                                             </connections>
                                         </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqi-lg-hzY" userLabel="LAdditionalSettings">
+                                            <rect key="frame" x="15" y="86" width="311" height="42"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" title="Weitere Einstellungsmöglichkeiten für Cuppa Benachrichtigungen befinden sich unter Systemeinstellungen &gt; Mitteilungen." id="MMh-Jk-OyA">
+                                                <font key="font" metaFont="menu" size="11"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                         <box fixedFrame="YES" borderType="none" title="Benutzeroberfläche einstellen" translatesAutoresizingMaskIntoConstraints="NO" id="255">
                                             <rect key="frame" x="6" y="-2" width="321" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -441,15 +450,6 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqi-lg-hzY" userLabel="LAdditionalSettings">
-                                            <rect key="frame" x="15" y="86" width="311" height="42"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" controlSize="small" title="Weitere Einstellungsmöglichkeiten für Cuppa Benachrichtigungen befinden sich unter Systemeinstellungen &gt; Mitteilungen." id="MMh-Jk-OyA">
-                                                <font key="font" metaFont="menu" size="11"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>
