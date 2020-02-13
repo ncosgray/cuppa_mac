@@ -604,7 +604,7 @@
 - (IBAction)testNotify:(id)sender
 {
     NSSound *startSound; // start sound
-    int secs = 6; // test timer duration
+    int secs = 10; // test timer duration
     
     mCurrentBevy = genericbevy;
     
