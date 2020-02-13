@@ -223,6 +223,8 @@
     {
         [mOSXNotifySwitch setEnabled:NO];
         [mOSXNotifySwitch setState:NSOffState];
+        
+        [mAdditionalSettings setHidden:YES];
     }
     else
     {

@@ -170,6 +170,7 @@
         <customObject id="195" userLabel="Cuppa_Control" customClass="Cuppa_Control">
             <connections>
                 <outlet property="mAddBevyButton" destination="454" id="460"/>
+                <outlet property="mAdditionalSettings" destination="4OB-h8-KeK" id="L72-Ro-WD7"/>
                 <outlet property="mAlertSwitch" destination="251" id="253"/>
                 <outlet property="mBevyTable" destination="202" id="249"/>
                 <outlet property="mBounceSwitch" destination="219" id="246"/>
@@ -221,7 +222,7 @@
                                                         <tableColumns>
                                                             <tableColumn identifier="image" editable="NO" width="40" minWidth="40" maxWidth="1000" id="205">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                                    <font key="font" metaFont="message" size="11"/>
+                                                                    <font key="font" metaFont="menu" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -234,7 +235,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="name" width="197" minWidth="40" maxWidth="1000" id="203">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Nápojů">
-                                                                    <font key="font" metaFont="message" size="11"/>
+                                                                    <font key="font" metaFont="menu" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -248,7 +249,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="time" width="41.033203125" minWidth="30.533203125" maxWidth="1000" id="206">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Čas">
-                                                                    <font key="font" metaFont="message" size="11"/>
+                                                                    <font key="font" metaFont="menu" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
@@ -396,9 +397,9 @@
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSB-9A-gTr" userLabel="MTestNotify Button">
-                                            <rect key="frame" x="12" y="130" width="128" height="27"/>
+                                            <rect key="frame" x="12" y="130" width="131" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Zkušební oznámení" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MBh-2D-zuL">
+                                            <buttonCell key="cell" type="push" title="Otestovat oznámení" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MBh-2D-zuL">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="message" size="11"/>
                                             </buttonCell>
@@ -440,6 +441,15 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OB-h8-KeK" userLabel="LAdditionalSettings">
+                                            <rect key="frame" x="15" y="94" width="299" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" title="Další nastavení pro upozornění Cuppa naleznete v Předvolbách systému &gt; Oznámení." id="0tA-28-MtE">
+                                                <font key="font" metaFont="message" size="11"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>

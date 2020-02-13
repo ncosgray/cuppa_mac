@@ -165,11 +165,12 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="139" y="260"/>
+            <point key="canvasLocation" x="111" y="387"/>
         </menu>
         <customObject id="195" userLabel="Cuppa_Control" customClass="Cuppa_Control">
             <connections>
                 <outlet property="mAddBevyButton" destination="454" id="460"/>
+                <outlet property="mAdditionalSettings" destination="uqi-lg-hzY" id="odb-kY-Wyo"/>
                 <outlet property="mAlertSwitch" destination="251" id="253"/>
                 <outlet property="mBevyTable" destination="202" id="249"/>
                 <outlet property="mBounceSwitch" destination="219" id="246"/>
@@ -221,7 +222,7 @@
                                                         <tableColumns>
                                                             <tableColumn identifier="image" editable="NO" width="40" minWidth="40" maxWidth="1000" id="205">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                                    <font key="font" metaFont="message" size="11"/>
+                                                                    <font key="font" metaFont="menu" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -234,7 +235,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="name" width="197" minWidth="40" maxWidth="1000" id="203">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
-                                                                    <font key="font" metaFont="message" size="11"/>
+                                                                    <font key="font" metaFont="menu" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -248,7 +249,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="time" width="41.033203125" minWidth="30.533203125" maxWidth="1000" id="206">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Zeit">
-                                                                    <font key="font" metaFont="message" size="11"/>
+                                                                    <font key="font" metaFont="menu" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
@@ -288,7 +289,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <buttonCell key="cell" type="push" title="Gewähltes Getränk löschen" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="453">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="message" size="11"/>
+                                                <font key="font" metaFont="menu" size="11"/>
                                                 <connections>
                                                     <action selector="deleteBevyButton:" target="195" id="458"/>
                                                 </connections>
@@ -299,7 +300,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <buttonCell key="cell" type="push" title="Getränk hinzufügen" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="455">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="message" size="11"/>
+                                                <font key="font" metaFont="menu" size="11"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="addBevyButton:" target="195" id="459"/>
@@ -310,7 +311,7 @@
                                             <rect key="frame" x="15" y="9" width="306" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="justified" id="457">
-                                                <font key="font" metaFont="message" size="11"/>
+                                                <font key="font" metaFont="menu" size="11"/>
                                                 <string key="title">Klicke auf den Button "Getränk hinzufügen" um ein neues Getränk hinzuzufügen. Bearbeite dann danach den Namen und die Brühzeit. Neue Getränke werden immer oben in der Liste angezeigt.</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -336,7 +337,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Docksymbol animieren" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="362">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleBounce:" target="195" id="234"/>
@@ -348,7 +349,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Klang abspielen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="363">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSound:" target="195" id="235"/>
@@ -360,7 +361,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="&quot;Brühzeit abgeschlossen&quot; Fenster anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="364">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleAlert:" target="195" id="252"/>
@@ -372,7 +373,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Benachrichtigung mit Mitteilungszentrale" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="365">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyOSX:" target="195" id="e1S-jq-1iB"/>
@@ -384,7 +385,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Benachrichtigung mit Growl" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="mmO-bn-BTH">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyGrowl:" target="195" id="dCI-66-LZf"/>
@@ -396,18 +397,18 @@
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cB-k0-lEs" userLabel="MTestNotify Button">
-                                            <rect key="frame" x="12" y="130" width="140" height="27"/>
+                                            <rect key="frame" x="12" y="130" width="155" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Testbenachrichtigung" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8cB-AK-Wsy">
+                                            <buttonCell key="cell" type="push" title="Benachrichtigung testen" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8cB-AK-Wsy">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="message" size="11"/>
+                                                <font key="font" metaFont="menu" size="11"/>
                                             </buttonCell>
                                             <connections>
                                                 <outlet property="nextKeyView" destination="257" id="sqi-y7-iVL"/>
                                             </connections>
                                         </button>
                                         <box fixedFrame="YES" borderType="none" title="Benutzeroberfläche einstellen" translatesAutoresizingMaskIntoConstraints="NO" id="255">
-                                            <rect key="frame" x="6" y="10" width="321" height="76"/>
+                                            <rect key="frame" x="6" y="-2" width="321" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <view key="contentView" id="1Cu-7X-EKE">
                                                 <rect key="frame" x="0.0" y="0.0" width="321" height="59"/>
@@ -418,7 +419,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Countdownzeit im Docksymbol anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="368">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleTimer:" target="195" id="260"/>
@@ -430,7 +431,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Aufbrühzeiten in Menü anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="369">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSteep:" target="195" id="326"/>
@@ -440,6 +441,15 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqi-lg-hzY" userLabel="LAdditionalSettings">
+                                            <rect key="frame" x="15" y="86" width="311" height="42"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" title="Weitere Einstellungsmöglichkeiten für Cuppa Benachrichtigungen befinden sich unter Systemeinstellungen &gt; Mitteilungen." id="MMh-Jk-OyA">
+                                                <font key="font" metaFont="menu" size="11"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -464,7 +474,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Starten" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="370">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="message" size="11"/>
+                            <font key="font" metaFont="menu" size="11"/>
                         </buttonCell>
                         <connections>
                             <action selector="startQuickTimer:" target="195" id="308"/>

@@ -76,6 +76,7 @@
     IBOutlet NSButton *mOSXNotifySwitch; // switch for Notification Center control
     IBOutlet NSButton *mGrowlNotifySwitch; // switch for Growl control
     IBOutlet NSButton *mTestNotifyButton; // test notifications button
+    IBOutlet NSTextField *mAdditionalSettings; // System Preferences label
     IBOutlet NSButton *mDeleteBevyButton; // delete beverage button
     IBOutlet NSButton *mAddBevyButton; // edit beverage button
     IBOutlet NSTableView *mBevyTable; // table of beverages
