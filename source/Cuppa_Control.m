@@ -378,6 +378,7 @@
             {
                 mTestNotify = false;
                 
+                [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
                 [self showPrefs:nil];
             }
         }
