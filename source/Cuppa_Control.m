@@ -68,7 +68,7 @@
     [mBevyTable setVerticalMotionCanBeginDrag:true];
     
     // determine if OS X Notification Center is available on system
-    mOSXNofifyAvail = (NSClassFromString(@"NSUserNotificationCenter") != nil);
+    mOSXNotifyAvail = (NSClassFromString(@"NSUserNotificationCenter") != nil);
     
     // determine if Growl is installed on system
     mGrowlInstalled = [GrowlApplicationBridge isGrowlRunning]; // isGrowlInstalled deprecated as of Growl 1.3
@@ -226,7 +226,7 @@
         [mAutoStartSwitch setNextState];
     }
     
-    if (!mOSXNofifyAvail)
+    if (!mOSXNotifyAvail)
     {
         [mOSXNotifySwitch setEnabled:NO];
         [mOSXNotifySwitch setState:NSOffState];
@@ -751,7 +751,7 @@
 {
     
     // do nothing if OS X Notification Center not available
-    if (!mOSXNofifyAvail)
+    if (!mOSXNotifyAvail)
     {
         return;
     }
