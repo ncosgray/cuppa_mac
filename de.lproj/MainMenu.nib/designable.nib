@@ -405,6 +405,7 @@
                                                 <font key="font" metaFont="menu" size="11"/>
                                             </buttonCell>
                                             <connections>
+                                                <action selector="testNotify:" target="195" id="1kq-Cp-G6g"/>
                                                 <outlet property="nextKeyView" destination="257" id="sqi-y7-iVL"/>
                                             </connections>
                                         </button>
