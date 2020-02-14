@@ -61,7 +61,7 @@
 
 // Class Interface
 
-@interface Cuppa_Control : NSObject <GrowlApplicationBridgeDelegate>
+@interface Cuppa_Control : NSObject <GrowlApplicationBridgeDelegate, NSUserNotificationCenterDelegate>
 {
     // IB connected objects
     IBOutlet NSWindow *mPrefsWindow; // application preferences window

@@ -1624,6 +1624,19 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
 
 // *************************************************************************************************
 
+// Override method so Cuppa's Notification Center alerts are always displayed, even if in foreground
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+}
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center
+ shouldPresentNotification:(NSUserNotification *)notification
+{
+    return YES;
+}
+
+// *************************************************************************************************
+
 @end // @implementation Cuppa_Control
 
 // end Cuppa_Control.m
