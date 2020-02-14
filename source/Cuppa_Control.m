@@ -371,6 +371,9 @@
             // show a little alert window
             if (mShowAlert)
             {
+                // force activation
+                [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+                
                 // It's more complicated if we want to allow keyboard shortcuts
                 NSAlert *brewAlert = [[[NSAlert alloc] init] autorelease];
                 [brewAlert setMessageText:NSLocalizedString(@"Brewing complete...", nil)];
