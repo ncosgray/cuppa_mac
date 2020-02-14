@@ -172,6 +172,7 @@
                 <outlet property="mAddBevyButton" destination="454" id="460"/>
                 <outlet property="mAdditionalSettings" destination="ICc-ZN-moA" id="oBP-q8-ea5"/>
                 <outlet property="mAlertSwitch" destination="251" id="253"/>
+                <outlet property="mAutoStartSwitch" destination="dc0-N6-Dsg" id="BgV-DT-mrG"/>
                 <outlet property="mBevyTable" destination="202" id="249"/>
                 <outlet property="mBounceSwitch" destination="219" id="246"/>
                 <outlet property="mDeleteBevyButton" destination="452" id="461"/>
@@ -333,7 +334,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="219">
-                                                        <rect key="frame" x="16" y="90" width="173" height="18"/>
+                                                        <rect key="frame" x="16" y="96" width="173" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Animation icône du Dock" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="362">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -345,7 +346,7 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220">
-                                                        <rect key="frame" x="16" y="72" width="107" height="18"/>
+                                                        <rect key="frame" x="16" y="78" width="107" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Jouer un son" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="363">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -357,7 +358,7 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="251">
-                                                        <rect key="frame" x="16" y="54" width="304" height="18"/>
+                                                        <rect key="frame" x="16" y="60" width="304" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Afficher l'alerte &quot;Infusion terminée&quot;" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="364">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -369,7 +370,7 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="263">
-                                                        <rect key="frame" x="16" y="36" width="270" height="18"/>
+                                                        <rect key="frame" x="16" y="42" width="270" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Notifier avec le Centre de Notifications" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="365">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -381,7 +382,7 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5KQ-zd-ScE">
-                                                        <rect key="frame" x="16" y="18" width="224" height="18"/>
+                                                        <rect key="frame" x="16" y="24" width="224" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Notifier avec Growl" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="mmO-bn-BTH">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -396,8 +397,17 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICc-ZN-moA" userLabel="LAdditionalSettings">
+                                            <rect key="frame" x="15" y="92" width="311" height="42"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" title="Des réglages supplémentaires pour les alertes de Cuppa sont disponibles dans Préférences Système &gt; Notifications." id="UtH-J7-fd1">
+                                                <font key="font" metaFont="message" size="11"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yi9-ma-aHO" userLabel="MTestNotify Button">
-                                            <rect key="frame" x="12" y="130" width="118" height="27"/>
+                                            <rect key="frame" x="12" y="136" width="118" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Test Notifications" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="d8n-8b-Nry">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -407,24 +417,15 @@
                                                 <outlet property="nextKeyView" destination="257" id="BJC-Wj-U2e"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICc-ZN-moA" userLabel="LAdditionalSettings">
-                                            <rect key="frame" x="15" y="86" width="311" height="42"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" controlSize="small" title="Des réglages supplémentaires pour les alertes de Cuppa sont disponibles dans Préférences Système &gt; Notifications." id="UtH-J7-fd1">
-                                                <font key="font" metaFont="message" size="11"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <box fixedFrame="YES" borderType="none" title="Options de l'interface utilisateur" translatesAutoresizingMaskIntoConstraints="NO" id="255">
-                                            <rect key="frame" x="6" y="2" width="321" height="76"/>
+                                            <rect key="frame" x="6" y="3" width="321" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <view key="contentView" id="08D-Dt-tx8">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="257">
-                                                        <rect key="frame" x="16" y="32" width="302" height="18"/>
+                                                        <rect key="frame" x="16" y="42" width="302" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Montrer le compte à rebours sur l'icône du Dock" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="368">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -436,7 +437,7 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="325">
-                                                        <rect key="frame" x="16" y="14" width="280" height="18"/>
+                                                        <rect key="frame" x="16" y="24" width="280" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Inclure les durées d'infusion dans les menus" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="369">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -444,6 +445,18 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSteep:" target="195" id="326"/>
+                                                            <outlet property="nextKeyView" destination="dc0-N6-Dsg" id="qhN-Q8-u0C"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dc0-N6-Dsg" userLabel="MAutoStart Switch">
+                                                        <rect key="frame" x="16" y="6" width="302" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Déclencher le premier minuteur favori au lancement" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="Mf4-XQ-3vH">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="toggleAutoStart:" target="195" id="TrI-AI-SIJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

@@ -171,6 +171,7 @@
                 <outlet property="mAddBevyButton" destination="454" id="460"/>
                 <outlet property="mAdditionalSettings" destination="UWO-ne-66n" id="pql-MC-Sgc"/>
                 <outlet property="mAlertSwitch" destination="251" id="253"/>
+                <outlet property="mAutoStartSwitch" destination="dgR-cd-tUT" id="C6p-R5-m1o"/>
                 <outlet property="mBevyTable" destination="202" id="249"/>
                 <outlet property="mBounceSwitch" destination="219" id="246"/>
                 <outlet property="mDeleteBevyButton" destination="452" id="461"/>
@@ -289,7 +290,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <buttonCell key="cell" type="push" title="Delete Selected Beverage" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="453">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu" size="11"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                                 <connections>
                                                     <action selector="deleteBevyButton:" target="195" id="458"/>
                                                 </connections>
@@ -300,7 +301,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <buttonCell key="cell" type="push" title="Add New Beverage" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="455">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu" size="11"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="addBevyButton:" target="195" id="459"/>
@@ -311,7 +312,7 @@
                                             <rect key="frame" x="15" y="17" width="306" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" id="457">
-                                                <font key="font" metaFont="menu" size="11"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                                 <string key="title">To add a beverage to Cuppa's database, click "Add New Beverage".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list.</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -337,7 +338,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Bounce Dock icon" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="362">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleBounce:" target="195" id="234"/>
@@ -349,7 +350,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Play sound" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="363">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSound:" target="195" id="235"/>
@@ -361,7 +362,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Show &quot;Brewing Complete&quot; alert box" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="364">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleAlert:" target="195" id="252"/>
@@ -373,7 +374,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Notify via Notification Center" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="365">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyOSX:" target="195" id="8zR-0a-s9D"/>
@@ -385,7 +386,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Notify via Growl" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="zS8-pm-iMQ">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyGrowl:" target="195" id="RYE-jI-LMK"/>
@@ -418,14 +419,14 @@
                                             </textFieldCell>
                                         </textField>
                                         <box fixedFrame="YES" borderType="none" title="User Interface Options" translatesAutoresizingMaskIntoConstraints="NO" id="255">
-                                            <rect key="frame" x="6" y="10" width="321" height="76"/>
+                                            <rect key="frame" x="6" y="-1" width="321" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <view key="contentView" id="Jh4-3Y-0ze">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="71"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="257">
-                                                        <rect key="frame" x="16" y="32" width="224" height="18"/>
+                                                        <rect key="frame" x="16" y="46" width="224" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Show countdown timer on Dock icon" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="368">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -437,7 +438,7 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="325">
-                                                        <rect key="frame" x="16" y="14" width="224" height="18"/>
+                                                        <rect key="frame" x="16" y="28" width="224" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Include steep times in menus" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="369">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -445,6 +446,18 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSteep:" target="195" id="326"/>
+                                                            <outlet property="nextKeyView" destination="dgR-cd-tUT" id="nNF-pN-6tc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgR-cd-tUT" userLabel="MAutoStart Switch">
+                                                        <rect key="frame" x="16" y="10" width="255" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Auto-start first beverage timer at launch" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="fku-RV-THJ">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="toggleAutoStart:" target="195" id="Krd-tU-ozl"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

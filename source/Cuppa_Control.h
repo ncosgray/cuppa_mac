@@ -73,6 +73,7 @@
     IBOutlet NSButton *mAlertSwitch; // switch on alert control
     IBOutlet NSButton *mTimerSwitch; // switch on timer control
     IBOutlet NSButton *mSteepSwitch; // switch on steep control
+    IBOutlet NSButton *mAutoStartSwitch; // switch on auto-start timer control
     IBOutlet NSButton *mOSXNotifySwitch; // switch for Notification Center control
     IBOutlet NSButton *mGrowlNotifySwitch; // switch for Growl control
     IBOutlet NSButton *mTestNotifyButton; // test notifications button
@@ -95,6 +96,7 @@
     int mShowAlert; // flag: show alert when brew complete?
     int mShowTimer; // flag: show countown timer during brew?
     int mShowSteep; // flag: show steep times in menus?
+    int mAutoStart; // flag: enable auto-start timer?
     int mNotifyOSX; // flag: notify Notification Center?
     int mNotifyGrowl; // flag: notify Growl?
     bool mTestNotify; // flag: indicates we are doing a test notification
@@ -150,6 +152,9 @@
 
 // Handle toggle of show steep flag.
 - (void)toggleSteep:(id)sender;
+
+// Handle toggle of auto-start timer flag.
+- (IBAction)toggleAutoStart:(id)sender;
 
 // Handle toggle of Notification Center notification.
 - (void)toggleNotifyOSX:(id)sender;

@@ -86,6 +86,7 @@
     [appDefaults setObject:@"YES" forKey:@"showAlert"];
     [appDefaults setObject:@"YES" forKey:@"showTimer"];
     [appDefaults setObject:@"NO" forKey:@"showSteep"];
+    [appDefaults setObject:@"NO" forKey:@"autoStart"];
     [appDefaults setObject:@"NO" forKey:@"notifyOSX"];
     if (mGrowlInstalled)
     {
@@ -124,6 +125,7 @@
     mShowAlert = [defaults boolForKey:@"showAlert"];
     mShowTimer = [defaults boolForKey:@"showTimer"];
     mShowSteep = [defaults boolForKey:@"showSteep"];
+    mAutoStart = [defaults boolForKey:@"autoStart"];
     mNotifyOSX = [defaults boolForKey:@"notifyOSX"];
     mNotifyGrowl = [defaults boolForKey:@"notifyGrowl"];
     
@@ -219,6 +221,11 @@
         [mSteepSwitch setNextState];
     }
     
+    if ([mAutoStartSwitch state] != (mAutoStart ? NSOnState : NSOffState))
+    {
+        [mAutoStartSwitch setNextState];
+    }
+    
     if (!mOSXNofifyAvail)
     {
         [mOSXNotifySwitch setEnabled:NO];
@@ -277,6 +284,22 @@
     
     // make sure to update the dock menu and the Beverages application menu
     [self setBevys:mBevys];
+    
+    // auto-start the first timer in the Beverage List, if that option is enabled
+    if (mAutoStart && [mBevys count] > 0)
+    {
+        Cuppa_Bevy *bevy; // matching beverage object
+
+        // which beverage is the chosen (first) one?
+        bevy = mBevys[0];
+            
+#if !defined(NDEBUG)
+        printf("Auto-start brewing %s (%d secs)\n", [[bevy name] cString], [bevy brewTime]);
+#endif
+
+        // start!
+        [self setTimer:bevy];
+    }
     
 } // end -awakeFromNib
 
@@ -698,6 +721,23 @@
     
     // update the menus
     [self setBevys:mBevys];
+    
+} // end -toggleSteep:
+
+// *************************************************************************************************
+
+// Handle toggle of auto-start timer flag.
+- (void)toggleAutoStart:(id)sender
+{
+#if !defined(NDEBUG)
+    printf("Toggle auto-start timer (now %s).\n", !mAutoStart ? "on" : "off");
+#endif
+    
+    // flip the flag
+    mAutoStart = !mAutoStart;
+    
+    // store to prefs
+    [[NSUserDefaults standardUserDefaults] setBool:mAutoStart forKey:@"autoStart"];
     
 } // end -toggleSteep:
 
@@ -1463,6 +1503,11 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     if ([mSteepSwitch state] != NSOnState)
         [mSteepSwitch setNextState];
     [[NSUserDefaults standardUserDefaults] setBool:mShowSteep forKey:@"showSteep"];
+    
+    mAutoStart = false;
+    if ([mAutoStartSwitch state] != NSOnState)
+        [mAutoStartSwitch setNextState];
+    [[NSUserDefaults standardUserDefaults] setBool:mAutoStart forKey:@"autoStart"];
     
     mNotifyOSX = true;
     if ([mOSXNotifySwitch state] != NSOnState)
