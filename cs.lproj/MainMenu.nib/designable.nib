@@ -223,7 +223,7 @@
                                                         <tableColumns>
                                                             <tableColumn identifier="image" editable="NO" width="40" minWidth="40" maxWidth="1000" id="205">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                                    <font key="font" metaFont="menu" size="11"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -236,7 +236,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="name" width="197" minWidth="40" maxWidth="1000" id="203">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Nápojů">
-                                                                    <font key="font" metaFont="menu" size="11"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -250,7 +250,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="time" width="41.033203125" minWidth="30.533203125" maxWidth="1000" id="206">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Čas">
-                                                                    <font key="font" metaFont="menu" size="11"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
@@ -290,7 +290,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <buttonCell key="cell" type="push" title="Vymazat vybraný nápoj" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="453">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu" size="11"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                                 <connections>
                                                     <action selector="deleteBevyButton:" target="195" id="458"/>
                                                 </connections>
@@ -301,7 +301,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <buttonCell key="cell" type="push" title="Přidat nový nápoj" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="455">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu" size="11"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="addBevyButton:" target="195" id="459"/>
@@ -312,7 +312,7 @@
                                             <rect key="frame" x="15" y="9" width="306" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="justified" id="457">
-                                                <font key="font" metaFont="menu" size="11"/>
+                                                <font key="font" metaFont="message" size="11"/>
                                                 <string key="title">Pro přidání nového nápoje do seznamu klikněte na "Přidat nový nápoj". Pak upravte jeho název a dobu přípravy (položka Nový nápoj, která se objeví jako první v seznamu).</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -338,7 +338,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Poskakování ikony v Docku" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="362">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleBounce:" target="195" id="234"/>
@@ -350,7 +350,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Přehrát zvuk" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="363">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSound:" target="195" id="235"/>
@@ -362,7 +362,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Zobrazit okno &quot;Příprava dokončena&quot;" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="364">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleAlert:" target="195" id="252"/>
@@ -374,7 +374,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Upozornit pomocí Oznamovacího centra" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="365">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyOSX:" target="195" id="e1S-jq-1iB"/>
@@ -386,7 +386,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Upozornit pomocí Growl" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="mmO-bn-BTH">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyGrowl:" target="195" id="dCI-66-LZf"/>
@@ -450,9 +450,9 @@
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Onw-Lk-TTc" userLabel="MAutoStart Switch">
-                                                        <rect key="frame" x="16" y="12" width="255" height="18"/>
+                                                        <rect key="frame" x="16" y="12" width="307" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Auto-start first beverage timer at launch" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="lfA-Ls-cbb">
+                                                        <buttonCell key="cell" type="check" title="Automatické spuštění prvního časovače při spuštění" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="lfA-Ls-cbb">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
