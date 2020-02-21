@@ -175,7 +175,6 @@
                 <outlet property="mBevyTable" destination="202" id="249"/>
                 <outlet property="mBounceSwitch" destination="219" id="246"/>
                 <outlet property="mDeleteBevyButton" destination="452" id="461"/>
-                <outlet property="mGrowlNotifySwitch" destination="ORb-RP-TwA" id="gBP-Bf-n2A"/>
                 <outlet property="mOSXNotifySwitch" destination="263" id="GKS-e4-SdA"/>
                 <outlet property="mPrefsWindow" destination="196" id="211"/>
                 <outlet property="mQTimerPanel" destination="278" id="304"/>
@@ -223,7 +222,7 @@
                                                         <tableColumns>
                                                             <tableColumn identifier="image" editable="NO" width="40" minWidth="40" maxWidth="1000" id="205">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                                    <font key="font" metaFont="menu" size="11"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -236,7 +235,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="name" width="171" minWidth="40" maxWidth="1000" id="203">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
-                                                                    <font key="font" metaFont="menu" size="11"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
@@ -250,7 +249,7 @@
                                                             </tableColumn>
                                                             <tableColumn identifier="time" width="67.033203125" minWidth="30.533203125" maxWidth="1000" id="206">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Time">
-                                                                    <font key="font" metaFont="menu" size="11"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
@@ -378,48 +377,27 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyOSX:" target="195" id="8zR-0a-s9D"/>
-                                                            <outlet property="nextKeyView" destination="ORb-RP-TwA" id="xeF-E8-vHG"/>
+                                                            <outlet property="nextKeyView" destination="nI6-KH-VIJ" id="Zcb-gf-ya6"/>
                                                         </connections>
                                                     </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-RP-TwA">
-                                                        <rect key="frame" x="16" y="18" width="224" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Notify via Growl" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="zS8-pm-iMQ">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-KH-VIJ" userLabel="MTestNotify Button">
+                                                        <rect key="frame" x="6" y="0.0" width="112" height="27"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Test Notification" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LAY-qA-dcS">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="toggleNotifyGrowl:" target="195" id="RYE-jI-LMK"/>
-                                                            <outlet property="nextKeyView" destination="nI6-KH-VIJ" id="1z4-5x-U3E"/>
+                                                            <action selector="testNotify:" target="195" id="UZk-46-Y0U"/>
+                                                            <outlet property="nextKeyView" destination="257" id="aN3-x3-H6X"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-KH-VIJ" userLabel="MTestNotify Button">
-                                            <rect key="frame" x="12" y="130" width="112" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Test Notification" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LAY-qA-dcS">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="message" size="11"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="testNotify:" target="195" id="UZk-46-Y0U"/>
-                                                <outlet property="nextKeyView" destination="257" id="aN3-x3-H6X"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-ne-66n" userLabel="LAdditionalSettings">
-                                            <rect key="frame" x="15" y="94" width="299" height="34"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" controlSize="small" title="Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications." id="5Qf-No-6KB">
-                                                <font key="font" metaFont="message" size="11"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <box fixedFrame="YES" borderType="none" title="User Interface Options" translatesAutoresizingMaskIntoConstraints="NO" id="255">
-                                            <rect key="frame" x="6" y="-1" width="321" height="88"/>
+                                            <rect key="frame" x="6" y="10" width="321" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <view key="contentView" id="Jh4-3Y-0ze">
                                                 <rect key="frame" x="0.0" y="0.0" width="321" height="71"/>
@@ -454,7 +432,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Auto-start first beverage timer at launch" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="fku-RV-THJ">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleAutoStart:" target="195" id="Krd-tU-ozl"/>
@@ -464,6 +442,15 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-ne-66n" userLabel="LAdditionalSettings">
+                                            <rect key="frame" x="15" y="106" width="299" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" title="Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications." id="5Qf-No-6KB">
+                                                <font key="font" metaFont="message" size="11"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>

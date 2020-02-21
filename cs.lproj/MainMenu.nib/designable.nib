@@ -176,7 +176,6 @@
                 <outlet property="mBevyTable" destination="202" id="249"/>
                 <outlet property="mBounceSwitch" destination="219" id="246"/>
                 <outlet property="mDeleteBevyButton" destination="452" id="461"/>
-                <outlet property="mGrowlNotifySwitch" destination="5KQ-zd-ScE" id="LGT-bN-ne4"/>
                 <outlet property="mOSXNotifySwitch" destination="263" id="mzQ-C1-Z93"/>
                 <outlet property="mPrefsWindow" destination="196" id="211"/>
                 <outlet property="mQTimerPanel" destination="278" id="304"/>
@@ -378,19 +377,7 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleNotifyOSX:" target="195" id="e1S-jq-1iB"/>
-                                                            <outlet property="nextKeyView" destination="5KQ-zd-ScE" id="CpR-8S-SPY"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5KQ-zd-ScE">
-                                                        <rect key="frame" x="16" y="18" width="224" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Upozornit pomocí Growl" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="mmO-bn-BTH">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="toggleNotifyGrowl:" target="195" id="dCI-66-LZf"/>
-                                                            <outlet property="nextKeyView" destination="TSB-9A-gTr" id="zMD-S9-nD2"/>
+                                                            <outlet property="nextKeyView" destination="TSB-9A-gTr" id="JEc-dE-Mlw"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -398,7 +385,7 @@
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSB-9A-gTr" userLabel="MTestNotify Button">
-                                            <rect key="frame" x="12" y="130" width="131" height="27"/>
+                                            <rect key="frame" x="12" y="146" width="131" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Otestovat oznámení" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MBh-2D-zuL">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -410,7 +397,7 @@
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OB-h8-KeK" userLabel="LAdditionalSettings">
-                                            <rect key="frame" x="15" y="94" width="299" height="34"/>
+                                            <rect key="frame" x="15" y="110" width="299" height="34"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" controlSize="small" title="Další nastavení pro upozornění Cuppa naleznete v Předvolbách systému &gt; Oznámení." id="0tA-28-MtE">
                                                 <font key="font" metaFont="message" size="11"/>
@@ -419,7 +406,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <box fixedFrame="YES" borderType="none" title="Možnosti uživatelského rozhraní" translatesAutoresizingMaskIntoConstraints="NO" id="255">
-                                            <rect key="frame" x="6" y="-3" width="321" height="89"/>
+                                            <rect key="frame" x="6" y="10" width="321" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <view key="contentView" id="b7s-nd-Zvl">
                                                 <rect key="frame" x="0.0" y="0.0" width="321" height="72"/>

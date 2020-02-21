@@ -40,10 +40,6 @@
 
 // Code!
 
-@interface Cuppa_Control (CuppaGrowl)
-- (void)notifyGrowl;
-@end
-
 @implementation Cuppa_Control
 ;
 
@@ -70,13 +66,6 @@
     // determine if OS X Notification Center is available on system
     mOSXNotifyAvail = (NSClassFromString(@"NSUserNotificationCenter") != nil);
     
-    // determine if Growl is installed on system
-    mGrowlInstalled = [GrowlApplicationBridge isGrowlRunning]; // isGrowlInstalled deprecated as of Growl 1.3
-    if (mGrowlInstalled)
-    {
-        [GrowlApplicationBridge setGrowlDelegate:self];
-    }
-    
     // set application defaults to guarantee our searches will succeed
     defaults = [NSUserDefaults standardUserDefaults];
     appDefaults = [NSMutableDictionary dictionary];
@@ -88,14 +77,6 @@
     [appDefaults setObject:@"NO" forKey:@"showSteep"];
     [appDefaults setObject:@"NO" forKey:@"autoStart"];
     [appDefaults setObject:@"NO" forKey:@"notifyOSX"];
-    if (mGrowlInstalled)
-    {
-        [appDefaults setObject:@"YES" forKey:@"notifyGrowl"];
-    }
-    else
-    {
-        [appDefaults setObject:@"NO" forKey:@"notifyGrowl"];
-    }
     [appDefaults setObject:[Cuppa_Bevy toDictionary:mBevys] forKey:@"bevys"];
     [defaults registerDefaults:appDefaults];
     
@@ -127,7 +108,6 @@
     mShowSteep = [defaults boolForKey:@"showSteep"];
     mAutoStart = [defaults boolForKey:@"autoStart"];
     mNotifyOSX = [defaults boolForKey:@"notifyOSX"];
-    mNotifyGrowl = [defaults boolForKey:@"notifyGrowl"];
     
     mBevys = [Cuppa_Bevy fromDictionary:[defaults objectForKey:@"bevys"]];
     [mBevys retain];
@@ -241,19 +221,6 @@
         }
     }
     
-    if (!mGrowlInstalled)
-    {
-        [mGrowlNotifySwitch setEnabled:NO];
-        [mGrowlNotifySwitch setState:NSOffState];
-    }
-    else
-    {
-        if ([mGrowlNotifySwitch state] != (mNotifyGrowl ? NSOnState : NSOffState))
-        {
-            [mGrowlNotifySwitch setNextState];
-        }
-    }
-    
     // reset quick timer value
     [mQTimerValue setStringValue:@"2:00"];
     
@@ -354,12 +321,6 @@
             {
                 NSSound *doneSound = [NSSound soundNamed:@"spoon"];
                 [doneSound play];
-            }
-            
-            // show a Growl notification
-            if (mNotifyGrowl)
-            {
-                [self notifyGrowl];
             }
             
             // send a message to OS X Notification Center
@@ -767,30 +728,6 @@
     [[NSUserDefaults standardUserDefaults] setBool:mNotifyOSX forKey:@"notifyOSX"];
     
 } // end -toggleNotifyOSX
-
-// *************************************************************************************************
-
-// Handle toggle of Growl alert flag.
-- (void)toggleNotifyGrowl:(id)sender
-{
-    
-    // do nothing if Growl not present
-    if (!mGrowlInstalled)
-    {
-        return;
-    }
-    
-#if !defined(NDEBUG)
-    printf("Toggle Growl notification (now %s).\n", !mNotifyGrowl ? "on" : "off");
-#endif
-    
-    // flip the flag
-    mNotifyGrowl = !mNotifyGrowl;
-    
-    // store to prefs
-    [[NSUserDefaults standardUserDefaults] setBool:mNotifyGrowl forKey:@"notifyGrowl"];
-    
-} // end -toggleNotifyGrowl
 
 // *************************************************************************************************
 
@@ -1517,11 +1454,6 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
         [mOSXNotifySwitch setNextState];
     [[NSUserDefaults standardUserDefaults] setBool:mNotifyOSX forKey:@"notifyOSX"];
     
-    mNotifyGrowl = true;
-    if ([mGrowlNotifySwitch state] != NSOnState)
-        [mGrowlNotifySwitch setNextState];
-    [[NSUserDefaults standardUserDefaults] setBool:mNotifyGrowl forKey:@"notifyGrowl"];
-    
     // apply the default beverage set
     [mBevys autorelease];
     mBevys = [Cuppa_Bevy defaultBevys];
@@ -1545,21 +1477,6 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
 
 // *************************************************************************************************
 
-// Get the registration dictionary for Growl
-- (NSDictionary *)registrationDictionaryForGrowl
-{
-    NSArray *notifications = [NSArray arrayWithObjects:BREWING_STARTED, BREWING_COMPLETE, nil];
-    NSDictionary *dict = [[NSMutableDictionary alloc] init];
-    
-    [dict setValue:notifications forKey:GROWL_NOTIFICATIONS_ALL];
-    [dict setValue:notifications forKey:GROWL_NOTIFICATIONS_DEFAULT];
-    
-    return dict;
-    
-} // end -registrationDictionaryForGrowl
-
-// *************************************************************************************************
-
 // Send notification to OS X Notification Center
 - (void)notifyOSX
 {
@@ -1571,41 +1488,6 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     
 } // end -notifyOSX
-
-// *************************************************************************************************
-
-// Send notification to Growl
-- (void)notifyGrowl
-{
-    NSLog(@"notifying Growl, current bevy: %@", [mCurrentBevy name]);
-    
-    [GrowlApplicationBridge notifyWithTitle:NSLocalizedString(@"Brewing complete...", nil)
-                                description:[NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]]
-                           notificationName:BREWING_COMPLETE
-                                   iconData:nil
-                                   priority:0.0
-                                   isSticky:NO
-                               clickContext:nil];
-    
-} // end -notifyGrowl
-
-// *************************************************************************************************
-
-// Define application name for Growl
-- (NSString *)applicationNameForGrowl
-{
-    return @"Cuppa";
-    
-} // end -applicationNameForGrowl
-
-// *************************************************************************************************
-
-// Handle Growl network entitlement check.
-- (BOOL)hasNetworkClientEntitlement;
-{
-    return YES;
-    
-} // end -hasNetworkClientEntitlement
 
 // *************************************************************************************************
 

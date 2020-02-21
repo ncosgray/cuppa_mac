@@ -45,10 +45,6 @@
 #import <AppKit/AppKit.h>
 #import <Foundation/Foundation.h>
 
-// Growl Includes
-
-#import <Growl/GrowlApplicationBridge.h>
-
 // Cuppa Includes
 
 #import "Cuppa_Bevy.h"
@@ -61,7 +57,7 @@
 
 // Class Interface
 
-@interface Cuppa_Control : NSObject <GrowlApplicationBridgeDelegate, NSUserNotificationCenterDelegate>
+@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate>
 {
     // IB connected objects
     IBOutlet NSWindow *mPrefsWindow; // application preferences window
@@ -75,7 +71,6 @@
     IBOutlet NSButton *mSteepSwitch; // switch on steep control
     IBOutlet NSButton *mAutoStartSwitch; // switch on auto-start timer control
     IBOutlet NSButton *mOSXNotifySwitch; // switch for Notification Center control
-    IBOutlet NSButton *mGrowlNotifySwitch; // switch for Growl control
     IBOutlet NSButton *mTestNotifyButton; // test notifications button
     IBOutlet NSTextField *mAdditionalSettings; // System Preferences label
     IBOutlet NSButton *mDeleteBevyButton; // delete beverage button
@@ -98,9 +93,7 @@
     int mShowSteep; // flag: show steep times in menus?
     int mAutoStart; // flag: enable auto-start timer?
     int mNotifyOSX; // flag: notify Notification Center?
-    int mNotifyGrowl; // flag: notify Growl?
     bool mTestNotify; // flag: indicates we are doing a test notification
-    bool mGrowlInstalled; // flag: shows if growl is installed on the system
     bool mOSXNotifyAvail; // flag: shows if OS X Notification Center is available
     Cuppa_Bevy *mCurrentBevy; // the currently brewing beverage
     Cuppa_Bevy *genericbevy; // quick timer beverage
@@ -158,12 +151,6 @@
 
 // Handle toggle of Notification Center notification.
 - (void)toggleNotifyOSX:(id)sender;
-
-// Handle toggle of Growl notification.
-- (void)toggleNotifyGrowl:(id)sender;
-
-// Handle Growl network entitlement check.
-- (BOOL)hasNetworkClientEntitlement;
 
 // Handle click on the add beverage button.
 - (void)addBevyButton:(id)sender;

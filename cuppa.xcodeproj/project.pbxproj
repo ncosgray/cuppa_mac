@@ -47,28 +47,14 @@
 		FE2940B81F970FB3003119BF /* Cuppa_Bevy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AB8B40204C19D01A80001 /* Cuppa_Bevy.m */; };
 		FE2940BA1F970FB3003119BF /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECF5BAD08DC6F6A00010F73 /* Carbon.framework */; };
 		FE2940BB1F970FB3003119BF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */; };
-		FE2940BC1F970FB3003119BF /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; };
-		FE2940C01F970FB3003119BF /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FE3F19C21F81CB6A0066AD74 /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = FE3F19C11F81CB6A0066AD74 /* icon.iconset */; };
-		FE4295AC0DC37BCC00C2F743 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FE9A9C8D1F847F5100F9AA57 /* teacup16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */; };
 		FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; };
 		FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA6ABB01055B23D00C436D8 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		FEC8E72F0DC3780400031109 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8E72E0DC3780400031109 /* Growl.framework */; };
 		FEEC297A1F9C187900B2E114 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FE2940BE1F970FB3003119BF /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FE2940C01F970FB3003119BF /* Growl.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FE4295AA0DC37BA800C2F743 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,7 +62,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FEA6ABC61055B2D200C436D8 /* Sparkle.framework in CopyFiles */,
-				FE4295AC0DC37BCC00C2F743 /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +113,6 @@
 		FEA42E17225183FE00A50A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		FEA6ABB01055B23D00C436D8 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
-		FEC8E72E0DC3780400031109 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		FECF5BAD08DC6F6A00010F73 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -140,7 +124,6 @@
 			files = (
 				FE256E03098754DD003C11F1 /* Carbon.framework in Frameworks */,
 				FE256E04098754DD003C11F1 /* Cocoa.framework in Frameworks */,
-				FEC8E72F0DC3780400031109 /* Growl.framework in Frameworks */,
 				FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +134,6 @@
 			files = (
 				FE2940BA1F970FB3003119BF /* Carbon.framework in Frameworks */,
 				FE2940BB1F970FB3003119BF /* Cocoa.framework in Frameworks */,
-				FE2940BC1F970FB3003119BF /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				FEA6ABB01055B23D00C436D8 /* Sparkle.framework */,
-				FEC8E72E0DC3780400031109 /* Growl.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -326,7 +307,6 @@
 				FE2940A81F970FB3003119BF /* Resources */,
 				FE2940B31F970FB3003119BF /* Sources */,
 				FE2940B91F970FB3003119BF /* Frameworks */,
-				FE2940BE1F970FB3003119BF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -553,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -590,7 +570,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
@@ -627,7 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
@@ -655,6 +635,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;
@@ -691,6 +672,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;
@@ -725,6 +707,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;

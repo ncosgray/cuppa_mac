@@ -195,14 +195,15 @@
 //  * cleaned up and centered app icon
 //  * upgraded Sparkle framework to 1.21.3
 //
-//  Modifications by Nathan Cosgray on 2020/02/08 (v. 1.8.3):
+//  Modifications by Nathan Cosgray on 2020/02/20 (v. 1.8.3):
+//  ! NOTE: this release requires OS 10.9 (Mavericks) or newer
 //  * new feature:
 //    - option to auto-start a timer at launch
 //  * bugfixes:
 //    - improve icon badge reliability on Catalina and later
 //    - quick timer now respects Play Sound preference
 //  * added Test Notification button
-//  * built with Xcode 11
+//  * removed support for Growl
 //  * upgraded Sparkle framework to 1.22
 
 #import <Cocoa/Cocoa.h>

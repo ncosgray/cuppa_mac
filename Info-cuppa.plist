@@ -5,7 +5,7 @@
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.7.0</string>
+	<string>10.9.0</string>
 	<key>CFBundleSignature</key>
 	<string>Cupa</string>
 	<key>CFBundleIdentifier</key>
