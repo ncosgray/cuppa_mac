@@ -76,7 +76,7 @@
     [appDefaults setObject:@"YES" forKey:@"showTimer"];
     [appDefaults setObject:@"NO" forKey:@"showSteep"];
     [appDefaults setObject:@"NO" forKey:@"autoStart"];
-    [appDefaults setObject:@"NO" forKey:@"notifyOSX"];
+    [appDefaults setObject:@"YES" forKey:@"notifyOSX"];
     [appDefaults setObject:[Cuppa_Bevy toDictionary:mBevys] forKey:@"bevys"];
     [defaults registerDefaults:appDefaults];
     
