@@ -1194,18 +1194,18 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     i++;
     
     // add the quick timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
                                       action:@selector(showQuickTimer:)
-                               keyEquivalent:@""];
+                               keyEquivalent:@""] autorelease];
     [item setTarget:self];
     [item setEnabled:YES];
     [mDockMenu insertItem:item atIndex:(i)];
     i++;
     
     // add the cancel timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
                                       action:@selector(cancelTimer:)
-                               keyEquivalent:@""];
+                               keyEquivalent:@""] autorelease];
     [item setTarget:self];
     [item setEnabled:YES];
     [mDockMenu insertItem:item atIndex:(i)];
@@ -1216,9 +1216,9 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     i++;
     
     // add the preferences item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Preferences...", nil)
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Preferences...", nil)
                                       action:@selector(showPrefs:)
-                               keyEquivalent:@""];
+                               keyEquivalent:@""] autorelease];
     [item setTarget:self];
     [item setEnabled:YES];
     [mDockMenu insertItem:item atIndex:(i)];
