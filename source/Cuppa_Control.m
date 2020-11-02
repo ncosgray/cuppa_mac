@@ -1035,7 +1035,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     // retrieve row index data from pasteboard
     dragRow = *((int *)[[[info draggingPasteboard] dataForType:@"RowIndexPboardType"] bytes]);
     
-    // debug info
 #if !defined(NDEBUG)
     printf("Received drag 'n' drop: moving rows %d to %d\n", dragRow, row);
 #endif
@@ -1465,7 +1464,9 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
 // Send notification to OS X Notification Center
 - (void)notifyOSX
 {
-    NSLog(@"notifying Notification Center, current bevy: %@", [mCurrentBevy name]);
+#if !defined(NDEBUG)
+    printf("notifying Notification Center, current bevy: %@\n", [mCurrentBevy name]);
+#endif
     
     NSUserNotification *notification = [[NSUserNotification alloc] init];
     notification.title = NSLocalizedString(@"Brewing complete...", nil);
