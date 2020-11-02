@@ -114,16 +114,16 @@
 - (void)startBrewing:(id)sender;
 
 // A request to configure application preferences has been made.
-- (void)showPrefs:(id)sender;
+- (IBAction)showPrefs:(id)sender;
 
 // A request to show the quick timer has been made.
-- (void)showQuickTimer:(id)sender;
+- (IBAction)showQuickTimer:(id)sender;
 
 // A request to cancel the timer has been made.
-- (void)cancelTimer:(id)sender;
+- (IBAction)cancelTimer:(id)sender;
 
 // A request to start the quick timer has been made.
-- (void)startQuickTimer:(id)sender;
+- (IBAction)startQuickTimer:(id)sender;
 
 // A request to do a notification test has been made.
 - (IBAction)testNotify:(id)sender;
@@ -132,31 +132,31 @@
 - (void)setTimer:(Cuppa_Bevy *)bevy;
 
 // Handle toggle of bounce icon flag.
-- (void)toggleBounce:(id)sender;
+- (IBAction)toggleBounce:(id)sender;
 
 // Handle toggle of make sound flag.
-- (void)toggleSound:(id)sender;
+- (IBAction)toggleSound:(id)sender;
 
 // Handle toggle of show alert flag.
-- (void)toggleAlert:(id)sender;
+- (IBAction)toggleAlert:(id)sender;
 
 // Handle toggle of countdown timer flag.
-- (void)toggleTimer:(id)sender;
+- (IBAction)toggleTimer:(id)sender;
 
 // Handle toggle of show steep flag.
-- (void)toggleSteep:(id)sender;
+- (IBAction)toggleSteep:(id)sender;
 
 // Handle toggle of auto-start timer flag.
 - (IBAction)toggleAutoStart:(id)sender;
 
 // Handle toggle of Notification Center notification.
-- (void)toggleNotifyOSX:(id)sender;
+- (IBAction)toggleNotifyOSX:(id)sender;
 
 // Handle click on the add beverage button.
-- (void)addBevyButton:(id)sender;
+- (IBAction)addBevyButton:(id)sender;
 
 // Handle click on the delete beverage button.
-- (void)deleteBevyButton:(id)sender;
+- (IBAction)deleteBevyButton:(id)sender;
 
 // Return the number of known beverages.
 - (int)numberOfRowsInTableView:(NSTableView *)aTableView;

@@ -407,7 +407,7 @@
 // *************************************************************************************************
 
 // A request to cancel the timer has been made.
-- (void)cancelTimer:(id)sender
+- (IBAction)cancelTimer:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Cancel timer.\n");
@@ -430,7 +430,7 @@
 // *************************************************************************************************
 
 // A request to configure application preferences has been made.
-- (void)showPrefs:(id)sender
+- (IBAction)showPrefs:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Show prefs.\n");
@@ -447,7 +447,7 @@
 // *************************************************************************************************
 
 // A request to show the quick timer has been made.
-- (void)showQuickTimer:(id)sender
+- (IBAction)showQuickTimer:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Show quick timer.\n");
@@ -464,7 +464,7 @@
 // *************************************************************************************************
 
 // A request to start the quick timer has been made.
-- (void)startQuickTimer:(id)sender
+- (IBAction)startQuickTimer:(id)sender
 {
     int hours = -1, mins = -1, secs = -1; // time values
 
@@ -603,7 +603,7 @@
 // *************************************************************************************************
 
 // Handle toggle of bounce icon flag.
-- (void)toggleBounce:(id)sender
+- (IBAction)toggleBounce:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Toggle bounce (now %s).\n", !mBounceIcon ? "on" : "off");
@@ -620,7 +620,7 @@
 // *************************************************************************************************
 
 // Handle toggle of make sound flag.
-- (void)toggleSound:(id)sender
+- (IBAction)toggleSound:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Toggle sound (now %s).\n", !mMakeSound ? "on" : "off");
@@ -637,7 +637,7 @@
 // *************************************************************************************************
 
 // Handle toggle of show alert flag.
-- (void)toggleAlert:(id)sender
+- (IBAction)toggleAlert:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Toggle alert (now %s).\n", !mShowAlert ? "on" : "off");
@@ -654,7 +654,7 @@
 // *************************************************************************************************
 
 // Handle toggle of countdown timer flag.
-- (void)toggleTimer:(id)sender
+- (IBAction)toggleTimer:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Toggle countdown timer (now %s).\n", !mShowTimer ? "on" : "off");
@@ -671,7 +671,7 @@
 // *************************************************************************************************
 
 // Handle toggle of show steep flag.
-- (void)toggleSteep:(id)sender
+- (IBAction)toggleSteep:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Toggle show steep time (now %s).\n", !mShowSteep ? "on" : "off");
@@ -691,7 +691,7 @@
 // *************************************************************************************************
 
 // Handle toggle of auto-start timer flag.
-- (void)toggleAutoStart:(id)sender
+- (IBAction)toggleAutoStart:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Toggle auto-start timer (now %s).\n", !mAutoStart ? "on" : "off");
@@ -708,7 +708,7 @@
 // *************************************************************************************************
 
 // Handle toggle of OS X Notification Center alert flag.
-- (void)toggleNotifyOSX:(id)sender
+- (IBAction)toggleNotifyOSX:(id)sender
 {
     
     // do nothing if OS X Notification Center not available
@@ -732,7 +732,7 @@
 // *************************************************************************************************
 
 // Handle click on the add beverage button.
-- (void)addBevyButton:(id)sender
+- (IBAction)addBevyButton:(id)sender
 {
     Cuppa_Bevy *bevy; // the new beverage
     
@@ -754,7 +754,7 @@
 // *************************************************************************************************
 
 // Handle click on the delete beverage button.
-- (void)deleteBevyButton:(id)sender
+- (IBAction)deleteBevyButton:(id)sender
 {
 #if !defined(NDEBUG)
     printf("Delete bevy click.\n");
