@@ -1103,22 +1103,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     if (mDockMenu)
     {
         // clear out old menu items first, since we're rebuilding the menu
-        // we don't count the separators, prefs and other items
-        i = (int)[mDockMenu numberOfItems] - 5;
-        while (i-- > 0)
-        {
-            // we've been using NSInvocations to get around the sender-is-NSApplication bug and
-            // we need to go release them here
-            [[[mDockMenu itemAtIndex:0] target] release];
-            [mDockMenu removeItemAtIndex:0];
-        }
-        
-        // just remove the separators, prefs and other items
-        [mDockMenu removeItemAtIndex:0];
-        [mDockMenu removeItemAtIndex:0];
-        [mDockMenu removeItemAtIndex:0];
-        [mDockMenu removeItemAtIndex:0];
-        [mDockMenu removeItemAtIndex:0];
+        [mDockMenu removeAllItems];
     }
     else
     {
