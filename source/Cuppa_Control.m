@@ -2,7 +2,7 @@
  **************************************************************************************************
  Package:  Cuppa
  Class:    Cuppa_Control
-           - Controls for the Cuppa user interface, such as changing preferences and setting timers.
+ - Controls for the Cuppa user interface, such as changing preferences and setting timers.
  ----------------------------------------------------------------------------------------------------
  Copyright (c) 2005-2020 Nathan Cosgray. All rights reserved.
  
@@ -256,14 +256,14 @@
     if (mAutoStart && [mBevys count] > 0)
     {
         Cuppa_Bevy *bevy; // matching beverage object
-
+        
         // which beverage is the chosen (first) one?
         bevy = mBevys[0];
-            
+        
 #if !defined(NDEBUG)
         printf("Auto-start brewing %s (%d secs)\n", [[bevy name] cString], [bevy brewTime]);
 #endif
-
+        
         // start!
         [self setTimer:bevy];
     }
@@ -382,7 +382,7 @@
 - (void)startBrewing:(id)sender
 {
     Cuppa_Bevy *bevy; // matching beverage object
-
+    
     // which beverage have they choosen?
     bevy = (Cuppa_Bevy *)[sender representedObject];
     if (!bevy)
@@ -395,13 +395,13 @@
 #if !defined(NDEBUG)
     printf("Start brewing %s (%d secs)\n", [[bevy name] cString], [bevy brewTime]);
 #endif
-
+    
     // Make sure Cuppa is not hidden while a timer is starting up.
     [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     
     // start!
     [self setTimer:bevy];
-
+    
 } // end -startBrewing:
 
 // *************************************************************************************************
@@ -467,7 +467,7 @@
 - (IBAction)startQuickTimer:(id)sender
 {
     int hours = -1, mins = -1, secs = -1; // time values
-
+    
     // set up the quick timer value scanner
     NSScanner *scanner = [NSScanner scannerWithString:[mQTimerValue stringValue]];
     
@@ -526,7 +526,7 @@
     
     // set quick timer duration
     [genericbevy setBrewTime:secs];
-
+    
 #if !defined(NDEBUG)
     printf("Start quick timer (%d secs)\n", secs);
 #endif
@@ -539,7 +539,7 @@
     
     // start!
     [self setTimer:genericbevy];
-
+    
 } // end -startQuickTimer:
 
 // *************************************************************************************************
@@ -557,11 +557,11 @@
     
     // make sure everyone knows we're testing (so we can reopen Preferences window later)
     mTestNotify = true;
-
+    
     // some notifications aren't displayed if we're in the foreground, so let's deactivate
     [[NSApplication sharedApplication] hide: self];
     [[NSApplication sharedApplication] miniaturizeAll: self];
-
+    
     // start!
     [self setTimer:genericbevy];
     
@@ -573,7 +573,7 @@
 - (void)setTimer:(Cuppa_Bevy *)bevy
 {
     NSSound *startSound; // start sound
-
+    
     // setup the brewing state
     mCurrentBevy = bevy;
     mSecondsTotal = [bevy brewTime];
@@ -586,18 +586,18 @@
         startSound = [NSSound soundNamed:@"pour"];
         [startSound play];
     }
-
+    
     // tell the OS we are doing something important... disable App Nap
     if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         self.timerActivity = [[NSProcessInfo processInfo]
-                         beginActivityWithOptions:(NSActivityIdleSystemSleepDisabled | NSActivityUserInitiated | NSActivityLatencyCritical)
-                         reason:@"Cuppa timer"];
+                              beginActivityWithOptions:(NSActivityIdleSystemSleepDisabled | NSActivityUserInitiated | NSActivityLatencyCritical)
+                              reason:@"Cuppa timer"];
     }
     
     // update the onscreen image
     [self updateTick:self];
-
+    
 } // end -setTimer:
 
 // *************************************************************************************************
@@ -1179,8 +1179,8 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     
     // add the quick timer item
     item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
-                                      action:@selector(showQuickTimer:)
-                               keyEquivalent:@""] autorelease];
+                                       action:@selector(showQuickTimer:)
+                                keyEquivalent:@""] autorelease];
     [item setTarget:self];
     [item setEnabled:YES];
     [mDockMenu insertItem:item atIndex:(i)];
@@ -1188,8 +1188,8 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     
     // add the cancel timer item
     item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
-                                      action:@selector(cancelTimer:)
-                               keyEquivalent:@""] autorelease];
+                                       action:@selector(cancelTimer:)
+                                keyEquivalent:@""] autorelease];
     [item setTarget:self];
     [item setEnabled:YES];
     [mDockMenu insertItem:item atIndex:(i)];
@@ -1201,8 +1201,8 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     
     // add the preferences item
     item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Preferences...", nil)
-                                      action:@selector(showPrefs:)
-                               keyEquivalent:@""] autorelease];
+                                       action:@selector(showPrefs:)
+                                keyEquivalent:@""] autorelease];
     [item setTarget:self];
     [item setEnabled:YES];
     [mDockMenu insertItem:item atIndex:(i)];
@@ -1498,7 +1498,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
 }
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center
- shouldPresentNotification:(NSUserNotification *)notification
+     shouldPresentNotification:(NSUserNotification *)notification
 {
     return YES;
 }
