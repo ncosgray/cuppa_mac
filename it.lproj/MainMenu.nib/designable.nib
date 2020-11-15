@@ -181,6 +181,7 @@
                 <outlet property="mQTimerPanel" destination="278" id="304"/>
                 <outlet property="mQTimerValue" destination="303" id="306"/>
                 <outlet property="mSoundSwitch" destination="220" id="247"/>
+                <outlet property="mSpeakSwitch" destination="ZSN-J9-IZf" id="ZCb-do-3kn"/>
                 <outlet property="mStartButton" destination="289" id="307"/>
                 <outlet property="mSteepSwitch" destination="325" id="327"/>
                 <outlet property="mTimerSwitch" destination="257" id="261"/>
@@ -351,7 +352,7 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSound:" target="195" id="235"/>
-                                                            <outlet property="nextKeyView" destination="251" id="350"/>
+                                                            <outlet property="nextKeyView" destination="ZSN-J9-IZf" id="TmS-Vk-ZgO"/>
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="251">
@@ -388,6 +389,18 @@
                                                         <connections>
                                                             <action selector="testNotify:" target="195" id="mDi-Ti-s8v"/>
                                                             <outlet property="nextKeyView" destination="257" id="Tbm-zn-vYJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSN-J9-IZf">
+                                                        <rect key="frame" x="154" y="72" width="131" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Parla vigile" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="NF0-9F-SmD">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="toggleSpeak:" target="195" id="Hd4-oS-YaY"/>
+                                                            <outlet property="nextKeyView" destination="251" id="KMI-I5-01T"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

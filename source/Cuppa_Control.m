@@ -103,6 +103,7 @@
     // apply current settings
     mBounceIcon = [defaults boolForKey:@"bounceIcon"];
     mMakeSound = [defaults boolForKey:@"makeSound"];
+    mSpeakAlert = [defaults boolForKey:@"speakAlert"];
     mShowAlert = [defaults boolForKey:@"showAlert"];
     mShowTimer = [defaults boolForKey:@"showTimer"];
     mShowSteep = [defaults boolForKey:@"showSteep"];
@@ -134,6 +135,9 @@
     // every second, regardless of whether we are actually brewing anything. This is a
     // (very minor) waste of CPU time.
     mBrewTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 invocation:inv repeats:YES];
+    
+    // initialize speech synthesizer
+    _speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
     
     // return the initialised object!
     return self;
@@ -184,6 +188,11 @@
     if ([mSoundSwitch state] != (mMakeSound ? NSOnState : NSOffState))
     {
         [mSoundSwitch setNextState];
+    }
+    
+    if ([mSpeakSwitch state] != (mSpeakAlert ? NSOnState : NSOffState))
+    {
+        [mSpeakSwitch setNextState];
     }
     
     if ([mAlertSwitch state] != (mShowAlert ? NSOnState : NSOffState))
@@ -310,6 +319,9 @@
             printf("Brew complete!\n");
 #endif
             
+            // alert message text contains beverage name
+            NSString *alertInfoText = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
+            
             // bounce the dock icon until user clicks (more useful than NSInformationalRequest)
             if (mBounceIcon)
             {
@@ -321,6 +333,12 @@
             {
                 NSSound *doneSound = [NSSound soundNamed:@"spoon"];
                 [doneSound play];
+            }
+            
+            // speak it
+            if (mSpeakAlert)
+            {
+                [self.speechSynth startSpeakingString:alertInfoText];
             }
             
             // send a message to OS X Notification Center
@@ -338,7 +356,7 @@
                 // It's more complicated if we want to allow keyboard shortcuts
                 NSAlert *brewAlert = [[[NSAlert alloc] init] autorelease];
                 [brewAlert setMessageText:NSLocalizedString(@"Brewing complete...", nil)];
-                [brewAlert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]]];
+                [brewAlert setInformativeText:alertInfoText];
                 NSButton *okButton = [brewAlert addButtonWithTitle:NSLocalizedString(@"OK", nil)];
                 [okButton setKeyEquivalent:@"\r"];
                 NSButton *quitButton = [brewAlert addButtonWithTitle:NSLocalizedString(@"Quit Cuppa", nil)];
@@ -633,6 +651,23 @@
     [[NSUserDefaults standardUserDefaults] setBool:mMakeSound forKey:@"makeSound"];
     
 } // end -toggleSound:
+
+// *************************************************************************************************
+
+// Handle toggle of speak alert flag.
+- (IBAction)toggleSpeak:(id)sender
+{
+#if !defined(NDEBUG)
+    printf("Toggle speak (now %s).\n", !mSpeakAlert ? "on" : "off");
+#endif
+    
+    // flip the flag
+    mSpeakAlert = !mSpeakAlert;
+    
+    // store to prefs
+    [[NSUserDefaults standardUserDefaults] setBool:mSpeakAlert forKey:@"speakAlert"];
+    
+} // end -toggleSpeak:
 
 // *************************************************************************************************
 
@@ -1412,6 +1447,11 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     if ([mSoundSwitch state] != NSOnState)
         [mSoundSwitch setNextState];
     [[NSUserDefaults standardUserDefaults] setBool:mMakeSound forKey:@"makeSound"];
+    
+    mSpeakAlert = false;
+    if ([mSpeakSwitch state] != NSOnState)
+        [mSpeakSwitch setNextState];
+    [[NSUserDefaults standardUserDefaults] setBool:mSpeakAlert forKey:@"speakAlert"];
     
     mShowAlert = true;
     if ([mAlertSwitch state] != NSOnState)

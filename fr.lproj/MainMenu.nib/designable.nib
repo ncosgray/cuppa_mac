@@ -181,6 +181,7 @@
                 <outlet property="mQTimerPanel" destination="278" id="304"/>
                 <outlet property="mQTimerValue" destination="303" id="306"/>
                 <outlet property="mSoundSwitch" destination="220" id="247"/>
+                <outlet property="mSpeakSwitch" destination="6f0-0E-7eU" id="GEo-zp-nX2"/>
                 <outlet property="mStartButton" destination="289" id="307"/>
                 <outlet property="mSteepSwitch" destination="325" id="327"/>
                 <outlet property="mTimerSwitch" destination="257" id="261"/>
@@ -318,7 +319,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Options" identifier="2" id="447">
-                                <view key="view" ambiguous="YES" id="448">
+                                <view key="view" id="448">
                                     <rect key="frame" x="10" y="33" width="334" height="276"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -350,7 +351,7 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSound:" target="195" id="235"/>
-                                                            <outlet property="nextKeyView" destination="251" id="350"/>
+                                                            <outlet property="nextKeyView" destination="6f0-0E-7eU" id="luZ-yp-SR5"/>
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="251">
@@ -387,6 +388,18 @@
                                                         <connections>
                                                             <action selector="testNotify:" target="195" id="9tE-IO-mRv"/>
                                                             <outlet property="nextKeyView" destination="257" id="BJC-Wj-U2e"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6f0-0E-7eU">
+                                                        <rect key="frame" x="130" y="78" width="107" height="17.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Parler alerte" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="wWf-Rq-4ev">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="toggleSpeak:" target="195" id="g85-ah-t0e"/>
+                                                            <outlet property="nextKeyView" destination="251" id="EuD-20-tqU"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

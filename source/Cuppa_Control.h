@@ -66,6 +66,7 @@
     IBOutlet NSTextField *mQTimerValue; // quick timer value field
     IBOutlet NSButton *mBounceSwitch; // switch on bounce control
     IBOutlet NSButton *mSoundSwitch; // switch on sound control
+    IBOutlet NSButton *mSpeakSwitch; // switch on speak control
     IBOutlet NSButton *mAlertSwitch; // switch on alert control
     IBOutlet NSButton *mTimerSwitch; // switch on timer control
     IBOutlet NSButton *mSteepSwitch; // switch on steep control
@@ -88,6 +89,7 @@
     Cuppa_Render *mRender; // render state and operations
     int mBounceIcon; // flag: bounce dock icon when brew complete?
     int mMakeSound; // flag: make sound when brew complete?
+    int mSpeakAlert; // flag: speak alert when brew complete?
     int mShowAlert; // flag: show alert when brew complete?
     int mShowTimer; // flag: show countown timer during brew?
     int mShowSteep; // flag: show steep times in menus?
@@ -97,10 +99,14 @@
     bool mOSXNotifyAvail; // flag: shows if OS X Notification Center is available
     Cuppa_Bevy *mCurrentBevy; // the currently brewing beverage
     Cuppa_Bevy *genericbevy; // quick timer beverage
+    
 }
 
 // timer activity
 @property (strong) id timerActivity;
+
+// speech synthesizer
+@property (strong) NSSpeechSynthesizer *speechSynth;
 
 // ------ Manipulators ------
 
@@ -136,6 +142,9 @@
 
 // Handle toggle of make sound flag.
 - (IBAction)toggleSound:(id)sender;
+
+// Handle toggle of speak alert flag.
+- (IBAction)toggleSpeak:(id)sender;
 
 // Handle toggle of show alert flag.
 - (IBAction)toggleAlert:(id)sender;
