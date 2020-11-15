@@ -205,6 +205,10 @@
 //  * added Test Notification button
 //  * removed support for Growl
 //  * upgraded Sparkle framework to 1.22
+//
+//  Modifications by Nathan Cosgray on 2020/11/14 (v. 1.8.4):
+//  * Universal 2 binary compatible with Intel and Apple Silicon
+//  * upgraded Sparkle framework to 1.24.0
 
 #import <Cocoa/Cocoa.h>
 
