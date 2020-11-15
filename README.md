@@ -3,7 +3,7 @@
 ##### Author: Nathan Cosgray | https://www.nathanatos.com
 
 * OS 10.9 Mavericks or newer (1, 2)
-* Intel only (3)
+* Universal 2 binary compatible with Intel and Apple Silicon (3)
 * Supports Notification Center notifications (4)
 * Localized in Czech, French, German, Italian
 * Target "cuppa" builds non-App Store distribution version with Sparkle updater and DMG
