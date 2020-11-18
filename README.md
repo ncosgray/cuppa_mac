@@ -10,6 +10,8 @@
 * Target "cuppa-appstore" builds App Store distribution version
 * See changelog in source/main.m
 
+**This project is licensed under the terms of the BSD license.**
+
 1. [Cuppa 1.8.2](https://www.nathanatos.com/software/downloads/Cuppa-1.8.2.zip) supported OS 10.7+
 2. [Cuppa 1.7.9](https://www.nathanatos.com/software/downloads/Cuppa-1.7.9.zip) supported OS 10.4+
 3. [Cuppa 1.7](https://www.nathanatos.com/software/downloads/Cuppa-1.7.zip) was the last version to support PowerPC
