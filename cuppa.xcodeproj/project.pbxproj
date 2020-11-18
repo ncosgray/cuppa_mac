@@ -90,6 +90,7 @@
 		FE3F19C11F81CB6A0066AD74 /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; name = icon.iconset; path = art/icon.iconset; sourceTree = "<group>"; };
 		FE4DDAA91F81968B007C1FEB /* Cuppa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cuppa.entitlements; sourceTree = "<group>"; };
 		FE5C9162092EC6E3003821C5 /* beep.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = beep.aiff; path = sound/beep.aiff; sourceTree = "<group>"; };
+		FE9207452564BE2400B7A6B2 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "teacup16@2x.png"; path = "art/teacup16@2x.png"; sourceTree = "<group>"; };
 		FEA42E03225183C800A50A78 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FEA42E04225183C800A50A78 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 		29B97314FDCFA39411CA2CEA /* cuppa */ = {
 			isa = PBXGroup;
 			children = (
+				FE9207452564BE2400B7A6B2 /* LICENSE.txt */,
 				FE2940C81F970FE1003119BF /* Cuppa-appstore.entitlements */,
 				FE047FEB1F8ACE0C007333E7 /* README.md */,
 				FE4DDAA91F81968B007C1FEB /* Cuppa.entitlements */,
