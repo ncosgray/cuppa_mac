@@ -134,6 +134,14 @@
     NSMenu *mMainMenu; // main menu object
     NSMenuItem *item; // current menu item
     
+    // disable App Nap
+    if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
+    {
+        self.timerActivity = [[[NSProcessInfo processInfo]
+                              beginActivityWithOptions:NSActivityUserInitiatedAllowingIdleSystemSleep
+                              reason:@"Cuppa timer"] retain];
+    }
+    
     mMainMenu = [NSApp mainMenu];
     
 #if !APPSTORE_BUILD
@@ -349,12 +357,6 @@
                 }
             }
             
-            // tell the OS we're done timing
-            if (self.timerActivity != nil)
-            {
-                [[NSProcessInfo processInfo] endActivity:self.timerActivity];
-            }
-            
             // ensure the final image is displayed
             [mRender setBrewState:0.0f];
             
@@ -413,12 +415,6 @@
     
     // reset the timer variable
     mSecondsRemain = 0;
-    
-    // tell the OS we're done timing
-    if (self.timerActivity != nil)
-    {
-        [[NSProcessInfo processInfo] endActivity:self.timerActivity];
-    }
     
     // reset the dock icon
     [mRender restore];
@@ -583,14 +579,6 @@
     {
         startSound = [NSSound soundNamed:@"pour"];
         [startSound play];
-    }
-    
-    // tell the OS we are doing something important... disable App Nap
-    if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
-    {
-        self.timerActivity = [[NSProcessInfo processInfo]
-                              beginActivityWithOptions:(NSActivityIdleSystemSleepDisabled | NSActivityUserInitiated | NSActivityLatencyCritical)
-                              reason:@"Cuppa timer"];
     }
     
     // update the onscreen image
