@@ -116,6 +116,10 @@
     // (very minor) waste of CPU time.
     mBrewTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 invocation:inv repeats:YES];
     
+    // no active timer on startup
+    mSecondsRemain = 0;
+    mAlarmTime = nil;
+    
     // initialize speech synthesizer
     _speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
     
@@ -274,73 +278,94 @@
 {
     
     // update the brew state
-    if (mSecondsRemain > 0)
+    if (mAlarmTime != nil || mSecondsRemain > 0)
     {
         // calculate time remaining til brewing complete
-        mSecondsRemain = floor([mAlarmTime timeIntervalSinceNow]);
-        
-        // update brew time remaining for countdown timer
-        if (mShowTimer)
+        if (mAlarmTime != nil)
         {
-            [mRender setBrewRemain:mSecondsRemain];
+            mSecondsRemain = floor([mAlarmTime timeIntervalSinceNow]);
         }
         else
         {
-            [mRender setBrewRemain:0];
+            mSecondsRemain = 0;
         }
         
-        // update brew state
-        [mRender setBrewState:((float)(mSecondsTotal - mSecondsRemain) / (float)mSecondsTotal)];
-        [mRender render];
-        
-        // emit a beep for the final 5 seconds
-        if (mMakeSound && mSecondsRemain <= 5 && mSecondsRemain >= 1)
+        // still timing?
+        if (mSecondsRemain > 0)
         {
-            NSSound *beepSound = [NSSound soundNamed:@"beep"];
-            [beepSound play];
+            // update brew time remaining for countdown timer
+            if (mShowTimer)
+            {
+                [mRender setBrewRemain:mSecondsRemain];
+            }
+            else
+            {
+                // hide countdown timer if show timer option got disabled
+                [mRender setBrewRemain:0];
+            }
+            
+            // update brew state
+            [mRender setBrewState:((float)(mSecondsTotal - mSecondsRemain) / (float)mSecondsTotal)];
+            [mRender render];
+            
+            // emit a beep for the final 5 seconds
+            if (mMakeSound && mSecondsRemain <= 5 && mSecondsRemain >= 1)
+            {
+                NSSound *beepSound = [NSSound soundNamed:@"beep"];
+                [beepSound play];
+            }
         }
-        
-        // is the bevarage ready?
-        if (mSecondsRemain <= 0)
+    
+        // or is the beverage ready?
+        else
         {
 #if !defined(NDEBUG)
             printf("Brew complete!\n");
 #endif
             
-            // alert message text contains beverage name
-            NSString *alertInfoText = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
+            // reset the timer variables
+            mSecondsRemain = 0;
+            mAlarmTime = nil;
+        
+            // no brew time remaining for countdown timer
+            [mRender setBrewRemain:0];
             
+            // alert message text contains beverage name
+            NSString *alertInfoText = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!",
+                                                                                   nil),
+                                       [mCurrentBevy name]];
+        
             // bounce the dock icon until user clicks (more useful than NSInformationalRequest)
             if (mBounceIcon)
             {
                 [NSApp requestUserAttention:NSCriticalRequest];
             }
-            
+        
             // play a nice sound
             if (mMakeSound)
             {
                 NSSound *doneSound = [NSSound soundNamed:@"spoon"];
                 [doneSound play];
             }
-            
+        
             // speak it
             if (mSpeakAlert)
             {
                 [self.speechSynth startSpeakingString:alertInfoText];
             }
-            
+        
             // send a message to OS X Notification Center
             if (mNotifyOSX)
             {
                 [self notifyOSX];
             }
-            
+        
             // show a little alert window
             if (mShowAlert)
             {
                 // force activation
                 [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
-                
+        
                 // It's more complicated if we want to allow keyboard shortcuts
                 NSAlert *brewAlert = [[[NSAlert alloc] init] autorelease];
                 [brewAlert setMessageText:NSLocalizedString(@"Brewing complete...", nil)];
@@ -356,19 +381,20 @@
                     [[NSApplication sharedApplication] terminate:self];
                 }
             }
-            
+        
             // ensure the final image is displayed
             [mRender setBrewState:0.0f];
-            
+
             // as a courtesy, reopen Preferences if user was testing
             if (mTestNotify)
             {
                 mTestNotify = false;
-                
+        
                 [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
                 [self showPrefs:nil];
             }
-        }
+            
+        } // end if
         
         // render dock tile, just in case
         [mRender render];
@@ -390,6 +416,7 @@
         // Bother, we didn't find it! This shouldn't happen.
         NSAssert(bevy != nil, @"Could not find matching bevy in array!\n");
         mSecondsRemain = 0;
+        mAlarmTime = nil;
     }
     
 #if !defined(NDEBUG)
@@ -413,8 +440,9 @@
     printf("Cancel timer.\n");
 #endif
     
-    // reset the timer variable
+    // reset the timer variables
     mSecondsRemain = 0;
+    mAlarmTime = nil;
     
     // reset the dock icon
     [mRender restore];
