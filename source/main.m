@@ -192,6 +192,10 @@
 //  * Big Sur-style app icon
 //  * Universal 2 binary compatible with Intel and Apple Silicon
 //  * upgraded Sparkle framework to 1.24.0
+//
+//  Modifications by Nathan Cosgray on 2021/09/21 (v. 1.8.5):
+//  * bugfix:
+//    - improve timer reliability on Big Sur
 
 #import <Cocoa/Cocoa.h>
 
