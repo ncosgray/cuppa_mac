@@ -424,7 +424,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="257">
-                                                        <rect key="frame" x="16" y="46" width="285" height="18"/>
+                                                        <rect key="frame" x="16" y="46" width="305" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Show countdown timer on Dock icon" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="368">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -436,7 +436,7 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="325">
-                                                        <rect key="frame" x="16" y="28" width="285" height="18"/>
+                                                        <rect key="frame" x="16" y="28" width="305" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <buttonCell key="cell" type="check" title="Include steep times in menus" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="369">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -448,7 +448,7 @@
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgR-cd-tUT" userLabel="MAutoStart Switch">
-                                                        <rect key="frame" x="16" y="10" width="285" height="18"/>
+                                                        <rect key="frame" x="16" y="10" width="305" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                         <buttonCell key="cell" type="check" title="Auto-start first beverage timer at launch" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="fku-RV-THJ">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>

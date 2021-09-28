@@ -123,7 +123,7 @@
 "278.title" = "Minuteur rapide";
 
 /* Class = "NSButtonCell"; title = "Bounce Dock icon"; ObjectID = "362"; */
-"362.title" = "Animation icône du Dock";
+"362.title" = "Animation de l'icône du Dock";
 
 /* Class = "NSButtonCell"; title = "Play sound"; ObjectID = "363"; */
 "363.title" = "Jouer un son";
@@ -186,4 +186,4 @@
 "fku-RV-THJ.title" = "Déclencher le premier minuteur favori au lancement";
 
 /* Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3"; */
-"gbr-1q-BI3.title" = "Parler alerte";
+"gbr-1q-BI3.title" = "Alerte parlée";
