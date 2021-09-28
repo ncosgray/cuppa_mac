@@ -1,0 +1,189 @@
+
+/* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
+"29.title" = "MainMenu";
+
+/* Class = "NSMenuItem"; title = "Cuppa"; ObjectID = "56"; */
+"56.title" = "Cuppa";
+
+/* Class = "NSMenu"; title = "Cuppa"; ObjectID = "57"; */
+"57.title" = "Cuppa";
+
+/* Class = "NSMenuItem"; title = "About Cuppa"; ObjectID = "58"; */
+"58.title" = "Informazioni su Cuppa";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "103"; */
+"103.title" = "Aiuto";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "106"; */
+"106.title" = "Aiuto";
+
+/* Class = "NSMenuItem"; title = "Cuppa Help"; ObjectID = "111"; */
+"111.title" = "Aiuto Cuppa";
+
+/* Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "129"; */
+"129.title" = "Preferenze...";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+"130.title" = "Servizi";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+"131.title" = "Servizi";
+
+/* Class = "NSMenuItem"; title = "Hide Cuppa"; ObjectID = "134"; */
+"134.title" = "Nascondi Cuppa";
+
+/* Class = "NSMenuItem"; title = "Quit Cuppa"; ObjectID = "136"; */
+"136.title" = "Esci da Cuppa";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145"; */
+"145.title" = "Nascondi altri";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "150"; */
+"150.title" = "Monstra tutto";
+
+/* Class = "NSMenuItem"; title = "Find..."; ObjectID = "154"; */
+"154.title" = "Cerca...";
+
+/* Class = "NSMenuItem"; title = "Scroll to Selection"; ObjectID = "155"; */
+"155.title" = "Vai alla selezione";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "157"; */
+"157.title" = "Copia";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "158"; */
+"158.title" = "Annulla";
+
+/* Class = "NSMenu"; title = "Find"; ObjectID = "159"; */
+"159.title" = "Cerca";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "160"; */
+"160.title" = "Taglia";
+
+/* Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "161"; */
+"161.title" = "Usa la selezione per la ricerca";
+
+/* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "162"; */
+"162.title" = "Cerca il precedente";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "163"; */
+"163.title" = "Modifica";
+
+/* Class = "NSMenuItem"; title = "Clear"; ObjectID = "164"; */
+"164.title" = "Cancella";
+
+/* Class = "NSMenuItem"; title = "Find Next"; ObjectID = "167"; */
+"167.title" = "Cerca il prossimo";
+
+/* Class = "NSMenuItem"; title = "Find"; ObjectID = "168"; */
+"168.title" = "Cerca";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "169"; */
+"169.title" = "Modifica";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "171"; */
+"171.title" = "Incolla";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "172"; */
+"172.title" = "Seleziona tutto";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "173"; */
+"173.title" = "Ripristina";
+
+/* Class = "NSMenuItem"; title = "Spelling"; ObjectID = "184"; */
+"184.title" = "Ortografia";
+
+/* Class = "NSMenu"; title = "Spelling"; ObjectID = "185"; */
+"185.title" = "Ortografia";
+
+/* Class = "NSMenuItem"; title = "Spelling..."; ObjectID = "187"; */
+"187.title" = "Ortografia...";
+
+/* Class = "NSMenuItem"; title = "Check Spelling"; ObjectID = "189"; */
+"189.title" = "Controlla ortografia";
+
+/* Class = "NSMenuItem"; title = "Check Spelling As You Type"; ObjectID = "191"; */
+"191.title" = "Controlla ortografia mentre scrivo";
+
+/* Class = "NSWindow"; title = "Cuppa Preferences"; ObjectID = "196"; */
+"196.title" = "Preferenze di Cuppa";
+
+/* Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "203"; */
+"203.headerCell.title" = "Nome";
+
+/* Class = "NSTableColumn"; headerCell.title = "Time"; ObjectID = "206"; */
+"206.headerCell.title" = "Tempo";
+
+/* Class = "NSBox"; title = "When Brewing is Complete..."; ObjectID = "217"; */
+"217.title" = "Quando l'infusione è completa...";
+
+/* Class = "NSBox"; title = "User Interface Options"; ObjectID = "255"; */
+"255.title" = "Opzioni interfaccia utente";
+
+/* Class = "NSWindow"; title = "Quick Timer"; ObjectID = "278"; */
+"278.title" = "Quick Timer";
+
+/* Class = "NSButtonCell"; title = "Bounce Dock icon"; ObjectID = "362"; */
+"362.title" = "Fai rimbalzare l'icona nel dock";
+
+/* Class = "NSButtonCell"; title = "Play sound"; ObjectID = "363"; */
+"363.title" = "Riproduci suono";
+
+/* Class = "NSButtonCell"; title = "Show \"Brewing Complete\" alert box"; ObjectID = "364"; */
+"364.title" = "Mostra l'avviso \"Infusione completata\"";
+
+/* Class = "NSButtonCell"; title = "Notify via Notification Center"; ObjectID = "365"; */
+"365.title" = "Notifica con Notification Center";
+
+/* Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368"; */
+"368.title" = "Mostra conto alla rovescia nell'icona del dock";
+
+/* Class = "NSButtonCell"; title = "Include steep times in menus"; ObjectID = "369"; */
+"369.title" = "Includi il tempo di infusione nei menù";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "370"; */
+"370.title" = "Inizia";
+
+/* Class = "NSTextFieldCell"; title = "QTimerValue"; ObjectID = "371"; */
+"371.title" = "QTimerValue";
+
+/* Class = "NSTextFieldCell"; title = "Enter a time in minutes:seconds format, or in seconds."; ObjectID = "372"; */
+"372.title" = "Inserisci il tempo in minuti:secondi o in secondi.";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "373"; */
+"373.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "374"; */
+"374.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "375"; */
+"375.title" = "Text Cell";
+
+/* Class = "NSTabViewItem"; label = "Beverage List"; ObjectID = "446"; */
+"446.label" = "Bevande";
+
+/* Class = "NSTabViewItem"; label = "Options"; ObjectID = "447"; */
+"447.label" = "Opzioni";
+
+/* Class = "NSButtonCell"; title = "Delete Selected Beverage"; ObjectID = "453"; */
+"453.title" = "Elimina bevanda";
+
+/* Class = "NSButtonCell"; title = "Add New Beverage"; ObjectID = "455"; */
+"455.title" = "Aggiungi bevanda";
+
+/* Class = "NSTextFieldCell"; title = "To add a beverage to Cuppa's database, click \"Add New Beverage\".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list."; ObjectID = "457"; */
+"457.title" = "Per aggiungere una bevanda al database di Cuppa, clicca su \"Aggiungi bevanda\" e modifica il nome e il tempo di infusione della nuova bevanda che apparirà in cima alla lista.";
+
+/* Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471"; */
+"471.title" = "Trova Cuppa nell'Apple Store...";
+
+/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
+"5Qf-No-6KB.title" = "Ulteriori impostazioni per le notifiche si trovano in > Preferenze di Sistema > Notifiche.";
+
+/* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
+"LAY-qA-dcS.title" = "Prova notifiche";
+
+/* Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ"; */
+"fku-RV-THJ.title" = "Avvia automaticamente il primo timer della lista";
+
+/* Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3"; */
+"gbr-1q-BI3.title" = "Parla vigile";

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,13 +18,13 @@
                 <menuItem title="Cuppa" id="56">
                     <menu key="submenu" title="Cuppa" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="Über Cuppa" id="58">
+                            <menuItem title="About Cuppa" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Cuppa im App Store..." id="471">
+                            <menuItem title="Find Cuppa in the App Store..." id="471">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="loadWebsite:" target="195" id="472"/>
@@ -33,7 +33,7 @@
                             <menuItem isSeparatorItem="YES" id="314">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Einstellungen..." keyEquivalent="," id="129">
+                            <menuItem title="Preferences..." keyEquivalent="," id="129">
                                 <connections>
                                     <action selector="showPrefs:" target="195" id="250"/>
                                 </connections>
@@ -41,23 +41,23 @@
                             <menuItem isSeparatorItem="YES" id="143">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Dienste" id="131">
-                                <menu key="submenu" title="Dienste" systemMenu="services" id="130"/>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="144">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Cuppa ausblenden" keyEquivalent="h" id="134">
+                            <menuItem title="Hide Cuppa" keyEquivalent="h" id="134">
                                 <connections>
                                     <action selector="hide:" target="-2" id="152"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Andere ausblenden" id="145">
+                            <menuItem title="Hide Others" id="145">
                                 <connections>
                                     <action selector="hideOtherApplications:" target="-2" id="146"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Alle einblenden" id="150">
+                            <menuItem title="Show All" id="150">
                                 <connections>
                                     <action selector="unhideAllApplications:" target="-2" id="153"/>
                                 </connections>
@@ -65,7 +65,7 @@
                             <menuItem isSeparatorItem="YES" id="149">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Cuppa beenden" keyEquivalent="q" id="136">
+                            <menuItem title="Quit Cuppa" keyEquivalent="q" id="136">
                                 <connections>
                                     <action selector="terminate:" target="-2" id="139"/>
                                 </connections>
@@ -73,15 +73,15 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Bearbeiten" id="163">
-                    <menu key="submenu" title="Bearbeiten" id="169">
+                <menuItem title="Edit" id="163">
+                    <menu key="submenu" title="Edit" id="169">
                         <items>
-                            <menuItem title="Widerrufen" keyEquivalent="z" id="158">
+                            <menuItem title="Undo" keyEquivalent="z" id="158">
                                 <connections>
                                     <action selector="undo:" target="-1" id="180"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Wiederholen" keyEquivalent="Z" id="173">
+                            <menuItem title="Redo" keyEquivalent="Z" id="173">
                                 <connections>
                                     <action selector="redo:" target="-1" id="178"/>
                                 </connections>
@@ -89,27 +89,27 @@
                             <menuItem isSeparatorItem="YES" id="156">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Ausschneiden" keyEquivalent="x" id="160">
+                            <menuItem title="Cut" keyEquivalent="x" id="160">
                                 <connections>
                                     <action selector="cut:" target="-1" id="175"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Kopieren" keyEquivalent="c" id="157">
+                            <menuItem title="Copy" keyEquivalent="c" id="157">
                                 <connections>
                                     <action selector="copy:" target="-1" id="181"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Einsetzen" keyEquivalent="v" id="171">
+                            <menuItem title="Paste" keyEquivalent="v" id="171">
                                 <connections>
                                     <action selector="paste:" target="-1" id="176"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Löschen" id="164">
+                            <menuItem title="Clear" id="164">
                                 <connections>
                                     <action selector="clear:" target="-1" id="183"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Alles auswählen" keyEquivalent="a" id="172">
+                            <menuItem title="Select All" keyEquivalent="a" id="172">
                                 <connections>
                                     <action selector="selectAll:" target="-1" id="179"/>
                                 </connections>
@@ -117,31 +117,31 @@
                             <menuItem isSeparatorItem="YES" id="174">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Suchen" id="168">
-                                <menu key="submenu" title="Suchen" id="159">
+                            <menuItem title="Find" id="168">
+                                <menu key="submenu" title="Find" id="159">
                                     <items>
-                                        <menuItem title="Suchen..." keyEquivalent="f" id="154"/>
-                                        <menuItem title="Nächster Treffer" keyEquivalent="g" id="167"/>
-                                        <menuItem title="Voriger Treffer" keyEquivalent="d" id="162"/>
-                                        <menuItem title="Nur in Auswahl suchen" keyEquivalent="e" id="161"/>
-                                        <menuItem title="Auswahl anzeigen" keyEquivalent="j" id="155"/>
+                                        <menuItem title="Find..." keyEquivalent="f" id="154"/>
+                                        <menuItem title="Find Next" keyEquivalent="g" id="167"/>
+                                        <menuItem title="Find Previous" keyEquivalent="d" id="162"/>
+                                        <menuItem title="Use Selection for Find" keyEquivalent="e" id="161"/>
+                                        <menuItem title="Scroll to Selection" keyEquivalent="j" id="155"/>
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Rechtschreibung und Grammatik" id="184">
-                                <menu key="submenu" title="Rechtschreibung und Grammatik" id="185">
+                            <menuItem title="Spelling" id="184">
+                                <menu key="submenu" title="Spelling" id="185">
                                     <items>
-                                        <menuItem title="Rechtschreibung und Grammatik einblenden..." keyEquivalent=":" id="187">
+                                        <menuItem title="Spelling..." keyEquivalent=":" id="187">
                                             <connections>
                                                 <action selector="showGuessPanel:" target="-1" id="188"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Dokument jetzt prüfen" keyEquivalent=";" id="189">
+                                        <menuItem title="Check Spelling" keyEquivalent=";" id="189">
                                             <connections>
                                                 <action selector="checkSpelling:" target="-1" id="190"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Während der Texteingabe prüfen" id="191">
+                                        <menuItem title="Check Spelling As You Type" id="191">
                                             <connections>
                                                 <action selector="toggleContinuousSpellChecking:" target="-1" id="192"/>
                                             </connections>
@@ -152,42 +152,43 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Hilfe" id="103">
-                    <menu key="submenu" title="Hilfe" id="106">
+                <menuItem title="Help" id="103">
+                    <menu key="submenu" title="Help" id="106">
                         <items>
-                            <menuItem title="Cuppa Hilfe" keyEquivalent="?" id="111">
+                            <menuItem title="Cuppa Help" keyEquivalent="?" id="111">
                                 <attributedString key="attributedTitle"/>
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="PoR-OA-N4l"/>
+                                    <action selector="showHelp:" target="-1" id="122"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="61" y="400"/>
+            <point key="canvasLocation" x="70" y="414"/>
         </menu>
         <customObject id="195" userLabel="Cuppa_Control" customClass="Cuppa_Control">
             <connections>
                 <outlet property="mAddBevyButton" destination="454" id="460"/>
-                <outlet property="mAdditionalSettings" destination="uqi-lg-hzY" id="odb-kY-Wyo"/>
+                <outlet property="mAdditionalSettings" destination="UWO-ne-66n" id="pql-MC-Sgc"/>
                 <outlet property="mAlertSwitch" destination="251" id="253"/>
-                <outlet property="mAutoStartSwitch" destination="SPd-yv-1JF" id="qi0-XH-RHW"/>
+                <outlet property="mAutoStartSwitch" destination="dgR-cd-tUT" id="C6p-R5-m1o"/>
                 <outlet property="mBevyTable" destination="202" id="249"/>
                 <outlet property="mBounceSwitch" destination="219" id="246"/>
                 <outlet property="mDeleteBevyButton" destination="452" id="461"/>
-                <outlet property="mOSXNotifySwitch" destination="263" id="mzQ-C1-Z93"/>
+                <outlet property="mOSXNotifySwitch" destination="263" id="GKS-e4-SdA"/>
                 <outlet property="mPrefsWindow" destination="196" id="211"/>
                 <outlet property="mQTimerPanel" destination="278" id="304"/>
                 <outlet property="mQTimerValue" destination="303" id="306"/>
                 <outlet property="mSoundSwitch" destination="220" id="247"/>
-                <outlet property="mSpeakSwitch" destination="f6J-Zb-i8C" id="CXp-ba-isi"/>
+                <outlet property="mSpeakSwitch" destination="jif-aM-MJA" id="tQM-hm-fFZ"/>
                 <outlet property="mStartButton" destination="289" id="307"/>
                 <outlet property="mSteepSwitch" destination="325" id="327"/>
+                <outlet property="mTestNotifyButton" destination="nI6-KH-VIJ" id="gRa-Qz-adq"/>
                 <outlet property="mTimerSwitch" destination="257" id="261"/>
             </connections>
         </customObject>
-        <window title="Cuppa Einstellungen" allowsToolTipsWhenApplicationIsInactive="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="prefsWindow" animationBehavior="default" id="196" userLabel="PrefsWindow" customClass="NSPanel">
+        <window title="Cuppa Preferences" allowsToolTipsWhenApplicationIsInactive="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="prefsWindow" animationBehavior="default" id="196" userLabel="PrefsWindow" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="171" y="412" width="380" height="338"/>
@@ -195,14 +196,14 @@
             <value key="minSize" type="size" width="360" height="206"/>
             <view key="contentView" id="197">
                 <rect key="frame" x="0.0" y="0.0" width="380" height="338"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <tabView fixedFrame="YES" initialItem="446" translatesAutoresizingMaskIntoConstraints="NO" id="445">
                         <rect key="frame" x="13" y="10" width="354" height="322"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
-                            <tabViewItem label="Getränke" identifier="1" id="446">
+                            <tabViewItem label="Beverage List" identifier="1" id="446">
                                 <view key="view" id="449">
                                     <rect key="frame" x="10" y="33" width="334" height="276"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,12 +211,12 @@
                                         <scrollView fixedFrame="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="204">
                                             <rect key="frame" x="17" y="103" width="300" height="170"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <clipView key="contentView" id="UC3-DP-0Ie">
+                                            <clipView key="contentView" id="PF7-Yt-Ksy">
                                                 <rect key="frame" x="1" y="1" width="287" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="378" id="202">
-                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="151"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="287" height="151"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -233,7 +234,7 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
-                                                            <tableColumn identifier="name" width="197" minWidth="40" maxWidth="1000" id="203">
+                                                            <tableColumn identifier="name" width="171" minWidth="40" maxWidth="1000" id="203">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,7 +248,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
                                                             <tableColumn identifier="time" width="58" minWidth="58" maxWidth="1000" id="206">
-                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Zeit">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Time">
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
@@ -275,7 +276,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="378">
-                                                <rect key="frame" x="0.0" y="0.0" width="313" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="287" height="17"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                             <connections>
@@ -283,9 +284,9 @@
                                             </connections>
                                         </scrollView>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="452">
-                                            <rect key="frame" x="151" y="71" width="171" height="28"/>
+                                            <rect key="frame" x="147" y="71" width="175" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <buttonCell key="cell" type="push" title="Gewähltes Getränk löschen" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="453">
+                                            <buttonCell key="cell" type="push" title="Delete Selected Beverage" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="453">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="message" size="11"/>
                                                 <connections>
@@ -294,9 +295,9 @@
                                             </buttonCell>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="454">
-                                            <rect key="frame" x="12" y="71" width="133" height="28"/>
+                                            <rect key="frame" x="12" y="71" width="139" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <buttonCell key="cell" type="push" title="Getränk hinzufügen" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="455">
+                                            <buttonCell key="cell" type="push" title="Add New Beverage" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="455">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="message" size="11"/>
                                             </buttonCell>
@@ -306,11 +307,11 @@
                                             </connections>
                                         </button>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="456">
-                                            <rect key="frame" x="15" y="9" width="306" height="56"/>
+                                            <rect key="frame" x="16" y="7" width="306" height="63"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="justified" id="457">
+                                            <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" id="457">
                                                 <font key="font" metaFont="message" size="11"/>
-                                                <string key="title">Klicke auf den Button "Getränk hinzufügen" um ein neues Getränk hinzuzufügen. Bearbeite dann danach den Namen und die Brühzeit. Neue Getränke werden immer oben in der Liste angezeigt.</string>
+                                                <string key="title">To add a beverage to Cuppa's database, click "Add New Beverage".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list.</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -318,22 +319,22 @@
                                     </subviews>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Optionen" identifier="2" id="447">
+                            <tabViewItem label="Options" identifier="2" id="447">
                                 <view key="view" id="448">
                                     <rect key="frame" x="10" y="33" width="334" height="276"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <box fixedFrame="YES" borderType="none" title="Wenn Brühzeit abgeschlossen ..." translatesAutoresizingMaskIntoConstraints="NO" id="217">
-                                            <rect key="frame" x="4" y="142" width="321" height="134"/>
+                                        <box fixedFrame="YES" borderType="none" title="When Brewing is Complete..." translatesAutoresizingMaskIntoConstraints="NO" id="217">
+                                            <rect key="frame" x="6" y="142" width="321" height="134"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <view key="contentView" id="DIp-d8-gvs">
+                                            <view key="contentView" id="VLN-tP-hxg">
                                                 <rect key="frame" x="0.0" y="0.0" width="321" height="117"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="219">
-                                                        <rect key="frame" x="16" y="96" width="153" height="18"/>
+                                                        <rect key="frame" x="16" y="90" width="285" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Docksymbol animieren" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="362">
+                                                        <buttonCell key="cell" type="check" title="Bounce Dock icon" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="362">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
@@ -343,21 +344,21 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220">
-                                                        <rect key="frame" x="16" y="78" width="107" height="18"/>
+                                                        <rect key="frame" x="16" y="72" width="119" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Klang abspielen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="363">
+                                                        <buttonCell key="cell" type="check" title="Play sound" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="363">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSound:" target="195" id="235"/>
-                                                            <outlet property="nextKeyView" destination="f6J-Zb-i8C" id="fYq-XD-JIr"/>
+                                                            <outlet property="nextKeyView" destination="jif-aM-MJA" id="5Mh-gq-tQB"/>
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="251">
-                                                        <rect key="frame" x="16" y="60" width="304" height="18"/>
+                                                        <rect key="frame" x="16" y="54" width="285" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="&quot;Brühzeit abgeschlossen&quot; Fenster anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="364">
+                                                        <buttonCell key="cell" type="check" title="Show &quot;Brewing Complete&quot; alert box" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="364">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
@@ -367,65 +368,65 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="263">
-                                                        <rect key="frame" x="16" y="42" width="270" height="18"/>
+                                                        <rect key="frame" x="16" y="36" width="285" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Benachrichtigung mit Mitteilungszentrale" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="365">
+                                                        <buttonCell key="cell" type="check" title="Notify via Notification Center" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="365">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="toggleNotifyOSX:" target="195" id="e1S-jq-1iB"/>
-                                                            <outlet property="nextKeyView" destination="7cB-k0-lEs" id="Xk8-Qc-Ggy"/>
+                                                            <action selector="toggleNotifyOSX:" target="195" id="8zR-0a-s9D"/>
+                                                            <outlet property="nextKeyView" destination="nI6-KH-VIJ" id="Zcb-gf-ya6"/>
                                                         </connections>
                                                     </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6J-Zb-i8C" userLabel="Alarm sprechen">
-                                                        <rect key="frame" x="130" y="78" width="107" height="18"/>
+                                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-KH-VIJ" userLabel="MTestNotify Button">
+                                                        <rect key="frame" x="6" y="0.0" width="155" height="27"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Test Notification" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LAY-qA-dcS">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="testNotify:" target="195" id="UZk-46-Y0U"/>
+                                                            <outlet property="nextKeyView" destination="257" id="aN3-x3-H6X"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jif-aM-MJA">
+                                                        <rect key="frame" x="142" y="72" width="159" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Alarm sprechen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="PXY-dy-5Xe">
+                                                        <buttonCell key="cell" type="check" title="Speak alert" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="gbr-1q-BI3">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="toggleSpeak:" target="195" id="1Xm-8M-Iea"/>
-                                                            <outlet property="nextKeyView" destination="251" id="DVd-Zk-aaE"/>
+                                                            <action selector="toggleSpeak:" target="195" id="YVa-KZ-dhO"/>
+                                                            <outlet property="nextKeyView" destination="251" id="1BH-hj-4zg"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cB-k0-lEs" userLabel="MTestNotify Button">
-                                            <rect key="frame" x="10" y="151" width="155" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Benachrichtigung testen" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8cB-AK-Wsy">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="message" size="11"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="testNotify:" target="195" id="1kq-Cp-G6g"/>
-                                                <outlet property="nextKeyView" destination="257" id="sqi-y7-iVL"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqi-lg-hzY" userLabel="LAdditionalSettings">
-                                            <rect key="frame" x="13" y="107" width="311" height="42"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-ne-66n" userLabel="LAdditionalSettings">
+                                            <rect key="frame" x="15" y="97" width="299" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" controlSize="small" title="Weitere Einstellungsmöglichkeiten für Cuppa Benachrichtigungen befinden sich unter Systemeinstellungen &gt; Mitteilungen." id="MMh-Jk-OyA">
+                                            <textFieldCell key="cell" controlSize="small" title="Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications." id="5Qf-No-6KB">
                                                 <font key="font" metaFont="message" size="11"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <box fixedFrame="YES" borderType="none" title="Benutzeroberfläche einstellen" translatesAutoresizingMaskIntoConstraints="NO" id="255">
-                                            <rect key="frame" x="6" y="4" width="321" height="86"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <view key="contentView" id="1Cu-7X-EKE">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="69"/>
+                                        <box fixedFrame="YES" borderType="none" title="User Interface Options" translatesAutoresizingMaskIntoConstraints="NO" id="255">
+                                            <rect key="frame" x="7" y="1" width="321" height="88"/>
+                                            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                            <view key="contentView" id="Jh4-3Y-0ze">
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="71"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="257">
-                                                        <rect key="frame" x="16" y="48" width="241" height="18"/>
+                                                        <rect key="frame" x="16" y="46" width="285" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Countdownzeit im Docksymbol anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="368">
+                                                        <buttonCell key="cell" type="check" title="Show countdown timer on Dock icon" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="368">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
@@ -435,26 +436,26 @@
                                                         </connections>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="325">
-                                                        <rect key="frame" x="16" y="30" width="224" height="18"/>
+                                                        <rect key="frame" x="16" y="28" width="285" height="18"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Aufbrühzeiten in Menü anzeigen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="369">
+                                                        <buttonCell key="cell" type="check" title="Include steep times in menus" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="369">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="toggleSteep:" target="195" id="326"/>
-                                                            <outlet property="nextKeyView" destination="SPd-yv-1JF" id="Fie-ET-vAG"/>
+                                                            <outlet property="nextKeyView" destination="dgR-cd-tUT" id="nNF-pN-6tc"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPd-yv-1JF" userLabel="MAutoStart Switch">
-                                                        <rect key="frame" x="16" y="12" width="307" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <buttonCell key="cell" type="check" title="Timer des obersten Getränkes automatisch beim Start beginnen" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="cSy-iI-6eV">
+                                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgR-cd-tUT" userLabel="MAutoStart Switch">
+                                                        <rect key="frame" x="16" y="10" width="285" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Auto-start first beverage timer at launch" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="fku-RV-THJ">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="toggleAutoStart:" target="195" id="0Xw-s5-j49"/>
+                                                            <action selector="toggleAutoStart:" target="195" id="Krd-tU-ozl"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -468,9 +469,9 @@
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="139" y="147"/>
+            <point key="canvasLocation" x="169" y="158"/>
         </window>
-        <window title="Schneller Timer" allowsToolTipsWhenApplicationIsInactive="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="QTimerPanel" animationBehavior="default" id="278" userLabel="QTimerPanel" customClass="NSPanel">
+        <window title="Quick Timer" allowsToolTipsWhenApplicationIsInactive="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="QTimerPanel" animationBehavior="default" id="278" userLabel="QTimerPanel" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="230" y="464" width="319" height="100"/>
@@ -483,7 +484,7 @@
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="289">
                         <rect key="frame" x="220" y="10" width="84" height="28"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="push" title="Starten" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="370">
+                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="370">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="message" size="11"/>
                         </buttonCell>
@@ -504,9 +505,9 @@
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="312">
-                        <rect key="frame" x="17" y="31" width="285" height="22"/>
+                        <rect key="frame" x="17" y="20" width="285" height="33"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Gib eine Zeit im Format Minuten:Sekunden ein oder direkt in Sekunden." id="372">
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Enter a time in minutes:seconds format, or in seconds." id="372">
                             <font key="font" metaFont="label" size="9"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -514,7 +515,7 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="109" y="-185"/>
+            <point key="canvasLocation" x="138.5" y="-166"/>
         </window>
         <customObject id="379" customClass="SUUpdater"/>
         <userDefaultsController representsSharedInstance="YES" id="383"/>
