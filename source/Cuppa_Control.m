@@ -330,6 +330,10 @@
             // no brew time remaining for countdown timer
             [mRender setBrewRemain:0];
             
+            // ensure the final image is displayed
+            [mRender setBrewState:0.0f];
+            [mRender render];
+
             // alert message text contains beverage name
             NSString *alertInfoText = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!",
                                                                                    nil),
@@ -381,9 +385,6 @@
                     [[NSApplication sharedApplication] terminate:self];
                 }
             }
-        
-            // ensure the final image is displayed
-            [mRender setBrewState:0.0f];
 
             // as a courtesy, reopen Preferences if user was testing
             if (mTestNotify)
@@ -395,9 +396,6 @@
             }
             
         } // end if
-        
-        // render dock tile, just in case
-        [mRender render];
         
     } // end if
 } // end -updateTick:
