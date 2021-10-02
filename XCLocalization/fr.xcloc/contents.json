@@ -1,0 +1,12 @@
+{
+  "developmentRegion" : "en",
+  "project" : "cuppa.xcodeproj",
+  "targetLocale" : "fr",
+  "toolInfo" : {
+    "toolBuildNumber" : "13A233",
+    "toolID" : "com.apple.dt.xcode",
+    "toolName" : "Xcode",
+    "toolVersion" : "13.0"
+  },
+  "version" : "1.0"
+}

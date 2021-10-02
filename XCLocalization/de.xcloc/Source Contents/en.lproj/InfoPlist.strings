@@ -1,0 +1,5 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Cuppa";
+CFBundleHelpBookName = "Cuppa Help";
+NSHumanReadableCopyright = "Copyright © 2005-2021 Nathan Cosgray.";
