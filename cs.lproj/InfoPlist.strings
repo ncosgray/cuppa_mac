@@ -2,6 +2,4 @@
 
 CFBundleName = "Cuppa";
 CFBundleHelpBookName = "Nápověda k Cuppa";
-NSHumanReadableCopyright = "Copyright © 2005-2021 Nathan Cosgray.
-
-Český překlad: Tomáš Klos.";
+NSHumanReadableCopyright = "Copyright © 2005-2021 Nathan Cosgray.";

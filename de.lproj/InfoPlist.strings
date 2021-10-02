@@ -2,6 +2,4 @@
 
 CFBundleName = "Cuppa";
 CFBundleHelpBookName = "Cuppa Hilfe";
-NSHumanReadableCopyright = "Copyright © 2005-2021 Nathan Cosgray.
-
-Deutsche Übersetzung von Benedikt Hopmann.";
+NSHumanReadableCopyright = "Copyright © 2005-2021 Nathan Cosgray.";
