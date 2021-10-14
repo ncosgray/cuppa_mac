@@ -345,7 +345,9 @@
         <source>Copyright © 2005-2021 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target state="needs-translation">Copyright © 2005-2021 Nathan Cosgray.</target>
+        <target state="translated">Copyright © 2005-2021 Nathan Cosgray.
+
+Cuppa používá Weblate pro překlady.</target>
         <note>Copyright (human-readable)</note>
       </trans-unit>
     </body>
@@ -402,6 +404,7 @@ Cuppa uses Weblate for translations.</source>
       </trans-unit>
       <trans-unit id="Green Tea" xml:space="preserve">
         <source>Green Tea</source>
+        <target>Zelený čaj</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Jasmine Green Tea" xml:space="preserve">
