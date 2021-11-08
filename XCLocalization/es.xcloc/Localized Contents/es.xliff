@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="Base.lproj/MainMenu.xib" source-language="en" target-language="es" datatype="plaintext">
     <header>
@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
         <source>Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications.</source>
-        <target/>
+        <target>Se pueden encontrar configuraciones adicionales para las alertas de Cuppa en Preferencias del sistema &gt; Notificaciones.</target>
         <note>Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications."; ObjectID = "5Qf-No-6KB";</note>
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
@@ -42,7 +42,7 @@
       </trans-unit>
       <trans-unit id="111.title" xml:space="preserve">
         <source>Cuppa Help</source>
-        <target/>
+        <target>Cuppa Ayuda</target>
         <note>Class = "NSMenuItem"; title = "Cuppa Help"; ObjectID = "111";</note>
       </trans-unit>
       <trans-unit id="129.title" xml:space="preserve">
