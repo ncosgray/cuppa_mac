@@ -505,7 +505,7 @@
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="312">
-                        <rect key="frame" x="17" y="20" width="285" height="33"/>
+                        <rect key="frame" x="17" y="20" width="210" height="33"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Enter a time in minutes:seconds format, or in seconds." id="372">
                             <font key="font" metaFont="label" size="9"/>
