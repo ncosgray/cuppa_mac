@@ -1,0 +1,5 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Cuppa";
+CFBundleHelpBookName = "Ayuda de Cuppa";
+NSHumanReadableCopyright = "Copyright © 2005-2021 Nathan Cosgray.\n\nCuppa Utiliza Weblate para traducciones.";

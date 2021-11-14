@@ -117,6 +117,15 @@
 		FEA6ABCD1055B4E900C436D8 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		FECF5BAD08DC6F6A00010F73 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		FED3F33C2741BC7700E0F7F7 /* es.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = es.xcloc; sourceTree = "<group>"; };
+		FED3F33D2741BC7700E0F7F7 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
+		FED3F33E2741BFA400E0F7F7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		FED3F33F2741BFA400E0F7F7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FED3F3402741BFA400E0F7F7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FED3F3412741C39A00E0F7F7 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		FED3F3422741C39A00E0F7F7 /* nl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = nl; path = nl.lproj/help; sourceTree = "<group>"; };
+		FED3F3432741C39A00E0F7F7 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FED3F3442741C39A00E0F7F7 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FED92D0B2702977200C1EF82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FED92D0E2702977B00C1EF82 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		FED92D102702978000C1EF82 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -262,6 +271,8 @@
 		FE29BCEE2708D16C009C3D11 /* XCLocalization */ = {
 			isa = PBXGroup;
 			children = (
+				FED3F33C2741BC7700E0F7F7 /* es.xcloc */,
+				FED3F33D2741BC7700E0F7F7 /* nl.xcloc */,
 				FE29BCEF2708D16C009C3D11 /* fr.xcloc */,
 				FE29BCF02708D16C009C3D11 /* it.xcloc */,
 				FE29BCF12708D16C009C3D11 /* cs.xcloc */,
@@ -378,6 +389,8 @@
 				de,
 				en,
 				Base,
+				es,
+				nl,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* cuppa */;
 			projectDirPath = "";
@@ -479,6 +492,8 @@
 				FEA42E0C225183E700A50A78 /* cs */,
 				FEA42E10225183EA00A50A78 /* de */,
 				FEA42E14225183F200A50A78 /* en */,
+				FED3F3402741BFA400E0F7F7 /* es */,
+				FED3F3442741C39A00E0F7F7 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -491,6 +506,7 @@
 				FEA42E0E225183E700A50A78 /* cs */,
 				FEA42E12225183EA00A50A78 /* de */,
 				FEA42E16225183F200A50A78 /* en */,
+				FED3F3422741C39A00E0F7F7 /* nl */,
 			);
 			name = help;
 			sourceTree = "<group>";
@@ -503,6 +519,8 @@
 				FEA42E0B225183E700A50A78 /* cs */,
 				FEA42E0F225183EA00A50A78 /* de */,
 				FEA42E13225183F200A50A78 /* en */,
+				FED3F33F2741BFA400E0F7F7 /* es */,
+				FED3F3432741C39A00E0F7F7 /* nl */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -516,6 +534,8 @@
 				FED92D122702978100C1EF82 /* de */,
 				FED92D16270297AA00C1EF82 /* it */,
 				FEA0D9C4270298AE00955E39 /* en */,
+				FED3F33E2741BFA400E0F7F7 /* es */,
+				FED3F3412741C39A00E0F7F7 /* nl */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
