@@ -196,6 +196,15 @@
 //  Modifications by Nathan Cosgray on 2021/09/21 (v. 1.8.5):
 //  * bugfix:
 //    - improve timer reliability on Big Sur
+//
+//  Modifications by Nathan Cosgray on 2021/11/27 (v. 1.8.6):
+//  * warn before starting a new brew if timer is already active
+//  * redrawn hi-res icon graphics
+//  * bugfix:
+//    - dock timer not reset until alert dialog is dismissed
+//  * Cuppa has been translated into Dutch and Spanish
+//    - contribute additional translations via Weblate!
+//  * improved security for app auto-updates (Sparkle EdDSA)
 
 #import <Cocoa/Cocoa.h>
 
