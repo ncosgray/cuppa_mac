@@ -1,3 +1,5 @@
+/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
+"5Qf-No-6KB.title" = "Ulteriori impostazioni per le notifiche si trovano in > Preferenze di Sistema > Notifiche.";
 
 /* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
 "29.title" = "MainMenu";
@@ -120,7 +122,7 @@
 "255.title" = "Opzioni interfaccia utente";
 
 /* Class = "NSWindow"; title = "Quick Timer"; ObjectID = "278"; */
-"278.title" = "Quick Timer";
+"278.title" = "Contaminuti rapido";
 
 /* Class = "NSButtonCell"; title = "Bounce Dock icon"; ObjectID = "362"; */
 "362.title" = "Fai rimbalzare l'icona nel dock";
@@ -176,14 +178,12 @@
 /* Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471"; */
 "471.title" = "Trova Cuppa nell'Apple Store...";
 
-/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
-"5Qf-No-6KB.title" = "Ulteriori impostazioni per le notifiche si trovano in > Preferenze di Sistema > Notifiche.";
-
-/* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
-"LAY-qA-dcS.title" = "Prova notifiche";
-
 /* Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ"; */
 "fku-RV-THJ.title" = "Avvia automaticamente il primo timer della lista";
 
 /* Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3"; */
 "gbr-1q-BI3.title" = "Parla vigile";
+
+/* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
+"LAY-qA-dcS.title" = "Prova notifiche";
+

@@ -26,6 +26,9 @@
 "English Breakfast" = "Englisches Frühstück";
 
 /* No comment provided by engineer. */
+"Green Tea" = "Grüner Tee";
+
+/* No comment provided by engineer. */
 "Jasmine Green Tea" = "Jasmin Grüner Tee";
 
 /* No comment provided by engineer. */
@@ -59,10 +62,11 @@
 "The Cuppa timer is still active for another %s.\n\nDo you really want to quit?" = "Der Cuppa Timer ist noch aktiv für weitere %s.\n\nMöchtest du wirklich beenden?";
 
 /* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Es gibt einen aktiven Timer. Abbrechen und einen neuen Timer starten?";
+
+/* No comment provided by engineer. */
 "Warning!" = "Warnung!";
 
 /* No comment provided by engineer. */
 "Yes" = "Ja";
 
-/* No comment provided by engineer. */
-"There is an active timer. Cancel and start a new timer?" = "Es gibt einen aktiven Timer. Abbrechen und einen neuen Timer starten?";

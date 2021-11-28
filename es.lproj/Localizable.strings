@@ -62,10 +62,11 @@
 "The Cuppa timer is still active for another %s.\n\nDo you really want to quit?" = "El temporizador Cuppa sigue activo para otros %s.\n\n¿Realmente quieres dejar de fumar?";
 
 /* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Hay un cronómetro activo. ¿Cancelar e iniciar un nuevo cronómetro?";
+
+/* No comment provided by engineer. */
 "Warning!" = "¡Atención!";
 
 /* No comment provided by engineer. */
 "Yes" = "Sí";
 
-/* No comment provided by engineer. */
-"There is an active timer. Cancel and start a new timer?" = "Hay un cronómetro activo. ¿Cancelar e iniciar un nuevo cronómetro?";

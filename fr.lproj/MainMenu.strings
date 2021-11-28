@@ -1,3 +1,5 @@
+/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
+"5Qf-No-6KB.title" = "Des réglages supplémentaires pour les alertes de Cuppa sont disponibles dans Préférences Système > Notifications.";
 
 /* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
 "29.title" = "MainMenu";
@@ -176,14 +178,12 @@
 /* Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471"; */
 "471.title" = "Chercher Cuppa sur l'App Store...";
 
-/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
-"5Qf-No-6KB.title" = "Des réglages supplémentaires pour les alertes de Cuppa sont disponibles dans Préférences Système > Notifications.";
-
-/* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
-"LAY-qA-dcS.title" = "Test Notifications";
-
 /* Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ"; */
 "fku-RV-THJ.title" = "Déclencher le premier minuteur favori au lancement";
 
 /* Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3"; */
 "gbr-1q-BI3.title" = "Alerte parlée";
+
+/* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
+"LAY-qA-dcS.title" = "Test Notifications";
+

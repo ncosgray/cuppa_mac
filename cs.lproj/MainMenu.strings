@@ -1,3 +1,5 @@
+/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
+"5Qf-No-6KB.title" = "Další nastavení pro upozornění Cuppa naleznete v Předvolbách systému > Oznámení.";
 
 /* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
 "29.title" = "MainMenu";
@@ -176,14 +178,12 @@
 /* Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471"; */
 "471.title" = "Najít Cuppa v App Store...";
 
-/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
-"5Qf-No-6KB.title" = "Další nastavení pro upozornění Cuppa naleznete v Předvolbách systému > Oznámení.";
-
-/* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
-"LAY-qA-dcS.title" = "Otestovat oznámení";
-
 /* Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ"; */
 "fku-RV-THJ.title" = "Automatický časovač prvního nápoje při spuštění";
 
 /* Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3"; */
 "gbr-1q-BI3.title" = "Mluvit ostražitě";
+
+/* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
+"LAY-qA-dcS.title" = "Otestovat oznámení";
+

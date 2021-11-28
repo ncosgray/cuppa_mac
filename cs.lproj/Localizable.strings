@@ -26,6 +26,9 @@
 "English Breakfast" = "Anglická snídaně";
 
 /* No comment provided by engineer. */
+"Green Tea" = "Zelený čaj";
+
+/* No comment provided by engineer. */
 "Jasmine Green Tea" = "Zelený čaj";
 
 /* No comment provided by engineer. */
@@ -59,10 +62,11 @@
 "The Cuppa timer is still active for another %s.\n\nDo you really want to quit?" = "Časovač je stále aktivní, do konce zbývá %s.\n\nOpravdu chcete Cuppa ukončit?";
 
 /* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Je zde aktivní časovač. Zrušit a spustit nový časovač?";
+
+/* No comment provided by engineer. */
 "Warning!" = "Varování!";
 
 /* No comment provided by engineer. */
 "Yes" = "Ano";
 
-/* No comment provided by engineer. */
-"There is an active timer. Cancel and start a new timer?" = "Je zde aktivní časovač. Zrušit a spustit nový časovač?";

@@ -62,10 +62,11 @@
 "The Cuppa timer is still active for another %s.\n\nDo you really want to quit?" = "De kookwekker loopt pas over %s af.\n\nWeet je zeker dat je wilt afsluiten?";
 
 /* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Er is nog een kookwekker actief. Weet je zeker dat je wilt doorgaan?";
+
+/* No comment provided by engineer. */
 "Warning!" = "Waarschuwing!";
 
 /* No comment provided by engineer. */
 "Yes" = "Ja";
 
-/* No comment provided by engineer. */
-"There is an active timer. Cancel and start a new timer?" = "Er is nog een kookwekker actief. Weet je zeker dat je wilt doorgaan?";

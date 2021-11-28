@@ -1,5 +1,9 @@
-/* Localized versions of Info.plist keys */
+/* (No Comment) */
+"CFBundleHelpBookName" = "Nápověda k Cuppa";
 
-CFBundleName = "Cuppa";
-CFBundleHelpBookName = "Nápověda k Cuppa";
-NSHumanReadableCopyright = "Copyright © 2005-2021 Nathan Cosgray.";
+/* Localized versions of Info.plist keys */
+"CFBundleName" = "Cuppa";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2005-2021 Nathan Cosgray.\n\nCuppa používá Weblate pro překlady.";
+
