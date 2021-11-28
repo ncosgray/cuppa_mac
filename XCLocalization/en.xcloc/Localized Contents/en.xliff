@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="Base.lproj/MainMenu.xib" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.0" build-num="13A233"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
     </header>
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
@@ -324,12 +324,12 @@
   </file>
   <file original="en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.0" build-num="13A233"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
     </header>
     <body>
       <trans-unit id="CFBundleGetInfoString" xml:space="preserve">
-        <source>1.8.5</source>
-        <target>1.8.5</target>
+        <source>1.8.6</source>
+        <target>1.8.6</target>
         <note>Get Info string</note>
       </trans-unit>
       <trans-unit id="CFBundleHelpBookName" xml:space="preserve">
@@ -355,7 +355,7 @@ Cuppa uses Weblate for translations.</target>
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.0" build-num="13A233"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
     </header>
     <body>
       <trans-unit id="%@ is now ready!" xml:space="preserve">
@@ -465,6 +465,11 @@ Do you really want to quit?</source>
         <target>The Cuppa timer is still active for another %s.
 
 Do you really want to quit?</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="There is an active timer. Cancel and start a new timer?" xml:space="preserve">
+        <source>There is an active timer. Cancel and start a new timer?</source>
+        <target>There is an active timer. Cancel and start a new timer?</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Warning!" xml:space="preserve">
