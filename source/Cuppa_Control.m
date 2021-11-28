@@ -592,6 +592,21 @@
 // Set up and start a timer.
 - (void)setTimer:(Cuppa_Bevy *)bevy
 {
+    // Do we have a timer outstanding?
+    if (mSecondsRemain > 0)
+    {
+        // Check with the user before starting a new timer
+        if (NSRunCriticalAlertPanel(NSLocalizedString(@"Warning!", nil),
+                                    NSLocalizedString(@"There is an active timer. Cancel and start a new timer?", nil),
+                                    NSLocalizedString(@"No", nil),
+                                    NSLocalizedString(@"Yes", nil),
+                                    nil) == NSAlertDefaultReturn)
+        {
+            // Cancel
+            return;
+        }
+    }
+
     NSSound *startSound; // start sound
     
     // setup the brewing state

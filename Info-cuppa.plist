@@ -46,7 +46,7 @@
 	<string>YES</string>
 	<key>SUFeedURL</key>
 	<string>https://www.nathanatos.com/software/cuppa.xml</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
-</dict>
+	<key>SUPublicEDKey</key>
+	<string>U9aJQR7OPPvP+6vQ5j/InYqRfvrdXj2ILj6+Pb8anvY=</string>
+	</dict>
 </plist>

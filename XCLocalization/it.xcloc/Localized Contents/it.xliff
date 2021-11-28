@@ -1,8 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="Base.lproj/MainMenu.xib" source-language="en" target-language="it" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.0" build-num="13A233"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
     </header>
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
@@ -47,7 +47,7 @@
       </trans-unit>
       <trans-unit id="129.title" xml:space="preserve">
         <source>Preferences...</source>
-        <target>Preferenze…</target>
+        <target>Preferenze...</target>
         <note>Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "129";</note>
       </trans-unit>
       <trans-unit id="130.title" xml:space="preserve">
@@ -82,7 +82,7 @@
       </trans-unit>
       <trans-unit id="154.title" xml:space="preserve">
         <source>Find...</source>
-        <target>Cerca…</target>
+        <target>Cerca...</target>
         <note>Class = "NSMenuItem"; title = "Find..."; ObjectID = "154";</note>
       </trans-unit>
       <trans-unit id="155.title" xml:space="preserve">
@@ -172,7 +172,7 @@
       </trans-unit>
       <trans-unit id="187.title" xml:space="preserve">
         <source>Spelling...</source>
-        <target>Ortografia…</target>
+        <target>Ortografia...</target>
         <note>Class = "NSMenuItem"; title = "Spelling..."; ObjectID = "187";</note>
       </trans-unit>
       <trans-unit id="189.title" xml:space="preserve">
@@ -202,7 +202,7 @@
       </trans-unit>
       <trans-unit id="217.title" xml:space="preserve">
         <source>When Brewing is Complete...</source>
-        <target>Quando l'infusione è completa…</target>
+        <target>Quando l'infusione è completa...</target>
         <note>Class = "NSBox"; title = "When Brewing is Complete..."; ObjectID = "217";</note>
       </trans-unit>
       <trans-unit id="255.title" xml:space="preserve">
@@ -212,7 +212,7 @@
       </trans-unit>
       <trans-unit id="278.title" xml:space="preserve">
         <source>Quick Timer</source>
-        <target>Contaminuti rapido</target>
+        <target>Quick Timer</target>
         <note>Class = "NSWindow"; title = "Quick Timer"; ObjectID = "278";</note>
       </trans-unit>
       <trans-unit id="362.title" xml:space="preserve">
@@ -227,12 +227,12 @@
       </trans-unit>
       <trans-unit id="364.title" xml:space="preserve">
         <source>Show "Brewing Complete" alert box</source>
-        <target>Mostra l'avviso «Infusione completata»</target>
+        <target>Mostra l'avviso "Infusione completata"</target>
         <note>Class = "NSButtonCell"; title = "Show \"Brewing Complete\" alert box"; ObjectID = "364";</note>
       </trans-unit>
       <trans-unit id="365.title" xml:space="preserve">
         <source>Notify via Notification Center</source>
-        <target>Notifica tramite Centro di notifica</target>
+        <target>Notifica con Notification Center</target>
         <note>Class = "NSButtonCell"; title = "Notify via Notification Center"; ObjectID = "365";</note>
       </trans-unit>
       <trans-unit id="368.title" xml:space="preserve">
@@ -297,12 +297,12 @@
       </trans-unit>
       <trans-unit id="457.title" xml:space="preserve">
         <source>To add a beverage to Cuppa's database, click "Add New Beverage".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list.</source>
-        <target>Per aggiungere una bevanda alla banca dati di Cuppa, clicca su «Aggiungi bevanda» e modifica il nome e il tempo di infusione della nuova bevanda che apparirà in cima alla lista.</target>
+        <target>Per aggiungere una bevanda al database di Cuppa, clicca su "Aggiungi bevanda" e modifica il nome e il tempo di infusione della nuova bevanda che apparirà in cima alla lista.</target>
         <note>Class = "NSTextFieldCell"; title = "To add a beverage to Cuppa's database, click \"Add New Beverage\".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list."; ObjectID = "457";</note>
       </trans-unit>
       <trans-unit id="471.title" xml:space="preserve">
         <source>Find Cuppa in the App Store...</source>
-        <target>Trova Cuppa nell'Apple Store…</target>
+        <target>Trova Cuppa nell'Apple Store...</target>
         <note>Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471";</note>
       </trans-unit>
       <trans-unit id="LAY-qA-dcS.title" xml:space="preserve">
@@ -324,11 +324,11 @@
   </file>
   <file original="en.lproj/InfoPlist.strings" source-language="en" target-language="it" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.0" build-num="13A233"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
     </header>
     <body>
       <trans-unit id="CFBundleGetInfoString" xml:space="preserve">
-        <source>1.8.5</source>
+        <source>1.8.6</source>
         <note>Get Info string</note>
       </trans-unit>
       <trans-unit id="CFBundleHelpBookName" xml:space="preserve">
@@ -345,16 +345,14 @@
         <source>Copyright © 2005-2021 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target>Copyright © 2005-2021 Nathan Cosgray.
-
-Cuppa usa Weblate per le traduzioni.</target>
+        <target>Copyright © 2005-2021 Nathan Cosgray.</target>
         <note>Copyright (human-readable)</note>
       </trans-unit>
     </body>
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="it" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.0" build-num="13A233"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
     </header>
     <body>
       <trans-unit id="%@ is now ready!" xml:space="preserve">
@@ -374,7 +372,7 @@ Cuppa usa Weblate per le traduzioni.</target>
       </trans-unit>
       <trans-unit id="Brewing complete..." xml:space="preserve">
         <source>Brewing complete...</source>
-        <target>Infusione completata…</target>
+        <target>Infusione completata...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Cancel" xml:space="preserve">
@@ -389,7 +387,7 @@ Cuppa usa Weblate per le traduzioni.</target>
       </trans-unit>
       <trans-unit id="Check for Updates..." xml:space="preserve">
         <source>Check for Updates...</source>
-        <target>Controlla aggiornamenti…</target>
+        <target>Controlla aggiornamenti...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Earl Grey" xml:space="preserve">
@@ -404,7 +402,6 @@ Cuppa usa Weblate per le traduzioni.</target>
       </trans-unit>
       <trans-unit id="Green Tea" xml:space="preserve">
         <source>Green Tea</source>
-        <target>Tè verde</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Jasmine Green Tea" xml:space="preserve">
@@ -439,12 +436,12 @@ Cuppa usa Weblate per le traduzioni.</target>
       </trans-unit>
       <trans-unit id="Preferences..." xml:space="preserve">
         <source>Preferences...</source>
-        <target>Preferenze…</target>
+        <target>Preferenze...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Quick Timer..." xml:space="preserve">
         <source>Quick Timer...</source>
-        <target>Contaminuti rapido…</target>
+        <target>Quick Timer...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Quit Cuppa" xml:space="preserve">
@@ -464,6 +461,11 @@ Do you really want to quit?</source>
         <target>Il timer di Cuppa sarà attivo ancora per %s.
 
 Vuoi veramente uscire?</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="There is an active timer. Cancel and start a new timer?" xml:space="preserve">
+        <source>There is an active timer. Cancel and start a new timer?</source>
+        <target>C’è un contaminuti attivo. Annullare e avviare un nuovo contaminuti?</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Warning!" xml:space="preserve">
