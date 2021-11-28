@@ -212,7 +212,7 @@
       </trans-unit>
       <trans-unit id="278.title" xml:space="preserve">
         <source>Quick Timer</source>
-        <target>Quick Timer</target>
+        <target>Contaminuti rapido</target>
         <note>Class = "NSWindow"; title = "Quick Timer"; ObjectID = "278";</note>
       </trans-unit>
       <trans-unit id="362.title" xml:space="preserve">
@@ -345,7 +345,9 @@
         <source>Copyright © 2005-2021 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target>Copyright © 2005-2021 Nathan Cosgray.</target>
+        <target>Copyright © 2005-2021 Nathan Cosgray.
+
+Cuppa usa Weblate per le traduzioni.</target>
         <note>Copyright (human-readable)</note>
       </trans-unit>
     </body>
@@ -402,6 +404,7 @@ Cuppa uses Weblate for translations.</source>
       </trans-unit>
       <trans-unit id="Green Tea" xml:space="preserve">
         <source>Green Tea</source>
+        <target>Tè verde</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Jasmine Green Tea" xml:space="preserve">
@@ -441,7 +444,7 @@ Cuppa uses Weblate for translations.</source>
       </trans-unit>
       <trans-unit id="Quick Timer..." xml:space="preserve">
         <source>Quick Timer...</source>
-        <target>Quick Timer...</target>
+        <target>Contaminuti rapido…</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Quit Cuppa" xml:space="preserve">
