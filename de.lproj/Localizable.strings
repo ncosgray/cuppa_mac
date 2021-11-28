@@ -64,3 +64,5 @@
 /* No comment provided by engineer. */
 "Yes" = "Ja";
 
+/* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Es gibt einen aktiven Timer. Abbrechen und einen neuen Timer starten?";

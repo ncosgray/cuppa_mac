@@ -64,3 +64,5 @@
 /* No comment provided by engineer. */
 "Yes" = "Ano";
 
+/* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Je zde aktivní časovač. Zrušit a spustit nový časovač?";

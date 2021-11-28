@@ -67,3 +67,5 @@
 /* No comment provided by engineer. */
 "Yes" = "Sí";
 
+/* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Hay un cronómetro activo. ¿Cancelar e iniciar un nuevo cronómetro?";
