@@ -19,7 +19,7 @@ Screenshots: [Dock menu](https://www.nathanatos.com/software/images/Cuppa-dock-m
 
 | macOS DMG | Mac App Store |
 | :--: | :--: |
-| <a href="https://github.com/ncosgray/cuppa/releases/latest"><img src="https://www.nathanatos.com/software/images/file-zip-icon.png" alt="Download macOS DMG" height="80"/></a> | <a href="https://itunes.apple.com/us/app/cuppa-tea-timer/id1297865739"><img src="https://www.nathanatos.com/software/images/mac-app-store-badge.png" alt="Download on the App Store" height="50"/></a> |
+| <a href="https://github.com/ncosgray/cuppa/releases/latest"><img src="https://www.nathanatos.com/software/images/file-zip-icon.png" alt="Download macOS DMG" width="80" height="80"/></a> | <a href="https://itunes.apple.com/us/app/cuppa-tea-timer/id1297865739"><img src="https://www.nathanatos.com/software/images/mac-app-store-badge.png" alt="Download on the App Store" width="206" height="50"/></a> |
 
 ### Features
 
@@ -62,7 +62,7 @@ Screenshots: [Dock menu](https://www.nathanatos.com/software/images/Cuppa-dock-m
 
 Buy us a cup of tea to support active development of Cuppa.
 
-<a href="https://paypal.me/ncosgray"><img src="https://www.nathanatos.com/software/images/paypal-badge.png" alt="Donate with PayPal" height="80"/></a><br/>
+<a href="https://paypal.me/ncosgray"><img src="https://www.nathanatos.com/software/images/paypal-badge.png" alt="Donate with PayPal" width="185" height="50"/></a><br/>
 
 ### History
 
