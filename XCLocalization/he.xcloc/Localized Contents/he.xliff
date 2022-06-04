@@ -257,7 +257,7 @@
       </trans-unit>
       <trans-unit id="372.title" xml:space="preserve">
         <source>Enter a time in minutes:seconds format, or in seconds.</source>
-        <target/>
+        <target state="translated">נא לציין שעה בתבנית דקות:שניות או בשניות.</target>
         <note>Class = "NSTextFieldCell"; title = "Enter a time in minutes:seconds format, or in seconds."; ObjectID = "372";</note>
       </trans-unit>
       <trans-unit id="373.title" xml:space="preserve">
@@ -277,22 +277,22 @@
       </trans-unit>
       <trans-unit id="446.label" xml:space="preserve">
         <source>Beverage List</source>
-        <target/>
+        <target state="translated">רשימת משקאות</target>
         <note>Class = "NSTabViewItem"; label = "Beverage List"; ObjectID = "446";</note>
       </trans-unit>
       <trans-unit id="447.label" xml:space="preserve">
         <source>Options</source>
-        <target/>
+        <target state="translated">אפשרויות</target>
         <note>Class = "NSTabViewItem"; label = "Options"; ObjectID = "447";</note>
       </trans-unit>
       <trans-unit id="453.title" xml:space="preserve">
         <source>Delete Selected Beverage</source>
-        <target/>
+        <target state="translated">מחיקת המשקה הנבחר</target>
         <note>Class = "NSButtonCell"; title = "Delete Selected Beverage"; ObjectID = "453";</note>
       </trans-unit>
       <trans-unit id="455.title" xml:space="preserve">
         <source>Add New Beverage</source>
-        <target/>
+        <target state="translated">הוספת משקה חדש</target>
         <note>Class = "NSButtonCell"; title = "Add New Beverage"; ObjectID = "455";</note>
       </trans-unit>
       <trans-unit id="457.title" xml:space="preserve">
@@ -302,12 +302,12 @@
       </trans-unit>
       <trans-unit id="471.title" xml:space="preserve">
         <source>Find Cuppa in the App Store...</source>
-        <target/>
+        <target state="translated">איתור Cuppa ב־App Store…</target>
         <note>Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471";</note>
       </trans-unit>
       <trans-unit id="LAY-qA-dcS.title" xml:space="preserve">
         <source>Test Notification</source>
-        <target/>
+        <target state="translated">בדיקת התראות</target>
         <note>Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS";</note>
       </trans-unit>
       <trans-unit id="fku-RV-THJ.title" xml:space="preserve">
@@ -334,7 +334,7 @@
       </trans-unit>
       <trans-unit id="CFBundleHelpBookName" xml:space="preserve">
         <source>Cuppa Help</source>
-        <target/>
+        <target state="translated">העזרה של Cuppa</target>
         <note/>
       </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
@@ -358,57 +358,57 @@ Cuppa uses Weblate for translations.</source>
     <body>
       <trans-unit id="%@ is now ready!" xml:space="preserve">
         <source>%@ is now ready!</source>
-        <target/>
+        <target state="translated">%@ מוכן כעת!</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Beverages" xml:space="preserve">
         <source>Beverages</source>
-        <target/>
+        <target state="translated">משקאות</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Blackcurrant Tea" xml:space="preserve">
         <source>Blackcurrant Tea</source>
-        <target/>
+        <target state="translated">תה ענבי שועל</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Brewing complete..." xml:space="preserve">
         <source>Brewing complete...</source>
-        <target/>
+        <target state="translated">החליטה הושלמה…</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Cancel" xml:space="preserve">
         <source>Cancel</source>
-        <target/>
+        <target state="translated">ביטול</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Chamomile" xml:space="preserve">
         <source>Chamomile</source>
-        <target/>
+        <target state="translated">קמומיל</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Check for Updates..." xml:space="preserve">
         <source>Check for Updates...</source>
-        <target/>
+        <target state="translated">חיפוש עדכונים…</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Earl Grey" xml:space="preserve">
         <source>Earl Grey</source>
-        <target/>
+        <target state="translated">ארל גריי</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="English Breakfast" xml:space="preserve">
         <source>English Breakfast</source>
-        <target/>
+        <target state="translated">אינגליש ברקפסט</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Green Tea" xml:space="preserve">
         <source>Green Tea</source>
-        <target/>
+        <target state="translated">תה ירוק</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Jasmine Green Tea" xml:space="preserve">
         <source>Jasmine Green Tea</source>
-        <target/>
+        <target state="translated">תה ירוק יסמין</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Libby's Mint Tea" xml:space="preserve">
