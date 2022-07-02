@@ -157,37 +157,37 @@
       </trans-unit>
       <trans-unit id="173.title" xml:space="preserve">
         <source>Redo</source>
-        <target/>
+        <target state="translated">Yinele</target>
         <note>Class = "NSMenuItem"; title = "Redo"; ObjectID = "173";</note>
       </trans-unit>
       <trans-unit id="184.title" xml:space="preserve">
         <source>Spelling</source>
-        <target/>
+        <target state="translated">Yazım</target>
         <note>Class = "NSMenuItem"; title = "Spelling"; ObjectID = "184";</note>
       </trans-unit>
       <trans-unit id="185.title" xml:space="preserve">
         <source>Spelling</source>
-        <target/>
+        <target state="translated">Yazım</target>
         <note>Class = "NSMenu"; title = "Spelling"; ObjectID = "185";</note>
       </trans-unit>
       <trans-unit id="187.title" xml:space="preserve">
         <source>Spelling...</source>
-        <target/>
+        <target state="translated">Yazım...</target>
         <note>Class = "NSMenuItem"; title = "Spelling..."; ObjectID = "187";</note>
       </trans-unit>
       <trans-unit id="189.title" xml:space="preserve">
         <source>Check Spelling</source>
-        <target/>
+        <target state="translated">Yazım Denetimi</target>
         <note>Class = "NSMenuItem"; title = "Check Spelling"; ObjectID = "189";</note>
       </trans-unit>
       <trans-unit id="191.title" xml:space="preserve">
         <source>Check Spelling As You Type</source>
-        <target/>
+        <target state="translated">Yazarken Yazım Denetimi Yapın</target>
         <note>Class = "NSMenuItem"; title = "Check Spelling As You Type"; ObjectID = "191";</note>
       </trans-unit>
       <trans-unit id="196.title" xml:space="preserve">
         <source>Cuppa Preferences</source>
-        <target/>
+        <target state="translated">Cuppa Tercihleri</target>
         <note>Class = "NSWindow"; title = "Cuppa Preferences"; ObjectID = "196";</note>
       </trans-unit>
       <trans-unit id="203.headerCell.title" xml:space="preserve">
