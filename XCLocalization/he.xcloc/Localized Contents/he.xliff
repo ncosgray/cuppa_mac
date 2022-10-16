@@ -297,7 +297,7 @@
       </trans-unit>
       <trans-unit id="457.title" xml:space="preserve">
         <source>To add a beverage to Cuppa's database, click "Add New Beverage".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list.</source>
-        <target/>
+        <target state="translated">כדי להוסיף משקה למסד הנתונים של Cuppa, יש ללחוץ על „הוספת משקה חדש”. לאחר מכן לערוך את השם ואת זמן ההכנה של רשומת המשקה החדש שתופיע בראש הרשימה.</target>
         <note>Class = "NSTextFieldCell"; title = "To add a beverage to Cuppa's database, click \"Add New Beverage\".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list."; ObjectID = "457";</note>
       </trans-unit>
       <trans-unit id="471.title" xml:space="preserve">
@@ -312,12 +312,12 @@
       </trans-unit>
       <trans-unit id="fku-RV-THJ.title" xml:space="preserve">
         <source>Auto-start first beverage timer at launch</source>
-        <target/>
+        <target state="translated">להפעיל אוטומטית את מתזמן המשקה בעת הטעינה</target>
         <note>Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ";</note>
       </trans-unit>
       <trans-unit id="gbr-1q-BI3.title" xml:space="preserve">
         <source>Speak alert</source>
-        <target/>
+        <target state="translated">התראת דיבור</target>
         <note>Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3";</note>
       </trans-unit>
     </body>
@@ -346,7 +346,9 @@
         <source>Copyright © 2005-2021 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target/>
+        <target state="translated">כל הזכויות © 2005-2021 נתן קוסגריי.
+
+Cuppa משתמש ב־Weblate לתרגומים.</target>
         <note>Copyright (human-readable)</note>
       </trans-unit>
     </body>
@@ -413,7 +415,7 @@ Cuppa uses Weblate for translations.</source>
       </trans-unit>
       <trans-unit id="Libby's Mint Tea" xml:space="preserve">
         <source>Libby's Mint Tea</source>
-        <target/>
+        <target state="translated">תה נענע של ליבי</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="New Beverage" xml:space="preserve">
@@ -477,7 +479,7 @@ Do you really want to quit?</source>
       </trans-unit>
       <trans-unit id="Yes" xml:space="preserve">
         <source>Yes</source>
-        <target/>
+        <target state="translated">כן</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>
