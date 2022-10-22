@@ -384,7 +384,7 @@ Cuppa Utiliza Weblate para traducciones.</target>
       </trans-unit>
       <trans-unit id="Chamomile" xml:space="preserve">
         <source>Chamomile</source>
-        <target>Chamomile</target>
+        <target state="translated">Manzanilla</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Check for Updates..." xml:space="preserve">
@@ -394,7 +394,7 @@ Cuppa Utiliza Weblate para traducciones.</target>
       </trans-unit>
       <trans-unit id="Earl Grey" xml:space="preserve">
         <source>Earl Grey</source>
-        <target>Earl Grey</target>
+        <target state="translated">Té Earl Grey</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="English Breakfast" xml:space="preserve">
