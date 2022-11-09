@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
         <source>Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications.</source>
-        <target/>
+        <target state="translated">Дополнительные настройки для оповещений Cuppa можно найти в Системных настройках &gt; Уведомления.</target>
         <note>Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications."; ObjectID = "5Qf-No-6KB";</note>
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
@@ -47,7 +47,7 @@
       </trans-unit>
       <trans-unit id="129.title" xml:space="preserve">
         <source>Preferences...</source>
-        <target/>
+        <target state="translated">Настройки...</target>
         <note>Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "129";</note>
       </trans-unit>
       <trans-unit id="130.title" xml:space="preserve">
@@ -57,197 +57,197 @@
       </trans-unit>
       <trans-unit id="131.title" xml:space="preserve">
         <source>Services</source>
-        <target/>
+        <target state="translated">Сервисы</target>
         <note>Class = "NSMenuItem"; title = "Services"; ObjectID = "131";</note>
       </trans-unit>
       <trans-unit id="134.title" xml:space="preserve">
         <source>Hide Cuppa</source>
-        <target/>
+        <target state="translated">Скрыть Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Hide Cuppa"; ObjectID = "134";</note>
       </trans-unit>
       <trans-unit id="136.title" xml:space="preserve">
         <source>Quit Cuppa</source>
-        <target/>
+        <target state="translated">Выйти из Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Quit Cuppa"; ObjectID = "136";</note>
       </trans-unit>
       <trans-unit id="145.title" xml:space="preserve">
         <source>Hide Others</source>
-        <target/>
+        <target state="translated">Скрыть других</target>
         <note>Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145";</note>
       </trans-unit>
       <trans-unit id="150.title" xml:space="preserve">
         <source>Show All</source>
-        <target/>
+        <target state="translated">Показать все</target>
         <note>Class = "NSMenuItem"; title = "Show All"; ObjectID = "150";</note>
       </trans-unit>
       <trans-unit id="154.title" xml:space="preserve">
         <source>Find...</source>
-        <target/>
+        <target state="translated">Найти...</target>
         <note>Class = "NSMenuItem"; title = "Find..."; ObjectID = "154";</note>
       </trans-unit>
       <trans-unit id="155.title" xml:space="preserve">
         <source>Scroll to Selection</source>
-        <target/>
+        <target state="translated">Прокрутка к выбору</target>
         <note>Class = "NSMenuItem"; title = "Scroll to Selection"; ObjectID = "155";</note>
       </trans-unit>
       <trans-unit id="157.title" xml:space="preserve">
         <source>Copy</source>
-        <target/>
+        <target state="translated">Копировать</target>
         <note>Class = "NSMenuItem"; title = "Copy"; ObjectID = "157";</note>
       </trans-unit>
       <trans-unit id="158.title" xml:space="preserve">
         <source>Undo</source>
-        <target/>
+        <target state="translated">Отменить</target>
         <note>Class = "NSMenuItem"; title = "Undo"; ObjectID = "158";</note>
       </trans-unit>
       <trans-unit id="159.title" xml:space="preserve">
         <source>Find</source>
-        <target/>
+        <target state="translated">Найти</target>
         <note>Class = "NSMenu"; title = "Find"; ObjectID = "159";</note>
       </trans-unit>
       <trans-unit id="160.title" xml:space="preserve">
         <source>Cut</source>
-        <target/>
+        <target state="translated">Вырезать</target>
         <note>Class = "NSMenuItem"; title = "Cut"; ObjectID = "160";</note>
       </trans-unit>
       <trans-unit id="161.title" xml:space="preserve">
         <source>Use Selection for Find</source>
-        <target/>
+        <target state="translated">Использование выделения для поиска</target>
         <note>Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "161";</note>
       </trans-unit>
       <trans-unit id="162.title" xml:space="preserve">
         <source>Find Previous</source>
-        <target/>
+        <target state="translated">Найти предыдущий</target>
         <note>Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "162";</note>
       </trans-unit>
       <trans-unit id="163.title" xml:space="preserve">
         <source>Edit</source>
-        <target/>
+        <target state="translated">Редактировать</target>
         <note>Class = "NSMenuItem"; title = "Edit"; ObjectID = "163";</note>
       </trans-unit>
       <trans-unit id="164.title" xml:space="preserve">
         <source>Clear</source>
-        <target/>
+        <target state="translated">Очистить</target>
         <note>Class = "NSMenuItem"; title = "Clear"; ObjectID = "164";</note>
       </trans-unit>
       <trans-unit id="167.title" xml:space="preserve">
         <source>Find Next</source>
-        <target/>
+        <target state="translated">Найти следующее</target>
         <note>Class = "NSMenuItem"; title = "Find Next"; ObjectID = "167";</note>
       </trans-unit>
       <trans-unit id="168.title" xml:space="preserve">
         <source>Find</source>
-        <target/>
+        <target state="translated">Найти</target>
         <note>Class = "NSMenuItem"; title = "Find"; ObjectID = "168";</note>
       </trans-unit>
       <trans-unit id="169.title" xml:space="preserve">
         <source>Edit</source>
-        <target/>
+        <target state="translated">Редактировать</target>
         <note>Class = "NSMenu"; title = "Edit"; ObjectID = "169";</note>
       </trans-unit>
       <trans-unit id="171.title" xml:space="preserve">
         <source>Paste</source>
-        <target/>
+        <target state="translated">Вставить</target>
         <note>Class = "NSMenuItem"; title = "Paste"; ObjectID = "171";</note>
       </trans-unit>
       <trans-unit id="172.title" xml:space="preserve">
         <source>Select All</source>
-        <target/>
+        <target state="translated">Выбрать все</target>
         <note>Class = "NSMenuItem"; title = "Select All"; ObjectID = "172";</note>
       </trans-unit>
       <trans-unit id="173.title" xml:space="preserve">
         <source>Redo</source>
-        <target/>
+        <target state="translated">Повторить</target>
         <note>Class = "NSMenuItem"; title = "Redo"; ObjectID = "173";</note>
       </trans-unit>
       <trans-unit id="184.title" xml:space="preserve">
         <source>Spelling</source>
-        <target/>
+        <target state="translated">Правописание</target>
         <note>Class = "NSMenuItem"; title = "Spelling"; ObjectID = "184";</note>
       </trans-unit>
       <trans-unit id="185.title" xml:space="preserve">
         <source>Spelling</source>
-        <target/>
+        <target state="translated">Правописание</target>
         <note>Class = "NSMenu"; title = "Spelling"; ObjectID = "185";</note>
       </trans-unit>
       <trans-unit id="187.title" xml:space="preserve">
         <source>Spelling...</source>
-        <target/>
+        <target state="translated">Правописание...</target>
         <note>Class = "NSMenuItem"; title = "Spelling..."; ObjectID = "187";</note>
       </trans-unit>
       <trans-unit id="189.title" xml:space="preserve">
         <source>Check Spelling</source>
-        <target/>
+        <target state="translated">Проверить правописание</target>
         <note>Class = "NSMenuItem"; title = "Check Spelling"; ObjectID = "189";</note>
       </trans-unit>
       <trans-unit id="191.title" xml:space="preserve">
         <source>Check Spelling As You Type</source>
-        <target/>
+        <target state="translated">Проверка правописания при вводе</target>
         <note>Class = "NSMenuItem"; title = "Check Spelling As You Type"; ObjectID = "191";</note>
       </trans-unit>
       <trans-unit id="196.title" xml:space="preserve">
         <source>Cuppa Preferences</source>
-        <target/>
+        <target state="translated">Настройки Cuppa</target>
         <note>Class = "NSWindow"; title = "Cuppa Preferences"; ObjectID = "196";</note>
       </trans-unit>
       <trans-unit id="203.headerCell.title" xml:space="preserve">
         <source>Name</source>
-        <target/>
+        <target state="translated">Имя</target>
         <note>Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "203";</note>
       </trans-unit>
       <trans-unit id="206.headerCell.title" xml:space="preserve">
         <source>Time</source>
-        <target/>
+        <target state="translated">Время</target>
         <note>Class = "NSTableColumn"; headerCell.title = "Time"; ObjectID = "206";</note>
       </trans-unit>
       <trans-unit id="217.title" xml:space="preserve">
         <source>When Brewing is Complete...</source>
-        <target/>
+        <target state="translated">После завершения варки...</target>
         <note>Class = "NSBox"; title = "When Brewing is Complete..."; ObjectID = "217";</note>
       </trans-unit>
       <trans-unit id="255.title" xml:space="preserve">
         <source>User Interface Options</source>
-        <target/>
+        <target state="translated">Параметры интерфейса</target>
         <note>Class = "NSBox"; title = "User Interface Options"; ObjectID = "255";</note>
       </trans-unit>
       <trans-unit id="278.title" xml:space="preserve">
         <source>Quick Timer</source>
-        <target/>
+        <target state="translated">Быстрый таймер</target>
         <note>Class = "NSWindow"; title = "Quick Timer"; ObjectID = "278";</note>
       </trans-unit>
       <trans-unit id="362.title" xml:space="preserve">
         <source>Bounce Dock icon</source>
-        <target/>
+        <target state="translated">Значок Bounce в док-панели</target>
         <note>Class = "NSButtonCell"; title = "Bounce Dock icon"; ObjectID = "362";</note>
       </trans-unit>
       <trans-unit id="363.title" xml:space="preserve">
         <source>Play sound</source>
-        <target/>
+        <target state="translated">Воспроизвести звук</target>
         <note>Class = "NSButtonCell"; title = "Play sound"; ObjectID = "363";</note>
       </trans-unit>
       <trans-unit id="364.title" xml:space="preserve">
         <source>Show "Brewing Complete" alert box</source>
-        <target/>
+        <target state="translated">Показать окно оповещения "Варка завершена"</target>
         <note>Class = "NSButtonCell"; title = "Show \"Brewing Complete\" alert box"; ObjectID = "364";</note>
       </trans-unit>
       <trans-unit id="365.title" xml:space="preserve">
         <source>Notify via Notification Center</source>
-        <target/>
+        <target state="translated">Уведомить через Центр уведомлений</target>
         <note>Class = "NSButtonCell"; title = "Notify via Notification Center"; ObjectID = "365";</note>
       </trans-unit>
       <trans-unit id="368.title" xml:space="preserve">
         <source>Show countdown timer on Dock icon</source>
-        <target/>
+        <target state="translated">Показать таймер обратного отсчета на значке в док-панели</target>
         <note>Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368";</note>
       </trans-unit>
       <trans-unit id="369.title" xml:space="preserve">
         <source>Include steep times in menus</source>
-        <target/>
+        <target state="translated">Включите в меню время отстоя</target>
         <note>Class = "NSButtonCell"; title = "Include steep times in menus"; ObjectID = "369";</note>
       </trans-unit>
       <trans-unit id="370.title" xml:space="preserve">
         <source>Start</source>
-        <target/>
+        <target state="translated">Начать</target>
         <note>Class = "NSButtonCell"; title = "Start"; ObjectID = "370";</note>
       </trans-unit>
       <trans-unit id="371.title" xml:space="preserve">
@@ -257,7 +257,7 @@
       </trans-unit>
       <trans-unit id="372.title" xml:space="preserve">
         <source>Enter a time in minutes:seconds format, or in seconds.</source>
-        <target/>
+        <target state="translated">Введите время в формате минута:секунда или в секундах.</target>
         <note>Class = "NSTextFieldCell"; title = "Enter a time in minutes:seconds format, or in seconds."; ObjectID = "372";</note>
       </trans-unit>
       <trans-unit id="373.title" xml:space="preserve">
@@ -277,47 +277,47 @@
       </trans-unit>
       <trans-unit id="446.label" xml:space="preserve">
         <source>Beverage List</source>
-        <target/>
+        <target state="translated">Список напитков</target>
         <note>Class = "NSTabViewItem"; label = "Beverage List"; ObjectID = "446";</note>
       </trans-unit>
       <trans-unit id="447.label" xml:space="preserve">
         <source>Options</source>
-        <target/>
+        <target state="translated">Опции</target>
         <note>Class = "NSTabViewItem"; label = "Options"; ObjectID = "447";</note>
       </trans-unit>
       <trans-unit id="453.title" xml:space="preserve">
         <source>Delete Selected Beverage</source>
-        <target/>
+        <target state="translated">Удалить выбранный напиток</target>
         <note>Class = "NSButtonCell"; title = "Delete Selected Beverage"; ObjectID = "453";</note>
       </trans-unit>
       <trans-unit id="455.title" xml:space="preserve">
         <source>Add New Beverage</source>
-        <target/>
+        <target state="translated">Добавить новый напиток</target>
         <note>Class = "NSButtonCell"; title = "Add New Beverage"; ObjectID = "455";</note>
       </trans-unit>
       <trans-unit id="457.title" xml:space="preserve">
         <source>To add a beverage to Cuppa's database, click "Add New Beverage".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list.</source>
-        <target/>
+        <target state="translated">Чтобы добавить напиток в базу данных Cuppa, нажмите "Добавить новый напиток".  Затем отредактируйте название и время приготовления нового напитка, которое появится в верхней части списка.</target>
         <note>Class = "NSTextFieldCell"; title = "To add a beverage to Cuppa's database, click \"Add New Beverage\".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list."; ObjectID = "457";</note>
       </trans-unit>
       <trans-unit id="471.title" xml:space="preserve">
         <source>Find Cuppa in the App Store...</source>
-        <target/>
+        <target state="translated">Найти Cuppa в App Store...</target>
         <note>Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471";</note>
       </trans-unit>
       <trans-unit id="LAY-qA-dcS.title" xml:space="preserve">
         <source>Test Notification</source>
-        <target/>
+        <target state="translated">Тестовое уведомление</target>
         <note>Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS";</note>
       </trans-unit>
       <trans-unit id="fku-RV-THJ.title" xml:space="preserve">
         <source>Auto-start first beverage timer at launch</source>
-        <target/>
+        <target state="translated">Автоматический запуск таймера первого напитка при запуске</target>
         <note>Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ";</note>
       </trans-unit>
       <trans-unit id="gbr-1q-BI3.title" xml:space="preserve">
         <source>Speak alert</source>
-        <target/>
+        <target state="translated">Говорите тревогу</target>
         <note>Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3";</note>
       </trans-unit>
     </body>
@@ -334,7 +334,7 @@
       </trans-unit>
       <trans-unit id="CFBundleHelpBookName" xml:space="preserve">
         <source>Cuppa Help</source>
-        <target/>
+        <target state="translated">Справка Cuppa</target>
         <note/>
       </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
@@ -346,7 +346,9 @@
         <source>Copyright © 2005-2021 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target/>
+        <target state="translated">Авторское право © 2005-2021 Натан Косгрей.
+
+Cuppa использует Weblate для переводов.</target>
         <note>Copyright (human-readable)</note>
       </trans-unit>
     </body>
@@ -358,124 +360,126 @@ Cuppa uses Weblate for translations.</source>
     <body>
       <trans-unit id="%@ is now ready!" xml:space="preserve">
         <source>%@ is now ready!</source>
-        <target/>
+        <target state="translated">%@ теперь готов!</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Beverages" xml:space="preserve">
         <source>Beverages</source>
-        <target/>
+        <target state="translated">Напитки</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Blackcurrant Tea" xml:space="preserve">
         <source>Blackcurrant Tea</source>
-        <target/>
+        <target state="translated">Чай из черной смородины</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Brewing complete..." xml:space="preserve">
         <source>Brewing complete...</source>
-        <target/>
+        <target state="translated">Готовка завершена...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Cancel" xml:space="preserve">
         <source>Cancel</source>
-        <target/>
+        <target state="translated">Отмена</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Chamomile" xml:space="preserve">
         <source>Chamomile</source>
-        <target/>
+        <target state="translated">Ромашковый</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Check for Updates..." xml:space="preserve">
         <source>Check for Updates...</source>
-        <target/>
+        <target state="translated">Проверка обновлений...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Earl Grey" xml:space="preserve">
         <source>Earl Grey</source>
-        <target/>
+        <target state="translated">Эрл Грей</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="English Breakfast" xml:space="preserve">
         <source>English Breakfast</source>
-        <target/>
+        <target state="translated">Английский завтрак</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Green Tea" xml:space="preserve">
         <source>Green Tea</source>
-        <target/>
+        <target state="translated">Зеленый чай</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Jasmine Green Tea" xml:space="preserve">
         <source>Jasmine Green Tea</source>
-        <target/>
+        <target state="translated">Жасминовый зеленый чай</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Libby's Mint Tea" xml:space="preserve">
         <source>Libby's Mint Tea</source>
-        <target/>
+        <target state="translated">Мятный чай Либби</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="New Beverage" xml:space="preserve">
         <source>New Beverage</source>
-        <target/>
+        <target state="translated">Новый напиток</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="No" xml:space="preserve">
         <source>No</source>
-        <target/>
+        <target state="translated">Нет</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="OK" xml:space="preserve">
         <source>OK</source>
-        <target/>
+        <target state="translated">OK</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Oolong Tea" xml:space="preserve">
         <source>Oolong Tea</source>
-        <target/>
+        <target state="translated">Чай Улун</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Preferences..." xml:space="preserve">
         <source>Preferences...</source>
-        <target/>
+        <target state="translated">Настройки...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Quick Timer..." xml:space="preserve">
         <source>Quick Timer...</source>
-        <target/>
+        <target state="translated">Быстрый таймер...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Quit Cuppa" xml:space="preserve">
         <source>Quit Cuppa</source>
-        <target/>
+        <target state="translated">Выйти из Cuppa</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Rooibos" xml:space="preserve">
         <source>Rooibos</source>
-        <target/>
+        <target state="translated">Rooibos</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="The Cuppa timer is still active for another %s.&#10;&#10;Do you really want to quit?" xml:space="preserve">
         <source>The Cuppa timer is still active for another %s.
 
 Do you really want to quit?</source>
-        <target/>
+        <target state="translated">Таймер Cuppa будет активен еще %s.
+
+Вы действительно хотите выйти?</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="There is an active timer. Cancel and start a new timer?" xml:space="preserve">
         <source>There is an active timer. Cancel and start a new timer?</source>
-        <target/>
+        <target state="translated">Активный таймер уже есть. Отменить и запустить новый таймер?</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Warning!" xml:space="preserve">
         <source>Warning!</source>
-        <target/>
+        <target state="translated">Внимание!</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Yes" xml:space="preserve">
         <source>Yes</source>
-        <target/>
+        <target state="translated">Да</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>
