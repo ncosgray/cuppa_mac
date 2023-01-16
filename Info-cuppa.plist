@@ -15,15 +15,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleVersion</key>
-	<string>33</string>
+	<string>34</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8.6</string>
+	<string>1.8.7</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright (c) 2005-2021 Nathan Cosgray.</string>
 	<key>CFBundleExecutable</key>
 	<string>Cuppa</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.8.6</string>
+	<string>1.8.7</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>help</string>
 	<key>CFBundleHelpBookName</key>
@@ -48,5 +48,5 @@
 	<string>https://www.nathanatos.com/software/cuppa.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>U9aJQR7OPPvP+6vQ5j/InYqRfvrdXj2ILj6+Pb8anvY=</string>
-	</dict>
+</dict>
 </plist>
