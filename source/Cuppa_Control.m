@@ -4,7 +4,7 @@
  Class:    Cuppa_Control
            - Controls for the Cuppa user interface, such as changing preferences and setting timers.
  ----------------------------------------------------------------------------------------------------
- Copyright (c) 2005-2021 Nathan Cosgray. All rights reserved.
+ Copyright (c) 2005-2023 Nathan Cosgray. All rights reserved.
  
  This source code is licensed under the BSD-style license found in LICENSE.txt.
  **************************************************************************************************
