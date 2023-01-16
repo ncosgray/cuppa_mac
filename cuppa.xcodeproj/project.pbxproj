@@ -92,7 +92,17 @@
 		FE29BCF22708D16C009C3D11 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		FE29BCF32708D16C009C3D11 /* de.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = de.xcloc; sourceTree = "<group>"; };
 		FE3F19C11F81CB6A0066AD74 /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; name = icon.iconset; path = art/icon.iconset; sourceTree = "<group>"; };
+		FE46DF4B2974ED3800785EBA /* ru.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ru.xcloc; sourceTree = "<group>"; };
+		FE46DF4C2974ED3800785EBA /* uk.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = uk.xcloc; sourceTree = "<group>"; };
 		FE4DDAA91F81968B007C1FEB /* Cuppa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cuppa.entitlements; sourceTree = "<group>"; };
+		FE50C1922974EEDB0034CBC1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		FE50C1932974EEDB0034CBC1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ru; path = ru.lproj/help; sourceTree = "<group>"; };
+		FE50C1942974EEDB0034CBC1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE50C1952974EEDB0034CBC1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE50C1962974EF9E0034CBC1 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		FE50C1972974EF9E0034CBC1 /* uk */ = {isa = PBXFileReference; lastKnownFileType = folder; name = uk; path = uk.lproj/help; sourceTree = "<group>"; };
+		FE50C1982974EF9E0034CBC1 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE50C1992974EF9E0034CBC1 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FE5C9162092EC6E3003821C5 /* beep.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = beep.aiff; path = sound/beep.aiff; sourceTree = "<group>"; };
 		FE9207452564BE2400B7A6B2 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "teacup16@2x.png"; path = "art/teacup16@2x.png"; sourceTree = "<group>"; };
@@ -268,6 +278,8 @@
 		FE29BCEE2708D16C009C3D11 /* XCLocalization */ = {
 			isa = PBXGroup;
 			children = (
+				FE46DF4B2974ED3800785EBA /* ru.xcloc */,
+				FE46DF4C2974ED3800785EBA /* uk.xcloc */,
 				FED3F33C2741BC7700E0F7F7 /* es.xcloc */,
 				FED3F33D2741BC7700E0F7F7 /* nl.xcloc */,
 				FE29BCEF2708D16C009C3D11 /* fr.xcloc */,
@@ -388,6 +400,8 @@
 				Base,
 				es,
 				nl,
+				ru,
+				uk,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* cuppa */;
 			projectDirPath = "";
@@ -490,6 +504,8 @@
 				FEA42E14225183F200A50A78 /* en */,
 				FED3F3402741BFA400E0F7F7 /* es */,
 				FED3F3442741C39A00E0F7F7 /* nl */,
+				FE50C1952974EEDB0034CBC1 /* ru */,
+				FE50C1992974EF9E0034CBC1 /* uk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -503,6 +519,8 @@
 				FEA42E12225183EA00A50A78 /* de */,
 				FEA42E16225183F200A50A78 /* en */,
 				FED3F3422741C39A00E0F7F7 /* nl */,
+				FE50C1932974EEDB0034CBC1 /* ru */,
+				FE50C1972974EF9E0034CBC1 /* uk */,
 			);
 			name = help;
 			sourceTree = "<group>";
@@ -517,6 +535,8 @@
 				FEA42E13225183F200A50A78 /* en */,
 				FED3F33F2741BFA400E0F7F7 /* es */,
 				FED3F3432741C39A00E0F7F7 /* nl */,
+				FE50C1942974EEDB0034CBC1 /* ru */,
+				FE50C1982974EF9E0034CBC1 /* uk */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -532,6 +552,8 @@
 				FEA0D9C4270298AE00955E39 /* en */,
 				FED3F33E2741BFA400E0F7F7 /* es */,
 				FED3F3412741C39A00E0F7F7 /* nl */,
+				FE50C1922974EEDB0034CBC1 /* ru */,
+				FE50C1962974EF9E0034CBC1 /* uk */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -656,6 +678,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
