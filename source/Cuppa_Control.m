@@ -793,6 +793,10 @@
     [self setBevys:mBevys];
     [mBevyTable reloadData];
     
+    // store to prefs
+    [[NSUserDefaults standardUserDefaults] setObject:[Cuppa_Bevy toDictionary:mBevys]
+                                              forKey:@"bevys"];
+    
 } // end -addBevyButton:
 
 // *************************************************************************************************
