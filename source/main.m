@@ -205,6 +205,12 @@
 //  * Cuppa has been translated into Dutch and Spanish
 //    - contribute additional translations via Weblate!
 //  * improved security for app auto-updates (Sparkle EdDSA)
+//
+//  Modifications by Nathan Cosgray on 2023/03/01 (v. 1.8.7):
+//  * bugfix:
+//    - newly added teas were not saved in rare cases
+//  * Cuppa has been translated into Russian and Ukrainian
+//    - contribute additional translations via Weblate!
 
 #import <Cocoa/Cocoa.h>
 
