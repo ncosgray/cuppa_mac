@@ -356,7 +356,7 @@ Cuppa 使用 Weblate 提供语言支持。</target>
       </trans-unit>
       <trans-unit id="Beverages" xml:space="preserve">
         <source>Beverages</source>
-        <target state="translated">饮料</target>
+        <target state="translated">饮品</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Blackcurrant Tea" xml:space="preserve">
