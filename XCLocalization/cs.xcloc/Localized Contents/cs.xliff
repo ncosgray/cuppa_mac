@@ -162,12 +162,12 @@
       </trans-unit>
       <trans-unit id="184.title" xml:space="preserve">
         <source>Spelling</source>
-        <target>Kontrola pravopisu</target>
+        <target state="translated">Pravopis</target>
         <note>Class = "NSMenuItem"; title = "Spelling"; ObjectID = "184";</note>
       </trans-unit>
       <trans-unit id="185.title" xml:space="preserve">
         <source>Spelling</source>
-        <target>Kontrola pravopisu</target>
+        <target state="translated">Pravopis</target>
         <note>Class = "NSMenu"; title = "Spelling"; ObjectID = "185";</note>
       </trans-unit>
       <trans-unit id="187.title" xml:space="preserve">
@@ -277,7 +277,7 @@
       </trans-unit>
       <trans-unit id="446.label" xml:space="preserve">
         <source>Beverage List</source>
-        <target>Nápoje</target>
+        <target state="translated">Nápojový lístek</target>
         <note>Class = "NSTabViewItem"; label = "Beverage List"; ObjectID = "446";</note>
       </trans-unit>
       <trans-unit id="447.label" xml:space="preserve">
@@ -409,7 +409,7 @@ Cuppa používá Weblate pro překlady.</target>
       </trans-unit>
       <trans-unit id="Jasmine Green Tea" xml:space="preserve">
         <source>Jasmine Green Tea</source>
-        <target>Zelený čaj</target>
+        <target state="translated">Jasmínový zelený čaj</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Libby's Mint Tea" xml:space="preserve">

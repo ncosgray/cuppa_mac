@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-  <file original="Base.lproj/MainMenu.xib" source-language="en" target-language="pt" datatype="plaintext">
+  <file original="Base.lproj/MainMenu.xib" source-language="en" target-language="zh-Hant" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
     </header>
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
         <source>Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications.</source>
-        <target state="translated">Configurações adicionais para os alertas do Cuppa podem ser encontradas nas Preferências de Sistema &gt; Notificações.</target>
         <note>Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications."; ObjectID = "5Qf-No-6KB";</note>
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
@@ -24,102 +23,82 @@
       </trans-unit>
       <trans-unit id="58.title" xml:space="preserve">
         <source>About Cuppa</source>
-        <target state="translated">Sobre Cuppa</target>
         <note>Class = "NSMenuItem"; title = "About Cuppa"; ObjectID = "58";</note>
       </trans-unit>
       <trans-unit id="103.title" xml:space="preserve">
         <source>Help</source>
-        <target state="translated">Ajuda</target>
         <note>Class = "NSMenuItem"; title = "Help"; ObjectID = "103";</note>
       </trans-unit>
       <trans-unit id="106.title" xml:space="preserve">
         <source>Help</source>
-        <target state="translated">Ajuda</target>
         <note>Class = "NSMenu"; title = "Help"; ObjectID = "106";</note>
       </trans-unit>
       <trans-unit id="111.title" xml:space="preserve">
         <source>Cuppa Help</source>
-        <target state="translated">Ajuda Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Cuppa Help"; ObjectID = "111";</note>
       </trans-unit>
       <trans-unit id="129.title" xml:space="preserve">
         <source>Preferences...</source>
-        <target state="translated">Preferências...</target>
         <note>Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "129";</note>
       </trans-unit>
       <trans-unit id="130.title" xml:space="preserve">
         <source>Services</source>
-        <target state="translated">Serviços</target>
         <note>Class = "NSMenu"; title = "Services"; ObjectID = "130";</note>
       </trans-unit>
       <trans-unit id="131.title" xml:space="preserve">
         <source>Services</source>
-        <target state="translated">Serviços</target>
         <note>Class = "NSMenuItem"; title = "Services"; ObjectID = "131";</note>
       </trans-unit>
       <trans-unit id="134.title" xml:space="preserve">
         <source>Hide Cuppa</source>
-        <target state="translated">Minimizar Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Hide Cuppa"; ObjectID = "134";</note>
       </trans-unit>
       <trans-unit id="136.title" xml:space="preserve">
         <source>Quit Cuppa</source>
-        <target state="translated">Sair do Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Quit Cuppa"; ObjectID = "136";</note>
       </trans-unit>
       <trans-unit id="145.title" xml:space="preserve">
         <source>Hide Others</source>
-        <target state="translated">Minimizar Outros</target>
         <note>Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145";</note>
       </trans-unit>
       <trans-unit id="150.title" xml:space="preserve">
         <source>Show All</source>
-        <target state="translated">Maximizar Todos</target>
         <note>Class = "NSMenuItem"; title = "Show All"; ObjectID = "150";</note>
       </trans-unit>
       <trans-unit id="154.title" xml:space="preserve">
         <source>Find...</source>
-        <target state="translated">Encontrar...</target>
         <note>Class = "NSMenuItem"; title = "Find..."; ObjectID = "154";</note>
       </trans-unit>
       <trans-unit id="155.title" xml:space="preserve">
         <source>Scroll to Selection</source>
-        <target state="translated">Mostrar Seleção</target>
         <note>Class = "NSMenuItem"; title = "Scroll to Selection"; ObjectID = "155";</note>
       </trans-unit>
       <trans-unit id="157.title" xml:space="preserve">
         <source>Copy</source>
-        <target state="translated">Copiar</target>
         <note>Class = "NSMenuItem"; title = "Copy"; ObjectID = "157";</note>
       </trans-unit>
       <trans-unit id="158.title" xml:space="preserve">
         <source>Undo</source>
-        <target state="translated">Desfazer</target>
         <note>Class = "NSMenuItem"; title = "Undo"; ObjectID = "158";</note>
       </trans-unit>
       <trans-unit id="159.title" xml:space="preserve">
         <source>Find</source>
-        <target state="translated">Encontrar</target>
         <note>Class = "NSMenu"; title = "Find"; ObjectID = "159";</note>
       </trans-unit>
       <trans-unit id="160.title" xml:space="preserve">
         <source>Cut</source>
-        <target state="translated">Cortar</target>
         <note>Class = "NSMenuItem"; title = "Cut"; ObjectID = "160";</note>
       </trans-unit>
       <trans-unit id="161.title" xml:space="preserve">
         <source>Use Selection for Find</source>
-        <target state="translated">Utilizar Seleção para Encontrar</target>
         <note>Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "161";</note>
       </trans-unit>
       <trans-unit id="162.title" xml:space="preserve">
         <source>Find Previous</source>
-        <target state="translated">Encontrar Anterior</target>
         <note>Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "162";</note>
       </trans-unit>
       <trans-unit id="163.title" xml:space="preserve">
         <source>Edit</source>
-        <target state="translated">Editar</target>
         <note>Class = "NSMenuItem"; title = "Edit"; ObjectID = "163";</note>
       </trans-unit>
       <trans-unit id="164.title" xml:space="preserve">
@@ -280,7 +259,7 @@
       </trans-unit>
     </body>
   </file>
-  <file original="en.lproj/InfoPlist.strings" source-language="en" target-language="pt" datatype="plaintext">
+  <file original="en.lproj/InfoPlist.strings" source-language="en" target-language="zh-Hant" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
     </header>
@@ -305,7 +284,7 @@ Cuppa uses Weblate for translations.</source>
       </trans-unit>
     </body>
   </file>
-  <file original="en.lproj/Localizable.strings" source-language="en" target-language="pt" datatype="plaintext">
+  <file original="en.lproj/Localizable.strings" source-language="en" target-language="zh-Hant" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
     </header>
