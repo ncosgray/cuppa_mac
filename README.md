@@ -32,7 +32,7 @@ Screenshots: [Dock menu](https://www.nathanatos.com/software/images/Cuppa-dock-m
 - Full Cocoa source code available.
 - Runs on macOS 10.9+.
 - Universal 2 binary compatible with Intel and Apple Silicon.
-- Localized to English, Czech, Dutch, French, German, Italian, and Spanish.
+- Localized to English, Czech, Dutch, French, German, Italian, Russian, Spanish, and Ukrainian.
 
 ### Join the Team
 

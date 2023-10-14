@@ -1,0 +1,72 @@
+/* No comment provided by engineer. */
+"%@ is now ready!" = "%@ теперь готов!";
+
+/* No comment provided by engineer. */
+"Beverages" = "Напитки";
+
+/* No comment provided by engineer. */
+"Blackcurrant Tea" = "Чай из черной смородины";
+
+/* No comment provided by engineer. */
+"Brewing complete..." = "Готовка завершена...";
+
+/* No comment provided by engineer. */
+"Cancel" = "Отмена";
+
+/* No comment provided by engineer. */
+"Chamomile" = "Ромашковый";
+
+/* No comment provided by engineer. */
+"Check for Updates..." = "Проверка обновлений...";
+
+/* No comment provided by engineer. */
+"Earl Grey" = "Эрл Грей";
+
+/* No comment provided by engineer. */
+"English Breakfast" = "Английский завтрак";
+
+/* No comment provided by engineer. */
+"Green Tea" = "Зеленый чай";
+
+/* No comment provided by engineer. */
+"Jasmine Green Tea" = "Жасминовый зеленый чай";
+
+/* No comment provided by engineer. */
+"Libby's Mint Tea" = "Мятный чай Либби";
+
+/* No comment provided by engineer. */
+"New Beverage" = "Новый напиток";
+
+/* No comment provided by engineer. */
+"No" = "Нет";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Oolong Tea" = "Чай Улун";
+
+/* No comment provided by engineer. */
+"Preferences..." = "Настройки...";
+
+/* No comment provided by engineer. */
+"Quick Timer..." = "Быстрый таймер...";
+
+/* No comment provided by engineer. */
+"Quit Cuppa" = "Выйти из Cuppa";
+
+/* No comment provided by engineer. */
+"Rooibos" = "Rooibos";
+
+/* No comment provided by engineer. */
+"The Cuppa timer is still active for another %s.\n\nDo you really want to quit?" = "Таймер Cuppa будет активен еще %s.\n\nВы действительно хотите выйти?";
+
+/* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Активный таймер уже есть. Отменить и запустить новый таймер?";
+
+/* No comment provided by engineer. */
+"Warning!" = "Внимание!";
+
+/* No comment provided by engineer. */
+"Yes" = "Да";
+

@@ -1,0 +1,9 @@
+/* (No Comment) */
+"CFBundleHelpBookName" = "Справка Cuppa";
+
+/* Localized versions of Info.plist keys */
+"CFBundleName" = "Cuppa";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Авторское право © 2005-2023 Натан Косгрей.\n\nCuppa использует Weblate для переводов.";
+

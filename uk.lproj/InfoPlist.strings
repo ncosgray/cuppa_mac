@@ -1,0 +1,9 @@
+/* (No Comment) */
+"CFBundleHelpBookName" = "Довідка Cuppa";
+
+/* Localized versions of Info.plist keys */
+"CFBundleName" = "Cuppa";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Авторські права © 2005-2023 Nathan Cosgray.\n\nCuppa використовує Weblate для перекладу.";
+

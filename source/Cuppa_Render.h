@@ -4,7 +4,7 @@
  Class:    Cuppa_Render
            - Handles rendering and render state management for the Cuppa dock icon.
  ----------------------------------------------------------------------------------------------------
- Copyright (c) 2005-2021 Nathan Cosgray. All rights reserved.
+ Copyright (c) 2005-2023 Nathan Cosgray. All rights reserved.
  
  This source code is licensed under the BSD-style license found in LICENSE.txt.
  **************************************************************************************************

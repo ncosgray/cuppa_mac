@@ -1,0 +1,72 @@
+/* No comment provided by engineer. */
+"%@ is now ready!" = "%@ вже готовий!";
+
+/* No comment provided by engineer. */
+"Beverages" = "Напої";
+
+/* No comment provided by engineer. */
+"Blackcurrant Tea" = "Чай з Чорної Смородини";
+
+/* No comment provided by engineer. */
+"Brewing complete..." = "Заварювання завершено…";
+
+/* No comment provided by engineer. */
+"Cancel" = "Скасувати";
+
+/* No comment provided by engineer. */
+"Chamomile" = "Ромашковий";
+
+/* No comment provided by engineer. */
+"Check for Updates..." = "Перевірити Оновлення…";
+
+/* No comment provided by engineer. */
+"Earl Grey" = "Ерл Ґрей";
+
+/* No comment provided by engineer. */
+"English Breakfast" = "Англійський Сніданок";
+
+/* No comment provided by engineer. */
+"Green Tea" = "Зелений Чай";
+
+/* No comment provided by engineer. */
+"Jasmine Green Tea" = "Жасминовий Зелений Чай";
+
+/* No comment provided by engineer. */
+"Libby's Mint Tea" = "М'ятний Чай Ліббі";
+
+/* No comment provided by engineer. */
+"New Beverage" = "Новий Напій";
+
+/* No comment provided by engineer. */
+"No" = "Ні";
+
+/* No comment provided by engineer. */
+"OK" = "Добре";
+
+/* No comment provided by engineer. */
+"Oolong Tea" = "Чай Улун";
+
+/* No comment provided by engineer. */
+"Preferences..." = "Налаштування…";
+
+/* No comment provided by engineer. */
+"Quick Timer..." = "Швидкий Таймер...";
+
+/* No comment provided by engineer. */
+"Quit Cuppa" = "Вийти з Cuppa";
+
+/* No comment provided by engineer. */
+"Rooibos" = "Ройбуш";
+
+/* No comment provided by engineer. */
+"The Cuppa timer is still active for another %s.\n\nDo you really want to quit?" = "Таймер Cuppa ще активний %s.\n\nВи справді хочете вийти?";
+
+/* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "Є активний таймер. Скасувати і запустити новий таймер?";
+
+/* No comment provided by engineer. */
+"Warning!" = "Попередження!";
+
+/* No comment provided by engineer. */
+"Yes" = "Так";
+
