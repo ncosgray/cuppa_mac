@@ -385,6 +385,7 @@ Do you really want to quit?</source>
       </trans-unit>
       <trans-unit id="Yes" xml:space="preserve">
         <source>Yes</source>
+        <target state="translated">Si</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>
