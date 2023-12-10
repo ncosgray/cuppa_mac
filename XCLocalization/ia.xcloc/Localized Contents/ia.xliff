@@ -381,6 +381,7 @@ Do you really want to quit?</source>
       </trans-unit>
       <trans-unit id="Warning!" xml:space="preserve">
         <source>Warning!</source>
+        <target state="translated">Attention!</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Yes" xml:space="preserve">
