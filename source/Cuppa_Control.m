@@ -1547,12 +1547,15 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
 #endif
     
     if (@available(macOS 10.14, *)) {
+        // create a unique request identifier
+        NSString *uuidString = [[NSUUID UUID] UUIDString];
+        
         // use new Notification Center API, if available
         UNMutableNotificationContent *notification = [[UNMutableNotificationContent alloc] init];
         notification.title = NSLocalizedString(@"Brewing complete...", nil);
         notification.body = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
         notification.sound = [UNNotificationSound soundNamed:@"spoon.aiff"];
-        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"CUPPA_NOTIFICATION" content:notification trigger:nil];
+        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:uuidString content:notification trigger:nil];
         [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {}];
     }
     else
