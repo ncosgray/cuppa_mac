@@ -146,6 +146,24 @@
                               reason:@"Cuppa timer"] retain];
     }
     
+    // request notification permissions
+    if (@available(macOS 10.14, *)) {
+        mOSXNotifyAvail = true;
+        [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:
+         (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error)
+        {
+          if (!granted || error)
+          {
+              // cannot use Notification Center
+              mOSXNotifyAvail = false;
+              
+              // hide options that require Notification Center
+              [mOSXNotifySwitch setEnabled:NO];
+              [mTimerSwitch setEnabled:NO];
+          }
+        }];
+    }
+
     mMainMenu = [NSApp mainMenu];
     
 #if !APPSTORE_BUILD
@@ -1521,10 +1539,22 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     printf("notifying Notification Center, current bevy: %@\n", [mCurrentBevy name]);
 #endif
     
-    NSUserNotification *notification = [[NSUserNotification alloc] init];
-    notification.title = NSLocalizedString(@"Brewing complete...", nil);
-    notification.informativeText = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
-    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    if (@available(macOS 10.14, *)) {
+        // use new Notification Center API, if available
+        UNMutableNotificationContent *notification = [[UNMutableNotificationContent alloc] init];
+        notification.title = NSLocalizedString(@"Brewing complete...", nil);
+        notification.body = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
+        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"CUPPA_NOTIFICATION" content:notification trigger:nil];
+        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {}];
+    }
+    else
+    {
+        // fall back to previous API
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = NSLocalizedString(@"Brewing complete...", nil);
+        notification.informativeText = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    }
     
 } // end -notifyOSX
 

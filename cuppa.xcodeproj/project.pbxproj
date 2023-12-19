@@ -10,6 +10,8 @@
 		73251EFC12893F42008CD18E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73251EFA12893F42008CD18E /* Localizable.strings */; };
 		733D2385128B1707006033B0 /* help in Resources */ = {isa = PBXBuildFile; fileRef = 733D2380128B1707006033B0 /* help */; };
 		73BD7D91128A8350003013D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73BD7D8F128A8350003013D4 /* InfoPlist.strings */; };
+		FE113E382B312BAF009A5274 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE113E372B312BAF009A5274 /* UserNotifications.framework */; };
+		FE113E392B312BB8009A5274 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE113E372B312BAF009A5274 /* UserNotifications.framework */; };
 		FE256DDF098754DD003C11F1 /* Cuppa_Render.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2C5020362E401A80001 /* Cuppa_Render.h */; };
 		FE256DE0098754DD003C11F1 /* Cuppa_Control.h in Headers */ = {isa = PBXBuildFile; fileRef = F538F2CD020371E201A80001 /* Cuppa_Control.h */; };
 		FE256DE1098754DD003C11F1 /* Cuppa_Bevy.h in Headers */ = {isa = PBXBuildFile; fileRef = F51AB8AD0204B17101A80001 /* Cuppa_Bevy.h */; };
@@ -82,6 +84,7 @@
 		F5F82AB202B1B0A201000008 /* spoon.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = spoon.aiff; path = sound/spoon.aiff; sourceTree = SOURCE_ROOT; };
 		F5F82AB502B1B6D201000008 /* teacup16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teacup16.png; path = art/teacup16.png; sourceTree = SOURCE_ROOT; };
 		FE047FEB1F8ACE0C007333E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE113E372B312BAF009A5274 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		FE256E0C098754DD003C11F1 /* Info-cuppa.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-cuppa.plist"; sourceTree = "<group>"; };
 		FE256E0D098754DD003C11F1 /* Cuppa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuppa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2940C61F970FB3003119BF /* Cuppa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuppa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +151,7 @@
 			files = (
 				FE256E03098754DD003C11F1 /* Carbon.framework in Frameworks */,
 				FE256E04098754DD003C11F1 /* Cocoa.framework in Frameworks */,
+				FE113E382B312BAF009A5274 /* UserNotifications.framework in Frameworks */,
 				FEA6ABB11055B23D00C436D8 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +162,7 @@
 			files = (
 				FE2940BA1F970FB3003119BF /* Carbon.framework in Frameworks */,
 				FE2940BB1F970FB3003119BF /* Cocoa.framework in Frameworks */,
+				FE113E392B312BB8009A5274 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +253,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE113E372B312BAF009A5274 /* UserNotifications.framework */,
 				FEA6ABB01055B23D00C436D8 /* Sparkle.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -797,12 +803,12 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "Cuppa-appstore.entitlements";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = BTLTN4T7QF;
+				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = BTLTN4T7QF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
@@ -818,6 +824,7 @@
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;
@@ -840,12 +847,12 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "Cuppa-appstore.entitlements";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = BTLTN4T7QF;
+				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = BTLTN4T7QF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
@@ -859,6 +866,7 @@
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;
@@ -881,11 +889,11 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "Cuppa-appstore.entitlements";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BTLTN4T7QF;
+				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = BTLTN4T7QF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
@@ -898,6 +906,7 @@
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanatos.Cuppa.Mac;
