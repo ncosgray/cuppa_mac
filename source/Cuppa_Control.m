@@ -37,6 +37,11 @@
     // chain up to superclass
     self = [super init];
     
+    // set app delegate
+    if (@available(macOS 10.14, *)) {
+        [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+    }
+    
     // create the render object to do our dirty work
     mRender = [[Cuppa_Render alloc] init];
     
@@ -1568,6 +1573,20 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     }
     
 } // end -notifyOSX
+
+// App delegate to allow notification in foreground
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler API_AVAILABLE(macos(10.14)) API_AVAILABLE(macos(10.14)) API_AVAILABLE(macos(10.14)){
+    if (@available(macOS 10.14, *)) {
+        UNNotificationPresentationOptions presentationOptions =
+        UNNotificationPresentationOptionSound
+        | UNNotificationPresentationOptionAlert
+        | UNNotificationPresentationOptionBadge;
+        
+        completionHandler(presentationOptions);
+    }
+} // end -userNotificationCenter
 
 // *************************************************************************************************
 
