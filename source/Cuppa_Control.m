@@ -186,7 +186,7 @@
     // setup preferences table to display bevy images properly
     imageCell = [[NSImageCell alloc] init];
     [imageCell setImageFrameStyle:NSImageFrameNone];
-    [imageCell setImageScaling:NSScaleNone];
+    [imageCell setImageScaling:NSImageScaleNone];
     column = [[mBevyTable tableColumns] objectAtIndex:0];
     [column setDataCell:imageCell];
     [imageCell release];
@@ -401,7 +401,7 @@
                 [okButton setKeyEquivalent:@"\r"];
                 NSButton *quitButton = [brewAlert addButtonWithTitle:NSLocalizedString(@"Quit Cuppa", nil)];
                 [quitButton setKeyEquivalent:@"q"];
-                [quitButton setKeyEquivalentModifierMask:NSCommandKeyMask];
+                [quitButton setKeyEquivalentModifierMask:NSEventModifierFlagCommand];
                 if ([brewAlert runModal] == NSAlertSecondButtonReturn)
                 {
                     // User wants to quit, how sad!
@@ -619,13 +619,14 @@
     if (mSecondsRemain > 0)
     {
         // Check with the user before starting a new timer
-        if (NSRunCriticalAlertPanel(NSLocalizedString(@"Warning!", nil),
-                                    NSLocalizedString(@"There is an active timer. Cancel and start a new timer?", nil),
-                                    NSLocalizedString(@"No", nil),
-                                    NSLocalizedString(@"Yes", nil),
-                                    nil) == NSAlertDefaultReturn)
-        {
-            // Cancel
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:NSLocalizedString(@"Warning!", nil)];
+        [alert setInformativeText:NSLocalizedString(@"There is an active timer. Cancel and start a new timer?", nil)];
+        [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+        [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+        [alert setAlertStyle:NSAlertStyleCritical];
+        NSInteger returnCode = [alert runModal];
+        if (returnCode == NSAlertFirstButtonReturn) {
             return;
         }
     }
@@ -1353,19 +1354,19 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                 [item setKeyEquivalent:[NSString stringWithFormat:@"%d", (i % 10)]];
                 if (i < 10)
                 {
-                    [item setKeyEquivalentModifierMask:NSCommandKeyMask];
+                    [item setKeyEquivalentModifierMask:NSEventModifierFlagCommand];
                 }
                 else if (i < 20)
                 {
-                    [item setKeyEquivalentModifierMask:NSCommandKeyMask + NSAlternateKeyMask];
+                    [item setKeyEquivalentModifierMask:NSEventModifierFlagCommand + NSEventModifierFlagOption];
                 }
                 else if (i < 30)
                 {
-                    [item setKeyEquivalentModifierMask:NSCommandKeyMask + NSControlKeyMask];
+                    [item setKeyEquivalentModifierMask:NSEventModifierFlagCommand + NSEventModifierFlagControl];
                 }
                 else
                 {
-                    [item setKeyEquivalentModifierMask:NSCommandKeyMask + NSShiftKeyMask];
+                    [item setKeyEquivalentModifierMask:NSEventModifierFlagCommand + NSEventModifierFlagShift];
                 }
             }
             
@@ -1432,10 +1433,14 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                 mSecondsRemain % 60);
     }
     
-    if (NSRunCriticalAlertPanel(NSLocalizedString(@"Warning!", nil),
-                                NSLocalizedString(@"The Cuppa timer is still active for another %s.\n\nDo you really want to quit?", nil), NSLocalizedString(@"No", nil), NSLocalizedString(@"Yes", nil),
-                                nil,
-                                countString) == NSAlertDefaultReturn)
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:NSLocalizedString(@"Warning!", nil)];
+    [alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"The Cuppa timer is still active for another %s.\n\nDo you really want to quit?", nil), countString]];
+    [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+    [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+    [alert setAlertStyle:NSAlertStyleCritical];
+    NSInteger returnCode = [alert runModal];
+    if (returnCode == NSAlertFirstButtonReturn)
     {
         return NSTerminateCancel;
     }
