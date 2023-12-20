@@ -371,15 +371,8 @@
             // play a nice sound
             if (mMakeSound)
             {
-                if (@available(macOS 10.14, *))
-                {
-                    // will be added as UNMutableNotificationContent
-                }
-                else
-                {
-                    NSSound *doneSound = [NSSound soundNamed:@"spoon"];
-                    [doneSound play];
-                }
+                NSSound *doneSound = [NSSound soundNamed:@"spoon"];
+                [doneSound play];
             }
         
             // speak it
@@ -1559,7 +1552,8 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
         UNMutableNotificationContent *notification = [[UNMutableNotificationContent alloc] init];
         notification.title = NSLocalizedString(@"Brewing complete...", nil);
         notification.body = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
-        notification.sound = [UNNotificationSound soundNamed:@"spoon.aiff"];
+        // NB: playing a sound is handled in updateTick for consistency
+        // notification.sound = [UNNotificationSound soundNamed:@"spoon.aiff"];
         UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:uuidString content:notification trigger:nil];
         [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {}];
     }
