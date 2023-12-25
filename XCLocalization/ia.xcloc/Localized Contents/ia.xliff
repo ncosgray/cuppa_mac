@@ -377,6 +377,7 @@ Do you really want to quit?</source>
       </trans-unit>
       <trans-unit id="There is an active timer. Cancel and start a new timer?" xml:space="preserve">
         <source>There is an active timer. Cancel and start a new timer?</source>
+        <target state="translated">Il ha un temporisator active. Cancellar e initiar un nove temporisator?</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Warning!" xml:space="preserve">
