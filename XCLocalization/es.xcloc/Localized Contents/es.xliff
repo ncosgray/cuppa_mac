@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="Base.lproj/MainMenu.xib" source-language="en" target-language="es" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
@@ -324,11 +324,11 @@
   </file>
   <file original="en.lproj/InfoPlist.strings" source-language="en" target-language="es" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
     <body>
       <trans-unit id="CFBundleGetInfoString" xml:space="preserve">
-        <source>1.8.6</source>
+        <source>1.8.7</source>
         <note>Get Info string</note>
       </trans-unit>
       <trans-unit id="CFBundleHelpBookName" xml:space="preserve">
@@ -342,10 +342,10 @@
         <note>Localized versions of Info.plist keys</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source>Copyright © 2005-2021 Nathan Cosgray.
+        <source>Copyright © 2005-2023 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target>Copyright © 2005-2021 Nathan Cosgray.
+        <target>Copyright © 2005-2023 Nathan Cosgray.
 
 Cuppa Utiliza Weblate para traducciones.</target>
         <note>Copyright (human-readable)</note>
@@ -354,7 +354,7 @@ Cuppa Utiliza Weblate para traducciones.</target>
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="es" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
     <body>
       <trans-unit id="%@ is now ready!" xml:space="preserve">
@@ -384,7 +384,7 @@ Cuppa Utiliza Weblate para traducciones.</target>
       </trans-unit>
       <trans-unit id="Chamomile" xml:space="preserve">
         <source>Chamomile</source>
-        <target state="translated">Manzanilla</target>
+        <target>Chamomile</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Check for Updates..." xml:space="preserve">
@@ -394,7 +394,7 @@ Cuppa Utiliza Weblate para traducciones.</target>
       </trans-unit>
       <trans-unit id="Earl Grey" xml:space="preserve">
         <source>Earl Grey</source>
-        <target state="translated">Té Earl Grey</target>
+        <target>Earl Grey</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="English Breakfast" xml:space="preserve">
