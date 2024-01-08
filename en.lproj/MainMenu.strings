@@ -134,8 +134,8 @@
 /* Class = "NSButtonCell"; title = "Notify via Notification Center"; ObjectID = "365"; */
 "365.title" = "Notify via Notification Center";
 
-/* Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368"; */
-"368.title" = "Show countdown timer on Dock icon";
+/* Class = "NSButtonCell"; title = "Show countdown timer as Dock icon badge"; ObjectID = "368"; */
+"368.title" = "Show countdown timer as Dock icon badge";
 
 /* Class = "NSButtonCell"; title = "Include steep times in menus"; ObjectID = "369"; */
 "369.title" = "Include steep times in menus";
@@ -176,8 +176,8 @@
 /* Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471"; */
 "471.title" = "Find Cuppa in the App Store...";
 
-/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
-"5Qf-No-6KB.title" = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications.";
+/* Class = "NSTextFieldCell"; title = "Additional settings can be found in System Settings > Notifications > Cuppa."; ObjectID = "5Qf-No-6KB"; */
+"5Qf-No-6KB.title" = "Additional settings can be found in System Settings > Notifications > Cuppa.";
 
 /* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
 "LAY-qA-dcS.title" = "Test Notification";

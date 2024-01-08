@@ -24,6 +24,7 @@
 
 #import <AppKit/AppKit.h>
 #import <Foundation/Foundation.h>
+#import <UserNotifications/UserNotifications.h>
 
 // Cuppa Includes
 
@@ -37,7 +38,7 @@
 
 // Class Interface
 
-@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate>
+@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate, UNUserNotificationCenterDelegate>
 {
     // IB connected objects
     IBOutlet NSWindow *mPrefsWindow; // application preferences window
