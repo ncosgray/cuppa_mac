@@ -37,6 +37,11 @@
     // chain up to superclass
     self = [super init];
     
+    // set app delegate
+    if (@available(macOS 10.14, *)) {
+        [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+    }
+    
     // create the render object to do our dirty work
     mRender = [[Cuppa_Render alloc] init];
     
@@ -146,6 +151,24 @@
                               reason:@"Cuppa timer"] retain];
     }
     
+    // request notification permissions
+    if (@available(macOS 10.14, *)) {
+        mOSXNotifyAvail = true;
+        [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:
+         (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error)
+        {
+          if (!granted || error)
+          {
+              // cannot use Notification Center
+              mOSXNotifyAvail = false;
+              
+              // hide options that require Notification Center
+              [mOSXNotifySwitch setEnabled:NO];
+              [mTimerSwitch setEnabled:NO];
+          }
+        }];
+    }
+
     mMainMenu = [NSApp mainMenu];
     
 #if !APPSTORE_BUILD
@@ -163,7 +186,7 @@
     // setup preferences table to display bevy images properly
     imageCell = [[NSImageCell alloc] init];
     [imageCell setImageFrameStyle:NSImageFrameNone];
-    [imageCell setImageScaling:NSScaleNone];
+    [imageCell setImageScaling:NSImageScaleNone];
     column = [[mBevyTable tableColumns] objectAtIndex:0];
     [column setDataCell:imageCell];
     [imageCell release];
@@ -378,7 +401,7 @@
                 [okButton setKeyEquivalent:@"\r"];
                 NSButton *quitButton = [brewAlert addButtonWithTitle:NSLocalizedString(@"Quit Cuppa", nil)];
                 [quitButton setKeyEquivalent:@"q"];
-                [quitButton setKeyEquivalentModifierMask:NSCommandKeyMask];
+                [quitButton setKeyEquivalentModifierMask:NSEventModifierFlagCommand];
                 if ([brewAlert runModal] == NSAlertSecondButtonReturn)
                 {
                     // User wants to quit, how sad!
@@ -596,13 +619,14 @@
     if (mSecondsRemain > 0)
     {
         // Check with the user before starting a new timer
-        if (NSRunCriticalAlertPanel(NSLocalizedString(@"Warning!", nil),
-                                    NSLocalizedString(@"There is an active timer. Cancel and start a new timer?", nil),
-                                    NSLocalizedString(@"No", nil),
-                                    NSLocalizedString(@"Yes", nil),
-                                    nil) == NSAlertDefaultReturn)
-        {
-            // Cancel
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:NSLocalizedString(@"Warning!", nil)];
+        [alert setInformativeText:NSLocalizedString(@"There is an active timer. Cancel and start a new timer?", nil)];
+        [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+        [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+        [alert setAlertStyle:NSAlertStyleCritical];
+        NSInteger returnCode = [alert runModal];
+        if (returnCode == NSAlertFirstButtonReturn) {
             return;
         }
     }
@@ -1330,19 +1354,19 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                 [item setKeyEquivalent:[NSString stringWithFormat:@"%d", (i % 10)]];
                 if (i < 10)
                 {
-                    [item setKeyEquivalentModifierMask:NSCommandKeyMask];
+                    [item setKeyEquivalentModifierMask:NSEventModifierFlagCommand];
                 }
                 else if (i < 20)
                 {
-                    [item setKeyEquivalentModifierMask:NSCommandKeyMask + NSAlternateKeyMask];
+                    [item setKeyEquivalentModifierMask:NSEventModifierFlagCommand + NSEventModifierFlagOption];
                 }
                 else if (i < 30)
                 {
-                    [item setKeyEquivalentModifierMask:NSCommandKeyMask + NSControlKeyMask];
+                    [item setKeyEquivalentModifierMask:NSEventModifierFlagCommand + NSEventModifierFlagControl];
                 }
                 else
                 {
-                    [item setKeyEquivalentModifierMask:NSCommandKeyMask + NSShiftKeyMask];
+                    [item setKeyEquivalentModifierMask:NSEventModifierFlagCommand + NSEventModifierFlagShift];
                 }
             }
             
@@ -1409,10 +1433,14 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                 mSecondsRemain % 60);
     }
     
-    if (NSRunCriticalAlertPanel(NSLocalizedString(@"Warning!", nil),
-                                NSLocalizedString(@"The Cuppa timer is still active for another %s.\n\nDo you really want to quit?", nil), NSLocalizedString(@"No", nil), NSLocalizedString(@"Yes", nil),
-                                nil,
-                                countString) == NSAlertDefaultReturn)
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:NSLocalizedString(@"Warning!", nil)];
+    [alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"The Cuppa timer is still active for another %s.\n\nDo you really want to quit?", nil), countString]];
+    [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+    [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+    [alert setAlertStyle:NSAlertStyleCritical];
+    NSInteger returnCode = [alert runModal];
+    if (returnCode == NSAlertFirstButtonReturn)
     {
         return NSTerminateCancel;
     }
@@ -1521,12 +1549,43 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     printf("notifying Notification Center, current bevy: %@\n", [mCurrentBevy name]);
 #endif
     
-    NSUserNotification *notification = [[NSUserNotification alloc] init];
-    notification.title = NSLocalizedString(@"Brewing complete...", nil);
-    notification.informativeText = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
-    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    if (@available(macOS 10.14, *)) {
+        // create a unique request identifier
+        NSString *uuidString = [[NSUUID UUID] UUIDString];
+        
+        // use new Notification Center API, if available
+        UNMutableNotificationContent *notification = [[UNMutableNotificationContent alloc] init];
+        notification.title = NSLocalizedString(@"Brewing complete...", nil);
+        notification.body = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
+        // NB: playing a sound is handled in updateTick for consistency
+        // notification.sound = [UNNotificationSound soundNamed:@"spoon.aiff"];
+        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:uuidString content:notification trigger:nil];
+        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {}];
+    }
+    else
+    {
+        // fall back to previous API
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = NSLocalizedString(@"Brewing complete...", nil);
+        notification.informativeText = [NSString stringWithFormat:NSLocalizedString(@"%@ is now ready!", nil), [mCurrentBevy name]];
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    }
     
 } // end -notifyOSX
+
+// App delegate to allow notification in foreground
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler API_AVAILABLE(macos(10.14)) API_AVAILABLE(macos(10.14)) API_AVAILABLE(macos(10.14)){
+    if (@available(macOS 10.14, *)) {
+        UNNotificationPresentationOptions presentationOptions =
+        UNNotificationPresentationOptionSound
+        | UNNotificationPresentationOptionAlert
+        | UNNotificationPresentationOptionBadge;
+        
+        completionHandler(presentationOptions);
+    }
+} // end -userNotificationCenter
 
 // *************************************************************************************************
 
