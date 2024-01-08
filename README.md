@@ -30,7 +30,7 @@ Screenshots: [Dock menu](https://www.nathanatos.com/software/images/Cuppa-dock-m
 - Customize the brew complete notification (supports macOS Notification Center).
 - Also great for timing French press coffee or anything else you can think of!
 - Full Cocoa source code available.
-- Runs on macOS 10.9+.
+- Runs on macOS 10.13+.
 - Universal 2 binary compatible with Intel and Apple Silicon.
 - Localized to English, Czech, Dutch, French, German, Italian, Russian, Spanish, and Ukrainian.
 
