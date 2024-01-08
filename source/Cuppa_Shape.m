@@ -4,7 +4,7 @@
  Class:    Cuppa_Shape
            - Constants for cup shape types and associated abstract support class.
  ----------------------------------------------------------------------------------------------------
- Copyright (c) 2005-2023 Nathan Cosgray. All rights reserved.
+ Copyright (c) 2005-2024 Nathan Cosgray. All rights reserved.
  
  This source code is licensed under the BSD-style license found in LICENSE.txt.
  **************************************************************************************************
