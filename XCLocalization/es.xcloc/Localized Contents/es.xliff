@@ -328,7 +328,7 @@
     </header>
     <body>
       <trans-unit id="CFBundleGetInfoString" xml:space="preserve">
-        <source>1.8.7</source>
+        <source>1.8.8</source>
         <note>Get Info string</note>
       </trans-unit>
       <trans-unit id="CFBundleHelpBookName" xml:space="preserve">
@@ -342,10 +342,10 @@
         <note>Localized versions of Info.plist keys</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source>Copyright © 2005-2023 Nathan Cosgray.
+        <source>Copyright © 2005-2024 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target>Copyright © 2005-2023 Nathan Cosgray.
+        <target>Copyright © 2005-2024 Nathan Cosgray.
 
 Cuppa Utiliza Weblate para traducciones.</target>
         <note>Copyright (human-readable)</note>
