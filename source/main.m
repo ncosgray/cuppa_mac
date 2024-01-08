@@ -211,6 +211,11 @@
 //    - newly added teas were not saved in rare cases
 //  * Cuppa has been translated into Russian and Ukrainian
 //    - contribute additional translations via Weblate!
+//
+//  Modifications by Nathan Cosgray on 2024/01/07 (v. 1.8.8):
+//  * NOTE: This release requires macOS 10.13 (High Sierra) or newer!
+//  * Cuppa will now proactively request notification permissions.
+//  * Language translation updates - contribute via Weblate!
 
 #import <Cocoa/Cocoa.h>
 

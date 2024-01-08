@@ -67,6 +67,7 @@ Buy us a cup of tea to support active development of Cuppa.
 ### History
 
 - [Full changelog](https://github.com/ncosgray/Cuppa/blob/master/source/main.m)
+- [Cuppa 1.8.7](https://www.nathanatos.com/software/downloads/Cuppa-1.8.7.zip) supported OS 10.9+
 - [Cuppa 1.8.2](https://www.nathanatos.com/software/downloads/Cuppa-1.8.2.zip) supported OS 10.7+
 - [Cuppa 1.7.9](https://www.nathanatos.com/software/downloads/Cuppa-1.7.9.zip) supported OS 10.4+
 - [Cuppa 1.7](https://www.nathanatos.com/software/downloads/Cuppa-1.7.zip) was the last version to support PowerPC
