@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
         <source>Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications.</source>
-        <target>Додаткові налаштування для сповіщень Cuppa можна знайти в Системних Налаштуваннях &gt; Сповіщення.</target>
+        <target state="translated">Додаткові налаштування можна знайти в Системних Налаштуваннях &gt; Сповіщення &gt; Cuppa.</target>
         <note>Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications."; ObjectID = "5Qf-No-6KB";</note>
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
@@ -237,7 +237,7 @@
       </trans-unit>
       <trans-unit id="368.title" xml:space="preserve">
         <source>Show countdown timer on Dock icon</source>
-        <target>Показати таймер зворотного відліку на піктограмі Dock</target>
+        <target state="translated">Показати таймер зворотного відліку як значок на іконці Dock</target>
         <note>Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368";</note>
       </trans-unit>
       <trans-unit id="369.title" xml:space="preserve">
