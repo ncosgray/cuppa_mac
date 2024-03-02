@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
         <source>Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications.</source>
-        <target>אפשר למצוא הגדרות נוספות להתראות של Cuppa בהעדפות מערכת &gt; התראות.</target>
+        <target state="translated">אפשר למצוא הגדרות נוספות בהגדרות מערכת &gt; התראות &gt;‏ Cuppa.</target>
         <note>Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications."; ObjectID = "5Qf-No-6KB";</note>
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
@@ -237,7 +237,7 @@
       </trans-unit>
       <trans-unit id="368.title" xml:space="preserve">
         <source>Show countdown timer on Dock icon</source>
-        <target>הצגת ספירה לאחורה על גבי סמל המעגן</target>
+        <target state="translated">הצגת ספירה לאחורה בתור עיטור על סמל המעגן</target>
         <note>Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368";</note>
       </trans-unit>
       <trans-unit id="369.title" xml:space="preserve">
@@ -343,10 +343,10 @@
         <note>Localized versions of Info.plist keys</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source>Copyright © 2005-2021 Nathan Cosgray.
+        <source>Copyright © 2005-2024 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target state="translated">כל הזכויות © 2005-2021 נתן קוסגריי.
+        <target state="translated">כל הזכויות © 2005-2024 נתן קוסגריי.
 
 Cuppa משתמש ב־Weblate לתרגומים.</target>
         <note>Copyright (human-readable)</note>

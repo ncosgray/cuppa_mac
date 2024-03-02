@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
         <source>Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications.</source>
-        <target state="translated">Yderligere indstillinger for Cuppa-alarmer kan findes i Systemindstillinger &gt; Notifikationer.</target>
+        <target state="translated">Yderligere indstillinger kan findes i Systemindstillinger &gt; Notifikationer &gt; Cuppa.</target>
         <note>Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications."; ObjectID = "5Qf-No-6KB";</note>
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
@@ -87,7 +87,7 @@
       </trans-unit>
       <trans-unit id="155.title" xml:space="preserve">
         <source>Scroll to Selection</source>
-        <target state="translated">Rul til valgte</target>
+        <target state="translated">Rul til markering</target>
         <note>Class = "NSMenuItem"; title = "Scroll to Selection"; ObjectID = "155";</note>
       </trans-unit>
       <trans-unit id="157.title" xml:space="preserve">
@@ -112,7 +112,7 @@
       </trans-unit>
       <trans-unit id="161.title" xml:space="preserve">
         <source>Use Selection for Find</source>
-        <target state="translated">Brug valgte til Find</target>
+        <target state="translated">Brug markering til Find</target>
         <note>Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "161";</note>
       </trans-unit>
       <trans-unit id="162.title" xml:space="preserve">
@@ -237,7 +237,7 @@
       </trans-unit>
       <trans-unit id="368.title" xml:space="preserve">
         <source>Show countdown timer on Dock icon</source>
-        <target state="translated">Vis nedtællingstimer i Dock-symbol</target>
+        <target state="translated">Vis nedtællingstimer som Dock-symboletiket</target>
         <note>Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368";</note>
       </trans-unit>
       <trans-unit id="369.title" xml:space="preserve">
@@ -312,7 +312,7 @@
       </trans-unit>
       <trans-unit id="fku-RV-THJ.title" xml:space="preserve">
         <source>Auto-start first beverage timer at launch</source>
-        <target state="translated">Start timer for første drik automatisk ved opstart</target>
+        <target state="translated">Start timer for øverste drik automatisk ved opstart</target>
         <note>Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ";</note>
       </trans-unit>
       <trans-unit id="gbr-1q-BI3.title" xml:space="preserve">
@@ -343,10 +343,10 @@
         <note>Localized versions of Info.plist keys</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source>Copyright © 2005-2021 Nathan Cosgray.
+        <source>Copyright © 2005-2024 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target state="translated">Copyright © 2005-2021 Nathan Cosgray.
+        <target state="translated">Copyright © 2005-2024 Nathan Cosgray.
 
 Cuppa bruger Weblate til oversættelser.</target>
         <note>Copyright (human-readable)</note>
