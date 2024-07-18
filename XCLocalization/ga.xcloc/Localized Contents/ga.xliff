@@ -97,7 +97,7 @@
       </trans-unit>
       <trans-unit id="158.title" xml:space="preserve">
         <source>Undo</source>
-        <target state="translated">Cealaigh</target>
+        <target state="translated">Cuir ar ceal</target>
         <note>Class = "NSMenuItem"; title = "Undo"; ObjectID = "158";</note>
       </trans-unit>
       <trans-unit id="159.title" xml:space="preserve">
