@@ -23,6 +23,7 @@
       </trans-unit>
       <trans-unit id="58.title" xml:space="preserve">
         <source>About Cuppa</source>
+        <target state="translated">A proposito de Cuppa</target>
         <note>Class = "NSMenuItem"; title = "About Cuppa"; ObjectID = "58";</note>
       </trans-unit>
       <trans-unit id="103.title" xml:space="preserve">
@@ -62,6 +63,7 @@
       </trans-unit>
       <trans-unit id="136.title" xml:space="preserve">
         <source>Quit Cuppa</source>
+        <target state="translated">Sortir de Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Quit Cuppa"; ObjectID = "136";</note>
       </trans-unit>
       <trans-unit id="145.title" xml:space="preserve">
