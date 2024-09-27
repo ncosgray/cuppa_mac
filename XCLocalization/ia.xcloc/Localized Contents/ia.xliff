@@ -176,14 +176,17 @@
       </trans-unit>
       <trans-unit id="196.title" xml:space="preserve">
         <source>Cuppa Preferences</source>
+        <target state="translated">Preferentias de Cuppa</target>
         <note>Class = "NSWindow"; title = "Cuppa Preferences"; ObjectID = "196";</note>
       </trans-unit>
       <trans-unit id="203.headerCell.title" xml:space="preserve">
         <source>Name</source>
+        <target state="translated">Nomine</target>
         <note>Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "203";</note>
       </trans-unit>
       <trans-unit id="206.headerCell.title" xml:space="preserve">
         <source>Time</source>
+        <target state="translated">Tempore</target>
         <note>Class = "NSTableColumn"; headerCell.title = "Time"; ObjectID = "206";</note>
       </trans-unit>
       <trans-unit id="217.title" xml:space="preserve">
@@ -206,6 +209,7 @@
       </trans-unit>
       <trans-unit id="363.title" xml:space="preserve">
         <source>Play sound</source>
+        <target state="translated">Reproducer un sono</target>
         <note>Class = "NSButtonCell"; title = "Play sound"; ObjectID = "363";</note>
       </trans-unit>
       <trans-unit id="364.title" xml:space="preserve">
