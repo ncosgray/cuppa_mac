@@ -111,6 +111,10 @@
 		FE6B89842CCEE534001218EA /* da */ = {isa = PBXFileReference; lastKnownFileType = folder; name = da; path = da.lproj/help; sourceTree = "<group>"; };
 		FE6B89852CCEE534001218EA /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE6B89862CCEE534001218EA /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE6B89872CCEEAF4001218EA /* ga */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ga; path = ga.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		FE6B89882CCEEAF4001218EA /* ga */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ga; path = ga.lproj/help; sourceTree = "<group>"; };
+		FE6B89892CCEEAF4001218EA /* ga */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ga; path = ga.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE6B898A2CCEEAF4001218EA /* ga */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ga; path = ga.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FE9207452564BE2400B7A6B2 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "teacup16@2x.png"; path = "art/teacup16@2x.png"; sourceTree = "<group>"; };
 		FEA0D9C4270298AE00955E39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -414,6 +418,7 @@
 				ru,
 				uk,
 				da,
+				ga,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* cuppa */;
 			projectDirPath = "";
@@ -520,6 +525,7 @@
 				FE50C1952974EEDB0034CBC1 /* ru */,
 				FE50C1992974EF9E0034CBC1 /* uk */,
 				FE6B89862CCEE534001218EA /* da */,
+				FE6B898A2CCEEAF4001218EA /* ga */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 				FE50C1932974EEDB0034CBC1 /* ru */,
 				FE50C1972974EF9E0034CBC1 /* uk */,
 				FE6B89842CCEE534001218EA /* da */,
+				FE6B89882CCEEAF4001218EA /* ga */,
 			);
 			name = help;
 			sourceTree = "<group>";
@@ -553,6 +560,7 @@
 				FE50C1942974EEDB0034CBC1 /* ru */,
 				FE50C1982974EF9E0034CBC1 /* uk */,
 				FE6B89852CCEE534001218EA /* da */,
+				FE6B89892CCEEAF4001218EA /* ga */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -571,6 +579,7 @@
 				FE50C1922974EEDB0034CBC1 /* ru */,
 				FE50C1962974EF9E0034CBC1 /* uk */,
 				FE6B89832CCEE534001218EA /* da */,
+				FE6B89872CCEEAF4001218EA /* ga */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";

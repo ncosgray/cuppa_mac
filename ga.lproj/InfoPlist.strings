@@ -1,0 +1,9 @@
+/* (No Comment) */
+"CFBundleHelpBookName" = "Cabhair Cuppa";
+
+/* Localized versions of Info.plist keys */
+"CFBundleName" = "Cuppa";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Cóipcheart © 2005-2024 Nathan Cosgray.\n\nÚsáideann Cuppa Weblate le haghaidh aistriúcháin.";
+
