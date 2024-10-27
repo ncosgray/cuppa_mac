@@ -107,6 +107,10 @@
 		FE50C1982974EF9E0034CBC1 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE50C1992974EF9E0034CBC1 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FE5C9162092EC6E3003821C5 /* beep.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = beep.aiff; path = sound/beep.aiff; sourceTree = "<group>"; };
+		FE6B89832CCEE534001218EA /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		FE6B89842CCEE534001218EA /* da */ = {isa = PBXFileReference; lastKnownFileType = folder; name = da; path = da.lproj/help; sourceTree = "<group>"; };
+		FE6B89852CCEE534001218EA /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE6B89862CCEE534001218EA /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FE9207452564BE2400B7A6B2 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "teacup16@2x.png"; path = "art/teacup16@2x.png"; sourceTree = "<group>"; };
 		FEA0D9C4270298AE00955E39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -409,6 +413,7 @@
 				nl,
 				ru,
 				uk,
+				da,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* cuppa */;
 			projectDirPath = "";
@@ -470,7 +475,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Generate files for signed Sparkle app release\n# NC 10/2017 (obviously with much help from the internets)\n\nset -o errexit\n\n# Set paths\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleGetInfoString)\nBUNDLE_VERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleVersion)\nDOWNLOAD_BASE_URL=\"https://www.nathanatos.com/software/downloads\"\nCREATEDMG_PATH=\"$SOURCE_ROOT/../Cuppa-support/create-dmg\"\nSPARKLE_PATH=\"$SOURCE_ROOT/../Cuppa-support/Sparkle\"\nDMG_FILENAME=\"$EXECUTABLE_NAME-$VERSION.dmg\"\nARCHIVE_FILENAME=\"$EXECUTABLE_NAME-$VERSION.zip\"\nAPPCAST_FILENAME=\"$EXECUTABLE_NAME-$VERSION.xml\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\n\n# Cleanup any leftovers before building\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -rf \"$DMG_FILENAME\"\nrm -rf \"$APPCAST_FILENAME\"\nrm -rf \"$ARCHIVE_FILENAME\"\nrm -rf \"/tmp/$DMG_FILENAME\"\n\n# Remove all extended attributes before signing\nxattr -cr \"$PROJECT_NAME.app\"\n\n# Sign Sparkle executable with Developer ID\ncodesign --force --timestamp --deep --options=runtime --sign \"Developer ID Application\" \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app\"\n\n# Sign entire app bundle with Developer ID\ncodesign --force --timestamp --deep --options=runtime --sign \"Developer ID Application\" \"$PROJECT_NAME.app\"\n\n# Create a codesigned DMG for web distribution\n\"$CREATEDMG_PATH/create-dmg\" \\\n  --volname \"$EXECUTABLE_NAME $VERSION Installer\" \\\n  --window-pos 200 120 \\\n  --window-size 720 360 \\\n  --background \"$CREATEDMG_PATH/$EXECUTABLE_NAME-dmg-background.tiff\" \\\n  --icon-size 128 \\\n  --icon $PROJECT_NAME.app 140 160 \\\n  --hide-extension $PROJECT_NAME.app \\\n  --app-drop-link 580 160 \\\n\"/tmp/$DMG_FILENAME\" \"$BUILT_PRODUCTS_DIR\"\ncodesign --force --timestamp --deep --options=runtime --sign \"Developer ID Application\" \"/tmp/$DMG_FILENAME\"\nmv \"/tmp/$DMG_FILENAME\" \"$BUILT_PRODUCTS_DIR/$DMG_FILENAME\"\n\n# Create a zip archive for Sparkle distribution\nditto -c -k --sequesterRsrc --keepParent \"$PROJECT_NAME.app\" \"$ARCHIVE_FILENAME\"\n\n# Use Sparkle tools to sign the archive\nPUBDATE=$(LC_TIME=en_US date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\"$SPARKLE_PATH/sign_update\" \"$ARCHIVE_FILENAME\")\n\n# Write a Sparkle appcast template for this release\ncat > \"$APPCAST_FILENAME\" <<EOF\n<item>\n<title>Version $VERSION</title>\n<description><![CDATA[\n<p>\n</p>\n]]></description>\n<sparkle:minimumSystemVersion>$MACOSX_DEPLOYMENT_TARGET</sparkle:minimumSystemVersion>\n<pubDate>$PUBDATE</pubDate>\n<enclosure\nurl=\"$DOWNLOAD_URL\"\nsparkle:version=\"$BUNDLE_VERSION\"\nsparkle:shortVersionString=\"$VERSION\"\ntype=\"application/octet-stream\"\n$SIGNATURE\n/>\n</item>\nEOF\n";
+			shellScript = "# Generate files for signed Sparkle app release\n# NC 10/2017 (obviously with much help from the internets)\n\nset -o errexit\n\n# Set paths\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleGetInfoString)\nBUNDLE_VERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleVersion)\nDOWNLOAD_BASE_URL=\"https://www.nathanatos.com/software/downloads\"\nCREATEDMG_PATH=\"$SOURCE_ROOT/../Cuppa-support/create-dmg\"\nSPARKLE_PATH=\"$SOURCE_ROOT/../Cuppa-support/Sparkle\"\nDMG_FILENAME=\"$EXECUTABLE_NAME-$VERSION.dmg\"\nARCHIVE_FILENAME=\"$EXECUTABLE_NAME-$VERSION.zip\"\nAPPCAST_FILENAME=\"$EXECUTABLE_NAME-$VERSION.xml\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\n\n# Cleanup any leftovers before building\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -rf \"$DMG_FILENAME\"\nrm -rf \"$APPCAST_FILENAME\"\nrm -rf \"$ARCHIVE_FILENAME\"\nrm -rf \"/tmp/$DMG_FILENAME\"\n\n# Remove all extended attributes before signing\nxattr -cr \"$PROJECT_NAME.app\"\n\n# Sign Sparkle executable with Developer ID\ncodesign --force --timestamp --deep --options=runtime --sign \"Developer ID Application\" \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app\"\n\n# Sign entire app bundle with Developer ID\ncodesign --force --timestamp --deep --options=runtime --sign \"Developer ID Application\" \"$PROJECT_NAME.app\"\n\n# Create a codesigned DMG for web distribution\n# skip-jenkins is a workaround for -1728 error\n\"$CREATEDMG_PATH/create-dmg\" \\\n  --skip-jenkins \\\n  --volname \"$EXECUTABLE_NAME $VERSION Installer\" \\\n  --window-pos 200 120 \\\n  --window-size 720 360 \\\n  --background \"$CREATEDMG_PATH/../$EXECUTABLE_NAME-dmg-background.tiff\" \\\n  --icon-size 128 \\\n  --icon $PROJECT_NAME.app 140 160 \\\n  --hide-extension $PROJECT_NAME.app \\\n  --app-drop-link 580 160 \\\n\"/tmp/$DMG_FILENAME\" \"$BUILT_PRODUCTS_DIR\"\ncodesign --force --timestamp --deep --options=runtime --sign \"Developer ID Application\" \"/tmp/$DMG_FILENAME\"\nmv \"/tmp/$DMG_FILENAME\" \"$BUILT_PRODUCTS_DIR/$DMG_FILENAME\"\n\n# Create a zip archive for Sparkle distribution\nditto -c -k --sequesterRsrc --keepParent \"$PROJECT_NAME.app\" \"$ARCHIVE_FILENAME\"\n\n# Use Sparkle tools to sign the archive\nPUBDATE=$(LC_TIME=en_US date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\"$SPARKLE_PATH/sign_update\" \"$ARCHIVE_FILENAME\")\n\n# Write a Sparkle appcast template for this release\ncat > \"$APPCAST_FILENAME\" <<EOF\n<item>\n<title>Version $VERSION</title>\n<description><![CDATA[\n<p>\n</p>\n]]></description>\n<sparkle:minimumSystemVersion>$MACOSX_DEPLOYMENT_TARGET</sparkle:minimumSystemVersion>\n<pubDate>$PUBDATE</pubDate>\n<enclosure\nurl=\"$DOWNLOAD_URL\"\nsparkle:version=\"$BUNDLE_VERSION\"\nsparkle:shortVersionString=\"$VERSION\"\ntype=\"application/octet-stream\"\n$SIGNATURE\n/>\n</item>\nEOF\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -514,6 +519,7 @@
 				FED3F3442741C39A00E0F7F7 /* nl */,
 				FE50C1952974EEDB0034CBC1 /* ru */,
 				FE50C1992974EF9E0034CBC1 /* uk */,
+				FE6B89862CCEE534001218EA /* da */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -529,6 +535,7 @@
 				FED3F3422741C39A00E0F7F7 /* nl */,
 				FE50C1932974EEDB0034CBC1 /* ru */,
 				FE50C1972974EF9E0034CBC1 /* uk */,
+				FE6B89842CCEE534001218EA /* da */,
 			);
 			name = help;
 			sourceTree = "<group>";
@@ -545,6 +552,7 @@
 				FED3F3432741C39A00E0F7F7 /* nl */,
 				FE50C1942974EEDB0034CBC1 /* ru */,
 				FE50C1982974EF9E0034CBC1 /* uk */,
+				FE6B89852CCEE534001218EA /* da */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -562,6 +570,7 @@
 				FED3F3412741C39A00E0F7F7 /* nl */,
 				FE50C1922974EEDB0034CBC1 /* ru */,
 				FE50C1962974EF9E0034CBC1 /* uk */,
+				FE6B89832CCEE534001218EA /* da */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
