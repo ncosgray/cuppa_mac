@@ -32,7 +32,7 @@ Screenshots: [Dock menu](https://www.nathanatos.com/software/images/Cuppa-dock-m
 - Full Cocoa source code available.
 - Runs on macOS 10.13+.
 - Universal 2 binary compatible with Intel and Apple Silicon.
-- Localized to English, Czech, Dutch, French, German, Italian, Russian, Spanish, and Ukrainian.
+- Localized to English, Czech, Danish, Dutch, French, German, Irish, Italian, Russian, Spanish, and Ukrainian.
 
 ### Join the Team
 
@@ -40,6 +40,7 @@ Screenshots: [Dock menu](https://www.nathanatos.com/software/images/Cuppa-dock-m
   - Target "cuppa" builds non-App Store distribution version with Sparkle updater and DMG
   - Target "cuppa-appstore" builds App Store distribution version
   - Localizations are exported to the XCLocalization folder
+  - Prerequisites: Xcode 10+ for building, and [create-dmg](https://github.com/create-dmg/create-dmg) for packaging
 
 - Use [Weblate](https://hosted.weblate.org/engage/cuppa/) to contribute a translation for your language.
 
