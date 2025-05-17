@@ -11,15 +11,15 @@ Cuppa is a small application to time your cup of tea as it steeps. Tired of leav
 
 Cuppa is an application that lives in your Dock: just right-click or control-click on Cuppa's icon and select the beverage you are brewing (the beverage list and times can be edited, and even expanded to time things other than tea!). When you choose a beverage, Cuppa will begin timing the brew for you, with a countdown timer that's optionally displayed as a badge on the dock icon. When the tea is done Cuppa will attempt to get your attention by various configurable means.
 
-<img src="https://www.nathanatos.com/software/images/Cuppa-notification-small.png" width="500" />
+<img src="https://www.nathanatos.com/images/Cuppa-notification-small.png" width="500" />
 
-Screenshots: [Dock menu](https://www.nathanatos.com/software/images/Cuppa-dock-menu.png), [Cuppa preferences](https://www.nathanatos.com/software/images/Cuppa-preferences.png), [Dock icon timer badge](https://www.nathanatos.com/software/images/Cuppa-timer.png)
+Screenshots: [Dock menu](https://www.nathanatos.com/images/Cuppa-dock-menu.png), [Cuppa preferences](https://www.nathanatos.com/images/Cuppa-preferences.png), [Dock icon timer badge](https://www.nathanatos.com/images/Cuppa-timer.png)
 
 ### Install
 
 | macOS DMG | Mac App Store |
 | :--: | :--: |
-| <a href="https://github.com/ncosgray/cuppa/releases/latest"><img src="https://www.nathanatos.com/software/images/file-zip-icon.png" alt="Download macOS DMG" width="80" height="80"/></a> | <a href="https://itunes.apple.com/us/app/cuppa-tea-timer/id1297865739"><img src="https://www.nathanatos.com/software/images/mac-app-store-badge.png" alt="Download on the App Store" width="206" height="50"/></a> |
+| <a href="https://github.com/ncosgray/cuppa/releases/latest"><img src="https://www.nathanatos.com/images/file-zip-icon.png" alt="Download macOS DMG" width="80" height="80"/></a> | <a href="https://itunes.apple.com/us/app/cuppa-tea-timer/id1297865739"><img src="https://www.nathanatos.com/images/mac-app-store-badge.png" alt="Download on the App Store" width="206" height="50"/></a> |
 
 ### Features
 
@@ -63,9 +63,9 @@ Screenshots: [Dock menu](https://www.nathanatos.com/software/images/Cuppa-dock-m
 
 Buy us a cup of tea to support active development of Cuppa.
 
-<a href="https://paypal.me/ncosgray"><img src="https://www.nathanatos.com/software/images/paypal-badge.png" alt="Donate with PayPal" width="185" height="50"/></a><br/>
-<a href="https://venmo.com/nathancosgray"><img src="https://www.nathanatos.com/software/images/venmo-badge.png" alt="Donate with Venmo" width="185" height="50"/></a><br/>
-<img src="https://www.nathanatos.com/software/images/ethereum-logo.png" alt="Ethereum Logo" width="15" height="25"/> <a href="ethereum:0xc5be97ea75ad15854ed09529139e672fae2f63c0">Ethereum: 0xc5be97ea75ad15854ed09529139e672fae2f63c0</a><br/>
+<a href="https://paypal.me/ncosgray"><img src="https://www.nathanatos.com/images/paypal-badge.png" alt="Donate with PayPal" width="185" height="50"/></a><br/>
+<a href="https://venmo.com/nathancosgray"><img src="https://www.nathanatos.com/images/venmo-badge.png" alt="Donate with Venmo" width="185" height="50"/></a><br/>
+<img src="https://www.nathanatos.com/images/ethereum-logo.png" alt="Ethereum Logo" width="15" height="25"/> <a href="ethereum:0xc5be97ea75ad15854ed09529139e672fae2f63c0">Ethereum: 0xc5be97ea75ad15854ed09529139e672fae2f63c0</a><br/>
 
 ### History
 
