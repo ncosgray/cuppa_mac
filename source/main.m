@@ -216,6 +216,12 @@
 //  * NOTE: This release requires macOS 10.13 (High Sierra) or newer!
 //  * Cuppa will now proactively request notification permissions.
 //  * Language translation updates - contribute via Weblate!
+//
+//  Modifications by Nathan Cosgray on 2024/11/11 (v. 1.8.9):
+//  * Upgraded Sparkle framework to fix a security vulnerability.
+//  * Refreshed app icon to align with Cuppa Mobile.
+//  * Cuppa has been translated into Danish and Irish.
+//    - Contribute additional translations via Weblate!
 
 #import <Cocoa/Cocoa.h>
 

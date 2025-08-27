@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="AppleTitle" content="Cuppa Help">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+    body,td,th {
+        font-family: "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif;
+    }
+</style>
+</head>
+<body>
+
+<table><tr><td><img src="teacup48@2x.png" width="48" height="48"></td><td> </td><td><h1>Cuppa</h1></td></tr></table>
+
+<p><i>Cuppa er en lille applikation til macOS, der timer din kop te, mens den trækker. Er du træt af at lade din te stå for længe, så den bliver bitter og kold, eller af at drikke den for tidligt og ikke kunne nyde den til dens fulde potentiale? Så er dette værktøj noget for dig!</i></p>
+
+<h2>Funktioner</h2>
+
+<ul>
+<li>Al funktionalitet er tilgængelig fra Dock-menuen.</li>
+<li>Dock-symbolet kan vise en lille nedtællingstimer, mens drikken trækker.</li>
+<li>Tilpas listen over drikke og deres trækketider.</li>
+<li>Funktionen Hurtig timer gør Cuppa til en alsidig timer.</li>
+<li>Tilpas notifikationen om færdigbrygning.</li>
+<li>Også god til timing af stempelkaffe og instantnudler!</li>
+<li>Den fulde Cocoa-kildekode er frit tilgængelig.</li>
+<li>Kører på macOS 10.13+.</li>
+</ul>
+
+<h2>Timing af trækketiden</h2>
+
+<p>Brug den fra Docken: Bare højreklik på Cuppas symbol og vælg drikken, du vil brygge. Eller vælg en drik fra menuen <i>Drikke</i>. Cuppa begynder at time brygningen, og et tebrev viser sig i koppen og mørknes gradvist, som teen trækker. Når teen er klar, forsøger Cuppa at få din opmærksomhed på forskellige måder, der kan tilpasses. Du kan også slå en nedtællingstimer til, der vises på en lille etiket på Dock-symbolet.</p>
+
+<h2>Konfiguration af Cuppa</h2>
+
+<p>Te er en personlig ting, men Cuppa kan tilpasses lige så meget, som du ønsker. Vælg <i>Indstillinger...</i> i menuen for at gøre dette.</p>
+
+<p><b>Liste over drikke:</b> Fanen <i>Liste over drikke</i> gør det muligt for dig at ændre en allerede eksisterende te ved at dobbeltklikke på dens navn eller trækketid og derefter blot indtaste en ny værdi. Du kan også fjerne drikke helt eller tilføje nye ved at klikke på knapperne under drikkene.</p>
+
+<p>Ved at klikke på fanen <i>Valgmuligheder</i> åbnes en side med yderligere konfigurationsindstillinger:</p>
+
+<ul>
+<li><b>Hoppende Dock-symbol:</b> Når trækningen er færdig, hopper Dock-symbolet gentagne gange, indtil du klikker på det. Dette er irriterende nok til at få din opmærksomhed.</li>
+<li><b>Afspil lyd:</b> Hvis du foretrækker en lydnotifikation, laver Cuppa lyden af en klirrende ske, når timeren rammer nul. Du vil også høre sagte biplyde i de sidste par sekunder af trækketiden.</li>
+<li><b>Vis "Trækning færdig"-alarmboks:</b> Vis en alarmboks på skærmen, når din drik er klar. Denne alarmboks gør det også muligt for dig at afslutte Cuppa med et enkelt klik (eller tastetryk), når din te er klar.</li>
+<li><b>Meddel via Notifikationscenter:</b> Brug det indbyggede Notifikationscenter på macOS 10.8 eller senere til at vise "Trækning færdig"-beskeder. Hvis du går glip af notifikationer, fordi de forsvinder for hurtigt, så prøv at stille alarmstilen for Cuppa til "Alarmer" i Notifikationssystemindstillingerne.</li>
+<li><b>Vis nedtællingstimer på Dock-symbol:</b> Når denne valgmulighed er aktiveret, viser Cuppa en lille nedtællingstimer som del af sit Dock-symbol. Prøv at undgå at få overanstrengte øjne af at kigge derpå!</li>
+<li><b>Inkluder trækketid i menuer:</b> Kryds denne boks af, hvis du vil have Cuppa til at inkludere tider for de forskellige drikke i menuer, så du allerede før timerens start ved, hvor lang tid du skal vente.</li>
+<li><b>Tjek efter programopdateringer automatisk:</b> Hvis dette er slået til, kontakter Cuppa periodisk en webservice og informerer dig, når en ny version af programmet er tilgængelig og klar til at blive hentet.</li>
+</ul>
+
+<h2>Cuppas Hurtige timer</h2>
+
+<p>Hvad nu hvis du har brug for at brygge en kop te i en fart, og du ikke har tid til at tilføje en ny drik i indstillingerne? Bare rolig; Cuppas funktion Hurtig timer er en enkel måde at starte en timer i en fart på. Bare vælg <i>Hurtig timer...</i> fra menuen og indtast enten et antal sekunder (f.eks. "30"), minutter og sekunder (f.eks. "2:45"), eller en hvilken som helst mængde tid på maksimalt 10 timer. Cuppa klarer resten og giver dig besked, når tiden er gået.</p>
+
+<h2>Blandet</h2>
+
+<p>Vælg <i>Afbryd</i> i menuen for at afbryde timeren, mens den kører.</p>
+
+<h2>Tilpasning af lyde</h2>
+
+<p>Du ville måske finde det morsomt, hvis nu din computer meddelte dig med ordene "Te -- Earl Grey -- Varm", når din morgente var klar til at drikke. Selvom der ikke er nogen funktion i Cuppas indstillinger til at ændre alarmlydene, så er det faktisk meget let at klare dette. Du får brug for et par lydfiler i AIFF-format, som du kan kopiere ind i Cuppas applikationsbundle. Disse erstatter standardlydene for start på brygning og færdigbrygning. Navngiv dem henholdsvis <tt>pour.aiff</tt> og <tt>spoon.aiff</tt>.</p>
+
+<p>Erstat derefter standardlydfilerne på følgende vis:</p>
+
+<ol>
+<li>Afslut Cuppa, hvis det kører lige nu.</li>
+<li>Find Cuppa-applikationen i din applikationsmappe og højreklik (control-klik) på den.</li>
+<li>Klik på <i>Vis pakkeindhold</i>.</li>
+<li>Åbn mappen Contents og derefter Resources.</li>
+<li>Lav sikkerhedskopier af lydfilerne <tt>pour.aiff</tt> og <tt>spoon.aiff</tt>, hvis der nu skulle ske noget utilsigtet.</li>
+<li>Kopiér dine nye lydfiler <tt>pour.aiff</tt> og <tt>spoon.aiff</tt> ind i Resources-mappen.</li>
+<li>Det var det! Nu kan du køre Cuppa og afprøve dine modifikationer.</li>
+</ol>
+
+<h2>Kreditering og copyright</h2>
+
+<p>Cuppa er en gratis, open source-applikation.</p>
+
+<p>Copyright © 2005-2024 Nathan Cosgray, med bidrag fra Mathias Meyer og Eric McMurry.</p>
+
+<p>Cuppa bruger Weblate til oversættelser. Lær mere og bidrag med en oversættelse til dit eget sprog på <a href="https://hosted.weblate.org/engage/cuppa/">https://hosted.weblate.org/engage/cuppa</a>.</p>
+
+<p>Original tysk oversættelse af Benedikt Hopmann. Original tjekkisk oversættelse af Tomáš. Original italiensk oversættelse af Giuseppe Morelli. Original fransk oversættelse af Christian Parent.</p>
+
+<p>Denne applikation blev inspireret af The Tea Cooker til Linux og er baseret på arbejde udført af Wunderbear Software.</p>
+
+<p>Besøg Cuppas hjemmeside på <a href="https://www.nathanatos.com">https://www.nathanatos.com</a>.</p>
+
+<p>Også tilgængelig: Cuppa til iOS og Android!</p>
+
+</body>
+</html>
