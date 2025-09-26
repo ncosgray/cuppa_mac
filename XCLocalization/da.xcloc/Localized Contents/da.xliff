@@ -12,17 +12,17 @@
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
         <source>MainMenu</source>
-        <target/>
+        <target state="translated">MainMenu</target>
         <note>Class = "NSMenu"; title = "MainMenu"; ObjectID = "29";</note>
       </trans-unit>
       <trans-unit id="56.title" xml:space="preserve">
         <source>Cuppa</source>
-        <target/>
+        <target state="translated">Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Cuppa"; ObjectID = "56";</note>
       </trans-unit>
       <trans-unit id="57.title" xml:space="preserve">
         <source>Cuppa</source>
-        <target/>
+        <target state="translated">Cuppa</target>
         <note>Class = "NSMenu"; title = "Cuppa"; ObjectID = "57";</note>
       </trans-unit>
       <trans-unit id="58.title" xml:space="preserve">
@@ -252,7 +252,7 @@
       </trans-unit>
       <trans-unit id="371.title" xml:space="preserve">
         <source>QTimerValue</source>
-        <target/>
+        <target state="translated">QTimerValue</target>
         <note>Class = "NSTextFieldCell"; title = "QTimerValue"; ObjectID = "371";</note>
       </trans-unit>
       <trans-unit id="372.title" xml:space="preserve">
@@ -262,17 +262,17 @@
       </trans-unit>
       <trans-unit id="373.title" xml:space="preserve">
         <source>Text Cell</source>
-        <target/>
+        <target state="translated">Text Cell</target>
         <note>Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "373";</note>
       </trans-unit>
       <trans-unit id="374.title" xml:space="preserve">
         <source>Text Cell</source>
-        <target/>
+        <target state="translated">Text Cell</target>
         <note>Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "374";</note>
       </trans-unit>
       <trans-unit id="375.title" xml:space="preserve">
         <source>Text Cell</source>
-        <target/>
+        <target state="translated">Text Cell</target>
         <note>Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "375";</note>
       </trans-unit>
       <trans-unit id="446.label" xml:space="preserve">
@@ -339,7 +339,7 @@
       </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
         <source>Cuppa</source>
-        <target/>
+        <target state="translated">Cuppa</target>
         <note>Localized versions of Info.plist keys</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">

@@ -89,6 +89,7 @@
 		F5F82AB502B1B6D201000008 /* teacup16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teacup16.png; path = art/teacup16.png; sourceTree = SOURCE_ROOT; };
 		FE047FEB1F8ACE0C007333E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FE113E372B312BAF009A5274 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		FE15FEAF2E864B95005361FC /* es */ = {isa = PBXFileReference; lastKnownFileType = folder; name = es; path = es.lproj/help; sourceTree = "<group>"; };
 		FE256E0C098754DD003C11F1 /* Info-cuppa.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-cuppa.plist"; sourceTree = "<group>"; };
 		FE256E0D098754DD003C11F1 /* Cuppa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuppa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2940C61F970FB3003119BF /* Cuppa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuppa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -573,6 +574,7 @@
 				FE6B89882CCEEAF4001218EA /* ga */,
 				FE364F582E86458500359476 /* fi */,
 				FEC5A0C52E8649DA009DBA42 /* tr */,
+				FE15FEAF2E864B95005361FC /* es */,
 			);
 			name = help;
 			sourceTree = "<group>";
