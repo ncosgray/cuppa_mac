@@ -28,8 +28,6 @@
 	<string>help</string>
 	<key>CFBundleHelpBookName</key>
 	<string>Cuppa Help</string>
-	<key>CFBundleIconFile</key>
-	<string>icon.icns</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleDevelopmentRegion</key>
