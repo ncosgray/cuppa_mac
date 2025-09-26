@@ -30,6 +30,9 @@
 
 #import "Cuppa_Bevy.h"
 #import "Cuppa_Render.h"
+#if !APPSTORE_BUILD
+#import "Sparkle/SPUStandardUpdaterController.h"
+#endif
 
 // defines
 
@@ -88,6 +91,11 @@
 
 // speech synthesizer
 @property (strong) NSSpeechSynthesizer *speechSynth;
+
+#if !APPSTORE_BUILD
+// Sparkle updater
+@property (strong, nonatomic) SPUStandardUpdaterController *updaterController;
+#endif
 
 // ------ Manipulators ------
 

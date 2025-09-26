@@ -15,7 +15,7 @@
 #import "Cuppa_Bevy.h"
 #import "Cuppa_Control.h"
 #if !APPSTORE_BUILD
-#import "Sparkle/SUUpdater.h"
+#import "Sparkle/SPUStandardUpdaterController.h"
 #endif
 
 // Code!
@@ -173,12 +173,11 @@
     
 #if !APPSTORE_BUILD
     // Set up Sparkle updater and add menu item
-    [[SUUpdater sharedUpdater] checkForUpdatesInBackground];
     NSMenu *mCuppaMenu = [[mMainMenu itemAtIndex:0] submenu];
     item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Check for Updates...", nil)
                                       action:@selector(checkForUpdates:)
                                keyEquivalent:@""];
-    [item setTarget:self];
+    [item setTarget:self.updaterController];
     [item setEnabled:YES];
     [mCuppaMenu insertItem:item atIndex:1];
 #endif
@@ -1395,7 +1394,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
 // Handle a click on the Check for Updates menu item
 - (IBAction)checkForUpdates:(id)sender;
 {
-    [[SUUpdater sharedUpdater] checkForUpdates:sender];
+    [self.updaterController checkForUpdates:sender];
 }
 #endif
 
@@ -1608,6 +1607,11 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+#if !APPSTORE_BUILD
+    self.updaterController = [[SPUStandardUpdaterController alloc] initWithStartingUpdater:YES
+                                                                           updaterDelegate:nil
+                                                                        userDriverDelegate:nil];
+#endif
 }
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center
      shouldPresentNotification:(NSUserNotification *)notification
