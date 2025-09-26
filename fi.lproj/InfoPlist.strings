@@ -1,0 +1,9 @@
+/* (No Comment) */
+"CFBundleHelpBookName" = "Cuppa-apu";
+
+/* Localized versions of Info.plist keys */
+"CFBundleName" = "Cuppa";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Tekijänoikeus © 2005-2024 Nathan Cosgray.\n\nCuppa käyttää käännöksissä Weblatea.";
+

@@ -1,0 +1,189 @@
+/* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
+"5Qf-No-6KB.title" = "Lisäasetukset löytyvät Järjestelmäasetukset > Ilmoitukset > Cuppa.";
+
+/* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
+"29.title" = "MainMenu";
+
+/* Class = "NSMenuItem"; title = "Cuppa"; ObjectID = "56"; */
+"56.title" = "Cuppa";
+
+/* Class = "NSMenu"; title = "Cuppa"; ObjectID = "57"; */
+"57.title" = "Cuppa";
+
+/* Class = "NSMenuItem"; title = "About Cuppa"; ObjectID = "58"; */
+"58.title" = "Tietoja Cupasta";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "103"; */
+"103.title" = "Apu";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "106"; */
+"106.title" = "Apu";
+
+/* Class = "NSMenuItem"; title = "Cuppa Help"; ObjectID = "111"; */
+"111.title" = "Cuppa-apu";
+
+/* Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "129"; */
+"129.title" = "Asetukset...";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+"130.title" = "Palvelut";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+"131.title" = "Palvelut";
+
+/* Class = "NSMenuItem"; title = "Hide Cuppa"; ObjectID = "134"; */
+"134.title" = "Piilota Cuppa";
+
+/* Class = "NSMenuItem"; title = "Quit Cuppa"; ObjectID = "136"; */
+"136.title" = "Lopeta Cuppa";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145"; */
+"145.title" = "Piilota Muut";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "150"; */
+"150.title" = "Näytä kaikki";
+
+/* Class = "NSMenuItem"; title = "Find..."; ObjectID = "154"; */
+"154.title" = "Löydä...";
+
+/* Class = "NSMenuItem"; title = "Scroll to Selection"; ObjectID = "155"; */
+"155.title" = "Vieritä kohtaan Valinta";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "157"; */
+"157.title" = "Kopioi";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "158"; */
+"158.title" = "Kumoa";
+
+/* Class = "NSMenu"; title = "Find"; ObjectID = "159"; */
+"159.title" = "Löydä";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "160"; */
+"160.title" = "Leikkaa";
+
+/* Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "161"; */
+"161.title" = "Käytä valintaa löytämiseen";
+
+/* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "162"; */
+"162.title" = "Löydä edellinen";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "163"; */
+"163.title" = "Muokkaa";
+
+/* Class = "NSMenuItem"; title = "Clear"; ObjectID = "164"; */
+"164.title" = "Tyhjennä";
+
+/* Class = "NSMenuItem"; title = "Find Next"; ObjectID = "167"; */
+"167.title" = "Löydä seuraava";
+
+/* Class = "NSMenuItem"; title = "Find"; ObjectID = "168"; */
+"168.title" = "Löydä";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "169"; */
+"169.title" = "Muokkaa";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "171"; */
+"171.title" = "Liitä";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "172"; */
+"172.title" = "Valitse kaikki";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "173"; */
+"173.title" = "Tee uudelleen";
+
+/* Class = "NSMenuItem"; title = "Spelling"; ObjectID = "184"; */
+"184.title" = "Oikeinkirjoitus";
+
+/* Class = "NSMenu"; title = "Spelling"; ObjectID = "185"; */
+"185.title" = "Oikeinkirjoitus";
+
+/* Class = "NSMenuItem"; title = "Spelling..."; ObjectID = "187"; */
+"187.title" = "Oikeinkirjoitus...";
+
+/* Class = "NSMenuItem"; title = "Check Spelling"; ObjectID = "189"; */
+"189.title" = "Tarkista oikeinkirjoitus";
+
+/* Class = "NSMenuItem"; title = "Check Spelling As You Type"; ObjectID = "191"; */
+"191.title" = "Tarkista oikeinkirjoitus kirjoittaessasi";
+
+/* Class = "NSWindow"; title = "Cuppa Preferences"; ObjectID = "196"; */
+"196.title" = "Cuppa-asetukset";
+
+/* Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "203"; */
+"203.headerCell.title" = "Nimi";
+
+/* Class = "NSTableColumn"; headerCell.title = "Time"; ObjectID = "206"; */
+"206.headerCell.title" = "Aika";
+
+/* Class = "NSBox"; title = "When Brewing is Complete..."; ObjectID = "217"; */
+"217.title" = "Kun haudutus on valmis...";
+
+/* Class = "NSBox"; title = "User Interface Options"; ObjectID = "255"; */
+"255.title" = "Käyttöliittymävaihtoehdot";
+
+/* Class = "NSWindow"; title = "Quick Timer"; ObjectID = "278"; */
+"278.title" = "Pika-ajastin";
+
+/* Class = "NSButtonCell"; title = "Bounce Dock icon"; ObjectID = "362"; */
+"362.title" = "Ponnahda Dock-kuvaketta";
+
+/* Class = "NSButtonCell"; title = "Play sound"; ObjectID = "363"; */
+"363.title" = "Toista ääni";
+
+/* Class = "NSButtonCell"; title = "Show \"Brewing Complete\" alert box"; ObjectID = "364"; */
+"364.title" = "Näytä \"Haudutus valmiina\" -hälytyslaatikko";
+
+/* Class = "NSButtonCell"; title = "Notify via Notification Center"; ObjectID = "365"; */
+"365.title" = "Ilmoita ilmoituskeskuksen kautta";
+
+/* Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368"; */
+"368.title" = "Näytä ajastin Dock-kuvakkeen nimiönä";
+
+/* Class = "NSButtonCell"; title = "Include steep times in menus"; ObjectID = "369"; */
+"369.title" = "Sisällytä valikoihin jyrkät ajat";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "370"; */
+"370.title" = "Aloita";
+
+/* Class = "NSTextFieldCell"; title = "QTimerValue"; ObjectID = "371"; */
+"371.title" = "QTimerValue";
+
+/* Class = "NSTextFieldCell"; title = "Enter a time in minutes:seconds format, or in seconds."; ObjectID = "372"; */
+"372.title" = "Syötä aika minuutti:sekunti-muodossa tai sekunteina.";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "373"; */
+"373.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "374"; */
+"374.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "375"; */
+"375.title" = "Text Cell";
+
+/* Class = "NSTabViewItem"; label = "Beverage List"; ObjectID = "446"; */
+"446.label" = "Juomaluettelo";
+
+/* Class = "NSTabViewItem"; label = "Options"; ObjectID = "447"; */
+"447.label" = "Vaihtoehdot";
+
+/* Class = "NSButtonCell"; title = "Delete Selected Beverage"; ObjectID = "453"; */
+"453.title" = "Poista valittu juoma";
+
+/* Class = "NSButtonCell"; title = "Add New Beverage"; ObjectID = "455"; */
+"455.title" = "Lisää uusi juoma";
+
+/* Class = "NSTextFieldCell"; title = "To add a beverage to Cuppa's database, click \"Add New Beverage\".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list."; ObjectID = "457"; */
+"457.title" = "Voit lisätä juoman Cupan tietokantaan napsauttamalla \"Lisää uusi juoma\". Muokkaa sitten luettelon yläosassa näkyvän Uusi juoma -merkinnän nimeä ja jyrkkää aikaa.";
+
+/* Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471"; */
+"471.title" = "Löydä Cuppa App Storesta...";
+
+/* Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ"; */
+"fku-RV-THJ.title" = "Käynnistä ensimmäinen juoma-ajastin automaattisesti käynnistyksen yhteydessä";
+
+/* Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3"; */
+"gbr-1q-BI3.title" = "Puhehälytys";
+
+/* Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS"; */
+"LAY-qA-dcS.title" = "Testi-ilmoitus";
+
