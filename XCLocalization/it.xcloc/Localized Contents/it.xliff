@@ -369,7 +369,7 @@ Cuppa usa Weblate per le traduzioni.</target>
       </trans-unit>
       <trans-unit id="Blackcurrant Tea" xml:space="preserve">
         <source>Blackcurrant Tea</source>
-        <target state="needs-translation">Tè al ribes nero</target>
+        <target state="translated">Tè al ribes nero</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Brewing complete..." xml:space="preserve">
@@ -414,7 +414,7 @@ Cuppa usa Weblate per le traduzioni.</target>
       </trans-unit>
       <trans-unit id="Libby's Mint Tea" xml:space="preserve">
         <source>Libby's Mint Tea</source>
-        <target state="needs-translation">Tè alla menta</target>
+        <target state="needs-translation">Tè alla menta di Libby</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="New Beverage" xml:space="preserve">
@@ -434,7 +434,7 @@ Cuppa usa Weblate per le traduzioni.</target>
       </trans-unit>
       <trans-unit id="Oolong Tea" xml:space="preserve">
         <source>Oolong Tea</source>
-        <target state="needs-translation">Tè oolong</target>
+        <target state="translated">Tè Oolong</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Preferences..." xml:space="preserve">

@@ -374,7 +374,7 @@ Cuppa использует Weblate для переводов.</target>
       </trans-unit>
       <trans-unit id="Brewing complete..." xml:space="preserve">
         <source>Brewing complete...</source>
-        <target>Готовка завершена...</target>
+        <target state="translated">Заварка завершена...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Cancel" xml:space="preserve">
