@@ -222,6 +222,11 @@
 //  * Refreshed app icon to align with Cuppa Mobile.
 //  * Cuppa has been translated into Danish and Irish.
 //    - Contribute additional translations via Weblate!
+//
+//  Modifications by Nathan Cosgray on 2025/09/27 (v. 1.9.0):
+//  * Support for macOS 26, including a refreshed app icon.
+//  * Cuppa has been translated into Finnish and Turkish.
+//    - Contribute additional translations via Weblate!
 
 #import <Cocoa/Cocoa.h>
 
