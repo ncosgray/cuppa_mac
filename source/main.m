@@ -3,7 +3,7 @@
  Package:  Cuppa
  Class:    main
  ----------------------------------------------------------------------------------------------------
- Copyright (c) 2005-2024 Nathan Cosgray. All rights reserved.
+ Copyright (c) 2005-2025 Nathan Cosgray. All rights reserved.
  
  This source code is licensed under the BSD-style license found in LICENSE.txt.
  **************************************************************************************************
@@ -221,6 +221,11 @@
 //  * Upgraded Sparkle framework to fix a security vulnerability.
 //  * Refreshed app icon to align with Cuppa Mobile.
 //  * Cuppa has been translated into Danish and Irish.
+//    - Contribute additional translations via Weblate!
+//
+//  Modifications by Nathan Cosgray on 2025/09/27 (v. 1.9.0):
+//  * Support for macOS 26, including a refreshed app icon.
+//  * Cuppa has been translated into Finnish and Turkish.
 //    - Contribute additional translations via Weblate!
 
 #import <Cocoa/Cocoa.h>

@@ -2,6 +2,6 @@
 
 CFBundleName = "Cuppa";
 CFBundleHelpBookName = "Cuppa Help";
-NSHumanReadableCopyright = "Copyright © 2005-2024 Nathan Cosgray.
+NSHumanReadableCopyright = "Copyright © 2005-2025 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.";

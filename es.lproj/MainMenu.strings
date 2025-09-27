@@ -1,5 +1,5 @@
 /* Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences > Notifications."; ObjectID = "5Qf-No-6KB"; */
-"5Qf-No-6KB.title" = "Se pueden encontrar configuraciones adicionales para las alertas de Cuppa en Preferencias del sistema > Notificaciones.";
+"5Qf-No-6KB.title" = "Puede encontrar ajustes adicionales en Ajustes del sistema > Notificaciones > Cuppa.";
 
 /* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
 "29.title" = "MainMenu";
@@ -137,7 +137,7 @@
 "365.title" = "Notificar a través del Centro de Notificación";
 
 /* Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368"; */
-"368.title" = "Mostrar el temporizador de cuenta atrás en el icono del Dock";
+"368.title" = "Mostrar la cuenta atrás como insignia en el icono del Dock";
 
 /* Class = "NSButtonCell"; title = "Include steep times in menus"; ObjectID = "369"; */
 "369.title" = "Incluir tiempos de espera en los menús";

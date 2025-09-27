@@ -5,7 +5,7 @@
 "Beverages" = "Bevande";
 
 /* No comment provided by engineer. */
-"Blackcurrant Tea" = "The al ribes nero";
+"Blackcurrant Tea" = "Tè al ribes nero";
 
 /* No comment provided by engineer. */
 "Brewing complete..." = "Infusione completata...";
@@ -32,9 +32,6 @@
 "Jasmine Green Tea" = "Tè verde al gelsomino";
 
 /* No comment provided by engineer. */
-"Libby's Mint Tea" = "The alla menta";
-
-/* No comment provided by engineer. */
 "New Beverage" = "Nuova bevanda";
 
 /* No comment provided by engineer. */
@@ -44,7 +41,7 @@
 "OK" = "OK";
 
 /* No comment provided by engineer. */
-"Oolong Tea" = "Té oolong";
+"Oolong Tea" = "Tè Oolong";
 
 /* No comment provided by engineer. */
 "Preferences..." = "Preferenze...";

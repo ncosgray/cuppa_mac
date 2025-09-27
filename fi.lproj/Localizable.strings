@@ -1,0 +1,72 @@
+/* No comment provided by engineer. */
+"%@ is now ready!" = "%@ on nyt valmis!";
+
+/* No comment provided by engineer. */
+"Beverages" = "Juomat";
+
+/* No comment provided by engineer. */
+"Blackcurrant Tea" = "Mustaherukkatee";
+
+/* No comment provided by engineer. */
+"Brewing complete..." = "Haudutus valmiina...";
+
+/* No comment provided by engineer. */
+"Cancel" = "Peruuta";
+
+/* No comment provided by engineer. */
+"Chamomile" = "Kamomilla";
+
+/* No comment provided by engineer. */
+"Check for Updates..." = "Tarkista päivitysten varalta…";
+
+/* No comment provided by engineer. */
+"Earl Grey" = "Earl Grey";
+
+/* No comment provided by engineer. */
+"English Breakfast" = "Englantilainen aamiainen";
+
+/* No comment provided by engineer. */
+"Green Tea" = "Vihreä tee";
+
+/* No comment provided by engineer. */
+"Jasmine Green Tea" = "Jasmiinin vihreä tee";
+
+/* No comment provided by engineer. */
+"Libby's Mint Tea" = "Libbyn minttutee";
+
+/* No comment provided by engineer. */
+"New Beverage" = "Uusi juoma";
+
+/* No comment provided by engineer. */
+"No" = "Ei";
+
+/* No comment provided by engineer. */
+"OK" = "Hyvä on";
+
+/* No comment provided by engineer. */
+"Oolong Tea" = "Oolongin tee";
+
+/* No comment provided by engineer. */
+"Preferences..." = "Asetukset...";
+
+/* No comment provided by engineer. */
+"Quick Timer..." = "Pika-ajastin...";
+
+/* No comment provided by engineer. */
+"Quit Cuppa" = "Lopeta Cuppa";
+
+/* No comment provided by engineer. */
+"Rooibos" = "Rooibos";
+
+/* No comment provided by engineer. */
+"The Cuppa timer is still active for another %s.\n\nDo you really want to quit?" = "Cuppa-ajastin on edelleen aktiivinen toiselle %s.\n\nHaluatko todella lopettaa?";
+
+/* No comment provided by engineer. */
+"There is an active timer. Cancel and start a new timer?" = "On aktiivinen ajastin. Perutaanko ja aloitetaanko uusi ajastin?";
+
+/* No comment provided by engineer. */
+"Warning!" = "Varoitus!";
+
+/* No comment provided by engineer. */
+"Yes" = "Kyllä";
+
