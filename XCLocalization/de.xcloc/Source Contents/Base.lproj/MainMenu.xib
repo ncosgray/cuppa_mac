@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="24128" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24128"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -192,29 +192,29 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="171" y="412" width="380" height="338"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="948"/>
             <value key="minSize" type="size" width="360" height="206"/>
-            <view key="contentView" id="197">
+            <view key="contentView" misplaced="YES" id="197">
                 <rect key="frame" x="0.0" y="0.0" width="380" height="338"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <tabView initialItem="446" translatesAutoresizingMaskIntoConstraints="NO" id="445">
-                        <rect key="frame" x="13" y="10" width="354" height="322"/>
+                        <rect key="frame" x="13" y="10" width="356" height="322"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Beverage List" identifier="1" id="446">
                                 <view key="view" id="449">
-                                    <rect key="frame" x="10" y="33" width="334" height="276"/>
+                                    <rect key="frame" x="10" y="33" width="336" height="276"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="204">
-                                            <rect key="frame" x="17" y="103" width="300" height="170"/>
+                                            <rect key="frame" x="17" y="103" width="302" height="170"/>
                                             <clipView key="contentView" id="PF7-Yt-Ksy">
-                                                <rect key="frame" x="1" y="1" width="287" height="168"/>
+                                                <rect key="frame" x="1" y="1" width="300" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="378" id="202">
-                                                        <rect key="frame" x="0.0" y="0.0" width="287" height="151"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="151"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -265,16 +265,16 @@
                                                     </tableView>
                                                 </subviews>
                                             </clipView>
-                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="377">
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="377">
                                                 <rect key="frame" x="-100" y="-100" width="272" height="11"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="376">
-                                                <rect key="frame" x="288" y="18" width="11" height="151"/>
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="376">
+                                                <rect key="frame" x="286" y="18" width="15" height="151"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" wantsLayer="YES" id="378">
-                                                <rect key="frame" x="0.0" y="0.0" width="287" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="17"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                             <connections>
@@ -282,7 +282,7 @@
                                             </connections>
                                         </scrollView>
                                         <button horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="452">
-                                            <rect key="frame" x="152" y="71" width="170" height="28"/>
+                                            <rect key="frame" x="162" y="78" width="156" height="17"/>
                                             <buttonCell key="cell" type="push" title="Delete Selected Beverage" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="453">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="message" size="11"/>
@@ -292,22 +292,22 @@
                                             </buttonCell>
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="454">
-                                            <rect key="frame" x="12" y="71" width="128" height="28"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="QxN-kO-CHD"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="nHW-Sv-1ZA"/>
-                                            </constraints>
+                                            <rect key="frame" x="18" y="78" width="120" height="17"/>
                                             <buttonCell key="cell" type="push" title="Add New Beverage" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="455">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="message" size="11"/>
                                             </buttonCell>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="QxN-kO-CHD"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="nHW-Sv-1ZA"/>
+                                            </constraints>
                                             <connections>
                                                 <action selector="addBevyButton:" target="195" id="459"/>
                                                 <outlet property="nextKeyView" destination="452" id="462"/>
                                             </connections>
                                         </button>
-                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="456">
-                                            <rect key="frame" x="16" y="7" width="306" height="63"/>
+                                        <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="456">
+                                            <rect key="frame" x="16" y="7" width="308" height="63"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="63" id="Dim-yh-fua"/>
                                             </constraints>
@@ -338,59 +338,59 @@
                             </tabViewItem>
                             <tabViewItem label="Options" identifier="2" id="447">
                                 <view key="view" id="448">
-                                    <rect key="frame" x="10" y="33" width="334" height="276"/>
+                                    <rect key="frame" x="10" y="33" width="334" height="279"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box borderType="none" title="When Brewing is Complete..." translatesAutoresizingMaskIntoConstraints="NO" id="217">
-                                            <rect key="frame" x="9" y="146" width="316" height="130"/>
+                                            <rect key="frame" x="9" y="146" width="316" height="133"/>
                                             <view key="contentView" id="VLN-tP-hxg">
-                                                <rect key="frame" x="0.0" y="0.0" width="316" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="316" height="121"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="219">
-                                                        <rect key="frame" x="16" y="89" width="280" height="18"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="16" id="1wc-wA-c8x"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="17" y="95" width="279" height="16"/>
                                                         <buttonCell key="cell" type="check" title="Bounce Dock icon" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="362">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16" id="1wc-wA-c8x"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="toggleBounce:" target="195" id="234"/>
                                                             <outlet property="nextKeyView" destination="220" id="349"/>
                                                         </connections>
                                                     </button>
                                                     <button horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="220">
-                                                        <rect key="frame" x="16" y="71" width="139" height="18"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="16" id="Qe1-cL-hD0"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="17" y="77" width="138" height="16"/>
                                                         <buttonCell key="cell" type="check" title="Play sound" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="363">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16" id="Qe1-cL-hD0"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="toggleSound:" target="195" id="235"/>
                                                             <outlet property="nextKeyView" destination="jif-aM-MJA" id="5Mh-gq-tQB"/>
                                                         </connections>
                                                     </button>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="251">
-                                                        <rect key="frame" x="16" y="53" width="235" height="18"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="16" id="KtN-Eb-qez"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="17" y="59" width="234" height="16"/>
                                                         <buttonCell key="cell" type="check" title="Show &quot;Brewing Complete&quot; alert box" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="364">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16" id="KtN-Eb-qez"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="toggleAlert:" target="195" id="252"/>
                                                             <outlet property="nextKeyView" destination="263" id="351"/>
                                                         </connections>
                                                     </button>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="263">
-                                                        <rect key="frame" x="16" y="36" width="235" height="17"/>
+                                                        <rect key="frame" x="17" y="43" width="234" height="14"/>
                                                         <buttonCell key="cell" type="check" title="Notify via Notification Center" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="365">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
@@ -401,28 +401,28 @@
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-KH-VIJ" userLabel="MTestNotify Button">
-                                                        <rect key="frame" x="6" y="0.0" width="155" height="27"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="HtK-3N-3Pt"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="12" y="9" width="143" height="20"/>
                                                         <buttonCell key="cell" type="push" title="Test Notification" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LAY-qA-dcS">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="HtK-3N-3Pt"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="testNotify:" target="195" id="UZk-46-Y0U"/>
                                                             <outlet property="nextKeyView" destination="257" id="aN3-x3-H6X"/>
                                                         </connections>
                                                     </button>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="jif-aM-MJA">
-                                                        <rect key="frame" x="162" y="71" width="144" height="18"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="gfT-0t-i2C"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="163" y="77" width="143" height="16"/>
                                                         <buttonCell key="cell" type="check" title="Speak alert" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="gbr-1q-BI3">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="gfT-0t-i2C"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="toggleSpeak:" target="195" id="YVa-KZ-dhO"/>
                                                             <outlet property="nextKeyView" destination="251" id="1BH-hj-4zg"/>
@@ -454,7 +454,7 @@
                                             </view>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-ne-66n" userLabel="LAdditionalSettings">
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-ne-66n" userLabel="LAdditionalSettings">
                                             <rect key="frame" x="21" y="97" width="293" height="43"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="43" id="m4b-Iy-WHS"/>
@@ -469,39 +469,39 @@
                                         <box borderType="none" title="User Interface Options" translatesAutoresizingMaskIntoConstraints="NO" id="255">
                                             <rect key="frame" x="9" y="5" width="316" height="84"/>
                                             <view key="contentView" id="Jh4-3Y-0ze">
-                                                <rect key="frame" x="0.0" y="0.0" width="316" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="316" height="72"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="257">
-                                                        <rect key="frame" x="16" y="45" width="300" height="18"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="16" id="nBW-CF-b9n"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="17" y="48" width="299" height="16"/>
                                                         <buttonCell key="cell" type="check" title="Show countdown timer on Dock icon" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="368">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16" id="nBW-CF-b9n"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="toggleTimer:" target="195" id="260"/>
                                                             <outlet property="nextKeyView" destination="325" id="353"/>
                                                         </connections>
                                                     </button>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="325">
-                                                        <rect key="frame" x="16" y="27" width="300" height="18"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="16" id="3AJ-PQ-JW8"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="17" y="30" width="299" height="16"/>
                                                         <buttonCell key="cell" type="check" title="Include steep times in menus" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="369">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16" id="3AJ-PQ-JW8"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="toggleSteep:" target="195" id="326"/>
                                                             <outlet property="nextKeyView" destination="dgR-cd-tUT" id="nNF-pN-6tc"/>
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dgR-cd-tUT" userLabel="MAutoStart Switch">
-                                                        <rect key="frame" x="16" y="10" width="300" height="17"/>
+                                                        <rect key="frame" x="17" y="13" width="299" height="15"/>
                                                         <buttonCell key="cell" type="check" title="Auto-start first beverage timer at launch" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="fku-RV-THJ">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
@@ -558,27 +558,27 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="230" y="464" width="319" height="100"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="948"/>
             <value key="minSize" type="size" width="133.13" height="5"/>
             <view key="contentView" id="279">
                 <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="289">
-                        <rect key="frame" x="220" y="10" width="84" height="28"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="17" id="7g3-d6-HDz"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="tem-bP-051"/>
-                        </constraints>
+                        <rect key="frame" x="226" y="17" width="72" height="17"/>
                         <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="370">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="message" size="11"/>
                         </buttonCell>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="7g3-d6-HDz"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="tem-bP-051"/>
+                        </constraints>
                         <connections>
                             <action selector="startQuickTimer:" target="195" id="308"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="303">
+                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="303">
                         <rect key="frame" x="20" y="61" width="93" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="Bgi-Uk-09h"/>
@@ -593,8 +593,8 @@
                             <action selector="performClick:" target="289" id="310"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="312">
-                        <rect key="frame" x="17" y="19" width="210" height="34"/>
+                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="312">
+                        <rect key="frame" x="17" y="21" width="210" height="32"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Enter a time in minutes:seconds format, or in seconds." id="372">
                             <font key="font" metaFont="label" size="9"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -615,7 +615,6 @@
             </view>
             <point key="canvasLocation" x="138.5" y="-166"/>
         </window>
-        <customObject id="379" customClass="SUUpdater"/>
         <userDefaultsController representsSharedInstance="YES" id="383"/>
     </objects>
 </document>
