@@ -210,11 +210,11 @@
                                         <scrollView horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="204">
                                             <rect key="frame" x="17" y="103" width="302" height="170"/>
                                             <clipView key="contentView" id="PF7-Yt-Ksy">
-                                                <rect key="frame" x="1" y="1" width="287" height="168"/>
+                                                <rect key="frame" x="1" y="1" width="300" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="378" id="202">
-                                                        <rect key="frame" x="0.0" y="0.0" width="287" height="151"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="151"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -270,11 +270,11 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="376">
-                                                <rect key="frame" x="288" y="18" width="13" height="151"/>
+                                                <rect key="frame" x="286" y="18" width="15" height="151"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" wantsLayer="YES" id="378">
-                                                <rect key="frame" x="0.0" y="0.0" width="287" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="17"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                             <connections>
