@@ -343,10 +343,10 @@
         <note>Localized versions of Info.plist keys</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source>Copyright © 2005-2024 Nathan Cosgray.
+        <source>Copyright © 2005-2025 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target state="translated">כל הזכויות © 2005-2024 נתן קוסגריי.
+        <target state="translated">כל הזכויות © 2005‏-2025 נתן קוסגריי.
 
 Cuppa משתמש ב־Weblate לתרגומים.</target>
         <note>Copyright (human-readable)</note>
