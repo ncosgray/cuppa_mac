@@ -7,7 +7,6 @@
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
         <source>Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications.</source>
-        <target state="translated">Допълнителни настройки могат да бъдат намерени в Системните настройки и Уведомления.</target>
         <note>Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications."; ObjectID = "5Qf-No-6KB";</note>
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
