@@ -337,7 +337,7 @@
         <source>Copyright © 2005-2025 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
-        <target state="needs-translation">Copyright © 2005-2024 Nathan Cosgray.
+        <target state="translated">Copyright © 2005-2025 Nathan Cosgray.
 
 Weblate används av Cuppa för översättningar.</target>
         <note>Copyright (human-readable)</note>
