@@ -7,6 +7,7 @@
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
         <source>Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications.</source>
+        <target state="translated">Additional settings can be found in System Settings &gt; Notifications &gt; Cuppa.</target>
         <note>Class = "NSTextFieldCell"; title = "Additional settings for Cuppa alerts can be found in System Preferences &gt; Notifications."; ObjectID = "5Qf-No-6KB";</note>
       </trans-unit>
       <trans-unit id="29.title" xml:space="preserve">
@@ -23,182 +24,227 @@
       </trans-unit>
       <trans-unit id="58.title" xml:space="preserve">
         <source>About Cuppa</source>
+        <target state="translated">About Cuppa</target>
         <note>Class = "NSMenuItem"; title = "About Cuppa"; ObjectID = "58";</note>
       </trans-unit>
       <trans-unit id="103.title" xml:space="preserve">
         <source>Help</source>
+        <target state="translated">Help</target>
         <note>Class = "NSMenuItem"; title = "Help"; ObjectID = "103";</note>
       </trans-unit>
       <trans-unit id="106.title" xml:space="preserve">
         <source>Help</source>
+        <target state="translated">Help</target>
         <note>Class = "NSMenu"; title = "Help"; ObjectID = "106";</note>
       </trans-unit>
       <trans-unit id="111.title" xml:space="preserve">
         <source>Cuppa Help</source>
+        <target state="translated">Cuppa Help</target>
         <note>Class = "NSMenuItem"; title = "Cuppa Help"; ObjectID = "111";</note>
       </trans-unit>
       <trans-unit id="129.title" xml:space="preserve">
         <source>Preferences...</source>
+        <target state="translated">Preferences...</target>
         <note>Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "129";</note>
       </trans-unit>
       <trans-unit id="130.title" xml:space="preserve">
         <source>Services</source>
+        <target state="translated">Services</target>
         <note>Class = "NSMenu"; title = "Services"; ObjectID = "130";</note>
       </trans-unit>
       <trans-unit id="131.title" xml:space="preserve">
         <source>Services</source>
+        <target state="translated">Services</target>
         <note>Class = "NSMenuItem"; title = "Services"; ObjectID = "131";</note>
       </trans-unit>
       <trans-unit id="134.title" xml:space="preserve">
         <source>Hide Cuppa</source>
+        <target state="translated">Hide Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Hide Cuppa"; ObjectID = "134";</note>
       </trans-unit>
       <trans-unit id="136.title" xml:space="preserve">
         <source>Quit Cuppa</source>
+        <target state="translated">Quit Cuppa</target>
         <note>Class = "NSMenuItem"; title = "Quit Cuppa"; ObjectID = "136";</note>
       </trans-unit>
       <trans-unit id="145.title" xml:space="preserve">
         <source>Hide Others</source>
+        <target state="translated">Hide Others</target>
         <note>Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145";</note>
       </trans-unit>
       <trans-unit id="150.title" xml:space="preserve">
         <source>Show All</source>
+        <target state="translated">Show All</target>
         <note>Class = "NSMenuItem"; title = "Show All"; ObjectID = "150";</note>
       </trans-unit>
       <trans-unit id="154.title" xml:space="preserve">
         <source>Find...</source>
+        <target state="translated">Find...</target>
         <note>Class = "NSMenuItem"; title = "Find..."; ObjectID = "154";</note>
       </trans-unit>
       <trans-unit id="155.title" xml:space="preserve">
         <source>Scroll to Selection</source>
+        <target state="translated">Scroll to Selection</target>
         <note>Class = "NSMenuItem"; title = "Scroll to Selection"; ObjectID = "155";</note>
       </trans-unit>
       <trans-unit id="157.title" xml:space="preserve">
         <source>Copy</source>
+        <target state="translated">Copy</target>
         <note>Class = "NSMenuItem"; title = "Copy"; ObjectID = "157";</note>
       </trans-unit>
       <trans-unit id="158.title" xml:space="preserve">
         <source>Undo</source>
+        <target state="translated">Undo</target>
         <note>Class = "NSMenuItem"; title = "Undo"; ObjectID = "158";</note>
       </trans-unit>
       <trans-unit id="159.title" xml:space="preserve">
         <source>Find</source>
+        <target state="translated">Find</target>
         <note>Class = "NSMenu"; title = "Find"; ObjectID = "159";</note>
       </trans-unit>
       <trans-unit id="160.title" xml:space="preserve">
         <source>Cut</source>
+        <target state="translated">Cut</target>
         <note>Class = "NSMenuItem"; title = "Cut"; ObjectID = "160";</note>
       </trans-unit>
       <trans-unit id="161.title" xml:space="preserve">
         <source>Use Selection for Find</source>
+        <target state="translated">Use Selection for Find</target>
         <note>Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "161";</note>
       </trans-unit>
       <trans-unit id="162.title" xml:space="preserve">
         <source>Find Previous</source>
+        <target state="translated">Find Previous</target>
         <note>Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "162";</note>
       </trans-unit>
       <trans-unit id="163.title" xml:space="preserve">
         <source>Edit</source>
+        <target state="translated">Edit</target>
         <note>Class = "NSMenuItem"; title = "Edit"; ObjectID = "163";</note>
       </trans-unit>
       <trans-unit id="164.title" xml:space="preserve">
         <source>Clear</source>
+        <target state="translated">Clear</target>
         <note>Class = "NSMenuItem"; title = "Clear"; ObjectID = "164";</note>
       </trans-unit>
       <trans-unit id="167.title" xml:space="preserve">
         <source>Find Next</source>
+        <target state="translated">Find Next</target>
         <note>Class = "NSMenuItem"; title = "Find Next"; ObjectID = "167";</note>
       </trans-unit>
       <trans-unit id="168.title" xml:space="preserve">
         <source>Find</source>
+        <target state="translated">Find</target>
         <note>Class = "NSMenuItem"; title = "Find"; ObjectID = "168";</note>
       </trans-unit>
       <trans-unit id="169.title" xml:space="preserve">
         <source>Edit</source>
+        <target state="translated">Edit</target>
         <note>Class = "NSMenu"; title = "Edit"; ObjectID = "169";</note>
       </trans-unit>
       <trans-unit id="171.title" xml:space="preserve">
         <source>Paste</source>
+        <target state="translated">Paste</target>
         <note>Class = "NSMenuItem"; title = "Paste"; ObjectID = "171";</note>
       </trans-unit>
       <trans-unit id="172.title" xml:space="preserve">
         <source>Select All</source>
+        <target state="translated">Select All</target>
         <note>Class = "NSMenuItem"; title = "Select All"; ObjectID = "172";</note>
       </trans-unit>
       <trans-unit id="173.title" xml:space="preserve">
         <source>Redo</source>
+        <target state="translated">Redo</target>
         <note>Class = "NSMenuItem"; title = "Redo"; ObjectID = "173";</note>
       </trans-unit>
       <trans-unit id="184.title" xml:space="preserve">
         <source>Spelling</source>
+        <target state="translated">Spelling</target>
         <note>Class = "NSMenuItem"; title = "Spelling"; ObjectID = "184";</note>
       </trans-unit>
       <trans-unit id="185.title" xml:space="preserve">
         <source>Spelling</source>
+        <target state="translated">Spelling</target>
         <note>Class = "NSMenu"; title = "Spelling"; ObjectID = "185";</note>
       </trans-unit>
       <trans-unit id="187.title" xml:space="preserve">
         <source>Spelling...</source>
+        <target state="translated">Spelling...</target>
         <note>Class = "NSMenuItem"; title = "Spelling..."; ObjectID = "187";</note>
       </trans-unit>
       <trans-unit id="189.title" xml:space="preserve">
         <source>Check Spelling</source>
+        <target state="translated">Check Spelling</target>
         <note>Class = "NSMenuItem"; title = "Check Spelling"; ObjectID = "189";</note>
       </trans-unit>
       <trans-unit id="191.title" xml:space="preserve">
         <source>Check Spelling As You Type</source>
+        <target state="translated">Check Spelling As You Type</target>
         <note>Class = "NSMenuItem"; title = "Check Spelling As You Type"; ObjectID = "191";</note>
       </trans-unit>
       <trans-unit id="196.title" xml:space="preserve">
         <source>Cuppa Preferences</source>
+        <target state="translated">Cuppa Preferences</target>
         <note>Class = "NSWindow"; title = "Cuppa Preferences"; ObjectID = "196";</note>
       </trans-unit>
       <trans-unit id="203.headerCell.title" xml:space="preserve">
         <source>Name</source>
+        <target state="translated">Name</target>
         <note>Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "203";</note>
       </trans-unit>
       <trans-unit id="206.headerCell.title" xml:space="preserve">
         <source>Time</source>
+        <target state="translated">Time</target>
         <note>Class = "NSTableColumn"; headerCell.title = "Time"; ObjectID = "206";</note>
       </trans-unit>
       <trans-unit id="217.title" xml:space="preserve">
         <source>When Brewing is Complete...</source>
+        <target state="translated">When Brewing is Complete...</target>
         <note>Class = "NSBox"; title = "When Brewing is Complete..."; ObjectID = "217";</note>
       </trans-unit>
       <trans-unit id="255.title" xml:space="preserve">
         <source>User Interface Options</source>
+        <target state="translated">User Interface Options</target>
         <note>Class = "NSBox"; title = "User Interface Options"; ObjectID = "255";</note>
       </trans-unit>
       <trans-unit id="278.title" xml:space="preserve">
         <source>Quick Timer</source>
+        <target state="translated">Quick Timer</target>
         <note>Class = "NSWindow"; title = "Quick Timer"; ObjectID = "278";</note>
       </trans-unit>
       <trans-unit id="362.title" xml:space="preserve">
         <source>Bounce Dock icon</source>
+        <target state="translated">Bounce Dock icon</target>
         <note>Class = "NSButtonCell"; title = "Bounce Dock icon"; ObjectID = "362";</note>
       </trans-unit>
       <trans-unit id="363.title" xml:space="preserve">
         <source>Play sound</source>
+        <target state="translated">Play Sound</target>
         <note>Class = "NSButtonCell"; title = "Play sound"; ObjectID = "363";</note>
       </trans-unit>
       <trans-unit id="364.title" xml:space="preserve">
         <source>Show "Brewing Complete" alert box</source>
+        <target state="translated">Show "Brewing Complete" alert box</target>
         <note>Class = "NSButtonCell"; title = "Show \"Brewing Complete\" alert box"; ObjectID = "364";</note>
       </trans-unit>
       <trans-unit id="365.title" xml:space="preserve">
         <source>Notify via Notification Center</source>
+        <target state="translated">Notify via Notification Centre</target>
         <note>Class = "NSButtonCell"; title = "Notify via Notification Center"; ObjectID = "365";</note>
       </trans-unit>
       <trans-unit id="368.title" xml:space="preserve">
         <source>Show countdown timer on Dock icon</source>
+        <target state="translated">Show countdown timer as Dock icon badge</target>
         <note>Class = "NSButtonCell"; title = "Show countdown timer on Dock icon"; ObjectID = "368";</note>
       </trans-unit>
       <trans-unit id="369.title" xml:space="preserve">
         <source>Include steep times in menus</source>
+        <target state="translated">Include steep times in menus</target>
         <note>Class = "NSButtonCell"; title = "Include steep times in menus"; ObjectID = "369";</note>
       </trans-unit>
       <trans-unit id="370.title" xml:space="preserve">
         <source>Start</source>
+        <target state="translated">Start</target>
         <note>Class = "NSButtonCell"; title = "Start"; ObjectID = "370";</note>
       </trans-unit>
       <trans-unit id="371.title" xml:space="preserve">
@@ -207,6 +253,7 @@
       </trans-unit>
       <trans-unit id="372.title" xml:space="preserve">
         <source>Enter a time in minutes:seconds format, or in seconds.</source>
+        <target state="translated">Enter a time in minutes:seconds format, or in seconds.</target>
         <note>Class = "NSTextFieldCell"; title = "Enter a time in minutes:seconds format, or in seconds."; ObjectID = "372";</note>
       </trans-unit>
       <trans-unit id="373.title" xml:space="preserve">
@@ -223,38 +270,47 @@
       </trans-unit>
       <trans-unit id="446.label" xml:space="preserve">
         <source>Beverage List</source>
+        <target state="translated">Beverage List</target>
         <note>Class = "NSTabViewItem"; label = "Beverage List"; ObjectID = "446";</note>
       </trans-unit>
       <trans-unit id="447.label" xml:space="preserve">
         <source>Options</source>
+        <target state="translated">Options</target>
         <note>Class = "NSTabViewItem"; label = "Options"; ObjectID = "447";</note>
       </trans-unit>
       <trans-unit id="453.title" xml:space="preserve">
         <source>Delete Selected Beverage</source>
+        <target state="translated">Delete Selected Beverage</target>
         <note>Class = "NSButtonCell"; title = "Delete Selected Beverage"; ObjectID = "453";</note>
       </trans-unit>
       <trans-unit id="455.title" xml:space="preserve">
         <source>Add New Beverage</source>
+        <target state="translated">Add New Beverage</target>
         <note>Class = "NSButtonCell"; title = "Add New Beverage"; ObjectID = "455";</note>
       </trans-unit>
       <trans-unit id="457.title" xml:space="preserve">
         <source>To add a beverage to Cuppa's database, click "Add New Beverage".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list.</source>
+        <target state="translated">To add a beverage to Cuppa's database, click "Add New Beverage". Then edit the name and steep time of the New Beverage entry that appears at the top of the list.</target>
         <note>Class = "NSTextFieldCell"; title = "To add a beverage to Cuppa's database, click \"Add New Beverage\".  Then edit the name and steep time of the New Beverage entry that appears at the top of the list."; ObjectID = "457";</note>
       </trans-unit>
       <trans-unit id="471.title" xml:space="preserve">
         <source>Find Cuppa in the App Store...</source>
+        <target state="translated">Find Cuppa in the App Store...</target>
         <note>Class = "NSMenuItem"; title = "Find Cuppa in the App Store..."; ObjectID = "471";</note>
       </trans-unit>
       <trans-unit id="LAY-qA-dcS.title" xml:space="preserve">
         <source>Test Notification</source>
+        <target state="translated">Test Notification</target>
         <note>Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS";</note>
       </trans-unit>
       <trans-unit id="fku-RV-THJ.title" xml:space="preserve">
         <source>Auto-start first beverage timer at launch</source>
+        <target state="translated">Auto-start first beverage timer on launch</target>
         <note>Class = "NSButtonCell"; title = "Auto-start first beverage timer at launch"; ObjectID = "fku-RV-THJ";</note>
       </trans-unit>
       <trans-unit id="gbr-1q-BI3.title" xml:space="preserve">
         <source>Speak alert</source>
+        <target state="translated">Speak alert</target>
         <note>Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3";</note>
       </trans-unit>
     </body>
@@ -270,6 +326,7 @@
       </trans-unit>
       <trans-unit id="CFBundleHelpBookName" xml:space="preserve">
         <source>Cuppa Help</source>
+        <target state="translated">Cuppa Help</target>
         <note/>
       </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
@@ -277,9 +334,12 @@
         <note>Localized versions of Info.plist keys</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source>Copyright © 2005-2024 Nathan Cosgray.
+        <source>Copyright © 2005-2025 Nathan Cosgray.
 
 Cuppa uses Weblate for translations.</source>
+        <target state="translated">Copyright © 2005-2025 Nathan Cosgray.
+
+Cuppa uses Weblate for translations.</target>
         <note>Copyright (human-readable)</note>
       </trans-unit>
     </body>
@@ -291,100 +351,126 @@ Cuppa uses Weblate for translations.</source>
     <body>
       <trans-unit id="%@ is now ready!" xml:space="preserve">
         <source>%@ is now ready!</source>
+        <target state="translated">%@ is now ready!</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Beverages" xml:space="preserve">
         <source>Beverages</source>
+        <target state="translated">Beverages</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Blackcurrant Tea" xml:space="preserve">
         <source>Blackcurrant Tea</source>
+        <target state="translated">Blackcurrant Tea</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Brewing complete..." xml:space="preserve">
         <source>Brewing complete...</source>
+        <target state="translated">Brewing complete...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Cancel" xml:space="preserve">
         <source>Cancel</source>
+        <target state="translated">Cancel</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Chamomile" xml:space="preserve">
         <source>Chamomile</source>
+        <target state="translated">Chamomile</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Check for Updates..." xml:space="preserve">
         <source>Check for Updates...</source>
+        <target state="translated">Check for Updates...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Earl Grey" xml:space="preserve">
         <source>Earl Grey</source>
+        <target state="translated">Earl Grey</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="English Breakfast" xml:space="preserve">
         <source>English Breakfast</source>
+        <target state="translated">English Breakfast</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Green Tea" xml:space="preserve">
         <source>Green Tea</source>
+        <target state="translated">Green Tea</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Jasmine Green Tea" xml:space="preserve">
         <source>Jasmine Green Tea</source>
+        <target state="translated">Jasmine Green Tea</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Libby's Mint Tea" xml:space="preserve">
         <source>Libby's Mint Tea</source>
+        <target state="translated">Libby's Mint Tea</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="New Beverage" xml:space="preserve">
         <source>New Beverage</source>
+        <target state="translated">New Beverage</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="No" xml:space="preserve">
         <source>No</source>
+        <target state="translated">No</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="OK" xml:space="preserve">
         <source>OK</source>
+        <target state="translated">OK</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Oolong Tea" xml:space="preserve">
         <source>Oolong Tea</source>
+        <target state="translated">Oolong Tea</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Preferences..." xml:space="preserve">
         <source>Preferences...</source>
+        <target state="translated">Preferences...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Quick Timer..." xml:space="preserve">
         <source>Quick Timer...</source>
+        <target state="translated">Quick Timer...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Quit Cuppa" xml:space="preserve">
         <source>Quit Cuppa</source>
+        <target state="translated">Quit Cuppa</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Rooibos" xml:space="preserve">
         <source>Rooibos</source>
+        <target state="translated">Rooibos</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="The Cuppa timer is still active for another %s.&#10;&#10;Do you really want to quit?" xml:space="preserve">
         <source>The Cuppa timer is still active for another %s.
 
 Do you really want to quit?</source>
+        <target state="translated">The Cuppa timer is still active for another %s.
+
+Do you really want to quit?</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="There is an active timer. Cancel and start a new timer?" xml:space="preserve">
         <source>There is an active timer. Cancel and start a new timer?</source>
+        <target state="translated">There is an active timer. Cancel and start a new timer?</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Warning!" xml:space="preserve">
         <source>Warning!</source>
+        <target state="translated">Warning!</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Yes" xml:space="preserve">
         <source>Yes</source>
+        <target state="translated">Yes</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>

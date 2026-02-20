@@ -202,7 +202,7 @@
       </trans-unit>
       <trans-unit id="217.title" xml:space="preserve">
         <source>When Brewing is Complete...</source>
-        <target>После завершения варки...</target>
+        <target state="translated">После завершения заваривания...</target>
         <note>Class = "NSBox"; title = "When Brewing is Complete..."; ObjectID = "217";</note>
       </trans-unit>
       <trans-unit id="255.title" xml:space="preserve">
@@ -374,7 +374,7 @@ Cuppa использует Weblate для переводов.</target>
       </trans-unit>
       <trans-unit id="Brewing complete..." xml:space="preserve">
         <source>Brewing complete...</source>
-        <target>Заварка завершена...</target>
+        <target state="translated">Заваривание завершено...</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Cancel" xml:space="preserve">
