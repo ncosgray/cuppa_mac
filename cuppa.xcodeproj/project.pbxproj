@@ -53,6 +53,8 @@
 		FE9A9C8D1F847F5100F9AA57 /* teacup16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9A9C8C1F847F5100F9AA57 /* teacup16@2x.png */; };
 		FEA129C02E824C5E003BA667 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA129BF2E824C5E003BA667 /* Sparkle.framework */; };
 		FEA129C12E824C6A003BA667 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA129BF2E824C5E003BA667 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FEC9D1212F4C07DC003426A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC9D1202F4C07DC003426A8 /* Assets.xcassets */; };
+		FEC9D1222F4C07DC003426A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC9D1202F4C07DC003426A8 /* Assets.xcassets */; };
 		FED92D092702977200C1EF82 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED92D0C2702977200C1EF82 /* MainMenu.xib */; };
 		FED92D0A2702977200C1EF82 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED92D0C2702977200C1EF82 /* MainMenu.xib */; };
 		FEDDC0402E790827005276A3 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = FEDDC03F2E790827005276A3 /* AppIcon.icon */; };
@@ -150,6 +152,7 @@
 		FEC5A0C52E8649DA009DBA42 /* tr */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tr; path = tr.lproj/help; sourceTree = "<group>"; };
 		FEC5A0C62E8649DA009DBA42 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FEC5A0C72E8649DA009DBA42 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FEC9D1202F4C07DC003426A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FECF5BAD08DC6F6A00010F73 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		FECF5BAE08DC6F6A00010F73 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		FED3F33C2741BC7700E0F7F7 /* es.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = es.xcloc; sourceTree = "<group>"; };
@@ -269,6 +272,7 @@
 				FEDDC03F2E790827005276A3 /* AppIcon.icon */,
 				FED92D0C2702977200C1EF82 /* MainMenu.xib */,
 				733D2380128B1707006033B0 /* help */,
+				FEC9D1202F4C07DC003426A8 /* Assets.xcassets */,
 				73251EFA12893F42008CD18E /* Localizable.strings */,
 				F51FA18B02A0A7F401000002 /* Art */,
 				F5F82AB002B1B0A201000008 /* Sound */,
@@ -464,6 +468,7 @@
 				FE256DEB098754DD003C11F1 /* teacup16.png in Resources */,
 				FE9A9C8D1F847F5100F9AA57 /* teacup16@2x.png in Resources */,
 				FE256DFB098754DD003C11F1 /* beep.aiff in Resources */,
+				FEC9D1212F4C07DC003426A8 /* Assets.xcassets in Resources */,
 				FEDDC0412E790827005276A3 /* AppIcon.icon in Resources */,
 				FE8C53712E864219007F8F81 /* fi.xcloc in Resources */,
 				73251EFC12893F42008CD18E /* Localizable.strings in Resources */,
@@ -483,6 +488,7 @@
 				FE2940AB1F970FB3003119BF /* teacup16.png in Resources */,
 				FED92D0A2702977200C1EF82 /* MainMenu.xib in Resources */,
 				FE2940AD1F970FB3003119BF /* teacup16@2x.png in Resources */,
+				FEC9D1222F4C07DC003426A8 /* Assets.xcassets in Resources */,
 				FEDDC0402E790827005276A3 /* AppIcon.icon in Resources */,
 				FE8C53722E864219007F8F81 /* fi.xcloc in Resources */,
 				FE2940AE1F970FB3003119BF /* beep.aiff in Resources */,
