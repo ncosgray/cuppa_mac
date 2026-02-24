@@ -12,6 +12,7 @@
 
 // OSX Includes
 
+#import <AppKit/AppKit.h>
 #import <Foundation/Foundation.h>
 
 // Cuppa Includes
@@ -23,9 +24,14 @@
 static NSString *sLabels[] =
 {
     @"default",
-    @"tea",
-    @"mug",
-    @"noodle"};
+    @"cup",
+    @"flower"};
+
+static NSString * const CuppaShapeImageNames[] = {
+    @"QuickAction",        // CUPPA_SHAPE_DEFAULT = 0
+    @"QuickActionCup",     // CUPPA_SHAPE_CUP
+    @"QuickActionFlower",  // CUPPA_SHAPE_FLOWER
+};
 
 // Code!
 
@@ -35,13 +41,13 @@ static NSString *sLabels[] =
 // *************************************************************************************************
 
 // Returns a (non human interface) string which represents the shape.
-// Param shape must be on of the shape CUPPA_SHAPE_* constants defined above.
+// Returns CUPPA_SHAPE_DEFAULT if the shape is not recognized.
 + (NSString *)labelForShape:(int)shape
 {
-    // parameter checks
-    NSAssert(shape >= 0, @"Cup shape index < 0.\n");
-    NSAssert(shape < CUPPA_SHAPE_MAX, @"Cup shape index >= MAX.\n");
-    
+    // parameter checks - return default if not found (for backwards compatibility)
+    if (shape < 0 || shape >= CUPPA_SHAPE_MAX)
+        shape = CUPPA_SHAPE_DEFAULT;
+
     // return label string
     return sLabels[shape];
     
@@ -50,13 +56,14 @@ static NSString *sLabels[] =
 // *************************************************************************************************
 
 // Returns a shape constant from a (non human interface) label returned by LabelForShape:.
-// Returns CUPPA_SHAPE_DEFAULT if the label string is not recognised.
+// Returns CUPPA_SHAPE_DEFAULT if the label string is not recognized.
 + (int)shapeForLabel:(NSString *)label
 {
     int i; // loop counter
     
-    // parameter checks
-    NSAssert(label != nil, @"Bad label parameter.");
+    // parameter checks - return default if nil (for backwards compatibility)
+    if (label == nil)
+        return CUPPA_SHAPE_DEFAULT;
     
     // check for label matchs
     for (i = 0; i < CUPPA_SHAPE_MAX; i++)
@@ -69,6 +76,21 @@ static NSString *sLabels[] =
     return CUPPA_SHAPE_DEFAULT;
     
 } // end +shapeForLabel:
+
+// *************************************************************************************************
+
+// Returns an image which represents the shape.
+// Returns CUPPA_SHAPE_DEFAULT if the shape is not recognized.
++ (NSImage *)imageForShape:(int)shape
+{
+    // parameter checks - return default if not found (for backwards compatibility)
+    if (shape < 0 || shape >= CUPPA_SHAPE_MAX)
+        shape = CUPPA_SHAPE_DEFAULT;
+
+    NSImage *image = [NSImage imageNamed:CuppaShapeImageNames[shape]];
+    [image setSize:NSMakeSize(16, 16)];
+    return image;
+}
 
 // *************************************************************************************************
 

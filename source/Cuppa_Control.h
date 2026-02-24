@@ -41,7 +41,7 @@
 
 // Class Interface
 
-@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate, UNUserNotificationCenterDelegate>
+@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate, UNUserNotificationCenterDelegate, NSTableViewDelegate, NSTableViewDataSource>
 {
     // IB connected objects
     IBOutlet NSWindow *mPrefsWindow; // application preferences window

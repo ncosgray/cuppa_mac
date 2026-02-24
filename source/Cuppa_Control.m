@@ -138,7 +138,6 @@
 // Handle setup once we've been fully woken.
 - (void)awakeFromNib
 {
-    NSImageCell *imageCell; // image cell for preference bevy setup images
     NSTableColumn *column; // column in mBevyTable displaying bevy images
     NSMenu *mMainMenu; // main menu object
     NSMenuItem *item; // current menu item
@@ -182,13 +181,19 @@
     [mCuppaMenu insertItem:item atIndex:1];
 #endif
     
-    // setup preferences table to display bevy images properly
-    imageCell = [[NSImageCell alloc] init];
-    [imageCell setImageFrameStyle:NSImageFrameNone];
-    [imageCell setImageScaling:NSImageScaleNone];
+    // setup preferences table to display bevy images properly with popup
+    NSPopUpButtonCell *popupCell = [[NSPopUpButtonCell alloc] init];
+    [popupCell setBordered:YES];
+    [popupCell setControlSize:NSControlSizeSmall];
+    [popupCell setPullsDown:NO];
+    [popupCell setImagePosition:NSImageLeft];
     column = [[mBevyTable tableColumns] objectAtIndex:0];
-    [column setDataCell:imageCell];
-    [imageCell release];
+    [column setDataCell:popupCell];
+    [popupCell release];
+    
+    // ensure delegate and data source are set
+    [mBevyTable setDelegate:self];
+    [mBevyTable setDataSource:self];
     
     // setup preferences table for drag 'n' drop
     [mBevyTable registerForDraggedTypes:[NSArray arrayWithObjects:@"RowIndexPboardType", nil]];
@@ -262,6 +267,7 @@
                                keyEquivalent:@"t"];
     [item setTarget:self];
     [item setEnabled:YES];
+    [item setImage:[Cuppa_Shape imageForShape:CUPPA_SHAPE_DEFAULT]];
     [mAppMenu insertItem:item atIndex:1];
     
     // add the cancel timer item
@@ -270,6 +276,7 @@
                                keyEquivalent:@"."];
     [item setTarget:self];
     [item setEnabled:YES];
+    [item setImage:[NSImage imageNamed:NSImageNameStopProgressTemplate]];
     [mAppMenu insertItem:item atIndex:2];
     
     // make sure to update the dock menu and the Beverages application menu
@@ -862,6 +869,48 @@
 
 // *************************************************************************************************
 
+// Populate the cup image popup in the beverage table.
+- (void)tableView:(NSTableView *)tableView
+  willDisplayCell:(id)cell
+   forTableColumn:(NSTableColumn *)tableColumn
+              row:(NSInteger)rowIndex
+{
+    Cuppa_Bevy *bevy;
+    
+    if ([[tableColumn identifier] isEqualToString:@"image"])
+    {
+        // Check if this is actually a popup button cell
+        if ([cell isKindOfClass:[NSPopUpButtonCell class]])
+        {
+            NSPopUpButtonCell *popup = (NSPopUpButtonCell *)cell;
+            
+            // Only populate if empty (for efficiency)
+            if ([popup numberOfItems] == 0)
+            {
+                [popup setPullsDown:NO];
+                [popup setEnabled:YES];
+                
+                // Add one item per shape (excluding MAX)
+                for (int shape = 0; shape < CUPPA_SHAPE_MAX; shape++)
+                {
+                    // Images don't need a label
+                    NSString *label = @"";
+
+                    [popup addItemWithTitle:label];
+                    NSMenuItem *item = [popup lastItem];
+                    NSImage *image = [Cuppa_Shape imageForShape:shape];
+                    [item setImage:image];
+                    [item setTag:shape];
+                }
+            }
+
+            // Select the current shape for this row
+            bevy = [mBevys objectAtIndex:rowIndex];
+            [popup selectItemWithTag:[bevy cupShape]];
+        }
+    }
+}
+
 // Return the object associated with a particular cell in the beverage table.
 - (id)tableView:(NSTableView *)aTableView
 objectValueForTableColumn:(NSTableColumn *)aTableColumn
@@ -879,13 +928,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     // which column does this apply to?
     if ([[aTableColumn identifier] isEqualToString:@"image"])
     {
-        static NSImage *image = NULL;
-        if (!image)
-        {
-            image = [NSImage imageNamed:@"teacup16"];
-            [image retain]; // TODO: crude
-        }
-        return image;
+        return [NSNumber numberWithInt:[bevy cupShape]];
     }
     
     if ([[aTableColumn identifier] isEqualToString:@"name"])
@@ -940,7 +983,18 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     // which column does this apply to?
     if ([[aTableColumn identifier] isEqualToString:@"image"])
     {
-        // TODO!
+        // anObject is the selected index, but we need the tag
+        int selectedIndex = [anObject intValue];
+        
+        // Get the cell to access the selected item's tag
+        NSTableColumn *column = [[mBevyTable tableColumns] objectAtIndex:0];
+        NSPopUpButtonCell *popup = (NSPopUpButtonCell *)[column dataCell];
+        
+        // Get the tag from the selected item
+        int shapeTag = (int)[[popup itemAtIndex:selectedIndex] tag];
+        
+        [bevy setCupShape:shapeTag];
+        [self setBevys:mBevys];
     }
     
     if ([[aTableColumn identifier] isEqualToString:@"name"])
@@ -1196,6 +1250,9 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
         invocation = [NSInvocation invocationWithMethodSignature:[self
                                                                   methodSignatureForSelector:@selector(startBrewing:)]];
         
+        // get the image for this beverage
+        NSImage *bevyImage = [Cuppa_Shape imageForShape:[bevy cupShape]];
+        
         if (mShowSteep)
         {
             // build a menu item for the beverage -- with steep times
@@ -1238,6 +1295,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
         [invocation setArgument:&item atIndex:2];
         [item setTarget:[invocation retain]];
         [item setEnabled:YES];
+        [item setImage:bevyImage];
         
         // append the item to the menu
         [mDockMenu insertItem:item atIndex:i];
@@ -1305,6 +1363,9 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
             invocation = [NSInvocation invocationWithMethodSignature:[self
                                                                       methodSignatureForSelector:@selector(startBrewing:)]];
             
+            // get the image for this beverage
+            NSImage *bevyImage = [Cuppa_Shape imageForShape:[bevy cupShape]];
+            
             if (mShowSteep)
             {
                 // build a menu item for the beverage -- with steep times
@@ -1318,6 +1379,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                                                                ([bevy brewTime] - (hours * 3600)) % 60]
                                                        action:@selector(invoke)
                                                 keyEquivalent:@""] autorelease];
+                    [item setImage:bevyImage];
                     [item setRepresentedObject:bevy];
                 }
                 else
@@ -1328,6 +1390,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                                                                [bevy brewTime] % 60]
                                                        action:@selector(invoke)
                                                 keyEquivalent:@""] autorelease];
+                    [item setImage:bevyImage];
                     [item setRepresentedObject:bevy];
                 }
             }
@@ -1338,6 +1401,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                                                            [bevy name]]
                                                    action:@selector(invoke)
                                             keyEquivalent:@""] autorelease];
+                [item setImage:bevyImage];
                 [item setRepresentedObject:bevy];
             }
             
