@@ -3,10 +3,10 @@
   "project" : "cuppa.xcodeproj",
   "targetLocale" : "cs",
   "toolInfo" : {
-    "toolBuildNumber" : "17A400",
+    "toolBuildNumber" : "17C529",
     "toolID" : "com.apple.dt.xcode",
     "toolName" : "Xcode",
-    "toolVersion" : "26.0.1"
+    "toolVersion" : "26.3"
   },
   "version" : "1.0"
 }
