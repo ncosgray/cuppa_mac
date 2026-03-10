@@ -138,7 +138,11 @@
 // Handle setup once we've been fully woken.
 - (void)awakeFromNib
 {
-    NSTableColumn *column; // column in mBevyTable displaying bevy images
+    // Guard against multiple calls (awakeFromNib is called once per NIB connection)
+    if (mAwoken)
+        return;
+    mAwoken = true;
+    
     NSMenu *mMainMenu; // main menu object
     NSMenuItem *item; // current menu item
     
@@ -180,16 +184,6 @@
     [item setEnabled:YES];
     [mCuppaMenu insertItem:item atIndex:1];
 #endif
-    
-    // setup preferences table to display bevy images properly with popup
-    NSPopUpButtonCell *popupCell = [[NSPopUpButtonCell alloc] init];
-    [popupCell setBordered:YES];
-    [popupCell setControlSize:NSControlSizeSmall];
-    [popupCell setPullsDown:NO];
-    [popupCell setImagePosition:NSImageLeft];
-    column = [[mBevyTable tableColumns] objectAtIndex:0];
-    [column setDataCell:popupCell];
-    [popupCell release];
     
     // ensure delegate and data source are set
     [mBevyTable setDelegate:self];
@@ -484,6 +478,12 @@
 #if !defined(NDEBUG)
     printf("Show prefs.\n");
 #endif
+    
+    // scroll beverage table to the top
+    if ([mBevyTable numberOfRows] > 0)
+    {
+        [mBevyTable scrollRowToVisible:0];
+    }
     
     // display the prefs window
     [mPrefsWindow makeKeyAndOrderFront:self];
@@ -869,208 +869,187 @@
 
 // *************************************************************************************************
 
-// Populate the cup image popup in the beverage table.
-- (void)tableView:(NSTableView *)tableView
-  willDisplayCell:(id)cell
-   forTableColumn:(NSTableColumn *)tableColumn
-              row:(NSInteger)rowIndex
+// Return the view for a cell in the beverage table (view-based).
+- (NSView *)tableView:(NSTableView *)tableView
+   viewForTableColumn:(NSTableColumn *)tableColumn
+                  row:(NSInteger)row
 {
-    Cuppa_Bevy *bevy;
+    Cuppa_Bevy *bevy = [mBevys objectAtIndex:row];
     
     if ([[tableColumn identifier] isEqualToString:@"image"])
     {
-        // Check if this is actually a popup button cell
-        if ([cell isKindOfClass:[NSPopUpButtonCell class]])
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"image" owner:self];
+        
+        // Find the popup button in this cell view
+        NSPopUpButton *popup = nil;
+        for (NSView *subview in [cellView subviews])
         {
-            NSPopUpButtonCell *popup = (NSPopUpButtonCell *)cell;
-            
-            // Only populate if empty (for efficiency)
+            if ([subview isKindOfClass:[NSPopUpButton class]])
+            {
+                popup = (NSPopUpButton *)subview;
+                break;
+            }
+        }
+        
+        if (popup)
+        {
+            // Populate if empty
             if ([popup numberOfItems] == 0)
             {
-                [popup setPullsDown:NO];
-                [popup setEnabled:YES];
-                
-                // Add one item per shape (excluding MAX)
                 for (int shape = 0; shape < CUPPA_SHAPE_MAX; shape++)
                 {
-                    // Images don't need a label
-                    NSString *label = @"";
-
-                    [popup addItemWithTitle:label];
+                    [popup addItemWithTitle:@""];
                     NSMenuItem *item = [popup lastItem];
-                    NSImage *image = [Cuppa_Shape imageForShape:shape];
-                    [item setImage:image];
+                    [item setImage:[Cuppa_Shape imageForShape:shape]];
                     [item setTag:shape];
                 }
             }
-
-            // Select the current shape for this row
-            bevy = [mBevys objectAtIndex:rowIndex];
             [popup selectItemWithTag:[bevy cupShape]];
         }
-    }
-}
-
-// Return the object associated with a particular cell in the beverage table.
-- (id)tableView:(NSTableView *)aTableView
-objectValueForTableColumn:(NSTableColumn *)aTableColumn
-            row:(int)rowIndex
-{
-    Cuppa_Bevy *bevy;
-    int hours; // hours digit of brew time
-    
-    // parameter checks
-    assert(rowIndex >= 0 && rowIndex < [mBevys count]);
-    
-    // retrieve the bevy associated with this row
-    bevy = [mBevys objectAtIndex:rowIndex];
-    
-    // which column does this apply to?
-    if ([[aTableColumn identifier] isEqualToString:@"image"])
-    {
-        return [NSNumber numberWithInt:[bevy cupShape]];
+        
+        return cellView;
     }
     
-    if ([[aTableColumn identifier] isEqualToString:@"name"])
+    if ([[tableColumn identifier] isEqualToString:@"name"])
     {
-        return [bevy name];
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"name" owner:self];
+        [[cellView textField] setStringValue:[bevy name]];
+        [[cellView textField] setEditable:YES];
+        [[cellView textField] setDelegate:self];
+        return cellView;
     }
     
-    if ([[aTableColumn identifier] isEqualToString:@"time"])
+    if ([[tableColumn identifier] isEqualToString:@"time"])
     {
-        hours = [bevy brewTime] / 3600;
-        if (hours > 0)
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"time" owner:self];
+        
+        // Find the NSDatePicker in the cell view
+        NSDatePicker *picker = nil;
+        for (NSView *subview in [cellView subviews])
         {
-            return [NSString stringWithFormat:@"%d:%02d:%02d",
-                    hours,
-                    ([bevy brewTime] - (hours * 3600)) / 60,
-                    ([bevy brewTime] - (hours * 3600)) % 60];
+            if ([subview isKindOfClass:[NSDatePicker class]])
+            {
+                picker = (NSDatePicker *)subview;
+                break;
+            }
         }
-        else
+        
+        if (picker)
         {
-            return [NSString stringWithFormat:@"%d:%02d",
-                    [bevy brewTime] / 60,
-                    [bevy brewTime] % 60];
+            // Configure picker for duration display (24-hour, no AM/PM, UTC timezone)
+            NSLocale *posixLocale = [NSLocale localeWithLocaleIdentifier:@"en_GB"];
+            NSTimeZone *utc = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+            NSCalendar *utcCal = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] autorelease];
+            [utcCal setTimeZone:utc];
+            [utcCal setLocale:posixLocale];
+            [picker setLocale:posixLocale];
+            [picker setTimeZone:utc];
+            [picker setCalendar:utcCal];
+            [[picker cell] setLocale:posixLocale];
+            [[picker cell] setTimeZone:utc];
+            [[picker cell] setCalendar:utcCal];
+            [picker setDatePickerStyle:NSDatePickerStyleTextFieldAndStepper];
+            
+            // Convert brew time (seconds) to an NSDate using a fixed reference date
+            // Reference date is 2001-01-01 00:00:00 UTC; with UTC timezone on picker,
+            // adding brewTime seconds gives us h:m:s directly
+            int brewTime = [bevy brewTime];
+            NSDate *midnight = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
+            [picker setDateValue:[midnight dateByAddingTimeInterval:brewTime]];
         }
+        
+        return cellView;
     }
     
-    // unknown column?
     return nil;
     
-} // end -tableView:objectValueForTableColumn:row:
+} // end -tableView:viewForTableColumn:row:
 
 // *************************************************************************************************
 
-// Modify the object associated with a particular cell in the beverage table.
-- (void)tableView:(NSTableView *)aTableView
-   setObjectValue:(id)anObject
-   forTableColumn:(NSTableColumn *)aTableColumn
-              row:(int)rowIndex
+// Handle change of brew time via date picker in beverage table.
+- (IBAction)brewTimePicked:(id)sender
 {
-    Cuppa_Bevy *bevy;
-    int hours = -1, mins = -1, secs = -1; // time values
+    NSDatePicker *picker = (NSDatePicker *)sender;
     
-#if !defined(NDEBUG)
-    printf("-tableView:setObjectValue:forTableColumn:row:\n");
-#endif
+    // Determine which row this picker belongs to
+    NSInteger row = [mBevyTable rowForView:picker];
+    if (row < 0 || row >= (NSInteger)[mBevys count])
+        return;
     
-    // parameter checks
-    NSAssert(rowIndex >= 0 && rowIndex < [mBevys count], @"Row index out of range.\n");
+    // Extract brew time as seconds since midnight reference date
+    NSDate *midnight = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
+    int secs = (int)[[picker dateValue] timeIntervalSinceDate:midnight];
     
-    // retrieve the bevy associated with this row
-    bevy = [mBevys objectAtIndex:rowIndex];
+    // Clamp to valid range
+    if (secs < CUPPA_BEVY_BREW_TIME_MIN)
+        secs = CUPPA_BEVY_BREW_TIME_MIN;
+    if (secs > CUPPA_BEVY_BREW_TIME_MAX)
+        secs = CUPPA_BEVY_BREW_TIME_MAX;
     
-    // which column does this apply to?
-    if ([[aTableColumn identifier] isEqualToString:@"image"])
-    {
-        // anObject is the selected index, but we need the tag
-        int selectedIndex = [anObject intValue];
-        
-        // Get the cell to access the selected item's tag
-        NSTableColumn *column = [[mBevyTable tableColumns] objectAtIndex:0];
-        NSPopUpButtonCell *popup = (NSPopUpButtonCell *)[column dataCell];
-        
-        // Get the tag from the selected item
-        int shapeTag = (int)[[popup itemAtIndex:selectedIndex] tag];
-        
-        [bevy setCupShape:shapeTag];
-        [self setBevys:mBevys];
-    }
+    // Apply to the beverage
+    Cuppa_Bevy *bevy = [mBevys objectAtIndex:row];
+    [bevy setBrewTime:secs];
+    [self setBevys:mBevys];
     
-    if ([[aTableColumn identifier] isEqualToString:@"name"])
-    {
-        [bevy setName:anObject];
-        [self setBevys:mBevys];
-    }
-    
-    if ([[aTableColumn identifier] isEqualToString:@"time"])
-    {
-        // set up the time value scanner
-        NSScanner *scanner = [NSScanner scannerWithString:anObject];
-        
-        // get hours
-        if ([scanner scanInt:&hours] != YES)
-        {
-            // skip over any separators
-            while (([scanner scanInt:&hours] != YES) && ([scanner scanLocation] < [anObject length]))
-            {
-                [scanner setScanLocation:[scanner scanLocation] + 1];
-            }
-        }
-        
-        // get minutes
-        if ([scanner scanInt:&mins] != YES)
-        {
-            // skip over any separators
-            while (([scanner scanInt:&mins] != YES) && ([scanner scanLocation] < [anObject length]))
-            {
-                [scanner setScanLocation:[scanner scanLocation] + 1];
-            }
-        }
-        
-        // get seconds
-        if ([scanner scanInt:&secs] != YES)
-        {
-            // skip over any separators
-            while (([scanner scanInt:&secs] != YES) && ([scanner scanLocation] < [anObject length]))
-            {
-                [scanner setScanLocation:[scanner scanLocation] + 1];
-            }
-        }
-        
-        // translate to seconds
-        if (secs != -1)
-        {
-            // calculate time in seconds
-            secs = hours * 3600 + mins * 60 + secs;
-        }
-        else if (mins != -1)
-        {
-            // calculate time in seconds
-            secs = hours * 60 + mins;
-        }
-        else
-        {
-            // just treat the first/only number as seconds
-            secs = hours;
-        }
-        
-        // final check for time limits
-        if (secs < CUPPA_BEVY_BREW_TIME_MIN)
-            secs = CUPPA_BEVY_BREW_TIME_MIN;
-        if (secs > CUPPA_BEVY_BREW_TIME_MAX)
-            secs = CUPPA_BEVY_BREW_TIME_MAX;
-        
-        // apply modified time
-        [bevy setBrewTime:secs];
-        [self setBevys:mBevys];
-    }
-    
-    // store to prefs
+    // Store to prefs
     [[NSUserDefaults standardUserDefaults] setObject:[Cuppa_Bevy toDictionary:mBevys]
                                               forKey:@"bevys"];
     
-} // end -tableView:setObjectValue:forTableColumn:row:
+} // end -brewTimePicked:
+
+// *************************************************************************************************
+
+// Handle change of cup shape via popup in beverage table.
+- (IBAction)cupShapePicked:(id)sender
+{
+    NSPopUpButton *popup = (NSPopUpButton *)sender;
+    
+    // Determine which row this popup belongs to
+    NSInteger row = [mBevyTable rowForView:popup];
+    if (row < 0 || row >= (NSInteger)[mBevys count])
+        return;
+    
+    int shapeTag = (int)[[popup selectedItem] tag];
+    Cuppa_Bevy *bevy = [mBevys objectAtIndex:row];
+    [bevy setCupShape:shapeTag];
+    [self setBevys:mBevys];
+    
+    // Store to prefs
+    [[NSUserDefaults standardUserDefaults] setObject:[Cuppa_Bevy toDictionary:mBevys]
+                                              forKey:@"bevys"];
+    
+} // end -cupShapePicked:
+
+// *************************************************************************************************
+
+// Handle name editing via text field in beverage table.
+- (void)controlTextDidEndEditing:(NSNotification *)notification
+{
+    NSTextField *textField = [notification object];
+    NSInteger row = [mBevyTable rowForView:textField];
+    if (row < 0 || row >= (NSInteger)[mBevys count])
+        return;
+    
+    // Determine which column this text field belongs to
+    NSInteger col = [mBevyTable columnForView:textField];
+    if (col < 0)
+        return;
+    
+    NSTableColumn *tableColumn = [[mBevyTable tableColumns] objectAtIndex:col];
+    
+    if ([[tableColumn identifier] isEqualToString:@"name"])
+    {
+        Cuppa_Bevy *bevy = [mBevys objectAtIndex:row];
+        [bevy setName:[textField stringValue]];
+        [self setBevys:mBevys];
+        
+        // Store to prefs
+        [[NSUserDefaults standardUserDefaults] setObject:[Cuppa_Bevy toDictionary:mBevys]
+                                                  forKey:@"bevys"];
+    }
+    
+} // end -controlTextDidEndEditing:
 
 // *************************************************************************************************
 
@@ -1328,8 +1307,17 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     [mDockMenu insertItem:[NSMenuItem separatorItem] atIndex:i];
     i++;
     
-    // add the preferences item
-    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Preferences...", nil)
+    // add the preferences/settings item
+    NSString *prefsTitle;
+    if (@available(macOS 13.0, *))
+    {
+        prefsTitle = NSLocalizedString(@"Settings...", nil);
+    }
+    else
+    {
+        prefsTitle = NSLocalizedString(@"Preferences...", nil);
+    }
+    item = [[[NSMenuItem alloc] initWithTitle:prefsTitle
                                        action:@selector(showPrefs:)
                                 keyEquivalent:@""] autorelease];
     [item setTarget:self];

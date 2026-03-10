@@ -41,7 +41,7 @@
 
 // Class Interface
 
-@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate, UNUserNotificationCenterDelegate, NSTableViewDelegate, NSTableViewDataSource>
+@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate, UNUserNotificationCenterDelegate, NSTableViewDelegate, NSTableViewDataSource, NSTextFieldDelegate>
 {
     // IB connected objects
     IBOutlet NSWindow *mPrefsWindow; // application preferences window
@@ -81,6 +81,7 @@
     int mNotifyOSX; // flag: notify Notification Center?
     bool mTestNotify; // flag: indicates we are doing a test notification
     bool mOSXNotifyAvail; // flag: shows if OS X Notification Center is available
+    bool mAwoken; // flag: has awakeFromNib already run?
     Cuppa_Bevy *mCurrentBevy; // the currently brewing beverage
     Cuppa_Bevy *genericbevy; // quick timer beverage
     
@@ -156,19 +157,19 @@
 // Handle click on the delete beverage button.
 - (IBAction)deleteBevyButton:(id)sender;
 
+// Handle change of brew time via date picker in beverage table.
+- (IBAction)brewTimePicked:(id)sender;
+
+// Handle change of cup shape via popup in beverage table.
+- (IBAction)cupShapePicked:(id)sender;
+
+// Return the view for a cell in the beverage table (view-based).
+- (NSView *)tableView:(NSTableView *)tableView
+   viewForTableColumn:(NSTableColumn *)tableColumn
+                  row:(NSInteger)row;
+
 // Return the number of known beverages.
 - (int)numberOfRowsInTableView:(NSTableView *)aTableView;
-
-// Return the object associated with a particular cell in the beverage table.
-- (id)tableView:(NSTableView *)aTableView
-objectValueForTableColumn:(NSTableColumn *)aTableColumn
-            row:(int)rowIndex;
-
-// Modify the object associated with a particular cell in the beverage table.
-- (void)tableView:(NSTableView *)aTableView
-   setObjectValue:(id)anObject
-   forTableColumn:(NSTableColumn *)aTableColumn
-              row:(int)rowIndex;
 
 // Support for drag and drop within preferences bevy table.
 - (BOOL)tableView:(NSTableView *)tableView
