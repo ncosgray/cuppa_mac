@@ -89,6 +89,7 @@ static NSString * const CuppaShapeImageNames[] = {
 
     NSImage *image = [NSImage imageNamed:CuppaShapeImageNames[shape]];
     [image setSize:NSMakeSize(16, 16)];
+    [image setTemplate:YES];
     return image;
 }
 

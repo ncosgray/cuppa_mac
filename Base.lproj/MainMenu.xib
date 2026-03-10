@@ -305,7 +305,7 @@
                                                                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oop-Y9-2TK">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="24"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                <datePickerCell key="cell" alignment="left" id="SXJ-M2-w4R">
+                                                                                <datePickerCell key="cell" alignment="left" drawsBackground="NO" id="SXJ-M2-w4R">
                                                                                     <font key="font" metaFont="smallSystem"/>
                                                                                     <date key="date" timeIntervalSinceReferenceDate="0.0">
                                                                                         <!--2001-01-01 00:00:00 +0000-->
