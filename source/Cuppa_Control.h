@@ -81,7 +81,6 @@
     int mNotifyOSX; // flag: notify Notification Center?
     bool mTestNotify; // flag: indicates we are doing a test notification
     bool mOSXNotifyAvail; // flag: shows if OS X Notification Center is available
-    bool mAwoken; // flag: has awakeFromNib already run?
     Cuppa_Bevy *mCurrentBevy; // the currently brewing beverage
     Cuppa_Bevy *genericbevy; // quick timer beverage
     

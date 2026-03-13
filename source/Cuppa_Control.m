@@ -138,16 +138,12 @@
 // Handle setup once we've been fully woken.
 - (void)awakeFromNib
 {
-    // Guard against multiple calls (awakeFromNib is called once per NIB connection)
-    if (mAwoken)
-        return;
-    mAwoken = true;
-    
     NSMenu *mMainMenu; // main menu object
     NSMenuItem *item; // current menu item
     
     // disable App Nap
-    if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
+    if (!self.timerActivity &&
+        [[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
     {
         self.timerActivity = [[[NSProcessInfo processInfo]
                               beginActivityWithOptions:NSActivityUserInitiatedAllowingIdleSystemSleep
@@ -175,14 +171,17 @@
     mMainMenu = [NSApp mainMenu];
     
 #if !APPSTORE_BUILD
-    // Set up Sparkle updater and add menu item
+    // add Check for Updates menu item if not already present
     NSMenu *mCuppaMenu = [[mMainMenu itemAtIndex:0] submenu];
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Check for Updates...", nil)
-                                      action:@selector(checkForUpdates:)
-                               keyEquivalent:@""];
-    [item setTarget:self.updaterController];
-    [item setEnabled:YES];
-    [mCuppaMenu insertItem:item atIndex:1];
+    if ([mCuppaMenu indexOfItemWithTitle:NSLocalizedString(@"Check for Updates...", nil)] == -1)
+    {
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Check for Updates...", nil)
+                                          action:@selector(checkForUpdates:)
+                                   keyEquivalent:@""];
+        [item setTarget:self.updaterController];
+        [item setEnabled:YES];
+        [mCuppaMenu insertItem:item atIndex:1];
+    }
 #endif
     
     // ensure delegate and data source are set
@@ -246,32 +245,35 @@
     // reset quick timer value
     [mQTimerValue setStringValue:@"2:00"];
     
-    // add the Beverages menu to the main menu
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Beverages", nil) action:nil keyEquivalent:@""];
-    [mMainMenu insertItem:item atIndex:1];
-    mAppMenu = [[NSMenu alloc] initWithTitle:NSLocalizedString(@"Beverages", nil)];
-    [mMainMenu setSubmenu:mAppMenu forItem:item];
-    
-    // add a separator
-    [mAppMenu insertItem:[NSMenuItem separatorItem] atIndex:0];
-    
-    // add the quick timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
-                                      action:@selector(showQuickTimer:)
-                               keyEquivalent:@"t"];
-    [item setTarget:self];
-    [item setEnabled:YES];
-    [item setImage:[Cuppa_Shape imageForShape:CUPPA_SHAPE_DEFAULT]];
-    [mAppMenu insertItem:item atIndex:1];
-    
-    // add the cancel timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
-                                      action:@selector(cancelTimer:)
-                               keyEquivalent:@"."];
-    [item setTarget:self];
-    [item setEnabled:YES];
-    [item setImage:[NSImage imageNamed:NSImageNameStopProgressTemplate]];
-    [mAppMenu insertItem:item atIndex:2];
+    // add the Beverages menu to the main menu if not already present
+    if (!mAppMenu || [mMainMenu indexOfItemWithSubmenu:mAppMenu] == -1)
+    {
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Beverages", nil) action:nil keyEquivalent:@""];
+        [mMainMenu insertItem:item atIndex:1];
+        mAppMenu = [[NSMenu alloc] initWithTitle:NSLocalizedString(@"Beverages", nil)];
+        [mMainMenu setSubmenu:mAppMenu forItem:item];
+        
+        // add a separator
+        [mAppMenu insertItem:[NSMenuItem separatorItem] atIndex:0];
+        
+        // add the quick timer item
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
+                                          action:@selector(showQuickTimer:)
+                                   keyEquivalent:@"t"];
+        [item setTarget:self];
+        [item setEnabled:YES];
+        [item setImage:[Cuppa_Shape imageForShape:CUPPA_SHAPE_DEFAULT]];
+        [mAppMenu insertItem:item atIndex:1];
+        
+        // add the cancel timer item
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
+                                          action:@selector(cancelTimer:)
+                                   keyEquivalent:@"."];
+        [item setTarget:self];
+        [item setEnabled:YES];
+        [item setImage:[NSImage imageNamed:NSImageNameStopProgressTemplate]];
+        [mAppMenu insertItem:item atIndex:2];
+    }
     
     // make sure to update the dock menu and the Beverages application menu
     [self setBevys:mBevys];
