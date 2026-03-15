@@ -31,8 +31,6 @@
     
     NSMutableDictionary *appDefaults; // dictionary of these application defaults
     NSUserDefaults *defaults; // user defaults object used to store preferences
-    NSMethodSignature *sig; // used to setup update timer
-    NSInvocation *inv; // ditto
     
     // chain up to superclass
     self = [super init];
@@ -108,20 +106,8 @@
     // we are not testing by default
     mTestNotify = false;
     
-    // create the brew timer object
-    // this is set to fire every second
-    // TODO: only run timer when active
-    sig = [Cuppa_Control instanceMethodSignatureForSelector:@selector(updateTick:)];
-    inv = [NSInvocation invocationWithMethodSignature:sig];
-    [inv setSelector:@selector(updateTick:)];
-    [inv setTarget:self];
-    
-    // TODO: this isn't the smartest design, and should be improved. The timer will fire
-    // every second, regardless of whether we are actually brewing anything. This is a
-    // (very minor) waste of CPU time.
-    mBrewTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 invocation:inv repeats:YES];
-    
     // no active timer on startup
+    mBrewTimer = nil;
     mSecondsRemain = 0;
     mAlarmTime = nil;
     
@@ -141,13 +127,18 @@
     NSMenu *mMainMenu; // main menu object
     NSMenuItem *item; // current menu item
     
-    // disable App Nap
-    if (!self.timerActivity &&
-        [[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
-    {
-        self.timerActivity = [[[NSProcessInfo processInfo]
-                              beginActivityWithOptions:NSActivityUserInitiatedAllowingIdleSystemSleep
-                              reason:@"Cuppa timer"] retain];
+    // On older macOS versions, keep App Nap permanently disabled as a
+    // workaround for bugs where long-running timers could be interrupted
+    if (@available(macOS 13.0, *)) {
+        // App Nap managed dynamically in startBrewTimer/stopBrewTimer
+    } else {
+        if (!self.timerActivity &&
+            [[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
+        {
+            self.timerActivity = [[[NSProcessInfo processInfo]
+                                  beginActivityWithOptions:NSActivityUserInitiatedAllowingIdleSystemSleep
+                                  reason:@"Cuppa timer"] retain];
+        }
     }
     
     // request notification permissions
@@ -351,6 +342,9 @@
             // reset the timer variables
             mSecondsRemain = 0;
             mAlarmTime = nil;
+            
+            // stop the repeating tick timer
+            [self stopBrewTimer];
         
             // no brew time remaining for countdown timer
             [mRender setBrewRemain:0];
@@ -466,6 +460,9 @@
     // reset the timer variables
     mSecondsRemain = 0;
     mAlarmTime = nil;
+    
+    // stop the repeating tick timer
+    [self stopBrewTimer];
     
     // reset the dock icon
     [mRender restore];
@@ -620,6 +617,52 @@
 
 // *************************************************************************************************
 
+// Start the repeating brew timer (fires every second).
+- (void)startBrewTimer
+{
+    // Invalidate any existing timer first
+    [mBrewTimer invalidate];
+    mBrewTimer = nil;
+    
+    // Disable App Nap while brewing (macOS 13+ only; older versions keep it always disabled)
+    if (@available(macOS 13.0, *)) {
+        if (!self.timerActivity &&
+            [[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
+        {
+            self.timerActivity = [[[NSProcessInfo processInfo]
+                                  beginActivityWithOptions:NSActivityUserInitiatedAllowingIdleSystemSleep
+                                  reason:@"Cuppa timer"] retain];
+        }
+    }
+    
+    mBrewTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                  target:self
+                                                selector:@selector(updateTick:)
+                                                userInfo:nil
+                                                 repeats:YES];
+}
+
+// *************************************************************************************************
+
+// Stop the repeating brew timer.
+- (void)stopBrewTimer
+{
+    [mBrewTimer invalidate];
+    mBrewTimer = nil;
+    
+    // Re-enable App Nap when not brewing (macOS 13+ only; older versions keep it always disabled)
+    if (@available(macOS 13.0, *)) {
+        if (self.timerActivity)
+        {
+            [[NSProcessInfo processInfo] endActivity:self.timerActivity];
+            [self.timerActivity release];
+            self.timerActivity = nil;
+        }
+    }
+}
+
+// *************************************************************************************************
+
 // Set up and start a timer.
 - (void)setTimer:(Cuppa_Bevy *)bevy
 {
@@ -646,6 +689,9 @@
     mSecondsTotal = [bevy brewTime];
     mSecondsRemain = mSecondsTotal + 1;
     mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
+    
+    // start the repeating tick timer
+    [self startBrewTimer];
     
     // play the start sound
     if (mMakeSound)

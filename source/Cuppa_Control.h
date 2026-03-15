@@ -123,6 +123,12 @@
 // A request to do a notification test has been made.
 - (IBAction)testNotify:(id)sender;
 
+// Start the repeating brew timer (fires every second).
+- (void)startBrewTimer;
+
+// Stop the repeating brew timer.
+- (void)stopBrewTimer;
+
 // Set up and start a timer.
 - (void)setTimer:(Cuppa_Bevy *)bevy;
 
