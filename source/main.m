@@ -227,6 +227,16 @@
 //  * Support for macOS 26, including a refreshed app icon.
 //  * Cuppa has been translated into Finnish and Turkish.
 //    - Contribute additional translations via Weblate!
+//
+//  Modifications by Nathan Cosgray on 2026/03/15 (v. 1.10.1):
+//  * New Feature:
+//    - Select one of three timer icons for each beverage.
+//  * UI improvements:
+//    - Easier brew time selection.
+//    - Expanded "About Cuppa" to include more information.
+//    - Language translation updates - contribute via Weblate!
+//  * Other:
+//    - Cuppa now uses less energy when no timer is active.
 
 #import <Cocoa/Cocoa.h>
 
