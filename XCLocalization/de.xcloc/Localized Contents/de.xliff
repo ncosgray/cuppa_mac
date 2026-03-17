@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="Base.lproj/MainMenu.xib" source-language="en" target-language="de" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.0.1" build-num="17A400"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.3" build-num="17C529"/>
     </header>
     <body>
       <trans-unit id="5Qf-No-6KB.title" xml:space="preserve">
@@ -97,7 +97,7 @@
       </trans-unit>
       <trans-unit id="158.title" xml:space="preserve">
         <source>Undo</source>
-        <target state="translated">Rückgängig</target>
+        <target>Widerrufen</target>
         <note>Class = "NSMenuItem"; title = "Undo"; ObjectID = "158";</note>
       </trans-unit>
       <trans-unit id="159.title" xml:space="preserve">
@@ -147,7 +147,7 @@
       </trans-unit>
       <trans-unit id="171.title" xml:space="preserve">
         <source>Paste</source>
-        <target state="translated">Einfügen</target>
+        <target>Einsetzen</target>
         <note>Class = "NSMenuItem"; title = "Paste"; ObjectID = "171";</note>
       </trans-unit>
       <trans-unit id="172.title" xml:space="preserve">
@@ -207,7 +207,7 @@
       </trans-unit>
       <trans-unit id="255.title" xml:space="preserve">
         <source>User Interface Options</source>
-        <target state="translated">Benutzeroberflächenoptionen</target>
+        <target>Benutzeroberfläche einstellen</target>
         <note>Class = "NSBox"; title = "User Interface Options"; ObjectID = "255";</note>
       </trans-unit>
       <trans-unit id="278.title" xml:space="preserve">
@@ -232,7 +232,7 @@
       </trans-unit>
       <trans-unit id="365.title" xml:space="preserve">
         <source>Notify via Notification Center</source>
-        <target state="translated">Benachrichtigung über Mitteilungszentrale</target>
+        <target>Benachrichtigung mit Mitteilungszentrale</target>
         <note>Class = "NSButtonCell"; title = "Notify via Notification Center"; ObjectID = "365";</note>
       </trans-unit>
       <trans-unit id="368.title" xml:space="preserve">
@@ -242,7 +242,7 @@
       </trans-unit>
       <trans-unit id="369.title" xml:space="preserve">
         <source>Include steep times in menus</source>
-        <target state="translated">Ziehzeiten in Menü anzeigen</target>
+        <target>Aufbrühzeiten in Menü anzeigen</target>
         <note>Class = "NSButtonCell"; title = "Include steep times in menus"; ObjectID = "369";</note>
       </trans-unit>
       <trans-unit id="370.title" xml:space="preserve">
@@ -265,11 +265,6 @@
         <target>Text Cell</target>
         <note>Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "373";</note>
       </trans-unit>
-      <trans-unit id="374.title" xml:space="preserve">
-        <source>Text Cell</source>
-        <target>Text Cell</target>
-        <note>Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "374";</note>
-      </trans-unit>
       <trans-unit id="375.title" xml:space="preserve">
         <source>Text Cell</source>
         <target>Text Cell</target>
@@ -277,7 +272,7 @@
       </trans-unit>
       <trans-unit id="446.label" xml:space="preserve">
         <source>Beverage List</source>
-        <target state="translated">Getränkeliste</target>
+        <target>Getränke</target>
         <note>Class = "NSTabViewItem"; label = "Beverage List"; ObjectID = "446";</note>
       </trans-unit>
       <trans-unit id="447.label" xml:space="preserve">
@@ -310,6 +305,10 @@
         <target>Benachrichtigung testen</target>
         <note>Class = "NSButtonCell"; title = "Test Notification"; ObjectID = "LAY-qA-dcS";</note>
       </trans-unit>
+      <trans-unit id="Og3-wg-ENb.title" xml:space="preserve">
+        <source>Table View Cell</source>
+        <note>Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "Og3-wg-ENb";</note>
+      </trans-unit>
       <trans-unit id="fku-RV-THJ.title" xml:space="preserve">
         <source>Auto-start first beverage timer at launch</source>
         <target>Timer des obersten Getränkes automatisch beim Start beginnen</target>
@@ -320,15 +319,19 @@
         <target>Alarm sprechen</target>
         <note>Class = "NSButtonCell"; title = "Speak alert"; ObjectID = "gbr-1q-BI3";</note>
       </trans-unit>
+      <trans-unit id="jFs-x2-NcI.title" xml:space="preserve">
+        <source>Text Cell</source>
+        <note>Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "jFs-x2-NcI";</note>
+      </trans-unit>
     </body>
   </file>
   <file original="en.lproj/InfoPlist.strings" source-language="en" target-language="de" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.0.1" build-num="17A400"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.3" build-num="17C529"/>
     </header>
     <body>
       <trans-unit id="CFBundleGetInfoString" xml:space="preserve">
-        <source>1.8.9</source>
+        <source>1.9.0</source>
         <note>Get Info string</note>
       </trans-unit>
       <trans-unit id="CFBundleHelpBookName" xml:space="preserve">
@@ -342,19 +345,15 @@
         <note>Localized versions of Info.plist keys</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source>Copyright © 2005-2025 Nathan Cosgray.
-
-Cuppa uses Weblate for translations.</source>
-        <target>Copyright © 2005-2025 Nathan Cosgray.
-
-Cuppa verwendet Weblate für Übersetzungen.</target>
+        <source>Copyright © 2005-2026 Nathan Cosgray.</source>
+        <target>Copyright © 2005-2026 Nathan Cosgray.</target>
         <note>Copyright (human-readable)</note>
       </trans-unit>
     </body>
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="de" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.0.1" build-num="17A400"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.3" build-num="17C529"/>
     </header>
     <body>
       <trans-unit id="%@ is now ready!" xml:space="preserve">
@@ -455,6 +454,10 @@ Cuppa verwendet Weblate für Übersetzungen.</target>
       <trans-unit id="Rooibos" xml:space="preserve">
         <source>Rooibos</source>
         <target>Rooibos</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Settings..." xml:space="preserve">
+        <source>Settings...</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="The Cuppa timer is still active for another %s.&#10;&#10;Do you really want to quit?" xml:space="preserve">

@@ -4,7 +4,7 @@
  Class:    Cuppa_Control
            - Controls for the Cuppa user interface, such as changing preferences and setting timers.
  ----------------------------------------------------------------------------------------------------
- Copyright (c) 2005-2025 Nathan Cosgray. All rights reserved.
+ Copyright (c) 2005-2026 Nathan Cosgray. All rights reserved.
  
  This source code is licensed under the BSD-style license found in LICENSE.txt.
  **************************************************************************************************
@@ -41,7 +41,7 @@
 
 // Class Interface
 
-@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate, UNUserNotificationCenterDelegate>
+@interface Cuppa_Control : NSObject <NSUserNotificationCenterDelegate, UNUserNotificationCenterDelegate, NSTableViewDelegate, NSTableViewDataSource, NSTextFieldDelegate>
 {
     // IB connected objects
     IBOutlet NSWindow *mPrefsWindow; // application preferences window
@@ -123,6 +123,12 @@
 // A request to do a notification test has been made.
 - (IBAction)testNotify:(id)sender;
 
+// Start the repeating brew timer (fires every second).
+- (void)startBrewTimer;
+
+// Stop the repeating brew timer.
+- (void)stopBrewTimer;
+
 // Set up and start a timer.
 - (void)setTimer:(Cuppa_Bevy *)bevy;
 
@@ -156,19 +162,19 @@
 // Handle click on the delete beverage button.
 - (IBAction)deleteBevyButton:(id)sender;
 
+// Handle change of brew time via date picker in beverage table.
+- (IBAction)brewTimePicked:(id)sender;
+
+// Handle change of cup shape via popup in beverage table.
+- (IBAction)cupShapePicked:(id)sender;
+
+// Return the view for a cell in the beverage table (view-based).
+- (NSView *)tableView:(NSTableView *)tableView
+   viewForTableColumn:(NSTableColumn *)tableColumn
+                  row:(NSInteger)row;
+
 // Return the number of known beverages.
 - (int)numberOfRowsInTableView:(NSTableView *)aTableView;
-
-// Return the object associated with a particular cell in the beverage table.
-- (id)tableView:(NSTableView *)aTableView
-objectValueForTableColumn:(NSTableColumn *)aTableColumn
-            row:(int)rowIndex;
-
-// Modify the object associated with a particular cell in the beverage table.
-- (void)tableView:(NSTableView *)aTableView
-   setObjectValue:(id)anObject
-   forTableColumn:(NSTableColumn *)aTableColumn
-              row:(int)rowIndex;
 
 // Support for drag and drop within preferences bevy table.
 - (BOOL)tableView:(NSTableView *)tableView

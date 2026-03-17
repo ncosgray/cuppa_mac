@@ -4,7 +4,7 @@
  Class:    Cuppa_Bevy
            - The Bevy class tracks information about a single beverage, such as name and brew time.
  ----------------------------------------------------------------------------------------------------
- Copyright (c) 2005-2025 Nathan Cosgray. All rights reserved.
+ Copyright (c) 2005-2026 Nathan Cosgray. All rights reserved.
  
  This source code is licensed under the BSD-style license found in LICENSE.txt.
  **************************************************************************************************
@@ -39,56 +39,56 @@
     bevy[0] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[0] setName:NSLocalizedString(@"Blackcurrant Tea", nil)];
     [bevy[0] setBrewTime:210];
-    [bevy[0] setCupShape:CUPPA_SHAPE_TEA];
+    [bevy[0] setCupShape:CUPPA_SHAPE_DEFAULT];
     [bevys addObject:bevy[0]];
     
     // Chamomile
     bevy[1] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[1] setName:NSLocalizedString(@"Chamomile", nil)];
     [bevy[1] setBrewTime:300];
-    [bevy[1] setCupShape:CUPPA_SHAPE_TEA];
+    [bevy[1] setCupShape:CUPPA_SHAPE_DEFAULT];
     [bevys addObject:bevy[1]];
     
     // Earl Grey
     bevy[2] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[2] setName:NSLocalizedString(@"Earl Grey", nil)];
     [bevy[2] setBrewTime:240];
-    [bevy[2] setCupShape:CUPPA_SHAPE_TEA];
+    [bevy[2] setCupShape:CUPPA_SHAPE_DEFAULT];
     [bevys addObject:bevy[2]];
     
     // English Breakfast
     bevy[3] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[3] setName:NSLocalizedString(@"English Breakfast", nil)];
     [bevy[3] setBrewTime:240];
-    [bevy[3] setCupShape:CUPPA_SHAPE_TEA];
+    [bevy[3] setCupShape:CUPPA_SHAPE_DEFAULT];
     [bevys addObject:bevy[3]];
     
     // Green Tea
     bevy[4] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[4] setName:NSLocalizedString(@"Green Tea", nil)];
     [bevy[4] setBrewTime:150];
-    [bevy[4] setCupShape:CUPPA_SHAPE_TEA];
+    [bevy[4] setCupShape:CUPPA_SHAPE_DEFAULT];
     [bevys addObject:bevy[4]];
     
     // Mint Tea
     bevy[5] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[5] setName:NSLocalizedString(@"Libby's Mint Tea", nil)];
     [bevy[5] setBrewTime:240];
-    [bevy[5] setCupShape:CUPPA_SHAPE_TEA];
+    [bevy[5] setCupShape:CUPPA_SHAPE_DEFAULT];
     [bevys addObject:bevy[5]];
     
     // Oolong Tea
     bevy[6] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[6] setName:NSLocalizedString(@"Oolong Tea", nil)];
     [bevy[6] setBrewTime:240];
-    [bevy[6] setCupShape:CUPPA_SHAPE_TEA];
+    [bevy[6] setCupShape:CUPPA_SHAPE_DEFAULT];
     [bevys addObject:bevy[6]];
     
     // Rooibos
     bevy[7] = [[[Cuppa_Bevy alloc] init] autorelease];
     [bevy[7] setName:NSLocalizedString(@"Rooibos", nil)];
     [bevy[7] setBrewTime:180];
-    [bevy[7] setCupShape:CUPPA_SHAPE_TEA];
+    [bevy[7] setCupShape:CUPPA_SHAPE_DEFAULT];
     [bevys addObject:bevy[7]];
     
     // return the array of standard bevys

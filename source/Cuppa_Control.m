@@ -4,7 +4,7 @@
  Class:    Cuppa_Control
            - Controls for the Cuppa user interface, such as changing preferences and setting timers.
  ----------------------------------------------------------------------------------------------------
- Copyright (c) 2005-2025 Nathan Cosgray. All rights reserved.
+ Copyright (c) 2005-2026 Nathan Cosgray. All rights reserved.
  
  This source code is licensed under the BSD-style license found in LICENSE.txt.
  **************************************************************************************************
@@ -31,8 +31,6 @@
     
     NSMutableDictionary *appDefaults; // dictionary of these application defaults
     NSUserDefaults *defaults; // user defaults object used to store preferences
-    NSMethodSignature *sig; // used to setup update timer
-    NSInvocation *inv; // ditto
     
     // chain up to superclass
     self = [super init];
@@ -108,20 +106,8 @@
     // we are not testing by default
     mTestNotify = false;
     
-    // create the brew timer object
-    // this is set to fire every second
-    // TODO: only run timer when active
-    sig = [Cuppa_Control instanceMethodSignatureForSelector:@selector(updateTick:)];
-    inv = [NSInvocation invocationWithMethodSignature:sig];
-    [inv setSelector:@selector(updateTick:)];
-    [inv setTarget:self];
-    
-    // TODO: this isn't the smartest design, and should be improved. The timer will fire
-    // every second, regardless of whether we are actually brewing anything. This is a
-    // (very minor) waste of CPU time.
-    mBrewTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 invocation:inv repeats:YES];
-    
     // no active timer on startup
+    mBrewTimer = nil;
     mSecondsRemain = 0;
     mAlarmTime = nil;
     
@@ -138,17 +124,21 @@
 // Handle setup once we've been fully woken.
 - (void)awakeFromNib
 {
-    NSImageCell *imageCell; // image cell for preference bevy setup images
-    NSTableColumn *column; // column in mBevyTable displaying bevy images
     NSMenu *mMainMenu; // main menu object
     NSMenuItem *item; // current menu item
     
-    // disable App Nap
-    if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
-    {
-        self.timerActivity = [[[NSProcessInfo processInfo]
-                              beginActivityWithOptions:NSActivityUserInitiatedAllowingIdleSystemSleep
-                              reason:@"Cuppa timer"] retain];
+    // On older macOS versions, keep App Nap permanently disabled as a
+    // workaround for bugs where long-running timers could be interrupted
+    if (@available(macOS 13.0, *)) {
+        // App Nap managed dynamically in startBrewTimer/stopBrewTimer
+    } else {
+        if (!self.timerActivity &&
+            [[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
+        {
+            self.timerActivity = [[[NSProcessInfo processInfo]
+                                  beginActivityWithOptions:NSActivityUserInitiatedAllowingIdleSystemSleep
+                                  reason:@"Cuppa timer"] retain];
+        }
     }
     
     // request notification permissions
@@ -172,23 +162,22 @@
     mMainMenu = [NSApp mainMenu];
     
 #if !APPSTORE_BUILD
-    // Set up Sparkle updater and add menu item
+    // add Check for Updates menu item if not already present
     NSMenu *mCuppaMenu = [[mMainMenu itemAtIndex:0] submenu];
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Check for Updates...", nil)
-                                      action:@selector(checkForUpdates:)
-                               keyEquivalent:@""];
-    [item setTarget:self.updaterController];
-    [item setEnabled:YES];
-    [mCuppaMenu insertItem:item atIndex:1];
+    if ([mCuppaMenu indexOfItemWithTitle:NSLocalizedString(@"Check for Updates...", nil)] == -1)
+    {
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Check for Updates...", nil)
+                                          action:@selector(checkForUpdates:)
+                                   keyEquivalent:@""];
+        [item setTarget:self.updaterController];
+        [item setEnabled:YES];
+        [mCuppaMenu insertItem:item atIndex:1];
+    }
 #endif
     
-    // setup preferences table to display bevy images properly
-    imageCell = [[NSImageCell alloc] init];
-    [imageCell setImageFrameStyle:NSImageFrameNone];
-    [imageCell setImageScaling:NSImageScaleNone];
-    column = [[mBevyTable tableColumns] objectAtIndex:0];
-    [column setDataCell:imageCell];
-    [imageCell release];
+    // ensure delegate and data source are set
+    [mBevyTable setDelegate:self];
+    [mBevyTable setDataSource:self];
     
     // setup preferences table for drag 'n' drop
     [mBevyTable registerForDraggedTypes:[NSArray arrayWithObjects:@"RowIndexPboardType", nil]];
@@ -247,30 +236,35 @@
     // reset quick timer value
     [mQTimerValue setStringValue:@"2:00"];
     
-    // add the Beverages menu to the main menu
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Beverages", nil) action:nil keyEquivalent:@""];
-    [mMainMenu insertItem:item atIndex:1];
-    mAppMenu = [[NSMenu alloc] initWithTitle:NSLocalizedString(@"Beverages", nil)];
-    [mMainMenu setSubmenu:mAppMenu forItem:item];
-    
-    // add a separator
-    [mAppMenu insertItem:[NSMenuItem separatorItem] atIndex:0];
-    
-    // add the quick timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
-                                      action:@selector(showQuickTimer:)
-                               keyEquivalent:@"t"];
-    [item setTarget:self];
-    [item setEnabled:YES];
-    [mAppMenu insertItem:item atIndex:1];
-    
-    // add the cancel timer item
-    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
-                                      action:@selector(cancelTimer:)
-                               keyEquivalent:@"."];
-    [item setTarget:self];
-    [item setEnabled:YES];
-    [mAppMenu insertItem:item atIndex:2];
+    // add the Beverages menu to the main menu if not already present
+    if (!mAppMenu || [mMainMenu indexOfItemWithSubmenu:mAppMenu] == -1)
+    {
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Beverages", nil) action:nil keyEquivalent:@""];
+        [mMainMenu insertItem:item atIndex:1];
+        mAppMenu = [[NSMenu alloc] initWithTitle:NSLocalizedString(@"Beverages", nil)];
+        [mMainMenu setSubmenu:mAppMenu forItem:item];
+        
+        // add a separator
+        [mAppMenu insertItem:[NSMenuItem separatorItem] atIndex:0];
+        
+        // add the quick timer item
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quick Timer...", nil)
+                                          action:@selector(showQuickTimer:)
+                                   keyEquivalent:@"t"];
+        [item setTarget:self];
+        [item setEnabled:YES];
+        [item setImage:[Cuppa_Shape imageForShape:CUPPA_SHAPE_DEFAULT]];
+        [mAppMenu insertItem:item atIndex:1];
+        
+        // add the cancel timer item
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil)
+                                          action:@selector(cancelTimer:)
+                                   keyEquivalent:@"."];
+        [item setTarget:self];
+        [item setEnabled:YES];
+        [item setImage:[NSImage imageNamed:NSImageNameStopProgressTemplate]];
+        [mAppMenu insertItem:item atIndex:2];
+    }
     
     // make sure to update the dock menu and the Beverages application menu
     [self setBevys:mBevys];
@@ -348,6 +342,9 @@
             // reset the timer variables
             mSecondsRemain = 0;
             mAlarmTime = nil;
+            
+            // stop the repeating tick timer
+            [self stopBrewTimer];
         
             // no brew time remaining for countdown timer
             [mRender setBrewRemain:0];
@@ -464,6 +461,9 @@
     mSecondsRemain = 0;
     mAlarmTime = nil;
     
+    // stop the repeating tick timer
+    [self stopBrewTimer];
+    
     // reset the dock icon
     [mRender restore];
     
@@ -477,6 +477,12 @@
 #if !defined(NDEBUG)
     printf("Show prefs.\n");
 #endif
+    
+    // scroll beverage table to the top
+    if ([mBevyTable numberOfRows] > 0)
+    {
+        [mBevyTable scrollRowToVisible:0];
+    }
     
     // display the prefs window
     [mPrefsWindow makeKeyAndOrderFront:self];
@@ -611,6 +617,52 @@
 
 // *************************************************************************************************
 
+// Start the repeating brew timer (fires every second).
+- (void)startBrewTimer
+{
+    // Invalidate any existing timer first
+    [mBrewTimer invalidate];
+    mBrewTimer = nil;
+    
+    // Disable App Nap while brewing (macOS 13+ only; older versions keep it always disabled)
+    if (@available(macOS 13.0, *)) {
+        if (!self.timerActivity &&
+            [[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
+        {
+            self.timerActivity = [[[NSProcessInfo processInfo]
+                                  beginActivityWithOptions:NSActivityUserInitiatedAllowingIdleSystemSleep
+                                  reason:@"Cuppa timer"] retain];
+        }
+    }
+    
+    mBrewTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                  target:self
+                                                selector:@selector(updateTick:)
+                                                userInfo:nil
+                                                 repeats:YES];
+}
+
+// *************************************************************************************************
+
+// Stop the repeating brew timer.
+- (void)stopBrewTimer
+{
+    [mBrewTimer invalidate];
+    mBrewTimer = nil;
+    
+    // Re-enable App Nap when not brewing (macOS 13+ only; older versions keep it always disabled)
+    if (@available(macOS 13.0, *)) {
+        if (self.timerActivity)
+        {
+            [[NSProcessInfo processInfo] endActivity:self.timerActivity];
+            [self.timerActivity release];
+            self.timerActivity = nil;
+        }
+    }
+}
+
+// *************************************************************************************************
+
 // Set up and start a timer.
 - (void)setTimer:(Cuppa_Bevy *)bevy
 {
@@ -637,6 +689,9 @@
     mSecondsTotal = [bevy brewTime];
     mSecondsRemain = mSecondsTotal + 1;
     mAlarmTime = [[NSDate alloc] initWithTimeIntervalSinceNow:mSecondsRemain];
+    
+    // start the repeating tick timer
+    [self startBrewTimer];
     
     // play the start sound
     if (mMakeSound)
@@ -862,161 +917,187 @@
 
 // *************************************************************************************************
 
-// Return the object associated with a particular cell in the beverage table.
-- (id)tableView:(NSTableView *)aTableView
-objectValueForTableColumn:(NSTableColumn *)aTableColumn
-            row:(int)rowIndex
+// Return the view for a cell in the beverage table (view-based).
+- (NSView *)tableView:(NSTableView *)tableView
+   viewForTableColumn:(NSTableColumn *)tableColumn
+                  row:(NSInteger)row
 {
-    Cuppa_Bevy *bevy;
-    int hours; // hours digit of brew time
+    Cuppa_Bevy *bevy = [mBevys objectAtIndex:row];
     
-    // parameter checks
-    assert(rowIndex >= 0 && rowIndex < [mBevys count]);
-    
-    // retrieve the bevy associated with this row
-    bevy = [mBevys objectAtIndex:rowIndex];
-    
-    // which column does this apply to?
-    if ([[aTableColumn identifier] isEqualToString:@"image"])
+    if ([[tableColumn identifier] isEqualToString:@"image"])
     {
-        static NSImage *image = NULL;
-        if (!image)
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"image" owner:self];
+        
+        // Find the popup button in this cell view
+        NSPopUpButton *popup = nil;
+        for (NSView *subview in [cellView subviews])
         {
-            image = [NSImage imageNamed:@"teacup16"];
-            [image retain]; // TODO: crude
+            if ([subview isKindOfClass:[NSPopUpButton class]])
+            {
+                popup = (NSPopUpButton *)subview;
+                break;
+            }
         }
-        return image;
+        
+        if (popup)
+        {
+            // Populate if empty
+            if ([popup numberOfItems] == 0)
+            {
+                for (int shape = 0; shape < CUPPA_SHAPE_MAX; shape++)
+                {
+                    [popup addItemWithTitle:@""];
+                    NSMenuItem *item = [popup lastItem];
+                    [item setImage:[Cuppa_Shape imageForShape:shape]];
+                    [item setTag:shape];
+                }
+            }
+            [popup selectItemWithTag:[bevy cupShape]];
+        }
+        
+        return cellView;
     }
     
-    if ([[aTableColumn identifier] isEqualToString:@"name"])
+    if ([[tableColumn identifier] isEqualToString:@"name"])
     {
-        return [bevy name];
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"name" owner:self];
+        [[cellView textField] setStringValue:[bevy name]];
+        [[cellView textField] setEditable:YES];
+        [[cellView textField] setDelegate:self];
+        return cellView;
     }
     
-    if ([[aTableColumn identifier] isEqualToString:@"time"])
+    if ([[tableColumn identifier] isEqualToString:@"time"])
     {
-        hours = [bevy brewTime] / 3600;
-        if (hours > 0)
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"time" owner:self];
+        
+        // Find the NSDatePicker in the cell view
+        NSDatePicker *picker = nil;
+        for (NSView *subview in [cellView subviews])
         {
-            return [NSString stringWithFormat:@"%d:%02d:%02d",
-                    hours,
-                    ([bevy brewTime] - (hours * 3600)) / 60,
-                    ([bevy brewTime] - (hours * 3600)) % 60];
+            if ([subview isKindOfClass:[NSDatePicker class]])
+            {
+                picker = (NSDatePicker *)subview;
+                break;
+            }
         }
-        else
+        
+        if (picker)
         {
-            return [NSString stringWithFormat:@"%d:%02d",
-                    [bevy brewTime] / 60,
-                    [bevy brewTime] % 60];
+            // Configure picker for duration display (24-hour, no AM/PM, UTC timezone)
+            NSLocale *posixLocale = [NSLocale localeWithLocaleIdentifier:@"en_GB"];
+            NSTimeZone *utc = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+            NSCalendar *utcCal = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] autorelease];
+            [utcCal setTimeZone:utc];
+            [utcCal setLocale:posixLocale];
+            [picker setLocale:posixLocale];
+            [picker setTimeZone:utc];
+            [picker setCalendar:utcCal];
+            [[picker cell] setLocale:posixLocale];
+            [[picker cell] setTimeZone:utc];
+            [[picker cell] setCalendar:utcCal];
+            [picker setDatePickerStyle:NSDatePickerStyleTextFieldAndStepper];
+            
+            // Convert brew time (seconds) to an NSDate using a fixed reference date
+            // Reference date is 2001-01-01 00:00:00 UTC; with UTC timezone on picker,
+            // adding brewTime seconds gives us h:m:s directly
+            int brewTime = [bevy brewTime];
+            NSDate *midnight = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
+            [picker setDateValue:[midnight dateByAddingTimeInterval:brewTime]];
         }
+        
+        return cellView;
     }
     
-    // unknown column?
     return nil;
     
-} // end -tableView:objectValueForTableColumn:row:
+} // end -tableView:viewForTableColumn:row:
 
 // *************************************************************************************************
 
-// Modify the object associated with a particular cell in the beverage table.
-- (void)tableView:(NSTableView *)aTableView
-   setObjectValue:(id)anObject
-   forTableColumn:(NSTableColumn *)aTableColumn
-              row:(int)rowIndex
+// Handle change of brew time via date picker in beverage table.
+- (IBAction)brewTimePicked:(id)sender
 {
-    Cuppa_Bevy *bevy;
-    int hours = -1, mins = -1, secs = -1; // time values
+    NSDatePicker *picker = (NSDatePicker *)sender;
     
-#if !defined(NDEBUG)
-    printf("-tableView:setObjectValue:forTableColumn:row:\n");
-#endif
+    // Determine which row this picker belongs to
+    NSInteger row = [mBevyTable rowForView:picker];
+    if (row < 0 || row >= (NSInteger)[mBevys count])
+        return;
     
-    // parameter checks
-    NSAssert(rowIndex >= 0 && rowIndex < [mBevys count], @"Row index out of range.\n");
+    // Extract brew time as seconds since midnight reference date
+    NSDate *midnight = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
+    int secs = (int)[[picker dateValue] timeIntervalSinceDate:midnight];
     
-    // retrieve the bevy associated with this row
-    bevy = [mBevys objectAtIndex:rowIndex];
+    // Clamp to valid range
+    if (secs < CUPPA_BEVY_BREW_TIME_MIN)
+        secs = CUPPA_BEVY_BREW_TIME_MIN;
+    if (secs > CUPPA_BEVY_BREW_TIME_MAX)
+        secs = CUPPA_BEVY_BREW_TIME_MAX;
     
-    // which column does this apply to?
-    if ([[aTableColumn identifier] isEqualToString:@"image"])
-    {
-        // TODO!
-    }
+    // Apply to the beverage
+    Cuppa_Bevy *bevy = [mBevys objectAtIndex:row];
+    [bevy setBrewTime:secs];
+    [self setBevys:mBevys];
     
-    if ([[aTableColumn identifier] isEqualToString:@"name"])
-    {
-        [bevy setName:anObject];
-        [self setBevys:mBevys];
-    }
-    
-    if ([[aTableColumn identifier] isEqualToString:@"time"])
-    {
-        // set up the time value scanner
-        NSScanner *scanner = [NSScanner scannerWithString:anObject];
-        
-        // get hours
-        if ([scanner scanInt:&hours] != YES)
-        {
-            // skip over any separators
-            while (([scanner scanInt:&hours] != YES) && ([scanner scanLocation] < [anObject length]))
-            {
-                [scanner setScanLocation:[scanner scanLocation] + 1];
-            }
-        }
-        
-        // get minutes
-        if ([scanner scanInt:&mins] != YES)
-        {
-            // skip over any separators
-            while (([scanner scanInt:&mins] != YES) && ([scanner scanLocation] < [anObject length]))
-            {
-                [scanner setScanLocation:[scanner scanLocation] + 1];
-            }
-        }
-        
-        // get seconds
-        if ([scanner scanInt:&secs] != YES)
-        {
-            // skip over any separators
-            while (([scanner scanInt:&secs] != YES) && ([scanner scanLocation] < [anObject length]))
-            {
-                [scanner setScanLocation:[scanner scanLocation] + 1];
-            }
-        }
-        
-        // translate to seconds
-        if (secs != -1)
-        {
-            // calculate time in seconds
-            secs = hours * 3600 + mins * 60 + secs;
-        }
-        else if (mins != -1)
-        {
-            // calculate time in seconds
-            secs = hours * 60 + mins;
-        }
-        else
-        {
-            // just treat the first/only number as seconds
-            secs = hours;
-        }
-        
-        // final check for time limits
-        if (secs < CUPPA_BEVY_BREW_TIME_MIN)
-            secs = CUPPA_BEVY_BREW_TIME_MIN;
-        if (secs > CUPPA_BEVY_BREW_TIME_MAX)
-            secs = CUPPA_BEVY_BREW_TIME_MAX;
-        
-        // apply modified time
-        [bevy setBrewTime:secs];
-        [self setBevys:mBevys];
-    }
-    
-    // store to prefs
+    // Store to prefs
     [[NSUserDefaults standardUserDefaults] setObject:[Cuppa_Bevy toDictionary:mBevys]
                                               forKey:@"bevys"];
     
-} // end -tableView:setObjectValue:forTableColumn:row:
+} // end -brewTimePicked:
+
+// *************************************************************************************************
+
+// Handle change of cup shape via popup in beverage table.
+- (IBAction)cupShapePicked:(id)sender
+{
+    NSPopUpButton *popup = (NSPopUpButton *)sender;
+    
+    // Determine which row this popup belongs to
+    NSInteger row = [mBevyTable rowForView:popup];
+    if (row < 0 || row >= (NSInteger)[mBevys count])
+        return;
+    
+    int shapeTag = (int)[[popup selectedItem] tag];
+    Cuppa_Bevy *bevy = [mBevys objectAtIndex:row];
+    [bevy setCupShape:shapeTag];
+    [self setBevys:mBevys];
+    
+    // Store to prefs
+    [[NSUserDefaults standardUserDefaults] setObject:[Cuppa_Bevy toDictionary:mBevys]
+                                              forKey:@"bevys"];
+    
+} // end -cupShapePicked:
+
+// *************************************************************************************************
+
+// Handle name editing via text field in beverage table.
+- (void)controlTextDidEndEditing:(NSNotification *)notification
+{
+    NSTextField *textField = [notification object];
+    NSInteger row = [mBevyTable rowForView:textField];
+    if (row < 0 || row >= (NSInteger)[mBevys count])
+        return;
+    
+    // Determine which column this text field belongs to
+    NSInteger col = [mBevyTable columnForView:textField];
+    if (col < 0)
+        return;
+    
+    NSTableColumn *tableColumn = [[mBevyTable tableColumns] objectAtIndex:col];
+    
+    if ([[tableColumn identifier] isEqualToString:@"name"])
+    {
+        Cuppa_Bevy *bevy = [mBevys objectAtIndex:row];
+        [bevy setName:[textField stringValue]];
+        [self setBevys:mBevys];
+        
+        // Store to prefs
+        [[NSUserDefaults standardUserDefaults] setObject:[Cuppa_Bevy toDictionary:mBevys]
+                                                  forKey:@"bevys"];
+    }
+    
+} // end -controlTextDidEndEditing:
 
 // *************************************************************************************************
 
@@ -1196,6 +1277,9 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
         invocation = [NSInvocation invocationWithMethodSignature:[self
                                                                   methodSignatureForSelector:@selector(startBrewing:)]];
         
+        // get the image for this beverage
+        NSImage *bevyImage = [Cuppa_Shape imageForShape:[bevy cupShape]];
+        
         if (mShowSteep)
         {
             // build a menu item for the beverage -- with steep times
@@ -1238,6 +1322,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
         [invocation setArgument:&item atIndex:2];
         [item setTarget:[invocation retain]];
         [item setEnabled:YES];
+        [item setImage:bevyImage];
         
         // append the item to the menu
         [mDockMenu insertItem:item atIndex:i];
@@ -1270,8 +1355,17 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
     [mDockMenu insertItem:[NSMenuItem separatorItem] atIndex:i];
     i++;
     
-    // add the preferences item
-    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Preferences...", nil)
+    // add the preferences/settings item
+    NSString *prefsTitle;
+    if (@available(macOS 13.0, *))
+    {
+        prefsTitle = NSLocalizedString(@"Settings...", nil);
+    }
+    else
+    {
+        prefsTitle = NSLocalizedString(@"Preferences...", nil);
+    }
+    item = [[[NSMenuItem alloc] initWithTitle:prefsTitle
                                        action:@selector(showPrefs:)
                                 keyEquivalent:@""] autorelease];
     [item setTarget:self];
@@ -1305,6 +1399,9 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
             invocation = [NSInvocation invocationWithMethodSignature:[self
                                                                       methodSignatureForSelector:@selector(startBrewing:)]];
             
+            // get the image for this beverage
+            NSImage *bevyImage = [Cuppa_Shape imageForShape:[bevy cupShape]];
+            
             if (mShowSteep)
             {
                 // build a menu item for the beverage -- with steep times
@@ -1318,6 +1415,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                                                                ([bevy brewTime] - (hours * 3600)) % 60]
                                                        action:@selector(invoke)
                                                 keyEquivalent:@""] autorelease];
+                    [item setImage:bevyImage];
                     [item setRepresentedObject:bevy];
                 }
                 else
@@ -1328,6 +1426,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                                                                [bevy brewTime] % 60]
                                                        action:@selector(invoke)
                                                 keyEquivalent:@""] autorelease];
+                    [item setImage:bevyImage];
                     [item setRepresentedObject:bevy];
                 }
             }
@@ -1338,6 +1437,7 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                                                            [bevy name]]
                                                    action:@selector(invoke)
                                             keyEquivalent:@""] autorelease];
+                [item setImage:bevyImage];
                 [item setRepresentedObject:bevy];
             }
             

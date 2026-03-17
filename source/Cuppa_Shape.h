@@ -4,7 +4,7 @@
  Class:    Cuppa_Shape
            - Constants for cup shape types and associated abstract support class.
  ----------------------------------------------------------------------------------------------------
- Copyright (c) 2005-2025 Nathan Cosgray. All rights reserved.
+ Copyright (c) 2005-2026 Nathan Cosgray. All rights reserved.
  
  This source code is licensed under the BSD-style license found in LICENSE.txt.
  **************************************************************************************************
@@ -27,9 +27,8 @@ enum
 {
     // Cup Shapes
     CUPPA_SHAPE_DEFAULT = 0,
-    CUPPA_SHAPE_TEA,
-    CUPPA_SHAPE_MUG,
-    CUPPA_SHAPE_NOODLE,
+    CUPPA_SHAPE_CUP,
+    CUPPA_SHAPE_FLOWER,
     CUPPA_SHAPE_MAX
 };
 
@@ -43,12 +42,16 @@ enum
 // ------ Class Methods ------
 
 // Returns a (non human interface) string which represents the shape.
-// Param shape must be on of the shape CUPPA_SHAPE_* constants defined above.
+// Returns CUPPA_SHAPE_DEFAULT if the shape is not recognized.
 + (NSString *)labelForShape:(int)shape;
 
 // Returns a shape constant from a (non human interface) label returned by LabelForShape:.
-// Returns CUPPA_SHAPE_DEFAULT if the label string is not recognised.
+// Returns CUPPA_SHAPE_DEFAULT if the label string is not recognized.
 + (int)shapeForLabel:(NSString *)label;
+
+// Returns an image which represents the shape.
+// Returns CUPPA_SHAPE_DEFAULT if the shape is not recognized.
++ (NSImage *)imageForShape:(int)shape;
 
 @end // @interface Cuppa_Shape
 
